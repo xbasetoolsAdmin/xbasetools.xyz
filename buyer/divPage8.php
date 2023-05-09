@@ -14,6 +14,7 @@ if(!isset($_SESSION['sname']) and !isset($_SESSION['spass'])){
 
 
 </thead>
+<table>
   <tbody>
 
  <?php
