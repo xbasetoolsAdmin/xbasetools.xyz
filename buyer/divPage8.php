@@ -24,50 +24,35 @@ if(!isset($_SESSION['sname']) and !isset($_SESSION['spass'])){
 ?>
 
 
-<?php
-	///////////////// premium
- if (
-	 $row['type'] == "account") {
-	 $itemid = $row['s_id'];
-$qe = mysqli_query($dbcon, "SELECT * FROM accounts WHERE id='$itemid'") or die(mysql_error());
-while ($rowe = mysqli_fetch_assoc($qe)) {
+</thead>
+  <tbody>
 
-$country = $rowe['country'];
-$site = $rowe['sitename'];
-$description = $rowe['infos'];
-$information = $rowe['url'];
-$code = array_search("$country", $countrycodes);
- $countrycode = strtolower($code);
-?>
-                  <h4>PREMIUM</h4>
+ <?php
+include("cr.php");
+$q = mysqli_query($dbcon, "SELECT * FROM banks WHERE sold='0' ORDER BY RAND()")or die(mysqli_error());
+ while($row = mysqli_fetch_assoc($q)){
+	 
+	 	 $countryfullname = $row['country'];
+	  $code = array_search("$countryfullname", $countrycodes);
+	 $countrycode = strtolower($code);
+	    $qer = mysqli_query($dbcon, "SELECT * FROM resseller WHERE username='".$row['resseller']."'")or die(mysql_error());
+		   while($rpw = mysqli_fetch_assoc($qer))
+			 $SellerNick = "seller".$rpw["id"]."";
+     echo "
+ <tr>     
+    <td id='bank_country'><i class='flag-icon flag-icon-$countrycode'></i>&nbsp;".htmlspecialchars($row['country'])." </td>
+    <td id='bank_sitename'> ".htmlspecialchars($row['bankname'])." </td> 
+    <td> ".htmlspecialchars($row['balance'])." </td> 
+	<td> ".htmlspecialchars($row['infos'])." </td>
+    <td id='bank_seller'> ".htmlspecialchars($SellerNick)."</td>
+    <td> ".htmlspecialchars($row['price'])."</td>
+	    <td> ".$row['date']."</td>";
+    echo '
+    <td>
+	<span id="bank'.$row['id'].'" title="buy" type="bank"><a onclick="javascript:buythistool('.$row['id'].')" class="btn btn-primary btn-xs"><font color=white>Buy</font></a></span><center>
+    </td>
+            </tr>
+     ';
+ }
 
-
-<table class="table">
-<tr>
-  <td>Country</td>
-  <td><b><span class="flag-icon flag-icon-<?php echo htmlspecialchars($countrycode); ?>"></span> <?php echo htmlspecialchars($country); ?></b></td>
-</tr>
-
-  <tr>
-  <td>Available Information</td>
-  <td><b><?php echo htmlspecialchars($description); ?></b></td>
-</tr>
-
-  <tr>
-  <td>Website</td>
-  <td><b><a><?php echo htmlspecialchars($site); ?></a></b></td>
-</tr>
-
-  <tr>
-  <td>Account Info</td>
-  <td><b><textarea rows='10' cols='30' ><?php echo htmlspecialchars($information); ?></textarea></b></td>
-</tr>
-
-  		
-</table>
-<?php
-}
-	 }
-	 //////////////End if premium
-	 ?>
-
+ ?>
