@@ -10,7 +10,7 @@
 		<script src="layout/js/bootbox.min.js"></script>
 		<link rel="stylesheet" type="text/css" href="layout/css/flags.css">
 		
-		<!--------datatables css----->        
+		<!---datatables css----->        
 		<!--------End datatables css----->     
 		<!--------datatables JS----->      
 		<!--------End datatables JS----->
