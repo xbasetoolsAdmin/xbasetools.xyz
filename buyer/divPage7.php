@@ -1,6 +1,6 @@
 
 <?php
-ob_start();
+ob_start(); 
 session_start();
 error_reporting();
 date_default_timezone_set('UTC');
