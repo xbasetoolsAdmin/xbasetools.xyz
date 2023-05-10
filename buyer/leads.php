@@ -16,66 +16,59 @@ $usrid = mysqli_real_escape_string($dbcon, $_SESSION['sname']);
 <head>
          <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1">
-         <meta name="alfacoins-site-verification" content="welcome">
          <meta name="revisit-after" content="2 days">
+	<meta name="alfacoins-site-verification" content="welcome">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-         <script src="/cdn-cgi/apps/head/AGN3NmUziwZfMV-TNTe1kdyeR2Y.js"></script>
+        <script src="/cdn-cgi/apps/head/AGN3NmUziwZfMV-TNTe1kdyeR2Y.js"></script>
         <link rel="shortcut icon" href="../../favicon.ico" />    
 	<title>Ticket</title>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.1/css/bootstrap.min.css" />
  	<script  type"text/javascript" src="files/js/bootbox.min.js"></script>   
 	<script type="text/javascript" src="files/js/clipboard.min.js"></script>
         <link rel="stylesheet" type="text/css" href="files/css/flags.css" />
-	<script type="text/javascript" src="files/js/bootstrap.min.js"></script>
-
-       <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-       <script type="text/javascript" src="files/js/jquery.js"></script>
-     <script type="text/javascript" src="jquery.dataTables.min.js"></script>
-
-<style>
-#table {
-  .sortable
-}
-table th:not(.sorttable_sorted):not(.sorttable_sorted_reverse):not(.sorttable_nosort):after { 
-    content: " \25BE" 
-}
-
-.label-as-badge {
-    border-radius: 0.5em;
-}
-
-body {
-    padding-top:50px;
-}
-table.floatThead-table {
-    border-top: none;
-    border-bottom: none;
-    background-color: #fff;
-}
-@media (min-width: 768px) {
-  .dropdown:hover .dropdown-menu {
-    display: block;
-  }
-}
-
-#mydiv {
-  height: 400px;
-  position: relative;
-}
-.ajax-loader {
-  position: absolute;
-  left: 0;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  margin: auto; /* presto! */
-
-}
-
-   
-    
-
-</style>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.1/js/bootstrap.bundle.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+       <script type="text/javascript" src="files/js/jquery.js">
+	</script>  
+	<script src="jquery.dataTables.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/responsive/2.2.6/css/responsive.dataTables.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/buttons/1.6.4/css/buttons.dataTables.min.css">
+    <script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/responsive/2.2.6/js/dataTables.responsive.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/1.6.4/js/dataTables.buttons.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/1.6.4/js/buttons.colVis.min.js"></script>
+    <link href="//cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet">
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/js/mdb.min.js"></script>
+    <script async src="//www.googletagmanager.com/gtag/js?id=UA-177092549-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];  function gtag() {dataLayer.push(arguments);  }
+        gtag('js', new Date());
+        gtag('set', {
+            '$usrid': 'USER_ID'
+        }); // Set the user ID using signed-in user_id.
+        gtag('config', 'UA-177092549-1');
+    </script>
+    <link rel="stylesheet" href="files/css/all.min.css" />
+    <link rel="stylesheet" href="files/css/ " />
+    <link rel="stylesheet" href="files/css/ " />
+    <style>body{padding-top:80px}</style>
+    <link rel="stylesheet" href="files/fonts/iconic/css/material-design-iconic-font.min.css">
+    <script src="files/js/main.js"></script>
+    <script type="text/javascript">
+        // Notice how this gets configured before we load Font Awesome
+        window.FontAwesomeConfig = {
+            autoReplaceSvg: false
+        }
+    </script>
+    <style>
+        @import url(//fonts.googleapis.com/css?family=Roboto:400);
+            .navbar-nav .dropdown-menu
+            {
+            margin:0 !important
+            }
+        </style>
+</head>
 <script type="text/javascript">
              function ajaxinfo() {
                 $.ajax({
