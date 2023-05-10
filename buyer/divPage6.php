@@ -1,38 +1,39 @@
 <?php ob_start(); session_start(); date_default_timezone_set('UTC'); include "../includes/config.php"; if (!isset($_SESSION['sname']) and !isset($_SESSION['spass'])) {  header("location: ../");    exit(); } $usrid = mysqli_real_escape_string($dbcon,$_SESSION['sname']); ?>
 
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" class="theme-dark">
+<html class="theme-light">
 	<head>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta name="alfacoins-site-verification" content="5ef8c2279aa605ef8c2279aa965ef8c2279aacb_ALFAcoins">
 		<meta name="revisit-after" content="2 days">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script>
-		<script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-B0E636W1BE&amp;l=dataLayer&amp;cx=c"></script>
-		<script src="/cdn-cgi/apps/head/AGN3NmUziwZfMV-TNTe1kdyeR2Y.js"></script>
-		<link rel="shortcut icon" href="../../favicon.ico">
+		<script type="text/javascript" async="" src="../www.google-analytics.com/analytics.js"></script>
+		<script type="text/javascript" async="" src="../www.googletagmanager.com/gtag/js%EF%B9%96id=G-B0E636W1BE&amp;l=dataLayer&amp;cx=c.js"></script>
+		<script src="cdn-cgi/apps/head/AGN3NmUziwZfMV-TNTe1kdyeR2Y.js"></script>
+		<link rel="stylesheet" href="data:text/css;charset=utf-8;base64,Y2xvdWRmbGFyZS1hcHBbYXBwPSJjb3JuZXItcmliYm9uIl0gewogIHBvaW50ZXItZXZlbnRzOiBub25lOwogIHBvc2l0aW9uOiBmaXhlZDsKfQoKY2xvdWRmbGFyZS1hcHBbYXBwPSJjb3JuZXItcmliYm9uIl0gLnJpYmJvbi1jb250ZW50IHsKICBib3JkZXI6IDA7CiAgYm94LXNoYWRvdzogMCAwIDNweCByZ2JhKDAsIDAsIDAsIC4zKTsKICBib3gtc2l6aW5nOiBib3JkZXItYm94OwogIGN1cnNvcjogZGVmYXVsdDsKICBoZWlnaHQ6IDNlbTsKICBsZXR0ZXItc3BhY2luZzogLjAzZW07CiAgbGluZS1oZWlnaHQ6IDEuMTsKICBvdmVyZmxvdzogaGlkZGVuOwogIHBhZGRpbmc6IDFlbSAwOwogIHBvc2l0aW9uOiBhYnNvbHV0ZTsKICB0ZXh0LWFsaWduOiBjZW50ZXI7CiAgdGV4dC1kZWNvcmF0aW9uOiBub25lOwogIHRleHQtb3ZlcmZsb3c6IGVsbGlwc2lzOwogIHRyYW5zZm9ybS1vcmlnaW46IDAgMDsKICB3aGl0ZS1zcGFjZTogbm93cmFwOwogIHdpZHRoOiAxNDEuNDIxMzU2JTsgLyogc3FydCgyKSAqLwp9CgpjbG91ZGZsYXJlLWFwcFthcHA9ImNvcm5lci1yaWJib24iXSAucmliYm9uLWNvbnRlbnRbaHJlZl0gewogIGN1cnNvcjogcG9pbnRlcjsKICBwb2ludGVyLWV2ZW50czogYWxsOwp9CgpjbG91ZGZsYXJlLWFwcFthcHA9ImNvcm5lci1yaWJib24iXSAucmliYm9uLWNvbnRlbnRbaHJlZl0sCmNsb3VkZmxhcmUtYXBwW2FwcD0iY29ybmVyLXJpYmJvbiJdIC5yaWJib24tY29udGVudFtocmVmXTpsaW5rLApjbG91ZGZsYXJlLWFwcFthcHA9ImNvcm5lci1yaWJib24iXSAucmliYm9uLWNvbnRlbnRbaHJlZl06aG92ZXIsCmNsb3VkZmxhcmUtYXBwW2FwcD0iY29ybmVyLXJpYmJvbiJdIC5yaWJib24tY29udGVudFtocmVmXTphY3RpdmUgewogIGNvbG9yOiBpbmhlcml0OwogIG91dGxpbmU6IG5vbmU7Cn0KCmNsb3VkZmxhcmUtYXBwW2FwcD0iY29ybmVyLXJpYmJvbiJdIC5yaWJib24tY29udGVudFtocmVmXTpob3ZlciB7CiAgb3BhY2l0eTogLjg7Cn0KCmNsb3VkZmxhcmUtYXBwW2FwcD0iY29ybmVyLXJpYmJvbiJdW2RhdGEtc2l6ZT0ic21hbGwiXSAgewogIGZvbnQtc2l6ZTogMC44NWVtOwp9CgpjbG91ZGZsYXJlLWFwcFthcHA9ImNvcm5lci1yaWJib24iXVtkYXRhLXNpemU9Im5vcm1hbCJdIHsKICBmb250LXNpemU6IDEuMDBlbTsKfQoKY2xvdWRmbGFyZS1hcHBbYXBwPSJjb3JuZXItcmliYm9uIl1bZGF0YS1zaXplPSJsYXJnZSJdIHsKICBmb250LXNpemU6IDEuMjVlbTsKfQoKY2xvdWRmbGFyZS1hcHBbYXBwPSJjb3JuZXItcmliYm9uIl1bZGF0YS1zaXplPSJodWdlIl0gewogIGZvbnQtc2l6ZTogMS41MGVtOwp9CgoKY2xvdWRmbGFyZS1hcHBbYXBwPSJjb3JuZXItcmliYm9uIl1bZGF0YS1wb3NpdGlvbj0idG9wLWxlZnQiXSB7CiAgdG9wOiAwOwogIGxlZnQ6IDA7Cn0KCmNsb3VkZmxhcmUtYXBwW2FwcD0iY29ybmVyLXJpYmJvbiJdW2RhdGEtcG9zaXRpb249InRvcC1yaWdodCJdIHsKICB0b3A6IDA7CiAgcmlnaHQ6IDA7Cn0KCmNsb3VkZmxhcmUtYXBwW2FwcD0iY29ybmVyLXJpYmJvbiJdW2RhdGEtcG9zaXRpb249ImJvdHRvbS1sZWZ0Il0gewogIGJvdHRvbTogMDsKICBsZWZ0OiAwOwp9CgpjbG91ZGZsYXJlLWFwcFthcHA9ImNvcm5lci1yaWJib24iXVtkYXRhLXBvc2l0aW9uPSJib3R0b20tcmlnaHQiXSB7CiAgYm90dG9tOiAwOwogIHJpZ2h0OiAwOwp9CgpjbG91ZGZsYXJlLWFwcFthcHA9ImNvcm5lci1yaWJib24iXVtkYXRhLXBvc2l0aW9uPSJ0b3AtbGVmdCJdIC5yaWJib24tY29udGVudCB7CiAgdHJhbnNmb3JtOiByb3RhdGUoLTQ1ZGVnKTsKICB0b3A6IDEwMCU7CiAgbGVmdDogLTIuMTIxMzJlbTsKICBtYXJnaW4tdG9wOiAtMi4xMjEzMmVtOwp9CgpjbG91ZGZsYXJlLWFwcFthcHA9ImNvcm5lci1yaWJib24iXVtkYXRhLXBvc2l0aW9uPSJ0b3AtcmlnaHQiXSAucmliYm9uLWNvbnRlbnQgewogIHRyYW5zZm9ybTogcm90YXRlKDQ1ZGVnKTsKICBsZWZ0OiAyLjEyMTMyZW07CiAgdG9wOiAtMi4xMjEzMmVtOwp9CgpjbG91ZGZsYXJlLWFwcFthcHA9ImNvcm5lci1yaWJib24iXVtkYXRhLXBvc2l0aW9uPSJib3R0b20tbGVmdCJdIC5yaWJib24tY29udGVudCB7CiAgdHJhbnNmb3JtOiByb3RhdGUoNDVkZWcpOwp9CgpjbG91ZGZsYXJlLWFwcFthcHA9ImNvcm5lci1yaWJib24iXVtkYXRhLXBvc2l0aW9uPSJib3R0b20tcmlnaHQiXSAucmliYm9uLWNvbnRlbnQgewogIHRyYW5zZm9ybTogcm90YXRlKC00NWRlZyk7CiAgdG9wOiAxMDAlOwp9Cg==">
+		<link rel="shortcut icon" href="favicon.ico.png">
 		<title>Ticket</title>
-		<link rel="stylesheet" href="http://odinshop.io/layout/css/bootstrap.min.css">
+		<link rel="stylesheet" href="layout/css/bootstrap.min.css">
 		<script src="layout/js/jquery-3.4.1.min.js"></script>
 		<script src="layout/js/clipboard.min.js"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+		<script src="../cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
 		<script src="layout/js/bootstrap.min.js"></script>
 		<script src="layout/js/bootbox.min.js"></script>
 		<link rel="stylesheet" type="text/css" href="layout/css/flags.css">
-		<link rel="stylesheet" href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css">
-		<link rel="stylesheet" href="https://cdn.datatables.net/responsive/2.2.6/css/responsive.dataTables.min.css">
-		<link rel="stylesheet" href="https://cdn.datatables.net/buttons/1.6.4/css/buttons.dataTables.min.css">
-		<script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
-		<script src="https://cdn.datatables.net/responsive/2.2.6/js/dataTables.responsive.min.js"></script>
-		<script src="https://cdn.datatables.net/buttons/1.6.4/js/dataTables.buttons.min.js"></script>
-		<script src="https://cdn.datatables.net/buttons/1.6.4/js/buttons.colVis.min.js"></script>
+		<link rel="stylesheet" href="../cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css">
+		<link rel="stylesheet" href="../cdn.datatables.net/responsive/2.2.6/css/responsive.dataTables.min.css">
+		<link rel="stylesheet" href="../cdn.datatables.net/buttons/1.6.4/css/buttons.dataTables.min.css">
+		<script src="../cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+		<script src="../cdn.datatables.net/responsive/2.2.6/js/dataTables.responsive.min.js"></script>
+		<script src="../cdn.datatables.net/buttons/1.6.4/js/dataTables.buttons.min.js"></script>
+		<script src="../cdn.datatables.net/buttons/1.6.4/js/buttons.colVis.min.js"></script>
 		<script src="js/jquery.dataTables.min.js"></script>
-		<link href="//cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet">
-		<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/js/mdb.min.js"></script>
+		<link href="../cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet">
+		<script type="text/javascript" src="../cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/js/mdb.min.js"></script>
 		<style type="text/css">/* Chart.js */
 @-webkit-keyframes chartjs-render-animation{from{opacity:0.99}to{opacity:1}}@keyframes chartjs-render-animation{from{opacity:0.99}to{opacity:1}}.chartjs-render-monitor{-webkit-animation:chartjs-render-animation 0.001s;animation:chartjs-render-animation 0.001s;}</style>
-		<script async="" src="//www.googletagmanager.com/gtag/js?id=UA-177092549-1"></script>
+		<script async="" src="../www.googletagmanager.com/gtag/js%EF%B9%96id=UA-177092549-1.js"></script>
 		<script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
@@ -42,7 +43,7 @@
         
 		</script>
 		<link rel="stylesheet" href="layout/css/all.min.css">
-		<link rel="stylesheet" href="layout/css/main.css?v=12.9">
+		<link rel="stylesheet" href="layout/css/main%EF%B9%96v=12.9.css">
 		<link rel="stylesheet" href="layout/css/util.css">
 		<style>body{padding-top:80px}</style>
 		<link rel="stylesheet" href="layout/fonts/iconic/css/material-design-iconic-font.min.css">
@@ -52,17 +53,14 @@
             window.FontAwesomeConfig = { autoReplaceSvg: false }
         
 		</script>
-		<style>
-            @import url(//fonts.googleapis.com/css?family=Roboto:400);
+		<style>@import url(../fonts.googleapis.com/css%EF%B9%96family=Roboto%EF%B9%95400.css);
             .navbar-nav .dropdown-menu
             {
             margin:0 !important
             }
         
 		</style>
-		<style>
-
-.display  td {
+		<style>.display  td {
     background: var(--color-card);
       color: var(--font-color);
 
@@ -100,8 +98,7 @@ color: var(--font-color);
 		</style>
 	</head>
 	<body class="them">
-		<style>
-    .navbar-nav .dropdown-menu
+		<style>.navbar-nav .dropdown-menu
     {
       margin:0 !important
     }
@@ -200,7 +197,7 @@ color: var(--font-color);
   -webkit-transition: 0.4s;
   transition: 0.4s;
   box-shadow: 0 0px 15px #2020203d;
-  background: white url('https://i.ibb.co/FxzBYR9/night.png');
+  background: white url('../i.ibb.co/FxzBYR9/night.png');
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -217,7 +214,7 @@ input:checked + .slider:before {
   -webkit-transform: translateX(24px);
   -ms-transform: translateX(24px);
   transform: translateX(24px);
-  background: white url('https://i.ibb.co/7JfqXxB/sunny.png');
+  background: white url('../i.ibb.co/7JfqXxB/sunny.png');
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -277,7 +274,7 @@ input:checked + .slider:before {
                                                           padding-bottom: 0.5rem;
                                                           padding-left: 1rem;
                                                         ">
-			<a class="navbar-brand" href="main" style="color: var(--font-color);">
+			<a class="navbar-brand" href="main.html" style="color: var(--font-color);">
 				<img width="40px" src="layout/images/logo.png">
 				Odin</a>
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -291,32 +288,32 @@ input:checked + .slider:before {
 							Hosts
 						</a>
 						<div class="dropdown-menu dropdown-menu-left" style="color: var(--font-color); background-color: var(--color-nav);" aria-labelledby="navbarDropdown">
-							<a class="dropdown-item waves-effect waves-light" href="rdp" style="color: var(--font-color);">
+							<a class="dropdown-item waves-effect waves-light" href="rdp.html" style="color: var(--font-color);">
 								<span class="px-2">
 									<i class="fas fa-desktop fa-fw"></i>
 									RDPs
 									<span class="badge badge-primary">76</span>
 								</span>
 							</a>
-							<a class="dropdown-item waves-effect waves-light" href="cPanel" style="color: var(--font-color);">
+							<a class="dropdown-item waves-effect waves-light" href="cPanel.html" style="color: var(--font-color);">
 								<span class="px-2">
 									<i class="fas fa-tools fa-fw"></i>
 									cPanels
-									<span class="badge badge-primary">15472</span>
+									<span class="badge badge-primary">15489</span>
 								</span>
 							</a>
-							<a class="dropdown-item waves-effect waves-light" href="shell" style="color: var(--font-color);">
+							<a class="dropdown-item waves-effect waves-light" href="shell.html" style="color: var(--font-color);">
 								<span class="px-2">
 									<i class="fas fa-file-code fa-fw"></i>
 									Shells
-									<span class="badge badge-primary">973</span>
+									<span class="badge badge-primary">919</span>
 								</span>
 							</a>
-							<a class="dropdown-item waves-effect waves-light" href="ssh" style="color: var(--font-color);">
+							<a class="dropdown-item waves-effect waves-light" href="ssh.html" style="color: var(--font-color);">
 								<span class="px-2">
 									<i class="fab fa-linux"></i>
 									SSH/WHM
-									<span class="badge badge-primary">134</span>
+									<span class="badge badge-primary">135</span>
 								</span>
 							</a>
 						</div>
@@ -325,21 +322,21 @@ input:checked + .slider:before {
 						<a class="nav-link dropdown-toggle waves-effect waves-light" style="color: var(--font-color);" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 							<i class="fas fa-leaf fa-fw fa-sm text-success" style="margin-right: 4px;"></i>Premium</a>
 						<div class="dropdown-menu dropdown-menu-left" style="color: var(--font-color); background-color: var(--color-nav);" aria-labelledby="navbarDropdown">
-							<a class="dropdown-item waves-effect waves-light" href="premium_shell" style="color: var(--font-color);">
+							<a class="dropdown-item waves-effect waves-light" href="premium_shell.html" style="color: var(--font-color);">
 								<span class="px-2">
 									<i class="fas fa-leaf fa-fw"></i>
 									Premium Shells
-									<span class="badge badge-primary">911</span>
+									<span class="badge badge-primary">881</span>
 								</span>
 							</a>
-							<a class="dropdown-item waves-effect waves-light" href="premium_cPanel" style="color: var(--font-color);">
+							<a class="dropdown-item waves-effect waves-light" href="premium_cPanel.html" style="color: var(--font-color);">
 								<span class="px-2">
 									<i class="fas fa-leaf fa-fw"></i>
 									Premium cPanels
-									<span class="badge badge-primary">5905</span>
+									<span class="badge badge-primary">6014</span>
 								</span>
 							</a>
-							<a class="dropdown-item waves-effect waves-light" href="premium_downloads" style="color: var(--font-color);">
+							<a class="dropdown-item waves-effect waves-light" href="premium_downloads.html" style="color: var(--font-color);">
 								<span class="px-2">
 									<i class="fas fa-leaf fa-fw"></i>
 									Premium Downloads
@@ -354,18 +351,18 @@ input:checked + .slider:before {
 							Send
 						</a>
 						<div class="dropdown-menu dropdown-menu-left" style="color: var(--font-color); background-color: var(--color-nav);" aria-labelledby="navbarDropdown">
-							<a class="dropdown-item waves-effect waves-light" href="mailer" style="color: var(--font-color);">
+							<a class="dropdown-item waves-effect waves-light" href="mailer.html" style="color: var(--font-color);">
 								<span class="px-2">
 									<i class="fas fa-leaf fa-fw"></i>
 									Mailers
-									<span class="badge badge-primary">453</span>
+									<span class="badge badge-primary">488</span>
 								</span>
 							</a>
-							<a class="dropdown-item waves-effect waves-light" href="smtp" style="color: var(--font-color);">
+							<a class="dropdown-item waves-effect waves-light" href="smtp.html" style="color: var(--font-color);">
 								<span class="px-2">
 									<i class="fas fa-envelope fa-fw"></i>
 									SMTPs
-									<span class="badge badge-primary">2046</span>
+									<span class="badge badge-primary">2291</span>
 								</span>
 							</a>
 						</div>
@@ -376,63 +373,63 @@ input:checked + .slider:before {
 							Leads
 						</a>
 						<div class="dropdown-menu dropdown-menu-left" style="color: var(--font-color); background-color: var(--color-nav);" aria-labelledby="navbarDropdown">
-							<a class="dropdown-item waves-effect waves-light" href="leads-5" style="color: var(--font-color);">
+							<a class="dropdown-item waves-effect waves-light" href="leads-5.html" style="color: var(--font-color);">
 								<span class="px-2">
 									<i class="fas fa-award"></i>
 									100% Validated Leads
 									<span class="badge badge-primary">0</span>
 								</span>
 							</a>
-							<a class="dropdown-item waves-effect waves-light" href="leads-1" style="color: var(--font-color);">
+							<a class="dropdown-item waves-effect waves-light" href="leads-1.html" style="color: var(--font-color);">
 								<span class="px-2">
 									<i class="fa fa-fire orange-color"></i>
 									Email Only
 									<span class="badge badge-primary">163</span>
 								</span>
 							</a>
-							<a class="dropdown-item waves-effect waves-light" href="leads-2" style="color: var(--font-color);">
+							<a class="dropdown-item waves-effect waves-light" href="leads-2.html" style="color: var(--font-color);">
 								<span class="px-2">
 									<i class="fas fa-passport"></i>
 									Combo Email:Password
 									<span class="badge badge-primary">24</span>
 								</span>
 							</a>
-							<a class="dropdown-item waves-effect waves-light" href="leads-3" style="color: var(--font-color);">
+							<a class="dropdown-item waves-effect waves-light" href="leads-3.html" style="color: var(--font-color);">
 								<span class="px-2">
 									<i class="fab fa-battle-net"></i>
 									Combo Username:Password
 									<span class="badge badge-primary">1</span>
 								</span>
 							</a>
-							<a class="dropdown-item waves-effect waves-light" href="leads-4" style="color: var(--font-color);">
+							<a class="dropdown-item waves-effect waves-light" href="leads-4.html" style="color: var(--font-color);">
 								<span class="px-2">
 									<i class="fas fa-at"></i>
 									Email Access
 									<span class="badge badge-primary">22</span>
 								</span>
 							</a>
-							<a class="dropdown-item waves-effect waves-light" href="leads-6" style="color: var(--font-color);">
+							<a class="dropdown-item waves-effect waves-light" href="leads-6.html" style="color: var(--font-color);">
 								<span class="px-2">
 									<i class="fas fa-mobile-alt"></i>
 									Phone Number Only
 									<span class="badge badge-primary">31</span>
 								</span>
 							</a>
-							<a class="dropdown-item waves-effect waves-light" href="leads-7" style="color: var(--font-color);">
+							<a class="dropdown-item waves-effect waves-light" href="leads-7.html" style="color: var(--font-color);">
 								<span class="px-2">
 									<i class="fas fa-phone-square"></i>
 									Combo Phone:Password
 									<span class="badge badge-primary">3</span>
 								</span>
 							</a>
-							<a class="dropdown-item waves-effect waves-light" href="leads-8" style="color: var(--font-color);">
+							<a class="dropdown-item waves-effect waves-light" href="leads-8.html" style="color: var(--font-color);">
 								<span class="px-2">
 									<i class="fas fa-inbox"></i>
 									Full Data
 									<span class="badge badge-primary">0</span>
 								</span>
 							</a>
-							<a class="dropdown-item waves-effect waves-light" href="leads-9" style="color: var(--font-color);">
+							<a class="dropdown-item waves-effect waves-light" href="leads-9.html" style="color: var(--font-color);">
 								<span class="px-2">
 									<i class="fab fa-facebook"></i>
 									Social Media Data
@@ -447,28 +444,28 @@ input:checked + .slider:before {
 							Business
 						</a>
 						<div class="dropdown-menu dropdown-menu-left" style="color: var(--font-color); background-color: var(--color-nav);" aria-labelledby="navbarDropdown">
-							<a class="dropdown-item waves-effect waves-light" href="business-1" style="color: var(--font-color);">
+							<a class="dropdown-item waves-effect waves-light" href="business-1.html" style="color: var(--font-color);">
 								<span class="px-2">
 									<i class="fas fa-business-time"></i>
 									cPanel Webmail
-									<span class="badge badge-primary">6221</span>
+									<span class="badge badge-primary">6215</span>
 								</span>
 							</a>
-							<a class="dropdown-item waves-effect waves-light" href="business-2" style="color: var(--font-color);">
+							<a class="dropdown-item waves-effect waves-light" href="business-2.html" style="color: var(--font-color);">
 								<span class="px-2">
 									<i class="fas fa-mail-bulk"></i>
 									Godaddy Webmail
-									<span class="badge badge-primary">2240</span>
+									<span class="badge badge-primary">2246</span>
 								</span>
 							</a>
-							<a class="dropdown-item waves-effect waves-light" href="business-3" style="color: var(--font-color);">
+							<a class="dropdown-item waves-effect waves-light" href="business-3.html" style="color: var(--font-color);">
 								<span class="px-2">
 									<i class="fas fa-globe"></i>
 									Office365 Webmail
-									<span class="badge badge-primary">9921</span>
+									<span class="badge badge-primary">10010</span>
 								</span>
 							</a>
-							<a class="dropdown-item waves-effect waves-light" href="business-4" style="color: var(--font-color);">
+							<a class="dropdown-item waves-effect waves-light" href="business-4.html" style="color: var(--font-color);">
 								<span class="px-2">
 									<i class="fas fa-envelope-open-text"></i>
 									Rackspace Webmail
@@ -483,84 +480,84 @@ input:checked + .slider:before {
 							Accounts
 						</a>
 						<div class="dropdown-menu dropdown-menu-left" style="color: var(--font-color); background-color: var(--color-nav);" aria-labelledby="navbarDropdown">
-							<a class="dropdown-item waves-effect waves-light" href="accounts-1" style="color: var(--font-color);">
+							<a class="dropdown-item waves-effect waves-light" href="accounts-1.html" style="color: var(--font-color);">
 								<span class="px-2">
 									<i class="fas fa-comments-dollar"></i>
 									Marketing
 									<span class="badge badge-primary">99</span>
 								</span>
 							</a>
-							<a class="dropdown-item waves-effect waves-light" href="accounts-2" style="color: var(--font-color);">
+							<a class="dropdown-item waves-effect waves-light" href="accounts-2.html" style="color: var(--font-color);">
 								<span class="px-2">
 									<i class="fas fa-server"></i>
 									Hosting / Domain
 									<span class="badge badge-primary">6</span>
 								</span>
 							</a>
-							<a class="dropdown-item waves-effect waves-light" href="accounts-3" style="color: var(--font-color);">
+							<a class="dropdown-item waves-effect waves-light" href="accounts-3.html" style="color: var(--font-color);">
 								<span class="px-2">
 									<i class="fas fa-gamepad"></i>
 									Games
 									<span class="badge badge-primary">18</span>
 								</span>
 							</a>
-							<a class="dropdown-item waves-effect waves-light" href="accounts-4" style="color: var(--font-color);">
+							<a class="dropdown-item waves-effect waves-light" href="accounts-4.html" style="color: var(--font-color);">
 								<span class="px-2">
 									<i class="fas fa-cubes"></i>
 									VPN/Socks Proxy&gt;Email Access
 									<span class="badge badge-primary">1190</span>
 								</span>
 							</a>
-							<a class="dropdown-item waves-effect waves-light" href="accounts-5" style="color: var(--font-color);">
+							<a class="dropdown-item waves-effect waves-light" href="accounts-5.html" style="color: var(--font-color);">
 								<span class="px-2">
 									<i class="fas fa-shopping-cart"></i>
 									Shopping{Amazon, Ebay, ...}
 									<span class="badge badge-primary">94</span>
 								</span>
 							</a>
-							<a class="dropdown-item waves-effect waves-light" href="accounts-6" style="color: var(--font-color);">
+							<a class="dropdown-item waves-effect waves-light" href="accounts-6.html" style="color: var(--font-color);">
 								<span class="px-2">
 									<i class="fas fa-ethernet"></i>
 									Programs {Antivirus, Adobe, ...}
 									<span class="badge badge-primary">0</span>
 								</span>
 							</a>
-							<a class="dropdown-item waves-effect waves-light" href="accounts-7" style="color: var(--font-color);">
+							<a class="dropdown-item waves-effect waves-light" href="accounts-7.html" style="color: var(--font-color);">
 								<span class="px-2">
 									<i class="fas fa-stream"></i>
 									Stream {Netflix,HBO, ... }
 									<span class="badge badge-primary">124</span>
 								</span>
 							</a>
-							<a class="dropdown-item waves-effect waves-light" href="accounts-8" style="color: var(--font-color);">
+							<a class="dropdown-item waves-effect waves-light" href="accounts-8.html" style="color: var(--font-color);">
 								<span class="px-2">
 									<i class="fas fa-user-plus"></i>
 									Dating
 									<span class="badge badge-primary">87</span>
 								</span>
 							</a>
-							<a class="dropdown-item waves-effect waves-light" href="accounts-9" style="color: var(--font-color);">
+							<a class="dropdown-item waves-effect waves-light" href="accounts-9.html" style="color: var(--font-color);">
 								<span class="px-2">
 									<i class="fas fa-graduation-cap"></i>
 									Learning{ Udacity, Udemy, Lynda, ... }
 									<span class="badge badge-primary">14</span>
 								</span>
 							</a>
-							<a class="dropdown-item waves-effect waves-light" href="accounts-10" style="color: var(--font-color);">
+							<a class="dropdown-item waves-effect waves-light" href="accounts-10.html" style="color: var(--font-color);">
 								<span class="px-2">
 									<i class="fas fa-window-restore"></i>
 									Torrent / File Host
 									<span class="badge badge-primary">3</span>
 								</span>
 							</a>
-							<a class="dropdown-item waves-effect waves-light" href="accounts-11" style="color: var(--font-color);">
+							<a class="dropdown-item waves-effect waves-light" href="accounts-11.html" style="color: var(--font-color);">
 								<span class="px-2">
 									<i class="fas fa-phone-volume"></i>
 									Voip / Sip
 									<span class="badge badge-primary">0</span>
 								</span>
 							</a>
-							<a class="dropdown-item waves-effect waves-light" href="accounts-12" style="color: var(--font-color);">
+							<a class="dropdown-item waves-effect waves-light" href="accounts-12.html" style="color: var(--font-color);">
 								<span class="px-2">
 									<i class="fas fa-network-wired"></i>
 									Other
@@ -575,7 +572,7 @@ input:checked + .slider:before {
 							Requests
 						</a>
 						<div class="dropdown-menu dropdown-menu-left" style="color: var(--font-color); background-color: var(--color-nav);" aria-labelledby="navbarDropdown">
-							<a class="dropdown-item waves-effect waves-light" href="requests" style="color: var(--font-color);">
+							<a class="dropdown-item waves-effect waves-light" href="requests.html" style="color: var(--font-color);">
 								<span class="px-2">
 									<i class="fas fa-user-plus"></i>
 									Buyers Requests
@@ -586,7 +583,7 @@ input:checked + .slider:before {
 						</div>
 					</li>
 					<li class="nav-item dropdown">
-						<a class="nav-link waves-effect waves-light" href="offers" style="color: var(--font-color);">
+						<a class="nav-link waves-effect waves-light" href="offers.html" style="color: var(--font-color);">
 							<i class="fas fa-user-secret text-primary fa-sm"></i>
 							Bulk Offers</a>
 					</li>
@@ -602,7 +599,7 @@ input:checked + .slider:before {
 						</div>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link waves-effect waves-light" href="addBalance" style="color: var(--font-color);" role="button" aria-haspopup="true" aria-expanded="false">
+						<a class="nav-link waves-effect waves-light" href="addBalance.html" style="color: var(--font-color);" role="button" aria-haspopup="true" aria-expanded="false">
 							<span class="badge badge-danger">
 								0
 								<span class="px-2">
@@ -617,51 +614,51 @@ input:checked + .slider:before {
 							<span class="badge badge-success">0</span>
 						</a>
 						<div class="dropdown-menu" aria-labelledby="navbarDropdown" style="color: var(--font-color); background-color: var(--color-nav);">
-							<a class="dropdown-item waves-effect waves-light" href="orders" style="color: var(--font-color);">
+							<a class="dropdown-item waves-effect waves-light" href="orders.html" style="color: var(--font-color);">
 								<span class="px-2">Report Items</span>
 							</a>
-							<a class="dropdown-item waves-effect waves-light" href="tickets" style="color: var(--font-color);">
+							<a class="dropdown-item waves-effect waves-light" href="tickets.html" style="color: var(--font-color);">
 								<span class="px-2">My Tickets
 									<span class="badge badge-success">0</span>
 								</span>
 							</a>
-							<a class="dropdown-item waves-effect waves-light" href="reports" style="color: var(--font-color);">
+							<a class="dropdown-item waves-effect waves-light" href="reports.html" style="color: var(--font-color);">
 								<span class="px-2">My Reports
 									<span class="badge badge-success">0</span>
 								</span>
 							</a>
-							<a class="dropdown-item waves-effect waves-light" href="OpenTicket" style="color: var(--font-color);">
+							<a class="dropdown-item waves-effect waves-light" href="OpenTicket.html" style="color: var(--font-color);">
 								<span class="px-2">New Ticket</span>
 							</a>
 						</div>
 					</li>
 					<li class="nav-item dropdown">
 						<a class="nav-link dropdown-toggle waves-effect waves-light" style="color: var(--font-color);" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-							xbaseleets
+							XBASELEET
 							<i class="fa fa-user-secret" style="color: var(--font-color);"></i>
 						</a>
 						<div class="dropdown-menu" aria-labelledby="navbarDropdown" style="color: var(--font-color); background-color: var(--color-nav);">
-							<a class="dropdown-item waves-effect waves-light" href="setting" style="color: var(--font-color);">
+							<a class="dropdown-item waves-effect waves-light" href="setting.html" style="color: var(--font-color);">
 								<span class="px-2">Setting
 									<i class="fa fa-cog"></i>
 								</span>
 							</a>
-							<a class="dropdown-item waves-effect waves-light" href="seller-profile" style="color: var(--font-color);">
+							<a class="dropdown-item waves-effect waves-light" href="seller-profile.html" style="color: var(--font-color);">
 								<span class="px-2">Profile
 									<i class="fa fa-user"></i>
 								</span>
 							</a>
-							<a class="dropdown-item waves-effect waves-light" href="orders" style="color: var(--font-color);">
+							<a class="dropdown-item waves-effect waves-light" href="orders.html" style="color: var(--font-color);">
 								<span class="px-2">My Orders
 									<i class="fa fa-shopping-cart"></i>
 								</span>
 							</a>
-							<a class="dropdown-item waves-effect waves-light" href="addBalance" style="color: var(--font-color);">
+							<a class="dropdown-item waves-effect waves-light" href="addBalance.html" style="color: var(--font-color);">
 								<span class="px-2">Add Balance
 									<i class="fa fa-money-bill-alt"></i>
 								</span>
 							</a>
-							<a class="dropdown-item waves-effect waves-light" href="logout" style="color: var(--font-color);">
+							<a class="dropdown-item waves-effect waves-light" href="login.html" style="color: var(--font-color);">
 								<span class="px-2">Logout
 									<i class="fa fa-door-open"></i>
 								</span>
@@ -713,12 +710,12 @@ a.closearb {
 				<li>Combo use for cracking (Brute forcing attack) not use for login to email.</li>
 				<li>There is
 					<b>
-						163
+						3
 					</b>
 					Available.</li>
 			</ul>
 		</div>
-		<input type="hidden" id="type" name="type" value="1">
+		<input type="hidden" id="type" name="type" value="7">
 		<div class="row m-3 pt-1" style="color: var(--font-color);">
 			<div class="col-xs-6 col-sm-4 col-lg-2" style="display:inline-block">
 				<label for="infos" style="margin-bottom: 10px; margin-top: 5px">Description:</label>
@@ -728,49 +725,16 @@ a.closearb {
 				<label for="Country" style="margin-bottom: 10px; margin-top: 5px">Country :</label>
 				<select name="country" id="country" class="form-control" style="color: var(--font-color); background-color: var(--color-card);">
 					<option value="">All Countries</option>
-					<option value="Australia">Australia</option>
-					<option value="Brazil">Brazil</option>
-					<option value="Canada">Canada</option>
-					<option value="China">China</option>
-					<option value="France">France</option>
-					<option value="Germany">Germany</option>
-					<option value="Greece">Greece</option>
-					<option value="Hungary">Hungary</option>
-					<option value="Indonesia">Indonesia</option>
-					<option value="Israel">Israel</option>
-					<option value="Italy">Italy</option>
-					<option value="Japan">Japan</option>
-					<option value="Lao">Lao</option>
-					<option value="Netherlands">Netherlands</option>
-					<option value="Pakistan">Pakistan</option>
-					<option value="Poland">Poland</option>
+					<option value="Belarus">Belarus</option>
 					<option value="Russia">Russia</option>
-					<option value="Slovakia">Slovakia</option>
-					<option value="South Africa">South Africa</option>
-					<option value="Swaziland">Swaziland</option>
-					<option value="Sweden">Sweden</option>
-					<option value="Switzerland">Switzerland</option>
-					<option value="Taiwan">Taiwan</option>
-					<option value="Thailand">Thailand</option>
-					<option value="Trinidad and Tobago">Trinidad and Tobago</option>
-					<option value="United Arab Emirates">United Arab Emirates</option>
-					<option value="United Kingdom">United Kingdom</option>
-					<option value="United States">United States</option>
-					<option value="Vietnam">Vietnam</option>
-					<option value="Virgin Islands (U.S)">Virgin Islands (U.S)</option>
-					<option value="WorldWide">WorldWide</option>
+					<option value="Ukraine">Ukraine</option>
 				</select>
 			</div>
 			<div class="col-xs-6 col-sm-4 col-lg-2" style="display:inline-block">
 				<label for="seller" style="margin-bottom: 10px; margin-top: 5px">Seller :</label>
 				<select name="seller" id="seller" class="form-control" style="color: var(--font-color); background-color: var(--color-card);">
 					<option value="">All</option>
-					<option value="Seller370">Seller370</option>
-					<option value="Seller397">Seller397</option>
-					<option value="Seller473">Seller473</option>
-					<option value="Seller471">Seller471</option>
-					<option value="Seller393">Seller393</option>
-					<option value="Seller465">Seller465</option>
+					<option value="Seller467">Seller467</option>
 				</select>
 			</div>
 		</div>
@@ -799,11 +763,7 @@ a.closearb {
 							<div class="dataTables_scrollHeadInner" style="box-sizing: content-box; width: 345px; padding-right: 0px;">
 								<table class="display responsive table-hover dataTable no-footer" style="width: 345px; color: var(--font-color); background-color: var(--color-card); margin-left: 0px;" role="grid">
 									<thead>
-										<tr role="row" class="even">
-										</tr>
-									</thead>
-									<tbody>
-										<tr class="odd">
+										<tr role="row">
 											<th class="all sorting" tabindex="0" aria-controls="lead_data" rowspan="1" colspan="1" style="width: 35.140625px;" aria-label="ID: activate to sort column ascending">ID</th>
 											<th data-priority="3" class="sorting" tabindex="0" aria-controls="lead_data" rowspan="1" colspan="1" style="width: 0px; display: none;" aria-label="Country: activate to sort column ascending">Country</th>
 											<th data-priority="6" class="sorting" tabindex="0" aria-controls="lead_data" rowspan="1" colspan="1" style="width: 0px; display: none;" aria-label="Description: activate to sort column ascending">Description</th>
@@ -815,10 +775,7 @@ a.closearb {
 											</th>
 											<th class="all sorting" tabindex="0" aria-controls="lead_data" rowspan="1" colspan="1" style="width: 86.53125px;" aria-label="Buy: activate to sort column ascending">Buy</th>
 										</tr>
-										<tr>
-											<td valign="top" colspan="4" class="dataTables_empty">No data available in table</td>
-										</tr>
-									</tbody>
+									</thead>
 								</table>
 							</div>
 						</div>
@@ -858,30 +815,76 @@ a.closearb {
 								</thead>
 								<tbody>
 									<tr role="row" class="odd">
-										<td class="dtr-control">7446</td>
+										<td class="dtr-control">7541</td>
 										<td style="display: none;">
-											<i class="flag-icon flag-icon-us">
-											</i>
-											United States</td>
-										<td style="display: none;">Beset fresh leads @AOL	 Frech list checked 100%  ✅</td>
-										<td style="display: none;">10</td>
+											<i class="flag-icon flag-icon-ru"></i>
+											Russia</td>
+										<td style="display: none;"></td>
+										<td style="display: none;">8500</td>
 										<td style="display: none;">
-											<a href="#" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer" target="_blank">
-												<i class="fas fa-user mr-1">
-												</i>Seller473</a>
+											<a href="login.html" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer" target="_blank">
+												<i class="fas fa-user mr-1"></i>Seller467</a>
 										</td>
 										<td>
 											<span>
-												<a href="https://imgur.com/gallery/4ahhzLMiBQ" class="btn btn-primary btn-sm" target="popup" onclick="window.open('https://imgur.com/gallery/4ahhzLMiBQ','popup', width=600,height=600); return false;">View Proof</a>
+												<a href="https://gyazo.com/a0f300108eb913d0b8f54e62154b1b62" class="btn btn-primary btn-sm" target="popup" onclick="window.open('https://gyazo.com/a0f300108eb913d0b8f54e62154b1b62','popup', width=600,height=600); return false;">View Proof</a>
 											</span>
 										</td>
-										<td style="display: none;">16.00</td>
+										<td style="display: none;">30.00</td>
+										<td style="display: none;">10/02/2023 03:24:13 am</td>
+										<td>
+											<span id="lead7541" title="buy" type="leads">
+												<a onclick="javascript:buythistool(7541)" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer">
+													<i class="fas fa-shopping-cart mr-1"></i>Buy</a>
+											</span>
+										</td>
+									</tr>
+									<tr role="row" class="even">
+										<td class="dtr-control">7543</td>
 										<td style="display: none;">
-											04/02/2023 11:12:03 pm
+											<i class="flag-icon flag-icon-by"></i>
+											Belarus</td>
+										<td style="display: none;"></td>
+										<td style="display: none;">1070808</td>
+										<td style="display: none;">
+											<a href="login.html" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer" target="_blank">
+												<i class="fas fa-user mr-1"></i>Seller467</a>
 										</td>
 										<td>
-											<span id="lead7446" title="buy" type="leads">
-												<a onclick="javascript:buythistool(7446)" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer">
+											<span>
+												<a href="https://gyazo.com/3b6e567663eaa32b76c6cb92846ab956" class="btn btn-primary btn-sm" target="popup" onclick="window.open('https://gyazo.com/3b6e567663eaa32b76c6cb92846ab956','popup', width=600,height=600); return false;">View Proof</a>
+											</span>
+										</td>
+										<td style="display: none;">120.00</td>
+										<td style="display: none;">10/02/2023 03:32:49 am</td>
+										<td>
+											<span id="lead7543" title="buy" type="leads">
+												<a onclick="javascript:buythistool(7543)" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer">
+													<i class="fas fa-shopping-cart mr-1"></i>Buy</a>
+											</span>
+										</td>
+									</tr>
+									<tr role="row" class="odd">
+										<td class="dtr-control">7542</td>
+										<td style="display: none;">
+											<i class="flag-icon flag-icon-ua"></i>
+											Ukraine</td>
+										<td style="display: none;"></td>
+										<td style="display: none;">61150</td>
+										<td style="display: none;">
+											<a href="login.html" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer" target="_blank">
+												<i class="fas fa-user mr-1"></i>Seller467</a>
+										</td>
+										<td>
+											<span>
+												<a href="https://gyazo.com/a0f300108eb913d0b8f54e62154b1b62" class="btn btn-primary btn-sm" target="popup" onclick="window.open('https://gyazo.com/a0f300108eb913d0b8f54e62154b1b62','popup', width=600,height=600); return false;">View Proof</a>
+											</span>
+										</td>
+										<td style="display: none;">80.00</td>
+										<td style="display: none;">10/02/2023 03:27:52 am</td>
+										<td>
+											<span id="lead7542" title="buy" type="leads">
+												<a onclick="javascript:buythistool(7542)" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer">
 													<i class="fas fa-shopping-cart mr-1"></i>Buy</a>
 											</span>
 										</td>
@@ -890,12 +893,13 @@ a.closearb {
 							</table>
 						</div>
 					</div>
-					<div class="dataTables_info" id="lead_data_info" role="status" aria-live="polite">Showing 0 to 0 of 0 entries</div>
+					<div class="dataTables_info" id="lead_data_info" role="status" aria-live="polite">Showing 1 to 3 of 3 entries</div>
 					<div class="dataTables_paginate paging_simple_numbers" id="lead_data_paginate">
 						<a class="paginate_button previous disabled" aria-controls="lead_data" data-dt-idx="0" tabindex="0" id="lead_data_previous">Previous</a>
 						<span>
+							<a class="paginate_button current" aria-controls="lead_data" data-dt-idx="1" tabindex="0">1</a>
 						</span>
-						<a class="paginate_button next disabled" aria-controls="lead_data" data-dt-idx="1" tabindex="0" id="lead_data_next">Next</a>
+						<a class="paginate_button next disabled" aria-controls="lead_data" data-dt-idx="2" tabindex="0" id="lead_data_next">Next</a>
 					</div>
 				</div>
 			</div>
@@ -942,7 +946,7 @@ a.closearb {
 							<span class="pt-3 mx-4" style="font-size: 14 px">
 								<b>No enough balance !</b>
 								Please refill your balance</span>
-							<a type="button" href="addBalance" onclick="window.open(this.href);return false;" class="btn btn-danger waves-effect waves-light">Add Balance
+							<a type="button" href="addBalance.html" onclick="window.open(this.href);return false;" class="btn btn-danger waves-effect waves-light">Add Balance
 								<i class="fas fa-book ml-1 white-text"></i>
 							</a>
 							<a type="button" class="btn btn-outline-danger waves-effect" data-dismiss="modal">No, thanks</a>
@@ -973,7 +977,7 @@ a.closearb {
                     ],
 
                     "ajax":{
-                        url:"divPage6.html",
+                        url:"divPage32.html",
                         type:"POST",
                         data:{
                             data_filter:myarray,
@@ -1040,12 +1044,12 @@ a.closearb {
               id= webID;
             $.ajax({
                         method:"GET",
-                        url:"buytool.php?id="+id+"&amp;t=leads",
+                        url:"buytool.php?id="+id+"&t=leads",
                         dataType:"text",
                         success:function(data){
                                 if(data.match("buy")){
                                 let lastid = data.split("buy,")[1];
-                                $("#lead"+id).html(`&lt;button onclick=openitem(${lastid}) class="btn btn-success btn-sm"&gt;Order ${'#'+lastid}&lt;/button&gt;`).show();
+                                $("#lead"+id).html(`<button onclick=openitem(${lastid}) class="btn btn-success btn-sm">Order ${'#'+lastid}</button>`).show();
 
                             }
                             else{
@@ -1081,3 +1085,7 @@ a.closearb {
 
     
 		</script>
+		<div class="hiddendiv common"></div>
+		
+	</body>
+</html>
