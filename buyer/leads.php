@@ -1,66 +1,24 @@
-<?php
-ob_start();
-session_start();
-date_default_timezone_set('UTC');
-include "../includes/config.php";
-
-if (!isset($_SESSION['sname']) and !isset($_SESSION['spass'])) {
-    header("location: ../");
-    exit();
-}
-$usrid = mysqli_real_escape_string($dbcon, $_SESSION['sname']);
-?>
-
-
-<!DOCTYPE html>
 <html>
- 
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="alfacoins-site-verification" content="5ef8c2279aa605ef8c2279aa965ef8c2279aacb_ALFAcoins">
-    <meta name="revisit-after" content="2 days">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <script src="/cdn-cgi/apps/head/AGN3NmUziwZfMV-TNTe1kdyeR2Y.js"></script>
-    <link rel="shortcut icon" href="../../favicon.ico" />
-    <title>Ticket</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.1/css/bootstrap.min.css" integrity="sha512-T584yQ/tdRR5QwOpfvDfVQUidzfgc2339Lc8uBDtcp/wYu80d7jwBgAxbyMh0a9YM9F8N3tdErpFI8iaGx6x5g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="layout/css/bootstrap.min.css">
-    <script src="layout/js/jquery-3.4.1.min.js"></script>
-    <script src="layout/js/clipboard.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-    <script src="layout/js/bootstrap.min.js"></script>
-    <script src="layout/js/bootbox.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="layout/css/flags.css" />
- 
-<!--------datatables css----->
- 
-
- 
-
- <!--------End datatables css----->
- 
-
- <!--------datatables JS----->
- 
-
- 
-<!--------End datatables JS----->
-
- 
-
- 
-
- 
-
-
- 
-    <script src="js/jquery.dataTables.min.js"></script>
-    <link href="//cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet">
-    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/js/mdb.min.js"></script>
- 
-    <script async src="//www.googletagmanager.com/gtag/js?id=UA-177092549-1"></script>
-    <script>
+	<head>
+		<title>Ticket</title>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.1/css/bootstrap.min.css" integrity="sha512-T584yQ/tdRR5QwOpfvDfVQUidzfgc2339Lc8uBDtcp/wYu80d7jwBgAxbyMh0a9YM9F8N3tdErpFI8iaGx6x5g==" crossorigin="anonymous" referrerpolicy="no-referrer">
+		<link rel="stylesheet" href="layout/css/bootstrap.min.css">
+		<script src="layout/js/jquery-3.4.1.min.js"></script>
+		<script src="layout/js/clipboard.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+		<script src="layout/js/bootstrap.min.js"></script>
+		<script src="layout/js/bootbox.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="layout/css/flags.css">
+		
+		<!--------datatables css----->        
+		<!--------End datatables css----->     
+		<!--------datatables JS----->      
+		<!--------End datatables JS----->
+		<script src="js/jquery.dataTables.min.js"></script>
+		<link href="//cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet">
+		<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/js/mdb.min.js"></script>
+		<script async="" src="//www.googletagmanager.com/gtag/js?id=UA-177092549-1"></script>
+		<script>
         window.dataLayer = window.dataLayer || [];
  
         function gtag() {
@@ -71,32 +29,35 @@ $usrid = mysqli_real_escape_string($dbcon, $_SESSION['sname']);
             '$usrid': 'USER_ID'
         }); // Set the user ID using signed-in user_id.
         gtag('config', 'UA-177092549-1');
-    </script>
-    <link rel="stylesheet" href="layout/css/all.min.css" />
-    <link rel="stylesheet" href="layout/css/main.css?v=12.9" />
-    <link rel="stylesheet" href="layout/css/util.css" />
-    <style>
+    
+		</script>
+		<link rel="stylesheet" href="layout/css/all.min.css">
+		<link rel="stylesheet" href="layout/css/main.css?v=12.9">
+		<link rel="stylesheet" href="layout/css/util.css">
+		<style>
         body {
             padding-top: 80px
         }
-    </style>
-    <link rel="stylesheet" href="layout/fonts/iconic/css/material-design-iconic-font.min.css">
-    <script src="layout/js/main.js"></script>
-    <script type="text/javascript">
+    
+		</style>
+		<link rel="stylesheet" href="layout/fonts/iconic/css/material-design-iconic-font.min.css">
+		<script src="layout/js/main.js"></script>
+		<script type="text/javascript">
         // Notice how this gets configured before we load Font Awesome
         window.FontAwesomeConfig = {
             autoReplaceSvg: false
         }
-    </script>
-    <style>
+    
+		</script>
+		<style>
         @import url(//fonts.googleapis.com/css?family=Roboto:400);
  
         .navbar-nav .dropdown-menu {
             margin: 0 !important
         }
-    </style>
-</head>
-<style>
+    
+		</style>
+		<style>
     .display td {
         background: var(--color-card);
         color: var(--font-color);
@@ -136,10 +97,11 @@ $usrid = mysqli_real_escape_string($dbcon, $_SESSION['sname']);
     #lead_data_info {
         color: var(--font-color);
     }
-</style>
- 
-<body class="them">
-    <style>
+
+		</style>
+	</head>
+	<body class="them">
+		<style>
         .navbar-nav .dropdown-menu {
             margin: 0 !important
         }
@@ -275,8 +237,9 @@ $usrid = mysqli_real_escape_string($dbcon, $_SESSION['sname']);
         .slider.round:before {
             border-radius: 50%;
         }
-    </style>
-    <script>
+    
+		</style>
+		<script>
         function setTheme(themeName) {
             localStorage.setItem('theme', themeName);
             document.documentElement.className = themeName;
@@ -301,8 +264,9 @@ $usrid = mysqli_real_escape_string($dbcon, $_SESSION['sname']);
                 document.getElementById('slider').checked = true;
             }
         })();
-    </script>
-    <nav class="navbar navbar-expand-xl navbar  navbar-light " style="
+    
+		</script>
+		<nav class="navbar navbar-expand-xl navbar  navbar-light " style="
                                                           position:fixed;
                                                           background-color: var(--color-nav);
                                                           z-index:1;
@@ -317,334 +281,537 @@ $usrid = mysqli_real_escape_string($dbcon, $_SESSION['sname']);
                                                           padding-bottom: 0.5rem;
                                                           padding-left: 1rem;
                                                         ">
-        <a class="navbar-brand" href="main" style="color: var(--font-color);"><img width="40px" src="layout/images/logo.png"> Odin</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <i class="navbar-toggler-icon"></i>
-        </button>
-        <div class="collapse navbar-collapse order-1" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
- 
-                <li class="nav-item dropdown mr-auto">
-                    <a class="nav-link dropdown-toggle" style="color: var(--font-color);" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-warehouse fa-sm orange-text"></i>
-                        Hosts
-                    </a>
-                    <div class="dropdown-menu dropdown-menu-left" style="color: var(--font-color); background-color: var(--color-nav);" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="rdp" style="color: var(--font-color);"><span class="px-2"><i class="fas fa-desktop fa-fw"></i> RDPs <span class="badge badge-primary">75</span></span></a>
-                        <a class="dropdown-item" href="cPanel" style="color: var(--font-color);"><span class="px-2"><i class="fas fa-tools fa-fw"></i> cPanels <span class="badge badge-primary">15436</span></span></a>
-                        <a class="dropdown-item" href="shell" style="color: var(--font-color);"><span class="px-2"><i class="fas fa-file-code fa-fw"></i> Shells <span class="badge badge-primary">1016</span></span></a>
-                        <a class="dropdown-item" href="ssh" style="color: var(--font-color);"><span class="px-2"><i class="fab fa-linux"></i> SSH/WHM <span class="badge badge-primary">134</span></span></a>
-                    </div>
-                </li>
- 
-                <li class="nav-item dropdown mr-auto">
-                    <a class="nav-link dropdown-toggle" style="color: var(--font-color);" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-leaf fa-fw fa-sm text-success" style="margin-right: 4px;"></i>Premium</a>
-                    <div class="dropdown-menu dropdown-menu-left" style="color: var(--font-color); background-color: var(--color-nav);" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="premium_shell" style="color: var(--font-color);"><span class="px-2"><i class="fas fa-leaf fa-fw"></i> Premium Shells <span class="badge badge-primary">934</span></span></a>
-                        <a class="dropdown-item" href="premium_cPanel" style="color: var(--font-color);"><span class="px-2"><i class="fas fa-leaf fa-fw"></i> Premium cPanels <span class="badge badge-primary">5886</span></span></a>
-                        <a class="dropdown-item" href="premium_downloads" style="color: var(--font-color);"><span class="px-2"><i class="fas fa-leaf fa-fw"></i> Premium Downloads <span class="badge badge-primary">8</span></span></a>
-                    </div>
-                </li>
- 
-                <li class="nav-item dropdown mr-auto">
-                    <a class="nav-link dropdown-toggle" style="color: var(--font-color);" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fab fa-google-play fa-sm text-success"></i>
-                        Send
-                    </a>
-                    <div class="dropdown-menu dropdown-menu-left" style="color: var(--font-color); background-color: var(--color-nav);" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="mailer" style="color: var(--font-color);"><span class="px-2"><i class="fas fa-leaf fa-fw"></i> Mailers <span class="badge badge-primary">493</span></span></a>
-                        <a class="dropdown-item" href="smtp" style="color: var(--font-color);"><span class="px-2"><i class="fas fa-envelope fa-fw"></i> SMTPs <span class="badge badge-primary">2023</span></span></a>
-                    </div>
-                </li>
- 
- 
-                <li class="nav-item dropdown mr-auto">
-                    <a class="nav-link dropdown-toggle" style="color: var(--font-color);" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-mail-bulk fa-sm pink-color"></i> Leads
-                    </a>
-                    <div class="dropdown-menu dropdown-menu-left" style="color: var(--font-color); background-color: var(--color-nav);" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="leads-5" style="color: var(--font-color);"><span class="px-2"><i class="fas fa-award"></i> 100% Validated Leads <span class="badge badge-primary">0</span></span></a>
-                        <a class="dropdown-item" href="leads-1" style="color: var(--font-color);"><span class="px-2"><i class="fa fa-fire orange-color"></i> Email Only <span class="badge badge-primary">163</span></span></a>
-                        <a class="dropdown-item" href="leads-2" style="color: var(--font-color);"><span class="px-2"><i class="fas fa-passport"></i> Combo Email:Password <span class="badge badge-primary">24</span></span></a>
-                        <a class="dropdown-item" href="leads-3" style="color: var(--font-color);"><span class="px-2"><i class="fab fa-battle-net"></i> Combo Username:Password <span class="badge badge-primary">1</span></span></a>
-                        <a class="dropdown-item" href="leads-4" style="color: var(--font-color);"><span class="px-2"><i class="fas fa-at"></i> Email Access <span class="badge badge-primary">22</span></span></a>
-                        <a class="dropdown-item" href="leads-6" style="color: var(--font-color);"><span class="px-2"><i class="fas fa-mobile-alt"></i> Phone Number Only <span class="badge badge-primary">31</span></span></a>
-                        <a class="dropdown-item" href="leads-7" style="color: var(--font-color);"><span class="px-2"><i class="fas fa-phone-square"></i> Combo Phone:Password <span class="badge badge-primary">3</span></span></a>
-                        <a class="dropdown-item" href="leads-8" style="color: var(--font-color);"><span class="px-2"><i class="fas fa-inbox"></i> Full Data <span class="badge badge-primary">0</span></span></a>
-                        <a class="dropdown-item" href="leads-9" style="color: var(--font-color);"><span class="px-2"><i class="fab fa-facebook"></i> Social Media Data <span class="badge badge-primary">0</span></span></a>
-                    </div>
-                </li>
- 
- 
-                <li class="nav-item dropdown mr-auto">
-                    <a class="nav-link dropdown-toggle" style="color: var(--font-color);" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-user-tie fa-sm"></i> Business
-                    </a>
-                    <div class="dropdown-menu dropdown-menu-left" style="color: var(--font-color); background-color: var(--color-nav);" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="business-1" style="color: var(--font-color);"><span class="px-2"><i class="fas fa-business-time"></i> cPanel Webmail <span class="badge badge-primary">6221</span></span></a>
-                        <a class="dropdown-item" href="business-2" style="color: var(--font-color);"><span class="px-2"><i class="fas fa-mail-bulk"></i> Godaddy Webmail <span class="badge badge-primary">2240</span></span></a>
-                        <a class="dropdown-item" href="business-3" style="color: var(--font-color);"><span class="px-2"><i class="fas fa-globe"></i> Office365 Webmail <span class="badge badge-primary">9868</span></span></a>
-                        <a class="dropdown-item" href="business-4" style="color: var(--font-color);"><span class="px-2"><i class="fas fa-envelope-open-text"></i> Rackspace Webmail <span class="badge badge-primary">1822</span></span></a>
-                    </div>
-                </li>
- 
- 
-                <li class="nav-item dropdown mr-auto">
-                    <a class="nav-link dropdown-toggle" style="color: var(--font-color);" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-user-friends fa-sm"></i> Accounts
-                    </a>
-                    <div class="dropdown-menu dropdown-menu-left" style="color: var(--font-color); background-color: var(--color-nav);" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="accounts-1" style="color: var(--font-color);"><span class="px-2"><i class="fas fa-comments-dollar"></i> Marketing <span class="badge badge-primary">99</span></span></a>
-                        <a class="dropdown-item" href="accounts-2" style="color: var(--font-color);"><span class="px-2"><i class="fas fa-server"></i> Hosting / Domain <span class="badge badge-primary">6</span></span></a>
-                        <a class="dropdown-item" href="accounts-3" style="color: var(--font-color);"><span class="px-2"><i class="fas fa-gamepad"></i> Games <span class="badge badge-primary">18</span></span></a>
-                        <a class="dropdown-item" href="accounts-4" style="color: var(--font-color);"><span class="px-2"><i class="fas fa-cubes"></i> VPN/Socks Proxy>Email Access <span class="badge badge-primary">1190</span></span></a>
-                        <a class="dropdown-item" href="accounts-5" style="color: var(--font-color);"><span class="px-2"><i class="fas fa-shopping-cart"></i> Shopping{Amazon, Ebay, ...} <span class="badge badge-primary">94</span></span></a>
-                        <a class="dropdown-item" href="accounts-6" style="color: var(--font-color);"><span class="px-2"><i class="fas fa-ethernet"></i> Programs {Antivirus, Adobe, ...} <span class="badge badge-primary">0</span></span></a>
-                        <a class="dropdown-item" href="accounts-7" style="color: var(--font-color);"><span class="px-2"><i class="fas fa-stream"></i> Stream {Netflix,HBO, ... } <span class="badge badge-primary">124</span></span></a>
-                        <a class="dropdown-item" href="accounts-8" style="color: var(--font-color);"><span class="px-2"><i class="fas fa-user-plus"></i> Dating <span class="badge badge-primary">87</span></span></a>
-                        <a class="dropdown-item" href="accounts-9" style="color: var(--font-color);"><span class="px-2"><i class="fas fa-graduation-cap"></i> Learning{ Udacity, Udemy, Lynda, ... } <span class="badge badge-primary">14</span></span></a>
-                        <a class="dropdown-item" href="accounts-10" style="color: var(--font-color);"><span class="px-2"><i class="fas fa-window-restore"></i> Torrent / File Host <span class="badge badge-primary">3</span></span></a>
-                        <a class="dropdown-item" href="accounts-11" style="color: var(--font-color);"><span class="px-2"><i class="fas fa-phone-volume"></i> Voip / Sip <span class="badge badge-primary">0</span></span></a>
-                        <a class="dropdown-item" href="accounts-12" style="color: var(--font-color);"><span class="px-2"><i class="fas fa-network-wired"></i> Other <span class="badge badge-primary">3</span></span></a>
-                    </div>
-                </li>
- 
- 
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" role="button" style="color: var(--font-color);" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fab fa-drupal text-primary fa-sm"></i> Requests
-                    </a>
-                    <div class="dropdown-menu dropdown-menu-left" style="color: var(--font-color); background-color: var(--color-nav);" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="requests" style="color: var(--font-color);"><span class="px-2"><i class="fas fa-user-plus"></i> Buyers Requests <span class="badge badge-primary"> 83</span></span></a>
-                    </div>
-                </li>
- 
-                <li class="nav-item dropdown">
-                    <a class="nav-link" href="offers" style="color: var(--font-color);"><i class="fas fa-user-secret text-primary fa-sm"></i> Bulk Offers</a>
-                </li>
+			<a class="navbar-brand" href="main" style="color: var(--font-color);">
+				<img width="40px" src="layout/images/logo.png">
+				Odin</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				<i class="navbar-toggler-icon"></i>
+			</button>
+			<div class="collapse navbar-collapse order-1" id="navbarSupportedContent">
+				<ul class="navbar-nav mr-auto">
+					<li class="nav-item dropdown mr-auto">
+						<a class="nav-link dropdown-toggle" style="color: var(--font-color);" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							<i class="fa fa-warehouse fa-sm orange-text"></i>
+							Hosts
+						</a>
+						<div class="dropdown-menu dropdown-menu-left" style="color: var(--font-color); background-color: var(--color-nav);" aria-labelledby="navbarDropdown">
+							<a class="dropdown-item" href="rdp" style="color: var(--font-color);">
+								<span class="px-2">
+									<i class="fas fa-desktop fa-fw"></i>
+									RDPs
+									<span class="badge badge-primary">75</span>
+								</span>
+							</a>
+							<a class="dropdown-item" href="cPanel" style="color: var(--font-color);">
+								<span class="px-2">
+									<i class="fas fa-tools fa-fw"></i>
+									cPanels
+									<span class="badge badge-primary">15436</span>
+								</span>
+							</a>
+							<a class="dropdown-item" href="shell" style="color: var(--font-color);">
+								<span class="px-2">
+									<i class="fas fa-file-code fa-fw"></i>
+									Shells
+									<span class="badge badge-primary">1016</span>
+								</span>
+							</a>
+							<a class="dropdown-item" href="ssh" style="color: var(--font-color);">
+								<span class="px-2">
+									<i class="fab fa-linux"></i>
+									SSH/WHM
+									<span class="badge badge-primary">134</span>
+								</span>
+							</a>
+						</div>
+					</li>
+					<li class="nav-item dropdown mr-auto">
+						<a class="nav-link dropdown-toggle" style="color: var(--font-color);" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							<i class="fas fa-leaf fa-fw fa-sm text-success" style="margin-right: 4px;"></i>Premium</a>
+						<div class="dropdown-menu dropdown-menu-left" style="color: var(--font-color); background-color: var(--color-nav);" aria-labelledby="navbarDropdown">
+							<a class="dropdown-item" href="premium_shell" style="color: var(--font-color);">
+								<span class="px-2">
+									<i class="fas fa-leaf fa-fw"></i>
+									Premium Shells
+									<span class="badge badge-primary">934</span>
+								</span>
+							</a>
+							<a class="dropdown-item" href="premium_cPanel" style="color: var(--font-color);">
+								<span class="px-2">
+									<i class="fas fa-leaf fa-fw"></i>
+									Premium cPanels
+									<span class="badge badge-primary">5886</span>
+								</span>
+							</a>
+							<a class="dropdown-item" href="premium_downloads" style="color: var(--font-color);">
+								<span class="px-2">
+									<i class="fas fa-leaf fa-fw"></i>
+									Premium Downloads
+									<span class="badge badge-primary">8</span>
+								</span>
+							</a>
+						</div>
+					</li>
+					<li class="nav-item dropdown mr-auto">
+						<a class="nav-link dropdown-toggle" style="color: var(--font-color);" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							<i class="fab fa-google-play fa-sm text-success"></i>
+							Send
+						</a>
+						<div class="dropdown-menu dropdown-menu-left" style="color: var(--font-color); background-color: var(--color-nav);" aria-labelledby="navbarDropdown">
+							<a class="dropdown-item" href="mailer" style="color: var(--font-color);">
+								<span class="px-2">
+									<i class="fas fa-leaf fa-fw"></i>
+									Mailers
+									<span class="badge badge-primary">493</span>
+								</span>
+							</a>
+							<a class="dropdown-item" href="smtp" style="color: var(--font-color);">
+								<span class="px-2">
+									<i class="fas fa-envelope fa-fw"></i>
+									SMTPs
+									<span class="badge badge-primary">2023</span>
+								</span>
+							</a>
+						</div>
+					</li>
+					<li class="nav-item dropdown mr-auto">
+						<a class="nav-link dropdown-toggle" style="color: var(--font-color);" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							<i class="fas fa-mail-bulk fa-sm pink-color"></i>
+							Leads
+						</a>
+						<div class="dropdown-menu dropdown-menu-left" style="color: var(--font-color); background-color: var(--color-nav);" aria-labelledby="navbarDropdown">
+							<a class="dropdown-item" href="leads-5" style="color: var(--font-color);">
+								<span class="px-2">
+									<i class="fas fa-award"></i>
+									100% Validated Leads
+									<span class="badge badge-primary">0</span>
+								</span>
+							</a>
+							<a class="dropdown-item" href="leads-1" style="color: var(--font-color);">
+								<span class="px-2">
+									<i class="fa fa-fire orange-color"></i>
+									Email Only
+									<span class="badge badge-primary">163</span>
+								</span>
+							</a>
+							<a class="dropdown-item" href="leads-2" style="color: var(--font-color);">
+								<span class="px-2">
+									<i class="fas fa-passport"></i>
+									Combo Email:Password
+									<span class="badge badge-primary">24</span>
+								</span>
+							</a>
+							<a class="dropdown-item" href="leads-3" style="color: var(--font-color);">
+								<span class="px-2">
+									<i class="fab fa-battle-net"></i>
+									Combo Username:Password
+									<span class="badge badge-primary">1</span>
+								</span>
+							</a>
+							<a class="dropdown-item" href="leads-4" style="color: var(--font-color);">
+								<span class="px-2">
+									<i class="fas fa-at"></i>
+									Email Access
+									<span class="badge badge-primary">22</span>
+								</span>
+							</a>
+							<a class="dropdown-item" href="leads-6" style="color: var(--font-color);">
+								<span class="px-2">
+									<i class="fas fa-mobile-alt"></i>
+									Phone Number Only
+									<span class="badge badge-primary">31</span>
+								</span>
+							</a>
+							<a class="dropdown-item" href="leads-7" style="color: var(--font-color);">
+								<span class="px-2">
+									<i class="fas fa-phone-square"></i>
+									Combo Phone:Password
+									<span class="badge badge-primary">3</span>
+								</span>
+							</a>
+							<a class="dropdown-item" href="leads-8" style="color: var(--font-color);">
+								<span class="px-2">
+									<i class="fas fa-inbox"></i>
+									Full Data
+									<span class="badge badge-primary">0</span>
+								</span>
+							</a>
+							<a class="dropdown-item" href="leads-9" style="color: var(--font-color);">
+								<span class="px-2">
+									<i class="fab fa-facebook"></i>
+									Social Media Data
+									<span class="badge badge-primary">0</span>
+								</span>
+							</a>
+						</div>
+					</li>
+					<li class="nav-item dropdown mr-auto">
+						<a class="nav-link dropdown-toggle" style="color: var(--font-color);" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							<i class="fas fa-user-tie fa-sm"></i>
+							Business
+						</a>
+						<div class="dropdown-menu dropdown-menu-left" style="color: var(--font-color); background-color: var(--color-nav);" aria-labelledby="navbarDropdown">
+							<a class="dropdown-item" href="business-1" style="color: var(--font-color);">
+								<span class="px-2">
+									<i class="fas fa-business-time"></i>
+									cPanel Webmail
+									<span class="badge badge-primary">6221</span>
+								</span>
+							</a>
+							<a class="dropdown-item" href="business-2" style="color: var(--font-color);">
+								<span class="px-2">
+									<i class="fas fa-mail-bulk"></i>
+									Godaddy Webmail
+									<span class="badge badge-primary">2240</span>
+								</span>
+							</a>
+							<a class="dropdown-item" href="business-3" style="color: var(--font-color);">
+								<span class="px-2">
+									<i class="fas fa-globe"></i>
+									Office365 Webmail
+									<span class="badge badge-primary">9868</span>
+								</span>
+							</a>
+							<a class="dropdown-item" href="business-4" style="color: var(--font-color);">
+								<span class="px-2">
+									<i class="fas fa-envelope-open-text"></i>
+									Rackspace Webmail
+									<span class="badge badge-primary">1822</span>
+								</span>
+							</a>
+						</div>
+					</li>
+					<li class="nav-item dropdown mr-auto">
+						<a class="nav-link dropdown-toggle" style="color: var(--font-color);" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							<i class="fas fa-user-friends fa-sm"></i>
+							Accounts
+						</a>
+						<div class="dropdown-menu dropdown-menu-left" style="color: var(--font-color); background-color: var(--color-nav);" aria-labelledby="navbarDropdown">
+							<a class="dropdown-item" href="accounts-1" style="color: var(--font-color);">
+								<span class="px-2">
+									<i class="fas fa-comments-dollar"></i>
+									Marketing
+									<span class="badge badge-primary">99</span>
+								</span>
+							</a>
+							<a class="dropdown-item" href="accounts-2" style="color: var(--font-color);">
+								<span class="px-2">
+									<i class="fas fa-server"></i>
+									Hosting / Domain
+									<span class="badge badge-primary">6</span>
+								</span>
+							</a>
+							<a class="dropdown-item" href="accounts-3" style="color: var(--font-color);">
+								<span class="px-2">
+									<i class="fas fa-gamepad"></i>
+									Games
+									<span class="badge badge-primary">18</span>
+								</span>
+							</a>
+							<a class="dropdown-item" href="accounts-4" style="color: var(--font-color);">
+								<span class="px-2">
+									<i class="fas fa-cubes"></i>
+									VPN/Socks Proxy&gt;Email Access
+									<span class="badge badge-primary">1190</span>
+								</span>
+							</a>
+							<a class="dropdown-item" href="accounts-5" style="color: var(--font-color);">
+								<span class="px-2">
+									<i class="fas fa-shopping-cart"></i>
+									Shopping{Amazon, Ebay, ...}
+									<span class="badge badge-primary">94</span>
+								</span>
+							</a>
+							<a class="dropdown-item" href="accounts-6" style="color: var(--font-color);">
+								<span class="px-2">
+									<i class="fas fa-ethernet"></i>
+									Programs {Antivirus, Adobe, ...}
+									<span class="badge badge-primary">0</span>
+								</span>
+							</a>
+							<a class="dropdown-item" href="accounts-7" style="color: var(--font-color);">
+								<span class="px-2">
+									<i class="fas fa-stream"></i>
+									Stream {Netflix,HBO, ... }
+									<span class="badge badge-primary">124</span>
+								</span>
+							</a>
+							<a class="dropdown-item" href="accounts-8" style="color: var(--font-color);">
+								<span class="px-2">
+									<i class="fas fa-user-plus"></i>
+									Dating
+									<span class="badge badge-primary">87</span>
+								</span>
+							</a>
+							<a class="dropdown-item" href="accounts-9" style="color: var(--font-color);">
+								<span class="px-2">
+									<i class="fas fa-graduation-cap"></i>
+									Learning{ Udacity, Udemy, Lynda, ... }
+									<span class="badge badge-primary">14</span>
+								</span>
+							</a>
+							<a class="dropdown-item" href="accounts-10" style="color: var(--font-color);">
+								<span class="px-2">
+									<i class="fas fa-window-restore"></i>
+									Torrent / File Host
+									<span class="badge badge-primary">3</span>
+								</span>
+							</a>
+							<a class="dropdown-item" href="accounts-11" style="color: var(--font-color);">
+								<span class="px-2">
+									<i class="fas fa-phone-volume"></i>
+									Voip / Sip
+									<span class="badge badge-primary">0</span>
+								</span>
+							</a>
+							<a class="dropdown-item" href="accounts-12" style="color: var(--font-color);">
+								<span class="px-2">
+									<i class="fas fa-network-wired"></i>
+									Other
+									<span class="badge badge-primary">3</span>
+								</span>
+							</a>
+						</div>
+					</li>
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" role="button" style="color: var(--font-color);" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							<i class="fab fa-drupal text-primary fa-sm"></i>
+							Requests
+						</a>
+						<div class="dropdown-menu dropdown-menu-left" style="color: var(--font-color); background-color: var(--color-nav);" aria-labelledby="navbarDropdown">
+							<a class="dropdown-item" href="requests" style="color: var(--font-color);">
+								<span class="px-2">
+									<i class="fas fa-user-plus"></i>
+									Buyers Requests
+									<span class="badge badge-primary">
+										83</span>
+								</span>
+							</a>
+						</div>
+					</li>
+					<li class="nav-item dropdown">
+						<a class="nav-link" href="offers" style="color: var(--font-color);">
+							<i class="fas fa-user-secret text-primary fa-sm"></i>
+							Bulk Offers</a>
+					</li>
+				</ul>
+				<ul class="navbar-nav profile">
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" style="color: var(--font-color);" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							<i class="fa fa-bell text-danger"></i>
+							<span class="badge badge-success">0</span>
+						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown" style="color: var(--font-color); background-color: var(--color-nav);">
+							<a class="dropdown-item" href="#" style="color: var(--font-color);">There is no new notifications</a>
+						</div>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="addBalance" style="color: var(--font-color);" role="button" aria-haspopup="true" aria-expanded="false">
+							<span class="badge badge-danger">
+								0
+								<span class="px-2">
+									<i class="fa fa-plus"></i>
+								</span>
+							</span>
+						</a>
+					</li>
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" style="color: var(--font-color);" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							Ticket
+							<span class="badge badge-success">0</span>
+						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown" style="color: var(--font-color); background-color: var(--color-nav);">
+							<a class="dropdown-item" href="orders" style="color: var(--font-color);">
+								<span class="px-2">Report Items</span>
+							</a>
+							<a class="dropdown-item" href="tickets" style="color: var(--font-color);">
+								<span class="px-2">My Tickets
+									<span class="badge badge-success">0</span>
+								</span>
+							</a>
+							<a class="dropdown-item" href="reports" style="color: var(--font-color);">
+								<span class="px-2">My Reports
+									<span class="badge badge-success">0</span>
+								</span>
+							</a><a class="dropdown-item" href="OpenTicket" style="color: var(--font-color);"><span class="px-2">New Ticket</span></a>
+						</div>
+					</li>
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" style="color: var(--font-color);" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							xbaseleets
+							<i class="fa fa-user-secret" style="color: var(--font-color);"></i>
+						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown" style="color: var(--font-color); background-color: var(--color-nav);">
+							<a class="dropdown-item" href="setting" style="color: var(--font-color);">
+								<span class="px-2">Setting
+									<i class="fa fa-cog"></i>
+								</span>
+							</a>
+							<a class="dropdown-item" href="seller-profile" style="color: var(--font-color);">
+								<span class="px-2">Profile
+									<i class="fa fa-user"></i>
+								</span>
+							</a>
+							<a class="dropdown-item" href="orders" style="color: var(--font-color);">
+								<span class="px-2">My Orders
+									<i class="fa fa-shopping-cart"></i>
+								</span>
+							</a>
+							<a class="dropdown-item" href="addBalance" style="color: var(--font-color);">
+								<span class="px-2">Add Balance
+									<i class="fa fa-money-bill-alt"></i>
+								</span>
+							</a>
+							<a class="dropdown-item" href="logout" style="color: var(--font-color);">
+								<span class="px-2">Logout
+									<i class="fa fa-door-open"></i>
+								</span>
+							</a>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</nav>
+<style>
+    .modal-dialog.modal-frame.modal-top.modal-notify.modal-danger .modal-body, .modal-dialog.modal-frame.modal-top.modal-offernov.modal-danger .modal-body { padding-top: 35px; } .modal-dialog.modal-frame.modal-top.modal-notify.modal-danger, .modal-dialog.modal-frame.modal-top.modal-offernov.modal-danger { max-width: 500px !important; margin: 1.75rem auto !important;position: relative;width: auto !important;pointer-events: none; } a.closearb { position: absolute; top: 2.5px; right: 2.5px; display: block; width: 30px; height: 30px; text-indent: -9999px; background-size: contain;background-repeat: no-repeat; background-position: center center;  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADwAAAA8CAYAAAA6/NlyAAAAAXNSR0IArs4c6QAAA3hJREFUaAXlm8+K00Acx7MiCIJH/yw+gA9g25O49SL4AO3Bp1jw5NvktC+wF88qevK4BU97EmzxUBCEolK/n5gp3W6TTJPfpNPNF37MNsl85/vN/DaTmU6PknC4K+pniqeKJ3k8UnkvDxXJzzy+q/yaxxeVHxW/FNHjgRSeKt4rFoplzaAuHHDBGR2eS9G54reirsmienDCTRt7xwsp+KAoEmt9nLaGitZxrBbPFNaGfPloGw2t4JVamSt8xYW6Dg1oCYo3Yv+rCGViV160oMkcd8SYKnYV1Nb1aEOjCe6L5ZOiLfF120EjWhuBu3YIZt1NQmujnk5F4MgOpURzLfAwOBSTmzp3fpDxuI/pabxpqOoz2r2HLAb0GMbZKlNV5/Hg9XJypguryA7lPF5KMdTZQzHjqxNPhWhzIuAruOl1eNqKEx1tSh5rfbxdw7mOxCq4qS68ZTjKS1YVvilu559vWvFHhh4rZrdyZ69Vmpgdj8fJbDZLJpNJ0uv1cnr/gjrUhQMuI+ANjyuwftQ0bbL6Erp0mM/ny8Fg4M3LtdRxgMtKl3jwmIHVxYXChFy94/Rmpa/pTbNUhstKV+4Rr8lLQ9KlUvJKLyG8yvQ2s9SBy1Jb7jV5a0yapfF6apaZLjLLcWtd4sNrmJUMHyM+1xibTjH82Zh01TNlhsrOhdKTe00uAzZQmN6+KW+sDa/JD2PSVQ873m29yf+1Q9VDzfEYlHi1G5LKBBWZbtEsHbFwb1oYDwr1ZiF/2bnCSg1OBE/pfr9/bWx26UxJL3ONPISOLKUvQza0LZUxSKyjpdTGa/vDEr25rddbMM0Q3O6Lx3rqFvU+x6UrRKQY7tyrZecmD9FODy8uLizTmilwNj0kraNcAJhOp5aGVwsAGD5VmJBrWWbJSgWT9zrzWepQF47RaGSiKfeGx6Szi3gzmX/HHbihwBser4B9UJYpFBNX4R6vTn3VQnez0SymnrHQMsRYGTr1dSk34ljRqS/EMd2pLQ8YBp3a1PLfcqCpo8gtHkZFHKkTX6fs3MY0blKnth66rKCnU0VRGu37ONrQaA4eZDFtWAu2fXj9zjFkxTBOo8F7t926gTp/83Kyzzcy2kZD6xiqxTYnHLRFm3vHiRSwNSjkz3hoIzo8lCKWUlg/YtGs7tObunDAZfpDLbfEI15zsEIY3U/x/gHHc/G1zltnAgAAAABJRU5ErkJggg==);  } 
+</style> 
+        <div class="d-flex flex-row-reverse mt-0"> <div class="p-2"> <label id="switch" class="switch"> <input type="checkbox" onchange="toggleTheme()" id="slider"> <span class="slider round">
+                    </span>
+				</label>
+			</div>
+		</div>
+		<div class="alert alert-info text-left" role="alert" style="margin: 15px;">
+			<ul>
+				<li>We Have Fresh E-mails Lists for Diffrents Countries ( You Can Use it for Spam ).</li>
+				<li>Our E-mails Lists Guarante for you Good results because most of them are from Shops and Big Sites .</li>
+				<li>Combo use for cracking (Brute forcing attack) not use for login to email.</li>
+				                       <li>There is<b>1</b>Available.</li>
             </ul>
- 
-            <ul class="navbar-nav profile">
- 
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" style="color: var(--font-color);" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-bell text-danger"></i> <span class="badge badge-success">0</span></a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="color: var(--font-color); background-color: var(--color-nav);">
-                        <a class="dropdown-item" href="#" style="color: var(--font-color);">There is no new notifications</a>
-                    </div>
-                </li>
- 
-                <li class="nav-item">
-                    <a class="nav-link" href="addBalance" style="color: var(--font-color);" role="button" aria-haspopup="true" aria-expanded="false"><span class="badge badge-danger">
-                            0
-                            <span class="px-2"><i class="fa fa-plus"></i></span></span>
-                    </a>
-                </li>
- 
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" style="color: var(--font-color);" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Ticket <span class="badge badge-success">0</span></a>
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="color: var(--font-color); background-color: var(--color-nav);">
-                        <a class="dropdown-item" href="orders" style="color: var(--font-color);"><span class="px-2">Report Items</span></a>
-                        <a class="dropdown-item" href="tickets" style="color: var(--font-color);"><span class="px-2">My Tickets <span class="badge badge-success">0</span></span></a>
-                        <a class="dropdown-item" href="reports" style="color: var(--font-color);"><span class="px-2">My Reports <span class="badge badge-success">0</span></span></a>
-                        <a class="dropdown-item" href="OpenTicket" style="color: var(--font-color);"><span class="px-2">New Ticket</span></a>
-                    </div>
-                </li>
- 
- 
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" style="color: var(--font-color);" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> xbaseleets <i class="fa fa-user-secret" style="color: var(--font-color);"></i></a>
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="color: var(--font-color); background-color: var(--color-nav);">
-                        <a class="dropdown-item" href="setting" style="color: var(--font-color);"><span class="px-2">Setting <i class="fa fa-cog"></i></span></a>
-                        <a class="dropdown-item" href="seller-profile" style="color: var(--font-color);"><span class="px-2">Profile <i class="fa fa-user"></i></span></a>
-                        <a class="dropdown-item" href="orders" style="color: var(--font-color);"><span class="px-2">My Orders <i class="fa fa-shopping-cart"></i></span></a>
-                        <a class="dropdown-item" href="addBalance" style="color: var(--font-color);"><span class="px-2">Add Balance <i class="fa fa-money-bill-alt"></i></span></a>
-                        <a class="dropdown-item" href="logout" style="color: var(--font-color);"><span class="px-2">Logout <i class="fa fa-door-open"></i></span></a>
-                    </div>
-                </li>
- 
-            </ul>
- 
-        </div>
-    </nav>
-    <style>
-        .modal-dialog.modal-frame.modal-top.modal-notify.modal-danger .modal-body,
-        .modal-dialog.modal-frame.modal-top.modal-offernov.modal-danger .modal-body {
-            padding-top: 35px;
-        }
- 
-        .modal-dialog.modal-frame.modal-top.modal-notify.modal-danger,
-        .modal-dialog.modal-frame.modal-top.modal-offernov.modal-danger {
-            max-width: 500px !important;
-            margin: 1.75rem auto !important;
-            position: relative;
-            width: auto !important;
-            pointer-events: none;
-        }
- 
-        a.closearb {
-            position: absolute;
-            top: 2.5px;
-            right: 2.5px;
-            display: block;
-            width: 30px;
-            height: 30px;
-            text-indent: -9999px;
-            background-size: contain;
-            background-repeat: no-repeat;
-            background-position: center center;
-            background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADwAAAA8CAYAAAA6/NlyAAAAAXNSR0IArs4c6QAAA3hJREFUaAXlm8+K00Acx7MiCIJH/yw+gA9g25O49SL4AO3Bp1jw5NvktC+wF88qevK4BU97EmzxUBCEolK/n5gp3W6TTJPfpNPNF37MNsl85/vN/DaTmU6PknC4K+pniqeKJ3k8UnkvDxXJzzy+q/yaxxeVHxW/FNHjgRSeKt4rFoplzaAuHHDBGR2eS9G54reirsmienDCTRt7xwsp+KAoEmt9nLaGitZxrBbPFNaGfPloGw2t4JVamSt8xYW6Dg1oCYo3Yv+rCGViV160oMkcd8SYKnYV1Nb1aEOjCe6L5ZOiLfF120EjWhuBu3YIZt1NQmujnk5F4MgOpURzLfAwOBSTmzp3fpDxuI/pabxpqOoz2r2HLAb0GMbZKlNV5/Hg9XJypguryA7lPF5KMdTZQzHjqxNPhWhzIuAruOl1eNqKEx1tSh5rfbxdw7mOxCq4qS68ZTjKS1YVvilu559vWvFHhh4rZrdyZ69Vmpgdj8fJbDZLJpNJ0uv1cnr/gjrUhQMuI+ANjyuwftQ0bbL6Erp0mM/ny8Fg4M3LtdRxgMtKl3jwmIHVxYXChFy94/Rmpa/pTbNUhstKV+4Rr8lLQ9KlUvJKLyG8yvQ2s9SBy1Jb7jV5a0yapfF6apaZLjLLcWtd4sNrmJUMHyM+1xibTjH82Zh01TNlhsrOhdKTe00uAzZQmN6+KW+sDa/JD2PSVQ873m29yf+1Q9VDzfEYlHi1G5LKBBWZbtEsHbFwb1oYDwr1ZiF/2bnCSg1OBE/pfr9/bWx26UxJL3ONPISOLKUvQza0LZUxSKyjpdTGa/vDEr25rddbMM0Q3O6Lx3rqFvU+x6UrRKQY7tyrZecmD9FODy8uLizTmilwNj0kraNcAJhOp5aGVwsAGD5VmJBrWWbJSgWT9zrzWepQF47RaGSiKfeGx6Szi3gzmX/HHbihwBser4B9UJYpFBNX4R6vTn3VQnez0SymnrHQMsRYGTr1dSk34ljRqS/EMd2pLQ8YBp3a1PLfcqCpo8gtHkZFHKkTX6fs3MY0blKnth66rKCnU0VRGu37ONrQaA4eZDFtWAu2fXj9zjFkxTBOo8F7t926gTp/83Kyzzcy2kZD6xiqxTYnHLRFm3vHiRSwNSjkz3hoIzo8lCKWUlg/YtGs7tObunDAZfpDLbfEI15zsEIY3U/x/gHHc/G1zltnAgAAAABJRU5ErkJggg==);
-        }
-    </style>
-    <div class="d-flex flex-row-reverse mt-0">
-        <div class="p-2">
-            <label id="switch" class="switch">
-                <input type="checkbox" onchange="toggleTheme()" id="slider">
-                <span class="slider round">
-                </span>
-            </label>
-        </div>
-    </div>
-    <div class="alert alert-info text-left" role="alert" style="margin: 15px;">
-        <ul>
-            <li>We Have Fresh E-mails Lists for Diffrents Countries ( You Can Use it for Spam ). </li>
-            <li>Our E-mails Lists Guarante for you Good results because most of them are from Shops and Big Sites .</li>
-            <li>Combo use for cracking (Brute forcing attack) not use for login to email.</li>
-            <li>There is <b> 1 </b> Available.</li>
-        </ul>
-    </div>
-    <input type=hidden id="type" name="type" value="3" />
-    <div class="row m-3 pt-1" style="color: var(--font-color);">
-        <div class="col-xs-6 col-sm-4 col-lg-2" style="display:inline-block">
-            <label for="infos" style="margin-bottom: 10px; margin-top: 5px">Description:</label>
-            <input type="search" class="form-control" id="infos" style="color: var(--font-color); background-color: var(--color-card);">
-        </div>
-        <div class="col-xs-6 col-sm-4 col-lg-2" style="display:inline-block">
-            <label for="Country" style="margin-bottom: 10px; margin-top: 5px">Country :</label>
-            <select name="country" id="country" class="form-control" style="color: var(--font-color); background-color: var(--color-card);">
-                <option value="">All Countries</option>
-                <option value="WorldWide">WorldWide</option>
-            </select>
-        </div>
-        <div class="col-xs-6 col-sm-4 col-lg-2" style="display:inline-block">
-            <label for="seller" style="margin-bottom: 10px; margin-top: 5px">Seller :</label>
-            <select name="seller" id="seller" class="form-control" style="color: var(--font-color); background-color: var(--color-card);">
-                <option value="">All</option>
-                <option value="Seller482">Seller482</option>
-            </select>
-        </div>
-    </div>
-    <div class="row m-2 pt-3 " style="max-width:100%; color: var(--font-color); background-color: var(--color-card);">
-        <div class="col-sm-12 table-responsive">
-            <table id="lead_data" class="display responsive table-hover" style="width:100%; color: var(--font-color); background-color: var(--color-card);">
-                <thead>
-                    <tr>
-                        <th data-priority="1"></th>
-                        <th class="all">ID</th>
-                        <th data-priority="3">Country</th>
-                        <th data-priority="6">Description</th>
-                        <th data-priority="7">Email N</th>
-                        <th data-priority="8">Seller</th>
-                        <th data-priority="2">Proof</th>
-                        <th data-priority="9">Price</th>
-                        <th data-priority="10">Added on </th>
-                        <th class="all">Buy</th>
-                    </tr>
-                </thead>
-                
-
-<div class="dataTables_scrollBody" style="position: relative; overflow: auto; width: 100%;"><table id="lead_data" class="display responsive table-hover dataTable no-footer dtr-inline collapsed" style="width: 100%; color: var(--font-color); background-color: var(--color-card);" role="grid" aria-describedby="lead_data_info"><thead>
-<tr role="row" style="height: 0px;"><th class="all sorting" aria-controls="lead_data" rowspan="1" colspan="1" style="width: 35.140625px; padding-top: 0px; padding-bottom: 0px; border-top-width: 0px; border-bottom-width: 0px; height: 0px;" aria-label="ID: activate to sort column ascending"><div class="dataTables_sizing" style="height:0;overflow:hidden;">ID</div>
-</th>
-<th data-priority="3" class="sorting" aria-controls="lead_data" rowspan="1" colspan="1" style="width: 0px; display: none; padding-top: 0px; padding-bottom: 0px; border-top-width: 0px; border-bottom-width: 0px; height: 0px;" aria-label="Country: activate to sort column ascending">
-<div class="dataTables_sizing" style="height:0;overflow:hidden;">Country</div></th><th data-priority="6" class="sorting" aria-controls="lead_data" rowspan="1" colspan="1" style="width: 0px; display: none; padding-top: 0px; padding-bottom: 0px; border-top-width: 0px; border-bottom-width: 0px; height: 0px;" aria-label="Description: activate to sort column ascending"><div class="dataTables_sizing" style="height:0;overflow:hidden;">Description</div></th><th data-priority="7" class="sorting" aria-controls="lead_data" rowspan="1" colspan="1" style="width: 0px; display: none; padding-top: 0px; padding-bottom: 0px; border-top-width: 0px; border-bottom-width: 0px; height: 0px;" aria-label="Email N: activate to sort column ascending"><div class="dataTables_sizing" style="height:0;overflow:hidden;">Email N</div></th><th data-priority="8" class="sorting" aria-controls="lead_data" rowspan="1" colspan="1" style="width: 0px; display: none; padding-top: 0px; padding-bottom: 0px; border-top-width: 0px; border-bottom-width: 0px; height: 0px;" aria-label="Seller: activate to sort column ascending"><div class="dataTables_sizing" style="height:0;overflow:hidden;">Seller</div></th><th data-priority="2" class="sorting" aria-controls="lead_data" rowspan="1" colspan="1" style="width: 115.34375px; padding-top: 0px; padding-bottom: 0px; border-top-width: 0px; border-bottom-width: 0px; height: 0px;" aria-label="Proof: activate to sort column ascending"><div class="dataTables_sizing" style="height:0;overflow:hidden;">Proof</div></th><th data-priority="9" class="sorting" aria-controls="lead_data" rowspan="1" colspan="1" style="width: 0px; display: none; padding-top: 0px; padding-bottom: 0px; border-top-width: 0px; border-bottom-width: 0px; height: 0px;" aria-label="Price: activate to sort column ascending"><div class="dataTables_sizing" style="height:0;overflow:hidden;">Price</div></th><th data-priority="10" class="sorting" aria-controls="lead_data" rowspan="1" colspan="1" style="width: 0px; display: none; padding-top: 0px; padding-bottom: 0px; border-top-width: 0px; border-bottom-width: 0px; height: 0px;" aria-label="Added on : activate to sort column ascending"><div class="dataTables_sizing" style="height:0;overflow:hidden;">Added on </div></th><th class="all sorting" aria-controls="lead_data" rowspan="1" colspan="1" style="width: 86.53125px; padding-top: 0px; padding-bottom: 0px; border-top-width: 0px; border-bottom-width: 0px; height: 0px;" aria-label="Buy: activate to sort column ascending"><div class="dataTables_sizing" style="height:0;overflow:hidden;">Buy</div>
-</th>
-</tr></thead>
-<tbody>
-<tr role="row" class="odd">
-<td class="dtr-control">7446</td>
-<td style="display: none;"><i class="flag-icon flag-icon-us"></i> United States</td>
-<td style="display: none;">Beset fresh leads @AOL	 Frech list checked 100%  ✅</td>
-<td style="display: none;">
-10
-</td>
-
-<td style="display: none;">
-<a href="login.html" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer" target="_blank"><i class="fas fa-user mr-1"></i>
-Seller473</a>
-</td>
-
-<td>
-<span><a href="https://imgur.com/gallery/4ahhzLMiBQ" class="btn btn-primary btn-sm" target="popup" onclick="window.open('https://imgur.com/gallery/4ahhzLMiBQ','popup', width=600,height=600); return false;">View Proof</a></span></td><td style="display: none;">16.00</td>
-
-<td style="display: none;">04/02/2023 11:12:03 pm
-
-</td>
-
-<td>
-<span id="lead7446" title="buy" type="leads"><a onclick="javascript:buythistool(7446)" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer"><i class="fas fa-shopping-cart mr-1"></i>Buy</a></span></td>
-</tr>
-</tbody>
-            </table>
-        </div>
-    </div>
-    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" data-backdrop="true">
-        <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-notify modal-success" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <p class="heading" id="myModalHeader"></p>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true" class="white-text">×</span>
-                    </button>
-                </div>
-                <div class="modal-body" id="modelbody">
-                </div>
-                <div class="modal-footer justify-content-center">
-                    <a type="button" class="btn btn-outline-success waves-effect" data-dismiss="modal">Close</a>
-                </div>
-            </div>
-        </div>
-    </div>
- 
-    <div class="modal fade" id="modalConfirmBuy" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered modal-sm modal-notify modal-info" role="document">
- 
-            <div class="modal-content text-center">
- 
-                <div class="modal-header d-flex justify-content-center">
-                    <p class="heading">Are you sure?</p>
-                </div>
- 
-                <div class="modal-body">
-                    <i class='fas fa-shopping-cart fa-4x animated rotateIn'></i>
-                </div>
- 
-                <div class="modal-footer flex-center">
-                    <a onClick='confirmbye()' class="btn btn-outline-info waves-effect" data-dismiss="modal">Yes</a>
-                    <a type="button" class="btn btn-info" data-dismiss="modal">No</a>
-                </div>
-            </div>
- 
-        </div>
-    </div>
- 
- 
-    <div class="modal fade top" id="modalCoupon" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" data-backdrop="true">
-        <div class="modal-dialog modal-frame modal-top modal-notify modal-danger" role="document">
- 
-            <div class="modal-content">
- 
-                <div class="modal-body">
-                    <div class="row d-flex justify-content-center align-items-center">
-                        <img src="layout/images/balance.png">
-                        <span class="pt-3 mx-4" style="font-size: 14 px"><b>No enough balance !</b> Please refill your balance</span>
-                        <a type="button" href="addBalance" onclick="window.open(this.href);return false;" class="btn btn-danger">Add Balance
-                            <i class="fas fa-book ml-1 white-text"></i>
-                        </a>
-                        <a type="button" class="btn btn-outline-danger waves-effect" data-dismiss="modal">No, thanks</a>
-                    </div>
-                </div>
-            </div>
- 
-        </div>
-    </div>
- 
-    <script>
+		</div>
+		<input type="hidden" id="type" name="type" value="3">
+		<div class="row m-3 pt-1" style="color: var(--font-color);">
+			<div class="col-xs-6 col-sm-4 col-lg-2" style="display:inline-block">
+				<label for="infos" style="margin-bottom: 10px; margin-top: 5px">Description:</label>
+				<input type="search" class="form-control" id="infos" style="color: var(--font-color); background-color: var(--color-card);">
+			</div>
+			<div class="col-xs-6 col-sm-4 col-lg-2" style="display:inline-block">
+				<label for="Country" style="margin-bottom: 10px; margin-top: 5px">Country :</label>
+				<select name="country" id="country" class="form-control" style="color: var(--font-color); background-color: var(--color-card);">
+					<option value="">All Countries</option>
+					<option value="WorldWide">WorldWide</option>
+				</select>
+			</div>
+			<div class="col-xs-6 col-sm-4 col-lg-2" style="display:inline-block">
+				<label for="seller" style="margin-bottom: 10px; margin-top: 5px">Seller :</label>
+				<select name="seller" id="seller" class="form-control" style="color: var(--font-color); background-color: var(--color-card);">
+					<option value="">All</option>
+					<option value="Seller482">Seller482</option>
+				</select>
+			</div>
+		</div>
+		<div class="row m-2 pt-3 " style="max-width:100%; color: var(--font-color); background-color: var(--color-card);">
+			<div class="col-sm-12 table-responsive">
+				<table id="mainDiv" class="display responsive table-hover" style="width:100%; color: var(--font-color); background-color: var(--color-card);">
+					<thead>
+						<tr>
+							<th data-priority="1"></th>
+							<th class="all">ID</th>
+							<th data-priority="3">Country</th>
+							<th data-priority="6">Description</th>
+							<th data-priority="7">Email N</th>
+							<th data-priority="8">Seller</th>
+							<th data-priority="2">Proof</th>
+							<th data-priority="9">Price</th>
+							<th data-priority="10">Added on</th>
+							<th class="all">Buy</th>
+						</tr>
+					</thead>
+				</table>
+			</div>
+		</div>
+		<div class="dataTables_scrollBody" style="position: relative; overflow: auto; width: 100%;">
+			<table id="table" class="display responsive table-hover dataTable no-footer dtr-inline collapsed" style="width: 100%; color: var(--font-color); background-color: var(--color-card);" role="grid" aria-describedby="lead_data_info">
+				<thead>
+					<tr>
+						<th data-priority="1"></th>
+						<th class="all">ID</th>
+						<th data-priority="3">Country</th>
+						<th data-priority="6">Description</th>
+						<th data-priority="7">Email N</th>
+						<th data-priority="8">Seller</th>
+						<th data-priority="2">Proof</th>
+						<th data-priority="9">Price</th>
+						<th data-priority="10">Added on</th>
+						<th class="all">Buy</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr role="row" class="odd">
+						<td class="dtr-control">7446</td>
+						<td style="display: none;"><i class="flag-icon flag-icon-us"></i>United States</td>
+						<td style="display: none;">Beset fresh leads @AOL	 Frech list checked 100%  ✅</td>
+						<td style="display: none;">10</td>
+						<td style="display: none;"><a href="popup" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer" target="_blank"><i class="fas fa-user mr-1"></i>Seller473</a></td>
+						<td><span><a href="https://imgur.com/gallery/4ahhzLMiBQ" class="btn btn-primary btn-sm" target="popup" onclick="window.open('https://imgur.com/gallery/4ahhzLMiBQ','popup', width=600,height=600); return false;">View Proof</a></span></td>
+						<td style="display: none;">16.00</td>
+						<td style="display: none;">04/02/2023 11:12:03 pm</td>
+						<td><span id="lead7446" title="buy" type="leads"><a onclick="javascript:buythistool(7446)" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer"><i class="fas fa-shopping-cart mr-1"></i>Buy</a></span></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" data-backdrop="true">
+			<div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-notify modal-success" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<p class="heading" id="myModalHeader"></p>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true" class="white-text">×</span>
+						</button>
+					</div>
+					<div class="modal-body" id="modelbody">
+					</div>
+					<div class="modal-footer justify-content-center">
+						<a type="button" class="btn btn-outline-success waves-effect" data-dismiss="modal">Close</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="modal fade" id="modalConfirmBuy" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+			<div class="modal-dialog modal-dialog-centered modal-sm modal-notify modal-info" role="document">
+				<div class="modal-content text-center">
+					<div class="modal-header d-flex justify-content-center">
+						<p class="heading">Are you sure?</p>
+					</div>
+					<div class="modal-body">
+						<i class="fas fa-shopping-cart fa-4x animated rotateIn"></i>
+					</div>
+					<div class="modal-footer flex-center">
+						<a onclick="confirmbye()" class="btn btn-outline-info waves-effect" data-dismiss="modal">Yes</a>
+						<a type="button" class="btn btn-info" data-dismiss="modal">No</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="modal fade top" id="modalCoupon" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" data-backdrop="true">
+			<div class="modal-dialog modal-frame modal-top modal-notify modal-danger" role="document">
+				<div class="modal-content">
+					<div class="modal-body">
+						<div class="row d-flex justify-content-center align-items-center">
+							<img src="layout/images/balance.png">
+							<span class="pt-3 mx-4" style="font-size: 14 px">
+								<b>No enough balance !</b>
+								Please refill your balance</span>
+							<a type="button" href="addBalance" onclick="window.open(this.href);return false;" class="btn btn-danger">Add Balance
+								<i class="fas fa-book ml-1 white-text"></i>
+							</a>
+							<a type="button" class="btn btn-outline-danger waves-effect" data-dismiss="modal">No, thanks</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script>
         $(document).ready(function() {
             var webID;
             load_data();
@@ -787,4 +954,7 @@ Seller473</a>
             });
  
         }
-    </script>
+    
+		</script>
+	</body>
+</html>
