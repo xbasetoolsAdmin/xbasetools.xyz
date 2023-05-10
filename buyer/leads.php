@@ -22,8 +22,8 @@ $usrid = mysqli_real_escape_string($dbcon, $_SESSION['sname']);
          <script src="/cdn-cgi/apps/head/AGN3NmUziwZfMV-TNTe1kdyeR2Y.js"></script>
         <link rel="shortcut icon" href="../../favicon.ico" />    
 	<title>Ticket</title>
-        <link rel="stylesheet" type="text/css" href="file/css/bootstrap.min.css">
-	<script  type"text/javascript" src="files/js/bootbox.min.js"></script>   
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.1/css/bootstrap.min.css" />
+ 	<script  type"text/javascript" src="files/js/bootbox.min.js"></script>   
 	<script type="text/javascript" src="files/js/clipboard.min.js"></script>
         <link rel="stylesheet" type="text/css" href="files/css/flags.css" />
 	<script type="text/javascript" src="files/js/bootstrap.min.js"></script>
