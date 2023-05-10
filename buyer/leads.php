@@ -22,7 +22,7 @@ $usrid = mysqli_real_escape_string($dbcon, $_SESSION['sname']);
          <script src="/cdn-cgi/apps/head/AGN3NmUziwZfMV-TNTe1kdyeR2Y.js"></script>
         <link rel="shortcut icon" href="../../favicon.ico" />    
 	<title>Ticket</title>
-        <link rel="stylesheet" type="text/css" href="filea/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="file/css/bootstrap.min.css">
 	<script  type"text/javascript" src="files/js/bootbox.min.js"></script>   
 	<script type="text/javascript" src="files/js/clipboard.min.js"></script>
         <link rel="stylesheet" type="text/css" href="files/css/flags.css" />
@@ -30,7 +30,7 @@ $usrid = mysqli_real_escape_string($dbcon, $_SESSION['sname']);
 
        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
        <script type="text/javascript" src="files/js/jquery.js"></script>
-     <script type="text/javascript" src="files/js/jquery.dataTables.min.js"></script>
+     <script type="text/javascript" src="jquery.dataTables.min.js"></script>
 
 <style>
 #table {
