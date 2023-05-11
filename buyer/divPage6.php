@@ -150,3 +150,9 @@ $usrid = mysqli_real_escape_string($dbcon, $_SESSION['sname']);
             <tr><th rowspan="1" colspan="1">Name</th><th rowspan="1" colspan="1">Position</th><th rowspan="1" colspan="1">Office</th><th rowspan="1" colspan="1">Age</th><th rowspan="1" colspan="1">Start date</th><th rowspan="1" colspan="1">Salary</th></tr>
         </tfoot>
     </table><div class="dataTables_info" id="table_info" role="status" aria-live="polite">Showing 1 to 10 of 57 entries</div><div class="dataTables_paginate paging_simple_numbers" id="table_paginate"><a class="paginate_button previous disabled" aria-controls="table" aria-disabled="true" aria-role="link" data-dt-idx="previous" tabindex="-1" id="table_previous">Previous</a><span><a class="paginate_button current" aria-controls="table" aria-role="link" aria-current="page" data-dt-idx="0" tabindex="0">1</a><a class="paginate_button " aria-controls="table" aria-role="link" data-dt-idx="1" tabindex="0">2</a><a class="paginate_button " aria-controls="table" aria-role="link" data-dt-idx="2" tabindex="0">3</a><a class="paginate_button " aria-controls="table" aria-role="link" data-dt-idx="3" tabindex="0">4</a><a class="paginate_button " aria-controls="table" aria-role="link" data-dt-idx="4" tabindex="0">5</a><a class="paginate_button " aria-controls="table" aria-role="link" data-dt-idx="5" tabindex="0">6</a></span><a class="paginate_button next" aria-controls="table" aria-role="link" data-dt-idx="next" tabindex="0" id="table_next">Next</a></div></div>
+    
+    <script>
+    document.addEventListener('DOMContentLoaded', function () {
+    let table = new DataTable('#table');
+});
+    </script>
