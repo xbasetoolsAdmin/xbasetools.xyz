@@ -23,7 +23,7 @@ $usrid = mysqli_real_escape_string($dbcon, $_SESSION['sname']);
 					<script src="files/js/main.js"></script>
 		<script src="layout/js/clipboard.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-		<script src="layout/js/bootstrap.min.js"></script>
+		<script src="files/js/bootstrap.min.js"></script>
 		<script src="files/js/bootbox.min.js"></script>
 		<link rel="stylesheet" type="text/css" href="files/css/flags.css">
 		<link rel="stylesheet" href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css">
@@ -49,9 +49,9 @@ $usrid = mysqli_real_escape_string($dbcon, $_SESSION['sname']);
 		</script>
 		<link rel="stylesheet" href="files/css/all.min.css" />
 		<link rel="stylesheet" href="files/css/main.css" />
-		<link rel="stylesheet" href="layout/css/util.css" />
+		<link rel="stylesheet" href="files/css/util.css" />
 		<style>body{padding-top:80px}</style>
-		<link rel="stylesheet" href="layout/fonts/iconic/css/material-design-iconic-font.min.css">
+		<link rel="stylesheet" href="files/fonts/iconic/css/material-design-iconic-font.min.css">
 		<script src="layout/js/main.js"></script>
 		<script type="text/javascript">
             // Notice how this gets configured before we load Font Awesome
