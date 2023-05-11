@@ -176,7 +176,7 @@ color: var(--font-color);
             load_data();
  
             function load_data(array_search) {
-                $('#lead_data').Datalead_data({
+                $('#lead_data').DataTables({
                     "processing": true,
                     "serverSide": true,
                     "responsive": true,
@@ -243,7 +243,7 @@ color: var(--font-color);
             }
  
             $(document).on('change', '.form-control', function() {
-                $('#lead_data').Datalead_data().destroy();
+                $('#lead_data').DataTables().destroy();
                 var country = $('#country').val();
                 var description = $('#infos').val();
                 var seller1 = $('#seller').val();
