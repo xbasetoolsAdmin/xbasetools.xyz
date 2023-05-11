@@ -28,10 +28,10 @@ if(!isset($_SESSION['sname']) and !isset($_SESSION['spass'])){
     </div>
     <div class="row m-2 pt-3 " style="max-width:100%; color: var(--font-color); background-color: var(--color-card);">
         <div class="col-sm-12 table-responsive">
-            <div id="account_data_wrapper" class="dataTables_wrapper no-footer">
-                <div class="dataTables_length" id="account_data_length">
+            <div id="lead_item_wrapper" class="dataTables_wrapper no-footer">
+                <div class="dataTables_length" id="lead_item_length">
                     <label>Show
-                        <select name="account_data_length" aria-controls="account_data" class="">
+                        <select name="lead_item_length" aria-controls="lead_item" class="">
                             <option value="10">10</option>
                             <option value="25">25</option>
                             <option value="50">50</option>
@@ -40,65 +40,65 @@ if(!isset($_SESSION['sname']) and !isset($_SESSION['spass'])){
                             <option value="10000">All</option>
                         </select> entries</label>
                 </div>
-                <div id="account_data_filter" class="dataTables_filter">
+                <div id="lead_item_filter" class="dataTables_filter">
                     <label>Search:
-                        <input type="search" class="" placeholder="" aria-controls="account_data">
+                        <input type="search" class="" placeholder="" aria-controls="lead_item">
                     </label>
                 </div>
-                <div id="account_data_processing" class="dataTables_processing" style="display: none;">Processing...</div>
+                <div id="lead_item_processing" class="dataTables_processing" style="display: none;">Processing...</div>
                 <div class="dataTables_scroll">
                     <div class="dataTables_scrollHead" style="overflow: hidden; position: relative; border: 0px; width: 100%;">
                         <div class="dataTables_scrollHeadInner" style="box-sizing: content-box; width: 345px; padding-right: 0px;">
                             <table class="display responsive table-hover dataTable no-footer" style="width: 345px; color: var(--font-color); background-color: var(--color-card); margin-left: 0px;" role="grid">
                                 <thead>
                                     <tr role="row">
-                                        <th class="all sorting" tabindex="0" aria-controls="account_data" rowspan="1" colspan="1" style="width: 35.140625px;" aria-label="ID: activate to sort column ascending">ID</th>
-                                        <th data-priority="3" class="sorting" tabindex="0" aria-controls="account_data" rowspan="1" colspan="1" style="width: 0px; display: none;" aria-label="Website Name: activate to sort column ascending">Website Name</th>
-                                        <th data-priority="4" class="sorting" tabindex="0" aria-controls="account_data" rowspan="1" colspan="1" style="width: 0px; display: none;" aria-label="Country: activate to sort column ascending">Country</th>
-                                        <th data-priority="7" class="sorting" tabindex="0" aria-controls="account_data" rowspan="1" colspan="1" style="width: 0px; display: none;" aria-label="Details: activate to sort column ascending">Details</th>
-                                        <th data-priority="8" class="sorting" tabindex="0" aria-controls="account_data" rowspan="1" colspan="1" style="width: 0px; display: none;" aria-label="Price: activate to sort column ascending">Price</th>
-                                        <th data-priority="9" class="sorting" tabindex="0" aria-controls="account_data" rowspan="1" colspan="1" style="width: 0px; display: none;" aria-label="Seller: activate to sort column ascending">Seller</th>
-                                        <th data-priority="10" class="sorting" tabindex="0" aria-controls="account_data" rowspan="1" colspan="1" style="width: 0px; display: none;" aria-label="Source: activate to sort column ascending">Source</th>
-                                        <th class="all sorting" tabindex="0" aria-controls="account_data" rowspan="1" colspan="1" style="width: 117.453125px;" aria-label="Proof: activate to sort column ascending">Proof</th>
-                                        <th data-priority="11" class="sorting" tabindex="0" aria-controls="account_data" rowspan="1" colspan="1" style="width: 0px; display: none;" aria-label="Date Created: activate to sort column ascending">Date Created</th>
-                                        <th class="all sorting" tabindex="0" aria-controls="account_data" rowspan="1" colspan="1" style="width: 84.421875px;" aria-label="Buy: activate to sort column ascending">Buy</th>
+                                        <th class="all sorting" tabindex="0" aria-controls="lead_item" rowspan="1" colspan="1" style="width: 35.140625px;" aria-label="ID: activate to sort column ascending">ID</th>
+                                        <th data-priority="3" class="sorting" tabindex="0" aria-controls="lead_item" rowspan="1" colspan="1" style="width: 0px; display: none;" aria-label="Website Name: activate to sort column ascending">Website Name</th>
+                                        <th data-priority="4" class="sorting" tabindex="0" aria-controls="lead_item" rowspan="1" colspan="1" style="width: 0px; display: none;" aria-label="Country: activate to sort column ascending">Country</th>
+                                        <th data-priority="7" class="sorting" tabindex="0" aria-controls="lead_item" rowspan="1" colspan="1" style="width: 0px; display: none;" aria-label="Details: activate to sort column ascending">Details</th>
+                                        <th data-priority="8" class="sorting" tabindex="0" aria-controls="lead_item" rowspan="1" colspan="1" style="width: 0px; display: none;" aria-label="Price: activate to sort column ascending">Price</th>
+                                        <th data-priority="9" class="sorting" tabindex="0" aria-controls="lead_item" rowspan="1" colspan="1" style="width: 0px; display: none;" aria-label="Seller: activate to sort column ascending">Seller</th>
+                                        <th data-priority="10" class="sorting" tabindex="0" aria-controls="lead_item" rowspan="1" colspan="1" style="width: 0px; display: none;" aria-label="Source: activate to sort column ascending">Source</th>
+                                        <th class="all sorting" tabindex="0" aria-controls="lead_item" rowspan="1" colspan="1" style="width: 117.453125px;" aria-label="Proof: activate to sort column ascending">Proof</th>
+                                        <th data-priority="11" class="sorting" tabindex="0" aria-controls="lead_item" rowspan="1" colspan="1" style="width: 0px; display: none;" aria-label="Date Created: activate to sort column ascending">Date Created</th>
+                                        <th class="all sorting" tabindex="0" aria-controls="lead_item" rowspan="1" colspan="1" style="width: 84.421875px;" aria-label="Buy: activate to sort column ascending">Buy</th>
                                     </tr>
                                 </thead>
                             </table>
                         </div>
                     </div>
                     <div class="dataTables_scrollBody" style="position: relative; overflow: auto; width: 100%;">
-                        <table id="account_data" class="display responsive table-hover dataTable no-footer dtr-inline collapsed" style="width: 100%; color: var(--font-color); background-color: var(--color-card);" role="grid" aria-describedby="account_data_info">
+                        <table id="lead_item" class="display responsive table-hover dataTable no-footer dtr-inline collapsed" style="width: 100%; color: var(--font-color); background-color: var(--color-card);" role="grid" aria-describedby="lead_item_info">
                             <thead>
                                 <tr role="row" style="height: 0px;">
-                                    <th class="all sorting" aria-controls="account_data" rowspan="1" colspan="1" style="width: 35.140625px; padding-top: 0px; padding-bottom: 0px; border-top-width: 0px; border-bottom-width: 0px; height: 0px;" aria-label="ID: activate to sort column ascending">
+                                    <th class="all sorting" aria-controls="lead_item" rowspan="1" colspan="1" style="width: 35.140625px; padding-top: 0px; padding-bottom: 0px; border-top-width: 0px; border-bottom-width: 0px; height: 0px;" aria-label="ID: activate to sort column ascending">
                                         <div class="dataTables_sizing" style="height:0;overflow:hidden;">ID</div>
                                     </th>
-                                    <th data-priority="3" class="sorting" aria-controls="account_data" rowspan="1" colspan="1" style="width: 0px; display: none; padding-top: 0px; padding-bottom: 0px; border-top-width: 0px; border-bottom-width: 0px; height: 0px;" aria-label="Website Name: activate to sort column ascending">
+                                    <th data-priority="3" class="sorting" aria-controls="lead_item" rowspan="1" colspan="1" style="width: 0px; display: none; padding-top: 0px; padding-bottom: 0px; border-top-width: 0px; border-bottom-width: 0px; height: 0px;" aria-label="Website Name: activate to sort column ascending">
                                         <div class="dataTables_sizing" style="height:0;overflow:hidden;">Website Name</div>
                                     </th>
-                                    <th data-priority="4" class="sorting" aria-controls="account_data" rowspan="1" colspan="1" style="width: 0px; display: none; padding-top: 0px; padding-bottom: 0px; border-top-width: 0px; border-bottom-width: 0px; height: 0px;" aria-label="Country: activate to sort column ascending">
+                                    <th data-priority="4" class="sorting" aria-controls="lead_item" rowspan="1" colspan="1" style="width: 0px; display: none; padding-top: 0px; padding-bottom: 0px; border-top-width: 0px; border-bottom-width: 0px; height: 0px;" aria-label="Country: activate to sort column ascending">
                                         <div class="dataTables_sizing" style="height:0;overflow:hidden;">Country</div>
                                     </th>
-                                    <th data-priority="7" class="sorting" aria-controls="account_data" rowspan="1" colspan="1" style="width: 0px; display: none; padding-top: 0px; padding-bottom: 0px; border-top-width: 0px; border-bottom-width: 0px; height: 0px;" aria-label="Details: activate to sort column ascending">
+                                    <th data-priority="7" class="sorting" aria-controls="lead_item" rowspan="1" colspan="1" style="width: 0px; display: none; padding-top: 0px; padding-bottom: 0px; border-top-width: 0px; border-bottom-width: 0px; height: 0px;" aria-label="Details: activate to sort column ascending">
                                         <div class="dataTables_sizing" style="height:0;overflow:hidden;">Details</div>
                                     </th>
-                                    <th data-priority="8" class="sorting" aria-controls="account_data" rowspan="1" colspan="1" style="width: 0px; display: none; padding-top: 0px; padding-bottom: 0px; border-top-width: 0px; border-bottom-width: 0px; height: 0px;" aria-label="Price: activate to sort column ascending">
+                                    <th data-priority="8" class="sorting" aria-controls="lead_item" rowspan="1" colspan="1" style="width: 0px; display: none; padding-top: 0px; padding-bottom: 0px; border-top-width: 0px; border-bottom-width: 0px; height: 0px;" aria-label="Price: activate to sort column ascending">
                                         <div class="dataTables_sizing" style="height:0;overflow:hidden;">Price</div>
                                     </th>
-                                    <th data-priority="9" class="sorting" aria-controls="account_data" rowspan="1" colspan="1" style="width: 0px; display: none; padding-top: 0px; padding-bottom: 0px; border-top-width: 0px; border-bottom-width: 0px; height: 0px;" aria-label="Seller: activate to sort column ascending">
+                                    <th data-priority="9" class="sorting" aria-controls="lead_item" rowspan="1" colspan="1" style="width: 0px; display: none; padding-top: 0px; padding-bottom: 0px; border-top-width: 0px; border-bottom-width: 0px; height: 0px;" aria-label="Seller: activate to sort column ascending">
                                         <div class="dataTables_sizing" style="height:0;overflow:hidden;">Seller</div>
                                     </th>
-                                    <th data-priority="10" class="sorting" aria-controls="account_data" rowspan="1" colspan="1" style="width: 0px; display: none; padding-top: 0px; padding-bottom: 0px; border-top-width: 0px; border-bottom-width: 0px; height: 0px;" aria-label="Source: activate to sort column ascending">
+                                    <th data-priority="10" class="sorting" aria-controls="lead_item" rowspan="1" colspan="1" style="width: 0px; display: none; padding-top: 0px; padding-bottom: 0px; border-top-width: 0px; border-bottom-width: 0px; height: 0px;" aria-label="Source: activate to sort column ascending">
                                         <div class="dataTables_sizing" style="height:0;overflow:hidden;">Source</div>
                                     </th>
-                                    <th class="all sorting" aria-controls="account_data" rowspan="1" colspan="1" style="width: 117.453125px; padding-top: 0px; padding-bottom: 0px; border-top-width: 0px; border-bottom-width: 0px; height: 0px;" aria-label="Proof: activate to sort column ascending">
+                                    <th class="all sorting" aria-controls="lead_item" rowspan="1" colspan="1" style="width: 117.453125px; padding-top: 0px; padding-bottom: 0px; border-top-width: 0px; border-bottom-width: 0px; height: 0px;" aria-label="Proof: activate to sort column ascending">
                                         <div class="dataTables_sizing" style="height:0;overflow:hidden;">Proof</div>
                                     </th>
-                                    <th data-priority="11" class="sorting" aria-controls="account_data" rowspan="1" colspan="1" style="width: 0px; display: none; padding-top: 0px; padding-bottom: 0px; border-top-width: 0px; border-bottom-width: 0px; height: 0px;" aria-label="Date Created: activate to sort column ascending">
+                                    <th data-priority="11" class="sorting" aria-controls="lead_item" rowspan="1" colspan="1" style="width: 0px; display: none; padding-top: 0px; padding-bottom: 0px; border-top-width: 0px; border-bottom-width: 0px; height: 0px;" aria-label="Date Created: activate to sort column ascending">
                                         <div class="dataTables_sizing" style="height:0;overflow:hidden;">Date Created</div>
                                     </th>
-                                    <th class="all sorting" aria-controls="account_data" rowspan="1" colspan="1" style="width: 84.421875px; padding-top: 0px; padding-bottom: 0px; border-top-width: 0px; border-bottom-width: 0px; height: 0px;" aria-label="Buy: activate to sort column ascending">
+                                    <th class="all sorting" aria-controls="lead_item" rowspan="1" colspan="1" style="width: 84.421875px; padding-top: 0px; padding-bottom: 0px; border-top-width: 0px; border-bottom-width: 0px; height: 0px;" aria-label="Buy: activate to sort column ascending">
                                         <div class="dataTables_sizing" style="height:0;overflow:hidden;">Buy</div>
                                     </th>
                                 </tr>
@@ -118,7 +118,7 @@ if(!isset($_SESSION['sname']) and !isset($_SESSION['spass'])){
                                     <td><span><a href="https://imgur.com/Gh4nBkN" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer" target="popup" onclick="window.open('https://imgur.com/Gh4nBkN','popup', width=600,height=600); return false;">View Proof</a></span>
                                     </td>
                                     <td style="display: none;">16/02/2022 08:57:29 am</td>
-                                    <td><span id="premium3010" title="buy" type="premium"><a onclick="javascript:buythistool(3010)" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer"><i class="fas fa-shopping-cart mr-1"></i>Buy</a></span>
+                                    <td><span id="lead3010" title="buy" type="lead"><a onclick="javascript:buythistool(3010)" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer"><i class="fas fa-shopping-cart mr-1"></i>Buy</a></span>
                                     </td>
                                 </tr>
                                 <tr role="row" class="even">
@@ -134,7 +134,7 @@ if(!isset($_SESSION['sname']) and !isset($_SESSION['spass'])){
                                     <td><span><a href="https://prnt.sc/qhpdDT0bFydx" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer" target="popup" onclick="window.open('https://prnt.sc/qhpdDT0bFydx','popup', width=600,height=600); return false;">View Proof</a></span>
                                     </td>
                                     <td style="display: none;">01/02/2023 02:56:23 pm</td>
-                                    <td><span id="premium3392" title="buy" type="premium"><a onclick="javascript:buythistool(3392)" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer"><i class="fas fa-shopping-cart mr-1"></i>Buy</a></span>
+                                    <td><span id="lead3392" title="buy" type="lead"><a onclick="javascript:buythistool(3392)" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer"><i class="fas fa-shopping-cart mr-1"></i>Buy</a></span>
                                     </td>
                                 </tr>
                                 <tr role="row" class="odd">
@@ -150,7 +150,7 @@ if(!isset($_SESSION['sname']) and !isset($_SESSION['spass'])){
                                     <td><span><a href="https://gyazo.com/f9dd5515498e43af17e31c0be2314782" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer" target="popup" onclick="window.open('https://gyazo.com/f9dd5515498e43af17e31c0be2314782','popup', width=600,height=600); return false;">View Proof</a></span>
                                     </td>
                                     <td style="display: none;">09/09/2022 01:11:08 pm</td>
-                                    <td><span id="premium3183" title="buy" type="premium"><a onclick="javascript:buythistool(3183)" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer"><i class="fas fa-shopping-cart mr-1"></i>Buy</a></span>
+                                    <td><span id="lead3183" title="buy" type="lead"><a onclick="javascript:buythistool(3183)" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer"><i class="fas fa-shopping-cart mr-1"></i>Buy</a></span>
                                     </td>
                                 </tr>
                                 <tr role="row" class="even">
@@ -166,7 +166,7 @@ if(!isset($_SESSION['sname']) and !isset($_SESSION['spass'])){
                                     <td><span><a href="https://gyazo.com/f9dd5515498e43af17e31c0be2314782" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer" target="popup" onclick="window.open('https://gyazo.com/f9dd5515498e43af17e31c0be2314782','popup', width=600,height=600); return false;">View Proof</a></span>
                                     </td>
                                     <td style="display: none;">09/09/2022 01:09:07 pm</td>
-                                    <td><span id="premium3161" title="buy" type="premium"><a onclick="javascript:buythistool(3161)" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer"><i class="fas fa-shopping-cart mr-1"></i>Buy</a></span>
+                                    <td><span id="lead3161" title="buy" type="lead"><a onclick="javascript:buythistool(3161)" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer"><i class="fas fa-shopping-cart mr-1"></i>Buy</a></span>
                                     </td>
                                 </tr>
                                 <tr role="row" class="odd">
@@ -182,7 +182,7 @@ if(!isset($_SESSION['sname']) and !isset($_SESSION['spass'])){
                                     <td><span><a href="https://imgur.com/Gh4nBkN" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer" target="popup" onclick="window.open('https://imgur.com/Gh4nBkN','popup', width=600,height=600); return false;">View Proof</a></span>
                                     </td>
                                     <td style="display: none;">16/02/2022 08:59:05 am</td>
-                                    <td><span id="premium3023" title="buy" type="premium"><a onclick="javascript:buythistool(3023)" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer"><i class="fas fa-shopping-cart mr-1"></i>Buy</a></span>
+                                    <td><span id="lead3023" title="buy" type="lead"><a onclick="javascript:buythistool(3023)" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer"><i class="fas fa-shopping-cart mr-1"></i>Buy</a></span>
                                     </td>
                                 </tr>
                                 <tr role="row" class="even">
@@ -198,7 +198,7 @@ if(!isset($_SESSION['sname']) and !isset($_SESSION['spass'])){
                                     <td><span><a href="https://imgur.com/Gh4nBkN" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer" target="popup" onclick="window.open('https://imgur.com/Gh4nBkN','popup', width=600,height=600); return false;">View Proof</a></span>
                                     </td>
                                     <td style="display: none;">16/02/2022 08:59:25 am</td>
-                                    <td><span id="premium3025" title="buy" type="premium"><a onclick="javascript:buythistool(3025)" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer"><i class="fas fa-shopping-cart mr-1"></i>Buy</a></span>
+                                    <td><span id="lead3025" title="buy" type="lead"><a onclick="javascript:buythistool(3025)" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer"><i class="fas fa-shopping-cart mr-1"></i>Buy</a></span>
                                     </td>
                                 </tr>
                                 <tr role="row" class="odd">
@@ -214,7 +214,7 @@ if(!isset($_SESSION['sname']) and !isset($_SESSION['spass'])){
                                     <td><span><a href="https://gyazo.com/f9dd5515498e43af17e31c0be2314782" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer" target="popup" onclick="window.open('https://gyazo.com/f9dd5515498e43af17e31c0be2314782','popup', width=600,height=600); return false;">View Proof</a></span>
                                     </td>
                                     <td style="display: none;">09/09/2022 01:08:57 pm</td>
-                                    <td><span id="premium3159" title="buy" type="premium"><a onclick="javascript:buythistool(3159)" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer"><i class="fas fa-shopping-cart mr-1"></i>Buy</a></span>
+                                    <td><span id="lead3159" title="buy" type="lead"><a onclick="javascript:buythistool(3159)" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer"><i class="fas fa-shopping-cart mr-1"></i>Buy</a></span>
                                     </td>
                                 </tr>
                                 <tr role="row" class="even">
@@ -230,7 +230,7 @@ if(!isset($_SESSION['sname']) and !isset($_SESSION['spass'])){
                                     <td><span><a href="https://gyazo.com/f9dd5515498e43af17e31c0be2314782" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer" target="popup" onclick="window.open('https://gyazo.com/f9dd5515498e43af17e31c0be2314782','popup', width=600,height=600); return false;">View Proof</a></span>
                                     </td>
                                     <td style="display: none;">09/09/2022 01:09:59 pm</td>
-                                    <td><span id="premium3169" title="buy" type="premium"><a onclick="javascript:buythistool(3169)" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer"><i class="fas fa-shopping-cart mr-1"></i>Buy</a></span>
+                                    <td><span id="lead3169" title="buy" type="lead"><a onclick="javascript:buythistool(3169)" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer"><i class="fas fa-shopping-cart mr-1"></i>Buy</a></span>
                                     </td>
                                 </tr>
                                 <tr role="row" class="odd">
@@ -246,7 +246,7 @@ if(!isset($_SESSION['sname']) and !isset($_SESSION['spass'])){
                                     <td><span><a href="https://imgur.com/Gh4nBkN" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer" target="popup" onclick="window.open('https://imgur.com/Gh4nBkN','popup', width=600,height=600); return false;">View Proof</a></span>
                                     </td>
                                     <td style="display: none;">16/02/2022 08:57:49 am</td>
-                                    <td><span id="premium3012" title="buy" type="premium"><a onclick="javascript:buythistool(3012)" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer"><i class="fas fa-shopping-cart mr-1"></i>Buy</a></span>
+                                    <td><span id="lead3012" title="buy" type="lead"><a onclick="javascript:buythistool(3012)" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer"><i class="fas fa-shopping-cart mr-1"></i>Buy</a></span>
                                     </td>
                                 </tr>
                                 <tr role="row" class="even">
@@ -262,7 +262,7 @@ if(!isset($_SESSION['sname']) and !isset($_SESSION['spass'])){
                                     <td><span><a href="https://gyazo.com/f9dd5515498e43af17e31c0be2314782" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer" target="popup" onclick="window.open('https://gyazo.com/f9dd5515498e43af17e31c0be2314782','popup', width=600,height=600); return false;">View Proof</a></span>
                                     </td>
                                     <td style="display: none;">09/09/2022 01:09:33 pm</td>
-                                    <td><span id="premium3165" title="buy" type="premium"><a onclick="javascript:buythistool(3165)" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer"><i class="fas fa-shopping-cart mr-1"></i>Buy</a></span>
+                                    <td><span id="lead3165" title="buy" type="lead"><a onclick="javascript:buythistool(3165)" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer"><i class="fas fa-shopping-cart mr-1"></i>Buy</a></span>
                                     </td>
                                 </tr>
                                 <tr role="row" class="odd">
@@ -278,7 +278,7 @@ if(!isset($_SESSION['sname']) and !isset($_SESSION['spass'])){
                                     <td><span><a href="https://imgur.com/9AZrsPD" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer" target="popup" onclick="window.open('https://imgur.com/9AZrsPD','popup', width=600,height=600); return false;">View Proof</a></span>
                                     </td>
                                     <td style="display: none;">16/02/2022 08:55:49 am</td>
-                                    <td><span id="premium3007" title="buy" type="premium"><a onclick="javascript:buythistool(3007)" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer"><i class="fas fa-shopping-cart mr-1"></i>Buy</a></span>
+                                    <td><span id="lead3007" title="buy" type="lead"><a onclick="javascript:buythistool(3007)" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer"><i class="fas fa-shopping-cart mr-1"></i>Buy</a></span>
                                     </td>
                                 </tr>
                                 <tr role="row" class="even">
@@ -294,7 +294,7 @@ if(!isset($_SESSION['sname']) and !isset($_SESSION['spass'])){
                                     <td><span><a href="https://gyazo.com/f9dd5515498e43af17e31c0be2314782" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer" target="popup" onclick="window.open('https://gyazo.com/f9dd5515498e43af17e31c0be2314782','popup', width=600,height=600); return false;">View Proof</a></span>
                                     </td>
                                     <td style="display: none;">09/09/2022 01:08:40 pm</td>
-                                    <td><span id="premium3155" title="buy" type="premium"><a onclick="javascript:buythistool(3155)" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer"><i class="fas fa-shopping-cart mr-1"></i>Buy</a></span>
+                                    <td><span id="lead3155" title="buy" type="lead"><a onclick="javascript:buythistool(3155)" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer"><i class="fas fa-shopping-cart mr-1"></i>Buy</a></span>
                                     </td>
                                 </tr>
                                 <tr role="row" class="odd">
@@ -310,7 +310,7 @@ if(!isset($_SESSION['sname']) and !isset($_SESSION['spass'])){
                                     <td><span><a href="https://prnt.sc/v0BRJlzLc5dE" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer" target="popup" onclick="window.open('https://prnt.sc/v0BRJlzLc5dE','popup', width=600,height=600); return false;">View Proof</a></span>
                                     </td>
                                     <td style="display: none;">20/09/2022 05:01:35 pm</td>
-                                    <td><span id="premium3190" title="buy" type="premium"><a onclick="javascript:buythistool(3190)" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer"><i class="fas fa-shopping-cart mr-1"></i>Buy</a></span>
+                                    <td><span id="lead3190" title="buy" type="lead"><a onclick="javascript:buythistool(3190)" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer"><i class="fas fa-shopping-cart mr-1"></i>Buy</a></span>
                                     </td>
                                 </tr>
                                 <tr role="row" class="even">
@@ -326,7 +326,7 @@ if(!isset($_SESSION['sname']) and !isset($_SESSION['spass'])){
                                     <td><span><a href="https://imgur.com/Gh4nBkN" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer" target="popup" onclick="window.open('https://imgur.com/Gh4nBkN','popup', width=600,height=600); return false;">View Proof</a></span>
                                     </td>
                                     <td style="display: none;">16/02/2022 08:58:29 am</td>
-                                    <td><span id="premium3018" title="buy" type="premium"><a onclick="javascript:buythistool(3018)" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer"><i class="fas fa-shopping-cart mr-1"></i>Buy</a></span>
+                                    <td><span id="lead3018" title="buy" type="lead"><a onclick="javascript:buythistool(3018)" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer"><i class="fas fa-shopping-cart mr-1"></i>Buy</a></span>
                                     </td>
                                 </tr>
                                 <tr role="row" class="odd">
@@ -342,7 +342,7 @@ if(!isset($_SESSION['sname']) and !isset($_SESSION['spass'])){
                                     <td><span><a href="https://prnt.sc/" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer" target="popup" onclick="window.open('https://prnt.sc/','popup', width=600,height=600); return false;">View Proof</a></span>
                                     </td>
                                     <td style="display: none;">01/02/2023 02:26:11 pm</td>
-                                    <td><span id="premium3385" title="buy" type="premium"><a onclick="javascript:buythistool(3385)" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer"><i class="fas fa-shopping-cart mr-1"></i>Buy</a></span>
+                                    <td><span id="lead3385" title="buy" type="lead"><a onclick="javascript:buythistool(3385)" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer"><i class="fas fa-shopping-cart mr-1"></i>Buy</a></span>
                                     </td>
                                 </tr>
                                 <tr role="row" class="even">
@@ -358,7 +358,7 @@ if(!isset($_SESSION['sname']) and !isset($_SESSION['spass'])){
                                     <td><span><a href="https://gyazo.com/f9dd5515498e43af17e31c0be2314782" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer" target="popup" onclick="window.open('https://gyazo.com/f9dd5515498e43af17e31c0be2314782','popup', width=600,height=600); return false;">View Proof</a></span>
                                     </td>
                                     <td style="display: none;">09/09/2022 01:11:04 pm</td>
-                                    <td><span id="premium3182" title="buy" type="premium"><a onclick="javascript:buythistool(3182)" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer"><i class="fas fa-shopping-cart mr-1"></i>Buy</a></span>
+                                    <td><span id="lead3182" title="buy" type="lead"><a onclick="javascript:buythistool(3182)" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer"><i class="fas fa-shopping-cart mr-1"></i>Buy</a></span>
                                     </td>
                                 </tr>
                                 <tr role="row" class="odd">
@@ -374,7 +374,7 @@ if(!isset($_SESSION['sname']) and !isset($_SESSION['spass'])){
                                     <td><span><a href="https://prnt.sc/pRYwVZyCcfke" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer" target="popup" onclick="window.open('https://prnt.sc/pRYwVZyCcfke','popup', width=600,height=600); return false;">View Proof</a></span>
                                     </td>
                                     <td style="display: none;">20/09/2022 05:14:10 pm</td>
-                                    <td><span id="premium3193" title="buy" type="premium"><a onclick="javascript:buythistool(3193)" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer"><i class="fas fa-shopping-cart mr-1"></i>Buy</a></span>
+                                    <td><span id="lead3193" title="buy" type="lead"><a onclick="javascript:buythistool(3193)" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer"><i class="fas fa-shopping-cart mr-1"></i>Buy</a></span>
                                     </td>
                                 </tr>
                                 <tr role="row" class="even">
@@ -390,7 +390,7 @@ if(!isset($_SESSION['sname']) and !isset($_SESSION['spass'])){
                                     <td><span><a href="https://gyazo.com/f9dd5515498e43af17e31c0be2314782" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer" target="popup" onclick="window.open('https://gyazo.com/f9dd5515498e43af17e31c0be2314782','popup', width=600,height=600); return false;">View Proof</a></span>
                                     </td>
                                     <td style="display: none;">09/09/2022 01:09:53 pm</td>
-                                    <td><span id="premium3168" title="buy" type="premium"><a onclick="javascript:buythistool(3168)" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer"><i class="fas fa-shopping-cart mr-1"></i>Buy</a></span>
+                                    <td><span id="lead3168" title="buy" type="lead"><a onclick="javascript:buythistool(3168)" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer"><i class="fas fa-shopping-cart mr-1"></i>Buy</a></span>
                                     </td>
                                 </tr>
                                 <tr role="row" class="odd">
@@ -406,7 +406,7 @@ if(!isset($_SESSION['sname']) and !isset($_SESSION['spass'])){
                                     <td><span><a href="https://gyazo.com/f9dd5515498e43af17e31c0be2314782" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer" target="popup" onclick="window.open('https://gyazo.com/f9dd5515498e43af17e31c0be2314782','popup', width=600,height=600); return false;">View Proof</a></span>
                                     </td>
                                     <td style="display: none;">09/09/2022 01:06:27 pm</td>
-                                    <td><span id="premium3145" title="buy" type="premium"><a onclick="javascript:buythistool(3145)" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer"><i class="fas fa-shopping-cart mr-1"></i>Buy</a></span>
+                                    <td><span id="lead3145" title="buy" type="lead"><a onclick="javascript:buythistool(3145)" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer"><i class="fas fa-shopping-cart mr-1"></i>Buy</a></span>
                                     </td>
                                 </tr>
                                 <tr role="row" class="even">
@@ -422,7 +422,7 @@ if(!isset($_SESSION['sname']) and !isset($_SESSION['spass'])){
                                     <td><span><a href="https://prnt.sc/" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer" target="popup" onclick="window.open('https://prnt.sc/','popup', width=600,height=600); return false;">View Proof</a></span>
                                     </td>
                                     <td style="display: none;">01/02/2023 02:25:34 pm</td>
-                                    <td><span id="premium3383" title="buy" type="premium"><a onclick="javascript:buythistool(3383)" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer"><i class="fas fa-shopping-cart mr-1"></i>Buy</a></span>
+                                    <td><span id="lead3383" title="buy" type="lead"><a onclick="javascript:buythistool(3383)" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer"><i class="fas fa-shopping-cart mr-1"></i>Buy</a></span>
                                     </td>
                                 </tr>
                                 <tr role="row" class="odd">
@@ -438,7 +438,7 @@ if(!isset($_SESSION['sname']) and !isset($_SESSION['spass'])){
                                     <td><span><a href="https://imgur.com/Gh4nBkN" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer" target="popup" onclick="window.open('https://imgur.com/Gh4nBkN','popup', width=600,height=600); return false;">View Proof</a></span>
                                     </td>
                                     <td style="display: none;">16/02/2022 08:58:47 am</td>
-                                    <td><span id="premium3021" title="buy" type="premium"><a onclick="javascript:buythistool(3021)" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer"><i class="fas fa-shopping-cart mr-1"></i>Buy</a></span>
+                                    <td><span id="lead3021" title="buy" type="lead"><a onclick="javascript:buythistool(3021)" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer"><i class="fas fa-shopping-cart mr-1"></i>Buy</a></span>
                                     </td>
                                 </tr>
                                 <tr role="row" class="even">
@@ -454,7 +454,7 @@ if(!isset($_SESSION['sname']) and !isset($_SESSION['spass'])){
                                     <td><span><a href="https://gyazo.com/f9dd5515498e43af17e31c0be2314782" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer" target="popup" onclick="window.open('https://gyazo.com/f9dd5515498e43af17e31c0be2314782','popup', width=600,height=600); return false;">View Proof</a></span>
                                     </td>
                                     <td style="display: none;">09/09/2022 01:09:22 pm</td>
-                                    <td><span id="premium3162" title="buy" type="premium"><a onclick="javascript:buythistool(3162)" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer"><i class="fas fa-shopping-cart mr-1"></i>Buy</a></span>
+                                    <td><span id="lead3162" title="buy" type="lead"><a onclick="javascript:buythistool(3162)" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer"><i class="fas fa-shopping-cart mr-1"></i>Buy</a></span>
                                     </td>
                                 </tr>
                                 <tr role="row" class="odd">
@@ -470,7 +470,7 @@ if(!isset($_SESSION['sname']) and !isset($_SESSION['spass'])){
                                     <td><span><a href="https://gyazo.com/f9dd5515498e43af17e31c0be2314782" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer" target="popup" onclick="window.open('https://gyazo.com/f9dd5515498e43af17e31c0be2314782','popup', width=600,height=600); return false;">View Proof</a></span>
                                     </td>
                                     <td style="display: none;">09/09/2022 01:10:08 pm</td>
-                                    <td><span id="premium3171" title="buy" type="premium"><a onclick="javascript:buythistool(3171)" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer"><i class="fas fa-shopping-cart mr-1"></i>Buy</a></span>
+                                    <td><span id="lead3171" title="buy" type="lead"><a onclick="javascript:buythistool(3171)" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer"><i class="fas fa-shopping-cart mr-1"></i>Buy</a></span>
                                     </td>
                                 </tr>
                                 <tr role="row" class="even">
@@ -486,7 +486,7 @@ if(!isset($_SESSION['sname']) and !isset($_SESSION['spass'])){
                                     <td><span><a href="https://prnt.sc/2fgJWGyNsbiC" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer" target="popup" onclick="window.open('https://prnt.sc/2fgJWGyNsbiC','popup', width=600,height=600); return false;">View Proof</a></span>
                                     </td>
                                     <td style="display: none;">03/09/2022 07:28:06 pm</td>
-                                    <td><span id="premium3124" title="buy" type="premium"><a onclick="javascript:buythistool(3124)" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer"><i class="fas fa-shopping-cart mr-1"></i>Buy</a></span>
+                                    <td><span id="lead3124" title="buy" type="lead"><a onclick="javascript:buythistool(3124)" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer"><i class="fas fa-shopping-cart mr-1"></i>Buy</a></span>
                                     </td>
                                 </tr>
                                 <tr role="row" class="odd">
@@ -502,7 +502,7 @@ if(!isset($_SESSION['sname']) and !isset($_SESSION['spass'])){
                                     <td><span><a href="https://gyazo.com/f9dd5515498e43af17e31c0be2314782" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer" target="popup" onclick="window.open('https://gyazo.com/f9dd5515498e43af17e31c0be2314782','popup', width=600,height=600); return false;">View Proof</a></span>
                                     </td>
                                     <td style="display: none;">09/09/2022 01:08:53 pm</td>
-                                    <td><span id="premium3158" title="buy" type="premium"><a onclick="javascript:buythistool(3158)" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer"><i class="fas fa-shopping-cart mr-1"></i>Buy</a></span>
+                                    <td><span id="lead3158" title="buy" type="lead"><a onclick="javascript:buythistool(3158)" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer"><i class="fas fa-shopping-cart mr-1"></i>Buy</a></span>
                                     </td>
                                 </tr>
                                 <tr role="row" class="even">
@@ -518,7 +518,7 @@ if(!isset($_SESSION['sname']) and !isset($_SESSION['spass'])){
                                     <td><span><a href="https://gyazo.com/f9dd5515498e43af17e31c0be2314782" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer" target="popup" onclick="window.open('https://gyazo.com/f9dd5515498e43af17e31c0be2314782','popup', width=600,height=600); return false;">View Proof</a></span>
                                     </td>
                                     <td style="display: none;">09/09/2022 01:08:35 pm</td>
-                                    <td><span id="premium3154" title="buy" type="premium"><a onclick="javascript:buythistool(3154)" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer"><i class="fas fa-shopping-cart mr-1"></i>Buy</a></span>
+                                    <td><span id="lead3154" title="buy" type="lead"><a onclick="javascript:buythistool(3154)" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer"><i class="fas fa-shopping-cart mr-1"></i>Buy</a></span>
                                     </td>
                                 </tr>
                                 <tr role="row" class="odd">
@@ -534,7 +534,7 @@ if(!isset($_SESSION['sname']) and !isset($_SESSION['spass'])){
                                     <td><span><a href="https://gyazo.com/f9dd5515498e43af17e31c0be2314782" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer" target="popup" onclick="window.open('https://gyazo.com/f9dd5515498e43af17e31c0be2314782','popup', width=600,height=600); return false;">View Proof</a></span>
                                     </td>
                                     <td style="display: none;">09/09/2022 01:05:17 pm</td>
-                                    <td><span id="premium3140" title="buy" type="premium"><a onclick="javascript:buythistool(3140)" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer"><i class="fas fa-shopping-cart mr-1"></i>Buy</a></span>
+                                    <td><span id="lead3140" title="buy" type="lead"><a onclick="javascript:buythistool(3140)" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer"><i class="fas fa-shopping-cart mr-1"></i>Buy</a></span>
                                     </td>
                                 </tr>
                                 <tr role="row" class="even">
@@ -550,7 +550,7 @@ if(!isset($_SESSION['sname']) and !isset($_SESSION['spass'])){
                                     <td><span><a href="https://imgur.com/Gh4nBkN" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer" target="popup" onclick="window.open('https://imgur.com/Gh4nBkN','popup', width=600,height=600); return false;">View Proof</a></span>
                                     </td>
                                     <td style="display: none;">16/02/2022 08:58:35 am</td>
-                                    <td><span id="premium3019" title="buy" type="premium"><a onclick="javascript:buythistool(3019)" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer"><i class="fas fa-shopping-cart mr-1"></i>Buy</a></span>
+                                    <td><span id="lead3019" title="buy" type="lead"><a onclick="javascript:buythistool(3019)" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer"><i class="fas fa-shopping-cart mr-1"></i>Buy</a></span>
                                     </td>
                                 </tr>
                                 <tr role="row" class="odd">
@@ -566,7 +566,7 @@ if(!isset($_SESSION['sname']) and !isset($_SESSION['spass'])){
                                     <td><span><a href="https://prnt.sc/" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer" target="popup" onclick="window.open('https://prnt.sc/','popup', width=600,height=600); return false;">View Proof</a></span>
                                     </td>
                                     <td style="display: none;">01/02/2023 02:27:08 pm</td>
-                                    <td><span id="premium3389" title="buy" type="premium"><a onclick="javascript:buythistool(3389)" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer"><i class="fas fa-shopping-cart mr-1"></i>Buy</a></span>
+                                    <td><span id="lead3389" title="buy" type="lead"><a onclick="javascript:buythistool(3389)" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer"><i class="fas fa-shopping-cart mr-1"></i>Buy</a></span>
                                     </td>
                                 </tr>
                                 <tr role="row" class="even">
@@ -582,7 +582,7 @@ if(!isset($_SESSION['sname']) and !isset($_SESSION['spass'])){
                                     <td><span><a href="https://prnt.sc/pEbBiF99T1Z5" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer" target="popup" onclick="window.open('https://prnt.sc/pEbBiF99T1Z5','popup', width=600,height=600); return false;">View Proof</a></span>
                                     </td>
                                     <td style="display: none;">14/03/2023 02:20:13 am</td>
-                                    <td><span id="premium3482" title="buy" type="premium"><a onclick="javascript:buythistool(3482)" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer"><i class="fas fa-shopping-cart mr-1"></i>Buy</a></span>
+                                    <td><span id="lead3482" title="buy" type="lead"><a onclick="javascript:buythistool(3482)" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer"><i class="fas fa-shopping-cart mr-1"></i>Buy</a></span>
                                     </td>
                                 </tr>
                                 <tr role="row" class="odd">
@@ -598,7 +598,7 @@ if(!isset($_SESSION['sname']) and !isset($_SESSION['spass'])){
                                     <td><span><a href="https://prnt.sc/Z11ykWvqyWgO" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer" target="popup" onclick="window.open('https://prnt.sc/Z11ykWvqyWgO','popup', width=600,height=600); return false;">View Proof</a></span>
                                     </td>
                                     <td style="display: none;">18/02/2023 03:01:13 pm</td>
-                                    <td><span id="premium3477" title="buy" type="premium"><a onclick="javascript:buythistool(3477)" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer"><i class="fas fa-shopping-cart mr-1"></i>Buy</a></span>
+                                    <td><span id="lead3477" title="buy" type="lead"><a onclick="javascript:buythistool(3477)" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer"><i class="fas fa-shopping-cart mr-1"></i>Buy</a></span>
                                     </td>
                                 </tr>
                                 <tr role="row" class="even">
@@ -614,7 +614,7 @@ if(!isset($_SESSION['sname']) and !isset($_SESSION['spass'])){
                                     <td><span><a href="https://prnt.sc/h6OtcN-m-mRN" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer" target="popup" onclick="window.open('https://prnt.sc/h6OtcN-m-mRN','popup', width=600,height=600); return false;">View Proof</a></span>
                                     </td>
                                     <td style="display: none;">03/09/2022 07:53:07 pm</td>
-                                    <td><span id="premium3136" title="buy" type="premium"><a onclick="javascript:buythistool(3136)" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer"><i class="fas fa-shopping-cart mr-1"></i>Buy</a></span>
+                                    <td><span id="lead3136" title="buy" type="lead"><a onclick="javascript:buythistool(3136)" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer"><i class="fas fa-shopping-cart mr-1"></i>Buy</a></span>
                                     </td>
                                 </tr>
                                 <tr role="row" class="odd">
@@ -630,7 +630,7 @@ if(!isset($_SESSION['sname']) and !isset($_SESSION['spass'])){
                                     <td><span><a href="https://imgur.com/Gh4nBkN" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer" target="popup" onclick="window.open('https://imgur.com/Gh4nBkN','popup', width=600,height=600); return false;">View Proof</a></span>
                                     </td>
                                     <td style="display: none;">16/02/2022 08:57:56 am</td>
-                                    <td><span id="premium3013" title="buy" type="premium"><a onclick="javascript:buythistool(3013)" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer"><i class="fas fa-shopping-cart mr-1"></i>Buy</a></span>
+                                    <td><span id="lead3013" title="buy" type="lead"><a onclick="javascript:buythistool(3013)" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer"><i class="fas fa-shopping-cart mr-1"></i>Buy</a></span>
                                     </td>
                                 </tr>
                                 <tr role="row" class="even">
@@ -646,7 +646,7 @@ if(!isset($_SESSION['sname']) and !isset($_SESSION['spass'])){
                                     <td><span><a href="https://gyazo.com/f9dd5515498e43af17e31c0be2314782" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer" target="popup" onclick="window.open('https://gyazo.com/f9dd5515498e43af17e31c0be2314782','popup', width=600,height=600); return false;">View Proof</a></span>
                                     </td>
                                     <td style="display: none;">09/09/2022 01:08:26 pm</td>
-                                    <td><span id="premium3153" title="buy" type="premium"><a onclick="javascript:buythistool(3153)" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer"><i class="fas fa-shopping-cart mr-1"></i>Buy</a></span>
+                                    <td><span id="lead3153" title="buy" type="lead"><a onclick="javascript:buythistool(3153)" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer"><i class="fas fa-shopping-cart mr-1"></i>Buy</a></span>
                                     </td>
                                 </tr>
                                 <tr role="row" class="odd">
@@ -662,7 +662,7 @@ if(!isset($_SESSION['sname']) and !isset($_SESSION['spass'])){
                                     <td><span><a href="https://gyazo.com/f9dd5515498e43af17e31c0be2314782" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer" target="popup" onclick="window.open('https://gyazo.com/f9dd5515498e43af17e31c0be2314782','popup', width=600,height=600); return false;">View Proof</a></span>
                                     </td>
                                     <td style="display: none;">09/09/2022 01:10:16 pm</td>
-                                    <td><span id="premium3173" title="buy" type="premium"><a onclick="javascript:buythistool(3173)" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer"><i class="fas fa-shopping-cart mr-1"></i>Buy</a></span>
+                                    <td><span id="lead3173" title="buy" type="lead"><a onclick="javascript:buythistool(3173)" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer"><i class="fas fa-shopping-cart mr-1"></i>Buy</a></span>
                                     </td>
                                 </tr>
                                 <tr role="row" class="even">
@@ -678,7 +678,7 @@ if(!isset($_SESSION['sname']) and !isset($_SESSION['spass'])){
                                     <td><span><a href="https://prnt.sc/" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer" target="popup" onclick="window.open('https://prnt.sc/','popup', width=600,height=600); return false;">View Proof</a></span>
                                     </td>
                                     <td style="display: none;">01/02/2023 02:24:47 pm</td>
-                                    <td><span id="premium3379" title="buy" type="premium"><a onclick="javascript:buythistool(3379)" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer"><i class="fas fa-shopping-cart mr-1"></i>Buy</a></span>
+                                    <td><span id="lead3379" title="buy" type="lead"><a onclick="javascript:buythistool(3379)" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer"><i class="fas fa-shopping-cart mr-1"></i>Buy</a></span>
                                     </td>
                                 </tr>
                                 <tr role="row" class="odd">
@@ -694,7 +694,7 @@ if(!isset($_SESSION['sname']) and !isset($_SESSION['spass'])){
                                     <td><span><a href="https://gyazo.com/f9dd5515498e43af17e31c0be2314782" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer" target="popup" onclick="window.open('https://gyazo.com/f9dd5515498e43af17e31c0be2314782','popup', width=600,height=600); return false;">View Proof</a></span>
                                     </td>
                                     <td style="display: none;">09/09/2022 01:10:12 pm</td>
-                                    <td><span id="premium3172" title="buy" type="premium"><a onclick="javascript:buythistool(3172)" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer"><i class="fas fa-shopping-cart mr-1"></i>Buy</a></span>
+                                    <td><span id="lead3172" title="buy" type="lead"><a onclick="javascript:buythistool(3172)" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer"><i class="fas fa-shopping-cart mr-1"></i>Buy</a></span>
                                     </td>
                                 </tr>
                                 <tr role="row" class="even">
@@ -710,7 +710,7 @@ if(!isset($_SESSION['sname']) and !isset($_SESSION['spass'])){
                                     <td><span><a href="https://imgur.com/Gh4nBkN" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer" target="popup" onclick="window.open('https://imgur.com/Gh4nBkN','popup', width=600,height=600); return false;">View Proof</a></span>
                                     </td>
                                     <td style="display: none;">16/02/2022 10:16:52 am</td>
-                                    <td><span id="premium3035" title="buy" type="premium"><a onclick="javascript:buythistool(3035)" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer"><i class="fas fa-shopping-cart mr-1"></i>Buy</a></span>
+                                    <td><span id="lead3035" title="buy" type="lead"><a onclick="javascript:buythistool(3035)" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer"><i class="fas fa-shopping-cart mr-1"></i>Buy</a></span>
                                     </td>
                                 </tr>
                                 <tr role="row" class="odd">
@@ -726,7 +726,7 @@ if(!isset($_SESSION['sname']) and !isset($_SESSION['spass'])){
                                     <td><span><a href="https://prnt.sc/qkh_dnMfpLRc" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer" target="popup" onclick="window.open('https://prnt.sc/qkh_dnMfpLRc','popup', width=600,height=600); return false;">View Proof</a></span>
                                     </td>
                                     <td style="display: none;">16/07/2022 04:48:04 pm</td>
-                                    <td><span id="premium3104" title="buy" type="premium"><a onclick="javascript:buythistool(3104)" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer"><i class="fas fa-shopping-cart mr-1"></i>Buy</a></span>
+                                    <td><span id="lead3104" title="buy" type="lead"><a onclick="javascript:buythistool(3104)" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer"><i class="fas fa-shopping-cart mr-1"></i>Buy</a></span>
                                     </td>
                                 </tr>
                                 <tr role="row" class="even">
@@ -742,7 +742,7 @@ if(!isset($_SESSION['sname']) and !isset($_SESSION['spass'])){
                                     <td><span><a href="https://prnt.sc/" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer" target="popup" onclick="window.open('https://prnt.sc/','popup', width=600,height=600); return false;">View Proof</a></span>
                                     </td>
                                     <td style="display: none;">01/02/2023 02:26:21 pm</td>
-                                    <td><span id="premium3386" title="buy" type="premium"><a onclick="javascript:buythistool(3386)" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer"><i class="fas fa-shopping-cart mr-1"></i>Buy</a></span>
+                                    <td><span id="lead3386" title="buy" type="lead"><a onclick="javascript:buythistool(3386)" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer"><i class="fas fa-shopping-cart mr-1"></i>Buy</a></span>
                                     </td>
                                 </tr>
                                 <tr role="row" class="odd">
@@ -758,7 +758,7 @@ if(!isset($_SESSION['sname']) and !isset($_SESSION['spass'])){
                                     <td><span><a href="https://gyazo.com/f9dd5515498e43af17e31c0be2314782" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer" target="popup" onclick="window.open('https://gyazo.com/f9dd5515498e43af17e31c0be2314782','popup', width=600,height=600); return false;">View Proof</a></span>
                                     </td>
                                     <td style="display: none;">09/09/2022 01:06:36 pm</td>
-                                    <td><span id="premium3146" title="buy" type="premium"><a onclick="javascript:buythistool(3146)" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer"><i class="fas fa-shopping-cart mr-1"></i>Buy</a></span>
+                                    <td><span id="lead3146" title="buy" type="lead"><a onclick="javascript:buythistool(3146)" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer"><i class="fas fa-shopping-cart mr-1"></i>Buy</a></span>
                                     </td>
                                 </tr>
                                 <tr role="row" class="even">
@@ -774,7 +774,7 @@ if(!isset($_SESSION['sname']) and !isset($_SESSION['spass'])){
                                     <td><span><a href="https://imgur.com/Gh4nBkN" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer" target="popup" onclick="window.open('https://imgur.com/Gh4nBkN','popup', width=600,height=600); return false;">View Proof</a></span>
                                     </td>
                                     <td style="display: none;">16/02/2022 08:59:11 am</td>
-                                    <td><span id="premium3024" title="buy" type="premium"><a onclick="javascript:buythistool(3024)" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer"><i class="fas fa-shopping-cart mr-1"></i>Buy</a></span>
+                                    <td><span id="lead3024" title="buy" type="lead"><a onclick="javascript:buythistool(3024)" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer"><i class="fas fa-shopping-cart mr-1"></i>Buy</a></span>
                                     </td>
                                 </tr>
                                 <tr role="row" class="odd">
@@ -790,7 +790,7 @@ if(!isset($_SESSION['sname']) and !isset($_SESSION['spass'])){
                                     <td><span><a href="https://gyazo.com/f9dd5515498e43af17e31c0be2314782" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer" target="popup" onclick="window.open('https://gyazo.com/f9dd5515498e43af17e31c0be2314782','popup', width=600,height=600); return false;">View Proof</a></span>
                                     </td>
                                     <td style="display: none;">09/09/2022 01:11:24 pm</td>
-                                    <td><span id="premium3185" title="buy" type="premium"><a onclick="javascript:buythistool(3185)" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer"><i class="fas fa-shopping-cart mr-1"></i>Buy</a></span>
+                                    <td><span id="lead3185" title="buy" type="lead"><a onclick="javascript:buythistool(3185)" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer"><i class="fas fa-shopping-cart mr-1"></i>Buy</a></span>
                                     </td>
                                 </tr>
                                 <tr role="row" class="even">
@@ -806,7 +806,7 @@ if(!isset($_SESSION['sname']) and !isset($_SESSION['spass'])){
                                     <td><span><a href="https://prnt.sc/" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer" target="popup" onclick="window.open('https://prnt.sc/','popup', width=600,height=600); return false;">View Proof</a></span>
                                     </td>
                                     <td style="display: none;">01/02/2023 02:25:04 pm</td>
-                                    <td><span id="premium3381" title="buy" type="premium"><a onclick="javascript:buythistool(3381)" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer"><i class="fas fa-shopping-cart mr-1"></i>Buy</a></span>
+                                    <td><span id="lead3381" title="buy" type="lead"><a onclick="javascript:buythistool(3381)" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer"><i class="fas fa-shopping-cart mr-1"></i>Buy</a></span>
                                     </td>
                                 </tr>
                                 <tr role="row" class="odd">
@@ -822,7 +822,7 @@ if(!isset($_SESSION['sname']) and !isset($_SESSION['spass'])){
                                     <td><span><a href="https://gyazo.com/f9dd5515498e43af17e31c0be2314782" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer" target="popup" onclick="window.open('https://gyazo.com/f9dd5515498e43af17e31c0be2314782','popup', width=600,height=600); return false;">View Proof</a></span>
                                     </td>
                                     <td style="display: none;">09/09/2022 01:08:10 pm</td>
-                                    <td><span id="premium3150" title="buy" type="premium"><a onclick="javascript:buythistool(3150)" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer"><i class="fas fa-shopping-cart mr-1"></i>Buy</a></span>
+                                    <td><span id="lead3150" title="buy" type="lead"><a onclick="javascript:buythistool(3150)" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer"><i class="fas fa-shopping-cart mr-1"></i>Buy</a></span>
                                     </td>
                                 </tr>
                                 <tr role="row" class="even">
@@ -838,7 +838,7 @@ if(!isset($_SESSION['sname']) and !isset($_SESSION['spass'])){
                                     <td><span><a href="https://prnt.sc/rqnWBjgBlYG2" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer" target="popup" onclick="window.open('https://prnt.sc/rqnWBjgBlYG2','popup', width=600,height=600); return false;">View Proof</a></span>
                                     </td>
                                     <td style="display: none;">20/09/2022 05:16:01 pm</td>
-                                    <td><span id="premium3194" title="buy" type="premium"><a onclick="javascript:buythistool(3194)" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer"><i class="fas fa-shopping-cart mr-1"></i>Buy</a></span>
+                                    <td><span id="lead3194" title="buy" type="lead"><a onclick="javascript:buythistool(3194)" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer"><i class="fas fa-shopping-cart mr-1"></i>Buy</a></span>
                                     </td>
                                 </tr>
                                 <tr role="row" class="odd">
@@ -854,7 +854,7 @@ if(!isset($_SESSION['sname']) and !isset($_SESSION['spass'])){
                                     <td><span><a href="https://prnt.sc/h81WHkBAjTw9" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer" target="popup" onclick="window.open('https://prnt.sc/h81WHkBAjTw9','popup', width=600,height=600); return false;">View Proof</a></span>
                                     </td>
                                     <td style="display: none;">03/09/2022 07:42:09 pm</td>
-                                    <td><span id="premium3132" title="buy" type="premium"><a onclick="javascript:buythistool(3132)" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer"><i class="fas fa-shopping-cart mr-1"></i>Buy</a></span>
+                                    <td><span id="lead3132" title="buy" type="lead"><a onclick="javascript:buythistool(3132)" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer"><i class="fas fa-shopping-cart mr-1"></i>Buy</a></span>
                                     </td>
                                 </tr>
                                 <tr role="row" class="even">
@@ -870,7 +870,7 @@ if(!isset($_SESSION['sname']) and !isset($_SESSION['spass'])){
                                     <td><span><a href="https://prnt.sc/h81WHkBAjTw9" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer" target="popup" onclick="window.open('https://prnt.sc/h81WHkBAjTw9','popup', width=600,height=600); return false;">View Proof</a></span>
                                     </td>
                                     <td style="display: none;">03/09/2022 07:42:33 pm</td>
-                                    <td><span id="premium3133" title="buy" type="premium"><a onclick="javascript:buythistool(3133)" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer"><i class="fas fa-shopping-cart mr-1"></i>Buy</a></span>
+                                    <td><span id="lead3133" title="buy" type="lead"><a onclick="javascript:buythistool(3133)" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer"><i class="fas fa-shopping-cart mr-1"></i>Buy</a></span>
                                     </td>
                                 </tr>
                                 <tr role="row" class="odd">
@@ -886,7 +886,7 @@ if(!isset($_SESSION['sname']) and !isset($_SESSION['spass'])){
                                     <td><span><a href="https://prnt.sc/tnQHMdApVvxb" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer" target="popup" onclick="window.open('https://prnt.sc/tnQHMdApVvxb','popup', width=600,height=600); return false;">View Proof</a></span>
                                     </td>
                                     <td style="display: none;">01/04/2023 02:56:32 pm</td>
-                                    <td><span id="premium3517" title="buy" type="premium"><a onclick="javascript:buythistool(3517)" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer"><i class="fas fa-shopping-cart mr-1"></i>Buy</a></span>
+                                    <td><span id="lead3517" title="buy" type="lead"><a onclick="javascript:buythistool(3517)" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer"><i class="fas fa-shopping-cart mr-1"></i>Buy</a></span>
                                     </td>
                                 </tr>
                                 <tr role="row" class="even">
@@ -902,7 +902,7 @@ if(!isset($_SESSION['sname']) and !isset($_SESSION['spass'])){
                                     <td><span><a href="https://imgur.com/Gh4nBkN" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer" target="popup" onclick="window.open('https://imgur.com/Gh4nBkN','popup', width=600,height=600); return false;">View Proof</a></span>
                                     </td>
                                     <td style="display: none;">16/02/2022 10:16:48 am</td>
-                                    <td><span id="premium3034" title="buy" type="premium"><a onclick="javascript:buythistool(3034)" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer"><i class="fas fa-shopping-cart mr-1"></i>Buy</a></span>
+                                    <td><span id="lead3034" title="buy" type="lead"><a onclick="javascript:buythistool(3034)" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer"><i class="fas fa-shopping-cart mr-1"></i>Buy</a></span>
                                     </td>
                                 </tr>
                                 <tr role="row" class="odd">
@@ -918,7 +918,7 @@ if(!isset($_SESSION['sname']) and !isset($_SESSION['spass'])){
                                     <td><span><a href="https://prnt.sc/" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer" target="popup" onclick="window.open('https://prnt.sc/','popup', width=600,height=600); return false;">View Proof</a></span>
                                     </td>
                                     <td style="display: none;">01/02/2023 02:24:56 pm</td>
-                                    <td><span id="premium3380" title="buy" type="premium"><a onclick="javascript:buythistool(3380)" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer"><i class="fas fa-shopping-cart mr-1"></i>Buy</a></span>
+                                    <td><span id="lead3380" title="buy" type="lead"><a onclick="javascript:buythistool(3380)" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer"><i class="fas fa-shopping-cart mr-1"></i>Buy</a></span>
                                     </td>
                                 </tr>
                                 <tr role="row" class="even">
@@ -934,7 +934,7 @@ if(!isset($_SESSION['sname']) and !isset($_SESSION['spass'])){
                                     <td><span><a href="https://prnt.sc/" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer" target="popup" onclick="window.open('https://prnt.sc/','popup', width=600,height=600); return false;">View Proof</a></span>
                                     </td>
                                     <td style="display: none;">01/02/2023 02:27:03 pm</td>
-                                    <td><span id="premium3388" title="buy" type="premium"><a onclick="javascript:buythistool(3388)" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer"><i class="fas fa-shopping-cart mr-1"></i>Buy</a></span>
+                                    <td><span id="lead3388" title="buy" type="lead"><a onclick="javascript:buythistool(3388)" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer"><i class="fas fa-shopping-cart mr-1"></i>Buy</a></span>
                                     </td>
                                 </tr>
                                 <tr role="row" class="odd">
@@ -950,7 +950,7 @@ if(!isset($_SESSION['sname']) and !isset($_SESSION['spass'])){
                                     <td><span><a href="https://prnt.sc/2WeFcqKG2I8U" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer" target="popup" onclick="window.open('https://prnt.sc/2WeFcqKG2I8U','popup', width=600,height=600); return false;">View Proof</a></span>
                                     </td>
                                     <td style="display: none;">25/02/2023 04:19:13 pm</td>
-                                    <td><span id="premium3480" title="buy" type="premium"><a onclick="javascript:buythistool(3480)" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer"><i class="fas fa-shopping-cart mr-1"></i>Buy</a></span>
+                                    <td><span id="lead3480" title="buy" type="lead"><a onclick="javascript:buythistool(3480)" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer"><i class="fas fa-shopping-cart mr-1"></i>Buy</a></span>
                                     </td>
                                 </tr>
                                 <tr role="row" class="even">
@@ -966,7 +966,7 @@ if(!isset($_SESSION['sname']) and !isset($_SESSION['spass'])){
                                     <td><span><a href="https://gyazo.com/f9dd5515498e43af17e31c0be2314782" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer" target="popup" onclick="window.open('https://gyazo.com/f9dd5515498e43af17e31c0be2314782','popup', width=600,height=600); return false;">View Proof</a></span>
                                     </td>
                                     <td style="display: none;">09/09/2022 01:09:38 pm</td>
-                                    <td><span id="premium3166" title="buy" type="premium"><a onclick="javascript:buythistool(3166)" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer"><i class="fas fa-shopping-cart mr-1"></i>Buy</a></span>
+                                    <td><span id="lead3166" title="buy" type="lead"><a onclick="javascript:buythistool(3166)" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer"><i class="fas fa-shopping-cart mr-1"></i>Buy</a></span>
                                     </td>
                                 </tr>
                                 <tr role="row" class="odd">
@@ -982,7 +982,7 @@ if(!isset($_SESSION['sname']) and !isset($_SESSION['spass'])){
                                     <td><span><a href="https://gyazo.com/f9dd5515498e43af17e31c0be2314782" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer" target="popup" onclick="window.open('https://gyazo.com/f9dd5515498e43af17e31c0be2314782','popup', width=600,height=600); return false;">View Proof</a></span>
                                     </td>
                                     <td style="display: none;">09/09/2022 01:10:55 pm</td>
-                                    <td><span id="premium3180" title="buy" type="premium"><a onclick="javascript:buythistool(3180)" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer"><i class="fas fa-shopping-cart mr-1"></i>Buy</a></span>
+                                    <td><span id="lead3180" title="buy" type="lead"><a onclick="javascript:buythistool(3180)" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer"><i class="fas fa-shopping-cart mr-1"></i>Buy</a></span>
                                     </td>
                                 </tr>
                                 <tr role="row" class="even">
@@ -998,7 +998,7 @@ if(!isset($_SESSION['sname']) and !isset($_SESSION['spass'])){
                                     <td><span><a href="https://gyazo.com/f9dd5515498e43af17e31c0be2314782" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer" target="popup" onclick="window.open('https://gyazo.com/f9dd5515498e43af17e31c0be2314782','popup', width=600,height=600); return false;">View Proof</a></span>
                                     </td>
                                     <td style="display: none;">09/09/2022 01:09:46 pm</td>
-                                    <td><span id="premium3167" title="buy" type="premium"><a onclick="javascript:buythistool(3167)" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer"><i class="fas fa-shopping-cart mr-1"></i>Buy</a></span>
+                                    <td><span id="lead3167" title="buy" type="lead"><a onclick="javascript:buythistool(3167)" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer"><i class="fas fa-shopping-cart mr-1"></i>Buy</a></span>
                                     </td>
                                 </tr>
                                 <tr role="row" class="odd">
@@ -1014,7 +1014,7 @@ if(!isset($_SESSION['sname']) and !isset($_SESSION['spass'])){
                                     <td><span><a href="https://imgur.com/Gh4nBkN" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer" target="popup" onclick="window.open('https://imgur.com/Gh4nBkN','popup', width=600,height=600); return false;">View Proof</a></span>
                                     </td>
                                     <td style="display: none;">16/02/2022 08:58:02 am</td>
-                                    <td><span id="premium3014" title="buy" type="premium"><a onclick="javascript:buythistool(3014)" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer"><i class="fas fa-shopping-cart mr-1"></i>Buy</a></span>
+                                    <td><span id="lead3014" title="buy" type="lead"><a onclick="javascript:buythistool(3014)" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer"><i class="fas fa-shopping-cart mr-1"></i>Buy</a></span>
                                     </td>
                                 </tr>
                                 <tr role="row" class="even">
@@ -1030,7 +1030,7 @@ if(!isset($_SESSION['sname']) and !isset($_SESSION['spass'])){
                                     <td><span><a href="https://imgur.com/Gh4nBkN" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer" target="popup" onclick="window.open('https://imgur.com/Gh4nBkN','popup', width=600,height=600); return false;">View Proof</a></span>
                                     </td>
                                     <td style="display: none;">16/02/2022 10:17:08 am</td>
-                                    <td><span id="premium3039" title="buy" type="premium"><a onclick="javascript:buythistool(3039)" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer"><i class="fas fa-shopping-cart mr-1"></i>Buy</a></span>
+                                    <td><span id="lead3039" title="buy" type="lead"><a onclick="javascript:buythistool(3039)" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer"><i class="fas fa-shopping-cart mr-1"></i>Buy</a></span>
                                     </td>
                                 </tr>
                                 <tr role="row" class="odd">
@@ -1046,7 +1046,7 @@ if(!isset($_SESSION['sname']) and !isset($_SESSION['spass'])){
                                     <td><span><a href="https://gyazo.com/b94986a9bd7056d0643317ea7c2a9315" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer" target="popup" onclick="window.open('https://gyazo.com/b94986a9bd7056d0643317ea7c2a9315','popup', width=600,height=600); return false;">View Proof</a></span>
                                     </td>
                                     <td style="display: none;">06/03/2023 08:43:48 pm</td>
-                                    <td><span id="premium3481" title="buy" type="premium"><a onclick="javascript:buythistool(3481)" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer"><i class="fas fa-shopping-cart mr-1"></i>Buy</a></span>
+                                    <td><span id="lead3481" title="buy" type="lead"><a onclick="javascript:buythistool(3481)" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer"><i class="fas fa-shopping-cart mr-1"></i>Buy</a></span>
                                     </td>
                                 </tr>
                                 <tr role="row" class="even">
@@ -1062,7 +1062,7 @@ if(!isset($_SESSION['sname']) and !isset($_SESSION['spass'])){
                                     <td><span><a href="https://gyazo.com/f9dd5515498e43af17e31c0be2314782" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer" target="popup" onclick="window.open('https://gyazo.com/f9dd5515498e43af17e31c0be2314782','popup', width=600,height=600); return false;">View Proof</a></span>
                                     </td>
                                     <td style="display: none;">09/09/2022 01:06:20 pm</td>
-                                    <td><span id="premium3143" title="buy" type="premium"><a onclick="javascript:buythistool(3143)" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer"><i class="fas fa-shopping-cart mr-1"></i>Buy</a></span>
+                                    <td><span id="lead3143" title="buy" type="lead"><a onclick="javascript:buythistool(3143)" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer"><i class="fas fa-shopping-cart mr-1"></i>Buy</a></span>
                                     </td>
                                 </tr>
                                 <tr role="row" class="odd">
@@ -1078,7 +1078,7 @@ if(!isset($_SESSION['sname']) and !isset($_SESSION['spass'])){
                                     <td><span><a href="https://prnt.sc/h81WHkBAjTw9" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer" target="popup" onclick="window.open('https://prnt.sc/h81WHkBAjTw9','popup', width=600,height=600); return false;">View Proof</a></span>
                                     </td>
                                     <td style="display: none;">03/09/2022 07:41:03 pm</td>
-                                    <td><span id="premium3129" title="buy" type="premium"><a onclick="javascript:buythistool(3129)" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer"><i class="fas fa-shopping-cart mr-1"></i>Buy</a></span>
+                                    <td><span id="lead3129" title="buy" type="lead"><a onclick="javascript:buythistool(3129)" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer"><i class="fas fa-shopping-cart mr-1"></i>Buy</a></span>
                                     </td>
                                 </tr>
                                 <tr role="row" class="even">
@@ -1094,7 +1094,7 @@ if(!isset($_SESSION['sname']) and !isset($_SESSION['spass'])){
                                     <td><span><a href="https://gyazo.com/f9dd5515498e43af17e31c0be2314782" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer" target="popup" onclick="window.open('https://gyazo.com/f9dd5515498e43af17e31c0be2314782','popup', width=600,height=600); return false;">View Proof</a></span>
                                     </td>
                                     <td style="display: none;">09/09/2022 01:10:22 pm</td>
-                                    <td><span id="premium3174" title="buy" type="premium"><a onclick="javascript:buythistool(3174)" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer"><i class="fas fa-shopping-cart mr-1"></i>Buy</a></span>
+                                    <td><span id="lead3174" title="buy" type="lead"><a onclick="javascript:buythistool(3174)" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer"><i class="fas fa-shopping-cart mr-1"></i>Buy</a></span>
                                     </td>
                                 </tr>
                                 <tr role="row" class="odd">
@@ -1110,7 +1110,7 @@ if(!isset($_SESSION['sname']) and !isset($_SESSION['spass'])){
                                     <td><span><a href="https://imgur.com/Gh4nBkN" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer" target="popup" onclick="window.open('https://imgur.com/Gh4nBkN','popup', width=600,height=600); return false;">View Proof</a></span>
                                     </td>
                                     <td style="display: none;">16/02/2022 10:17:16 am</td>
-                                    <td><span id="premium3041" title="buy" type="premium"><a onclick="javascript:buythistool(3041)" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer"><i class="fas fa-shopping-cart mr-1"></i>Buy</a></span>
+                                    <td><span id="lead3041" title="buy" type="lead"><a onclick="javascript:buythistool(3041)" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer"><i class="fas fa-shopping-cart mr-1"></i>Buy</a></span>
                                     </td>
                                 </tr>
                                 <tr role="row" class="even">
@@ -1126,7 +1126,7 @@ if(!isset($_SESSION['sname']) and !isset($_SESSION['spass'])){
                                     <td><span><a href="https://gyazo.com/f9dd5515498e43af17e31c0be2314782" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer" target="popup" onclick="window.open('https://gyazo.com/f9dd5515498e43af17e31c0be2314782','popup', width=600,height=600); return false;">View Proof</a></span>
                                     </td>
                                     <td style="display: none;">09/09/2022 01:06:45 pm</td>
-                                    <td><span id="premium3148" title="buy" type="premium"><a onclick="javascript:buythistool(3148)" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer"><i class="fas fa-shopping-cart mr-1"></i>Buy</a></span>
+                                    <td><span id="lead3148" title="buy" type="lead"><a onclick="javascript:buythistool(3148)" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer"><i class="fas fa-shopping-cart mr-1"></i>Buy</a></span>
                                     </td>
                                 </tr>
                                 <tr role="row" class="odd">
@@ -1142,7 +1142,7 @@ if(!isset($_SESSION['sname']) and !isset($_SESSION['spass'])){
                                     <td><span><a href="https://gyazo.com/f9dd5515498e43af17e31c0be2314782" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer" target="popup" onclick="window.open('https://gyazo.com/f9dd5515498e43af17e31c0be2314782','popup', width=600,height=600); return false;">View Proof</a></span>
                                     </td>
                                     <td style="display: none;">09/09/2022 01:08:14 pm</td>
-                                    <td><span id="premium3151" title="buy" type="premium"><a onclick="javascript:buythistool(3151)" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer"><i class="fas fa-shopping-cart mr-1"></i>Buy</a></span>
+                                    <td><span id="lead3151" title="buy" type="lead"><a onclick="javascript:buythistool(3151)" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer"><i class="fas fa-shopping-cart mr-1"></i>Buy</a></span>
                                     </td>
                                 </tr>
                                 <tr role="row" class="even">
@@ -1158,7 +1158,7 @@ if(!isset($_SESSION['sname']) and !isset($_SESSION['spass'])){
                                     <td><span><a href="https://gyazo.com/f9dd5515498e43af17e31c0be2314782" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer" target="popup" onclick="window.open('https://gyazo.com/f9dd5515498e43af17e31c0be2314782','popup', width=600,height=600); return false;">View Proof</a></span>
                                     </td>
                                     <td style="display: none;">09/09/2022 01:09:03 pm</td>
-                                    <td><span id="premium3160" title="buy" type="premium"><a onclick="javascript:buythistool(3160)" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer"><i class="fas fa-shopping-cart mr-1"></i>Buy</a></span>
+                                    <td><span id="lead3160" title="buy" type="lead"><a onclick="javascript:buythistool(3160)" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer"><i class="fas fa-shopping-cart mr-1"></i>Buy</a></span>
                                     </td>
                                 </tr>
                                 <tr role="row" class="odd">
@@ -1174,7 +1174,7 @@ if(!isset($_SESSION['sname']) and !isset($_SESSION['spass'])){
                                     <td><span><a href="https://imgur.com/Gh4nBkN" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer" target="popup" onclick="window.open('https://imgur.com/Gh4nBkN','popup', width=600,height=600); return false;">View Proof</a></span>
                                     </td>
                                     <td style="display: none;">16/02/2022 08:57:15 am</td>
-                                    <td><span id="premium3008" title="buy" type="premium"><a onclick="javascript:buythistool(3008)" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer"><i class="fas fa-shopping-cart mr-1"></i>Buy</a></span>
+                                    <td><span id="lead3008" title="buy" type="lead"><a onclick="javascript:buythistool(3008)" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer"><i class="fas fa-shopping-cart mr-1"></i>Buy</a></span>
                                     </td>
                                 </tr>
                                 <tr role="row" class="even">
@@ -1190,7 +1190,7 @@ if(!isset($_SESSION['sname']) and !isset($_SESSION['spass'])){
                                     <td><span><a href="https://prnt.sc/x1CpfEpOeemB" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer" target="popup" onclick="window.open('https://prnt.sc/x1CpfEpOeemB','popup', width=600,height=600); return false;">View Proof</a></span>
                                     </td>
                                     <td style="display: none;">14/03/2023 02:37:54 am</td>
-                                    <td><span id="premium3484" title="buy" type="premium"><a onclick="javascript:buythistool(3484)" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer"><i class="fas fa-shopping-cart mr-1"></i>Buy</a></span>
+                                    <td><span id="lead3484" title="buy" type="lead"><a onclick="javascript:buythistool(3484)" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer"><i class="fas fa-shopping-cart mr-1"></i>Buy</a></span>
                                     </td>
                                 </tr>
                                 <tr role="row" class="odd">
@@ -1206,7 +1206,7 @@ if(!isset($_SESSION['sname']) and !isset($_SESSION['spass'])){
                                     <td><span><a href="https://imgur.com/Gh4nBkN" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer" target="popup" onclick="window.open('https://imgur.com/Gh4nBkN','popup', width=600,height=600); return false;">View Proof</a></span>
                                     </td>
                                     <td style="display: none;">16/02/2022 10:16:44 am</td>
-                                    <td><span id="premium3033" title="buy" type="premium"><a onclick="javascript:buythistool(3033)" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer"><i class="fas fa-shopping-cart mr-1"></i>Buy</a></span>
+                                    <td><span id="lead3033" title="buy" type="lead"><a onclick="javascript:buythistool(3033)" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer"><i class="fas fa-shopping-cart mr-1"></i>Buy</a></span>
                                     </td>
                                 </tr>
                                 <tr role="row" class="even">
@@ -1222,7 +1222,7 @@ if(!isset($_SESSION['sname']) and !isset($_SESSION['spass'])){
                                     <td><span><a href="https://gyazo.com/f9dd5515498e43af17e31c0be2314782" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer" target="popup" onclick="window.open('https://gyazo.com/f9dd5515498e43af17e31c0be2314782','popup', width=600,height=600); return false;">View Proof</a></span>
                                     </td>
                                     <td style="display: none;">09/09/2022 01:08:49 pm</td>
-                                    <td><span id="premium3157" title="buy" type="premium"><a onclick="javascript:buythistool(3157)" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer"><i class="fas fa-shopping-cart mr-1"></i>Buy</a></span>
+                                    <td><span id="lead3157" title="buy" type="lead"><a onclick="javascript:buythistool(3157)" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer"><i class="fas fa-shopping-cart mr-1"></i>Buy</a></span>
                                     </td>
                                 </tr>
                                 <tr role="row" class="odd">
@@ -1238,7 +1238,7 @@ if(!isset($_SESSION['sname']) and !isset($_SESSION['spass'])){
                                     <td><span><a href="https://prnt.sc/" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer" target="popup" onclick="window.open('https://prnt.sc/','popup', width=600,height=600); return false;">View Proof</a></span>
                                     </td>
                                     <td style="display: none;">01/02/2023 02:25:15 pm</td>
-                                    <td><span id="premium3382" title="buy" type="premium"><a onclick="javascript:buythistool(3382)" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer"><i class="fas fa-shopping-cart mr-1"></i>Buy</a></span>
+                                    <td><span id="lead3382" title="buy" type="lead"><a onclick="javascript:buythistool(3382)" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer"><i class="fas fa-shopping-cart mr-1"></i>Buy</a></span>
                                     </td>
                                 </tr>
                                 <tr role="row" class="even">
@@ -1254,7 +1254,7 @@ if(!isset($_SESSION['sname']) and !isset($_SESSION['spass'])){
                                     <td><span><a href="https://gyazo.com/f9dd5515498e43af17e31c0be2314782" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer" target="popup" onclick="window.open('https://gyazo.com/f9dd5515498e43af17e31c0be2314782','popup', width=600,height=600); return false;">View Proof</a></span>
                                     </td>
                                     <td style="display: none;">09/09/2022 01:06:09 pm</td>
-                                    <td><span id="premium3141" title="buy" type="premium"><a onclick="javascript:buythistool(3141)" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer"><i class="fas fa-shopping-cart mr-1"></i>Buy</a></span>
+                                    <td><span id="lead3141" title="buy" type="lead"><a onclick="javascript:buythistool(3141)" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer"><i class="fas fa-shopping-cart mr-1"></i>Buy</a></span>
                                     </td>
                                 </tr>
                                 <tr role="row" class="odd">
@@ -1270,7 +1270,7 @@ if(!isset($_SESSION['sname']) and !isset($_SESSION['spass'])){
                                     <td><span><a href="https://gyazo.com/f9dd5515498e43af17e31c0be2314782" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer" target="popup" onclick="window.open('https://gyazo.com/f9dd5515498e43af17e31c0be2314782','popup', width=600,height=600); return false;">View Proof</a></span>
                                     </td>
                                     <td style="display: none;">09/09/2022 01:11:19 pm</td>
-                                    <td><span id="premium3184" title="buy" type="premium"><a onclick="javascript:buythistool(3184)" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer"><i class="fas fa-shopping-cart mr-1"></i>Buy</a></span>
+                                    <td><span id="lead3184" title="buy" type="lead"><a onclick="javascript:buythistool(3184)" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer"><i class="fas fa-shopping-cart mr-1"></i>Buy</a></span>
                                     </td>
                                 </tr>
                                 <tr role="row" class="even">
@@ -1286,7 +1286,7 @@ if(!isset($_SESSION['sname']) and !isset($_SESSION['spass'])){
                                     <td><span><a href="https://prnt.sc/kXIQn40WS--2" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer" target="popup" onclick="window.open('https://prnt.sc/kXIQn40WS--2','popup', width=600,height=600); return false;">View Proof</a></span>
                                     </td>
                                     <td style="display: none;">18/02/2023 02:57:11 pm</td>
-                                    <td><span id="premium3476" title="buy" type="premium"><a onclick="javascript:buythistool(3476)" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer"><i class="fas fa-shopping-cart mr-1"></i>Buy</a></span>
+                                    <td><span id="lead3476" title="buy" type="lead"><a onclick="javascript:buythistool(3476)" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer"><i class="fas fa-shopping-cart mr-1"></i>Buy</a></span>
                                     </td>
                                 </tr>
                                 <tr role="row" class="odd">
@@ -1302,7 +1302,7 @@ if(!isset($_SESSION['sname']) and !isset($_SESSION['spass'])){
                                     <td><span><a href="https://prnt.sc/" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer" target="popup" onclick="window.open('https://prnt.sc/','popup', width=600,height=600); return false;">View Proof</a></span>
                                     </td>
                                     <td style="display: none;">01/02/2023 02:25:56 pm</td>
-                                    <td><span id="premium3384" title="buy" type="premium"><a onclick="javascript:buythistool(3384)" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer"><i class="fas fa-shopping-cart mr-1"></i>Buy</a></span>
+                                    <td><span id="lead3384" title="buy" type="lead"><a onclick="javascript:buythistool(3384)" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer"><i class="fas fa-shopping-cart mr-1"></i>Buy</a></span>
                                     </td>
                                 </tr>
                                 <tr role="row" class="even">
@@ -1318,7 +1318,7 @@ if(!isset($_SESSION['sname']) and !isset($_SESSION['spass'])){
                                     <td><span><a href="https://gyazo.com/f9dd5515498e43af17e31c0be2314782" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer" target="popup" onclick="window.open('https://gyazo.com/f9dd5515498e43af17e31c0be2314782','popup', width=600,height=600); return false;">View Proof</a></span>
                                     </td>
                                     <td style="display: none;">09/09/2022 01:06:16 pm</td>
-                                    <td><span id="premium3142" title="buy" type="premium"><a onclick="javascript:buythistool(3142)" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer"><i class="fas fa-shopping-cart mr-1"></i>Buy</a></span>
+                                    <td><span id="lead3142" title="buy" type="lead"><a onclick="javascript:buythistool(3142)" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer"><i class="fas fa-shopping-cart mr-1"></i>Buy</a></span>
                                     </td>
                                 </tr>
                                 <tr role="row" class="odd">
@@ -1334,7 +1334,7 @@ if(!isset($_SESSION['sname']) and !isset($_SESSION['spass'])){
                                     <td><span><a href="https://prnt.sc/Cd9P7s5Yd-_w" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer" target="popup" onclick="window.open('https://prnt.sc/Cd9P7s5Yd-_w','popup', width=600,height=600); return false;">View Proof</a></span>
                                     </td>
                                     <td style="display: none;">18/02/2023 02:50:16 pm</td>
-                                    <td><span id="premium3475" title="buy" type="premium"><a onclick="javascript:buythistool(3475)" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer"><i class="fas fa-shopping-cart mr-1"></i>Buy</a></span>
+                                    <td><span id="lead3475" title="buy" type="lead"><a onclick="javascript:buythistool(3475)" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer"><i class="fas fa-shopping-cart mr-1"></i>Buy</a></span>
                                     </td>
                                 </tr>
                                 <tr role="row" class="even">
@@ -1350,7 +1350,7 @@ if(!isset($_SESSION['sname']) and !isset($_SESSION['spass'])){
                                     <td><span><a href="https://prnt.sc/" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer" target="popup" onclick="window.open('https://prnt.sc/','popup', width=600,height=600); return false;">View Proof</a></span>
                                     </td>
                                     <td style="display: none;">01/02/2023 02:26:30 pm</td>
-                                    <td><span id="premium3387" title="buy" type="premium"><a onclick="javascript:buythistool(3387)" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer"><i class="fas fa-shopping-cart mr-1"></i>Buy</a></span>
+                                    <td><span id="lead3387" title="buy" type="lead"><a onclick="javascript:buythistool(3387)" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer"><i class="fas fa-shopping-cart mr-1"></i>Buy</a></span>
                                     </td>
                                 </tr>
                                 <tr role="row" class="odd">
@@ -1366,7 +1366,7 @@ if(!isset($_SESSION['sname']) and !isset($_SESSION['spass'])){
                                     <td><span><a href="https://prnt.sc/" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer" target="popup" onclick="window.open('https://prnt.sc/','popup', width=600,height=600); return false;">View Proof</a></span>
                                     </td>
                                     <td style="display: none;">01/02/2023 02:27:27 pm</td>
-                                    <td><span id="premium3391" title="buy" type="premium"><a onclick="javascript:buythistool(3391)" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer"><i class="fas fa-shopping-cart mr-1"></i>Buy</a></span>
+                                    <td><span id="lead3391" title="buy" type="lead"><a onclick="javascript:buythistool(3391)" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer"><i class="fas fa-shopping-cart mr-1"></i>Buy</a></span>
                                     </td>
                                 </tr>
                                 <tr role="row" class="even">
@@ -1382,7 +1382,7 @@ if(!isset($_SESSION['sname']) and !isset($_SESSION['spass'])){
                                     <td><span><a href="https://imgur.com/Gh4nBkN" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer" target="popup" onclick="window.open('https://imgur.com/Gh4nBkN','popup', width=600,height=600); return false;">View Proof</a></span>
                                     </td>
                                     <td style="display: none;">16/02/2022 08:58:16 am</td>
-                                    <td><span id="premium3016" title="buy" type="premium"><a onclick="javascript:buythistool(3016)" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer"><i class="fas fa-shopping-cart mr-1"></i>Buy</a></span>
+                                    <td><span id="lead3016" title="buy" type="lead"><a onclick="javascript:buythistool(3016)" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer"><i class="fas fa-shopping-cart mr-1"></i>Buy</a></span>
                                     </td>
                                 </tr>
                                 <tr role="row" class="odd">
@@ -1398,7 +1398,7 @@ if(!isset($_SESSION['sname']) and !isset($_SESSION['spass'])){
                                     <td><span><a href="https://imgur.com/Nri0i7R" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer" target="popup" onclick="window.open('https://imgur.com/Nri0i7R','popup', width=600,height=600); return false;">View Proof</a></span>
                                     </td>
                                     <td style="display: none;">14/10/2022 12:23:22 pm</td>
-                                    <td><span id="premium3199" title="buy" type="premium"><a onclick="javascript:buythistool(3199)" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer"><i class="fas fa-shopping-cart mr-1"></i>Buy</a></span>
+                                    <td><span id="lead3199" title="buy" type="lead"><a onclick="javascript:buythistool(3199)" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer"><i class="fas fa-shopping-cart mr-1"></i>Buy</a></span>
                                     </td>
                                 </tr>
                                 <tr role="row" class="even">
@@ -1414,7 +1414,7 @@ if(!isset($_SESSION['sname']) and !isset($_SESSION['spass'])){
                                     <td><span><a href="https://gyazo.com/f9dd5515498e43af17e31c0be2314782" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer" target="popup" onclick="window.open('https://gyazo.com/f9dd5515498e43af17e31c0be2314782','popup', width=600,height=600); return false;">View Proof</a></span>
                                     </td>
                                     <td style="display: none;">09/09/2022 01:06:24 pm</td>
-                                    <td><span id="premium3144" title="buy" type="premium"><a onclick="javascript:buythistool(3144)" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer"><i class="fas fa-shopping-cart mr-1"></i>Buy</a></span>
+                                    <td><span id="lead3144" title="buy" type="lead"><a onclick="javascript:buythistool(3144)" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer"><i class="fas fa-shopping-cart mr-1"></i>Buy</a></span>
                                     </td>
                                 </tr>
                                 <tr role="row" class="odd">
@@ -1430,7 +1430,7 @@ if(!isset($_SESSION['sname']) and !isset($_SESSION['spass'])){
                                     <td><span><a href="https://imgur.com/Nri0i7R" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer" target="popup" onclick="window.open('https://imgur.com/Nri0i7R','popup', width=600,height=600); return false;">View Proof</a></span>
                                     </td>
                                     <td style="display: none;">14/10/2022 12:22:22 pm</td>
-                                    <td><span id="premium3197" title="buy" type="premium"><a onclick="javascript:buythistool(3197)" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer"><i class="fas fa-shopping-cart mr-1"></i>Buy</a></span>
+                                    <td><span id="lead3197" title="buy" type="lead"><a onclick="javascript:buythistool(3197)" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer"><i class="fas fa-shopping-cart mr-1"></i>Buy</a></span>
                                     </td>
                                 </tr>
                                 <tr role="row" class="even">
@@ -1446,7 +1446,7 @@ if(!isset($_SESSION['sname']) and !isset($_SESSION['spass'])){
                                     <td><span><a href="https://prnt.sc/h6OtcN-m-mRN" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer" target="popup" onclick="window.open('https://prnt.sc/h6OtcN-m-mRN','popup', width=600,height=600); return false;">View Proof</a></span>
                                     </td>
                                     <td style="display: none;">03/09/2022 07:55:05 pm</td>
-                                    <td><span id="premium3137" title="buy" type="premium"><a onclick="javascript:buythistool(3137)" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer"><i class="fas fa-shopping-cart mr-1"></i>Buy</a></span>
+                                    <td><span id="lead3137" title="buy" type="lead"><a onclick="javascript:buythistool(3137)" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer"><i class="fas fa-shopping-cart mr-1"></i>Buy</a></span>
                                     </td>
                                 </tr>
                                 <tr role="row" class="odd">
@@ -1462,7 +1462,7 @@ if(!isset($_SESSION['sname']) and !isset($_SESSION['spass'])){
                                     <td><span><a href="https://prnt.sc/IBugXhAIzAky" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer" target="popup" onclick="window.open('https://prnt.sc/IBugXhAIzAky','popup', width=600,height=600); return false;">View Proof</a></span>
                                     </td>
                                     <td style="display: none;">03/09/2022 07:36:42 pm</td>
-                                    <td><span id="premium3128" title="buy" type="premium"><a onclick="javascript:buythistool(3128)" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer"><i class="fas fa-shopping-cart mr-1"></i>Buy</a></span>
+                                    <td><span id="lead3128" title="buy" type="lead"><a onclick="javascript:buythistool(3128)" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer"><i class="fas fa-shopping-cart mr-1"></i>Buy</a></span>
                                     </td>
                                 </tr>
                                 <tr role="row" class="even">
@@ -1478,7 +1478,7 @@ if(!isset($_SESSION['sname']) and !isset($_SESSION['spass'])){
                                     <td><span><a href="https://gyazo.com/f9dd5515498e43af17e31c0be2314782" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer" target="popup" onclick="window.open('https://gyazo.com/f9dd5515498e43af17e31c0be2314782','popup', width=600,height=600); return false;">View Proof</a></span>
                                     </td>
                                     <td style="display: none;">09/09/2022 01:08:22 pm</td>
-                                    <td><span id="premium3152" title="buy" type="premium"><a onclick="javascript:buythistool(3152)" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer"><i class="fas fa-shopping-cart mr-1"></i>Buy</a></span>
+                                    <td><span id="lead3152" title="buy" type="lead"><a onclick="javascript:buythistool(3152)" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer"><i class="fas fa-shopping-cart mr-1"></i>Buy</a></span>
                                     </td>
                                 </tr>
                                 <tr role="row" class="odd">
@@ -1494,7 +1494,7 @@ if(!isset($_SESSION['sname']) and !isset($_SESSION['spass'])){
                                     <td><span><a href="https://gyazo.com/f9dd5515498e43af17e31c0be2314782" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer" target="popup" onclick="window.open('https://gyazo.com/f9dd5515498e43af17e31c0be2314782','popup', width=600,height=600); return false;">View Proof</a></span>
                                     </td>
                                     <td style="display: none;">09/09/2022 01:08:07 pm</td>
-                                    <td><span id="premium3149" title="buy" type="premium"><a onclick="javascript:buythistool(3149)" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer"><i class="fas fa-shopping-cart mr-1"></i>Buy</a></span>
+                                    <td><span id="lead3149" title="buy" type="lead"><a onclick="javascript:buythistool(3149)" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer"><i class="fas fa-shopping-cart mr-1"></i>Buy</a></span>
                                     </td>
                                 </tr>
                                 <tr role="row" class="even">
@@ -1510,7 +1510,7 @@ if(!isset($_SESSION['sname']) and !isset($_SESSION['spass'])){
                                     <td><span><a href="https://gyazo.com/f9dd5515498e43af17e31c0be2314782" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer" target="popup" onclick="window.open('https://gyazo.com/f9dd5515498e43af17e31c0be2314782','popup', width=600,height=600); return false;">View Proof</a></span>
                                     </td>
                                     <td style="display: none;">09/09/2022 01:10:03 pm</td>
-                                    <td><span id="premium3170" title="buy" type="premium"><a onclick="javascript:buythistool(3170)" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer"><i class="fas fa-shopping-cart mr-1"></i>Buy</a></span>
+                                    <td><span id="lead3170" title="buy" type="lead"><a onclick="javascript:buythistool(3170)" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer"><i class="fas fa-shopping-cart mr-1"></i>Buy</a></span>
                                     </td>
                                 </tr>
                                 <tr role="row" class="odd">
@@ -1526,7 +1526,7 @@ if(!isset($_SESSION['sname']) and !isset($_SESSION['spass'])){
                                     <td><span><a href="https://gyazo.com/f9dd5515498e43af17e31c0be2314782" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer" target="popup" onclick="window.open('https://gyazo.com/f9dd5515498e43af17e31c0be2314782','popup', width=600,height=600); return false;">View Proof</a></span>
                                     </td>
                                     <td style="display: none;">09/09/2022 01:10:51 pm</td>
-                                    <td><span id="premium3179" title="buy" type="premium"><a onclick="javascript:buythistool(3179)" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer"><i class="fas fa-shopping-cart mr-1"></i>Buy</a></span>
+                                    <td><span id="lead3179" title="buy" type="lead"><a onclick="javascript:buythistool(3179)" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer"><i class="fas fa-shopping-cart mr-1"></i>Buy</a></span>
                                     </td>
                                 </tr>
                                 <tr role="row" class="even">
@@ -1542,7 +1542,7 @@ if(!isset($_SESSION['sname']) and !isset($_SESSION['spass'])){
                                     <td><span><a href="https://imgur.com/Gh4nBkN" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer" target="popup" onclick="window.open('https://imgur.com/Gh4nBkN','popup', width=600,height=600); return false;">View Proof</a></span>
                                     </td>
                                     <td style="display: none;">16/02/2022 08:58:53 am</td>
-                                    <td><span id="premium3022" title="buy" type="premium"><a onclick="javascript:buythistool(3022)" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer"><i class="fas fa-shopping-cart mr-1"></i>Buy</a></span>
+                                    <td><span id="lead3022" title="buy" type="lead"><a onclick="javascript:buythistool(3022)" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer"><i class="fas fa-shopping-cart mr-1"></i>Buy</a></span>
                                     </td>
                                 </tr>
                                 <tr role="row" class="odd">
@@ -1558,7 +1558,7 @@ if(!isset($_SESSION['sname']) and !isset($_SESSION['spass'])){
                                     <td><span><a href="https://prnt.sc/" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer" target="popup" onclick="window.open('https://prnt.sc/','popup', width=600,height=600); return false;">View Proof</a></span>
                                     </td>
                                     <td style="display: none;">01/02/2023 02:27:13 pm</td>
-                                    <td><span id="premium3390" title="buy" type="premium"><a onclick="javascript:buythistool(3390)" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer"><i class="fas fa-shopping-cart mr-1"></i>Buy</a></span>
+                                    <td><span id="lead3390" title="buy" type="lead"><a onclick="javascript:buythistool(3390)" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer"><i class="fas fa-shopping-cart mr-1"></i>Buy</a></span>
                                     </td>
                                 </tr>
                                 <tr role="row" class="even">
@@ -1574,7 +1574,7 @@ if(!isset($_SESSION['sname']) and !isset($_SESSION['spass'])){
                                     <td><span><a href="https://prnt.sc/x1CpfEpOeemB" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer" target="popup" onclick="window.open('https://prnt.sc/x1CpfEpOeemB','popup', width=600,height=600); return false;">View Proof</a></span>
                                     </td>
                                     <td style="display: none;">14/03/2023 02:37:09 am</td>
-                                    <td><span id="premium3483" title="buy" type="premium"><a onclick="javascript:buythistool(3483)" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer"><i class="fas fa-shopping-cart mr-1"></i>Buy</a></span>
+                                    <td><span id="lead3483" title="buy" type="lead"><a onclick="javascript:buythistool(3483)" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer"><i class="fas fa-shopping-cart mr-1"></i>Buy</a></span>
                                     </td>
                                 </tr>
                                 <tr role="row" class="odd">
@@ -1590,7 +1590,7 @@ if(!isset($_SESSION['sname']) and !isset($_SESSION['spass'])){
                                     <td><span><a href="https://gyazo.com/f9dd5515498e43af17e31c0be2314782" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer" target="popup" onclick="window.open('https://gyazo.com/f9dd5515498e43af17e31c0be2314782','popup', width=600,height=600); return false;">View Proof</a></span>
                                     </td>
                                     <td style="display: none;">09/09/2022 01:09:29 pm</td>
-                                    <td><span id="premium3164" title="buy" type="premium"><a onclick="javascript:buythistool(3164)" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer"><i class="fas fa-shopping-cart mr-1"></i>Buy</a></span>
+                                    <td><span id="lead3164" title="buy" type="lead"><a onclick="javascript:buythistool(3164)" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer"><i class="fas fa-shopping-cart mr-1"></i>Buy</a></span>
                                     </td>
                                 </tr>
                                 <tr role="row" class="even">
@@ -1606,7 +1606,7 @@ if(!isset($_SESSION['sname']) and !isset($_SESSION['spass'])){
                                     <td><span><a href="https://prnt.sc/h81WHkBAjTw9" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer" target="popup" onclick="window.open('https://prnt.sc/h81WHkBAjTw9','popup', width=600,height=600); return false;">View Proof</a></span>
                                     </td>
                                     <td style="display: none;">03/09/2022 07:42:53 pm</td>
-                                    <td><span id="premium3134" title="buy" type="premium"><a onclick="javascript:buythistool(3134)" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer"><i class="fas fa-shopping-cart mr-1"></i>Buy</a></span>
+                                    <td><span id="lead3134" title="buy" type="lead"><a onclick="javascript:buythistool(3134)" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer"><i class="fas fa-shopping-cart mr-1"></i>Buy</a></span>
                                     </td>
                                 </tr>
                                 <tr role="row" class="odd">
@@ -1622,7 +1622,7 @@ if(!isset($_SESSION['sname']) and !isset($_SESSION['spass'])){
                                     <td><span><a href="https://gyazo.com/f9dd5515498e43af17e31c0be2314782" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer" target="popup" onclick="window.open('https://gyazo.com/f9dd5515498e43af17e31c0be2314782','popup', width=600,height=600); return false;">View Proof</a></span>
                                     </td>
                                     <td style="display: none;">09/09/2022 01:10:43 pm</td>
-                                    <td><span id="premium3177" title="buy" type="premium"><a onclick="javascript:buythistool(3177)" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer"><i class="fas fa-shopping-cart mr-1"></i>Buy</a></span>
+                                    <td><span id="lead3177" title="buy" type="lead"><a onclick="javascript:buythistool(3177)" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer"><i class="fas fa-shopping-cart mr-1"></i>Buy</a></span>
                                     </td>
                                 </tr>
                                 <tr role="row" class="even">
@@ -1638,7 +1638,7 @@ if(!isset($_SESSION['sname']) and !isset($_SESSION['spass'])){
                                     <td><span><a href="https://gyazo.com/f9dd5515498e43af17e31c0be2314782" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer" target="popup" onclick="window.open('https://gyazo.com/f9dd5515498e43af17e31c0be2314782','popup', width=600,height=600); return false;">View Proof</a></span>
                                     </td>
                                     <td style="display: none;">09/09/2022 01:10:28 pm</td>
-                                    <td><span id="premium3175" title="buy" type="premium"><a onclick="javascript:buythistool(3175)" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer"><i class="fas fa-shopping-cart mr-1"></i>Buy</a></span>
+                                    <td><span id="lead3175" title="buy" type="lead"><a onclick="javascript:buythistool(3175)" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer"><i class="fas fa-shopping-cart mr-1"></i>Buy</a></span>
                                     </td>
                                 </tr>
                                 <tr role="row" class="odd">
@@ -1654,7 +1654,7 @@ if(!isset($_SESSION['sname']) and !isset($_SESSION['spass'])){
                                     <td><span><a href="https://gyazo.com/f9dd5515498e43af17e31c0be2314782" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer" target="popup" onclick="window.open('https://gyazo.com/f9dd5515498e43af17e31c0be2314782','popup', width=600,height=600); return false;">View Proof</a></span>
                                     </td>
                                     <td style="display: none;">09/09/2022 01:10:40 pm</td>
-                                    <td><span id="premium3176" title="buy" type="premium"><a onclick="javascript:buythistool(3176)" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer"><i class="fas fa-shopping-cart mr-1"></i>Buy</a></span>
+                                    <td><span id="lead3176" title="buy" type="lead"><a onclick="javascript:buythistool(3176)" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer"><i class="fas fa-shopping-cart mr-1"></i>Buy</a></span>
                                     </td>
                                 </tr>
                                 <tr role="row" class="even">
@@ -1670,7 +1670,7 @@ if(!isset($_SESSION['sname']) and !isset($_SESSION['spass'])){
                                     <td><span><a href="https://imgur.com/Gh4nBkN" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer" target="popup" onclick="window.open('https://imgur.com/Gh4nBkN','popup', width=600,height=600); return false;">View Proof</a></span>
                                     </td>
                                     <td style="display: none;">16/02/2022 10:16:32 am</td>
-                                    <td><span id="premium3031" title="buy" type="premium"><a onclick="javascript:buythistool(3031)" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer"><i class="fas fa-shopping-cart mr-1"></i>Buy</a></span>
+                                    <td><span id="lead3031" title="buy" type="lead"><a onclick="javascript:buythistool(3031)" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer"><i class="fas fa-shopping-cart mr-1"></i>Buy</a></span>
                                     </td>
                                 </tr>
                                 <tr role="row" class="odd">
@@ -1686,16 +1686,16 @@ if(!isset($_SESSION['sname']) and !isset($_SESSION['spass'])){
                                     <td><span><a href="https://imgur.com/Gh4nBkN" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer" target="popup" onclick="window.open('https://imgur.com/Gh4nBkN','popup', width=600,height=600); return false;">View Proof</a></span>
                                     </td>
                                     <td style="display: none;">16/02/2022 08:58:41 am</td>
-                                    <td><span id="premium3" title="buy" type="premium"><a onclick="javascript:buythistool(3020)" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer"><i class="fas fa-shopping-cart mr-1"></i>Buy</a></span>
+                                    <td><span id="lead3" title="buy" type="lead"><a onclick="javascript:buythistool(3020)" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer"><i class="fas fa-shopping-cart mr-1"></i>Buy</a></span>
                                     </td>
                                 </tr>
                             </tbody>
                         </table>
                     </div>
                 </div>
-                <div class="dataTables_info" id="account_data_info" role="status" aria-live="polite">Showing 1 to 99 of 99 entries</div>
-                <div class="dataTables_paginate paging_simple_numbers" id="account_data_paginate"><a class="paginate_button previous disabled" aria-controls="account_data" data-dt-idx="0" tabindex="0" id="account_data_previous">Previous</a><span><a class="paginate_button current" aria-controls="account_data" data-dt-idx="1" tabindex="0">1</a></span>
-                    <a class="paginate_button next disabled" aria-controls="account_data" data-dt-idx="2" tabindex="0" id="account_data_next">Next</a>
+                <div class="dataTables_info" id="lead_item_info" role="status" aria-live="polite">Showing 1 to 99 of 99 entries</div>
+                <div class="dataTables_paginate paging_simple_numbers" id="lead_item_paginate"><a class="paginate_button previous disabled" aria-controls="lead_item" data-dt-idx="0" tabindex="0" id="lead_item_previous">Previous</a><span><a class="paginate_button current" aria-controls="lead_item" data-dt-idx="1" tabindex="0">1</a></span>
+                    <a class="paginate_button next disabled" aria-controls="lead_item" data-dt-idx="2" tabindex="0" id="lead_item_next">Next</a>
                 </div>
             </div>
         </div>
@@ -1768,7 +1768,7 @@ if(!isset($_SESSION['sname']) and !isset($_SESSION['spass'])){
             load_data();
 
             function load_data(myarray) {
-                $('#account_data').DataTable({
+                $('#lead_item').DataTable({
                     "processing": true,
                     "serverSide": true,
                     "responsive": true,
@@ -1828,7 +1828,7 @@ if(!isset($_SESSION['sname']) and !isset($_SESSION['spass'])){
 
             $(document).on('change', '.form-control', function() {
 
-                $('#account_data').DataTable().destroy();
+                $('#lead_item').DataTable().destroy();
                 var country = $('#country').val();
                 var details = $('#infos').val();
                 var seller1 = $('#seller').val();
@@ -1868,12 +1868,12 @@ if(!isset($_SESSION['sname']) and !isset($_SESSION['spass'])){
                 success: function(data) {
                     if (data.match("buy")) {
                         let lastid = data.split("buy,")[1];
-                        $("#premium" + id).html(`<button onclick=openitem(${lastid}) class="btn btn-success btn-sm" style="font-size: 11px; cursor:pointer">Order ${'#'+lastid}</button>`).show();
+                        $("#lead" + id).html(`<button onclick=openitem(${lastid}) class="btn btn-success btn-sm" style="font-size: 11px; cursor:pointer">Order ${'#'+lastid}</button>`).show();
 
                     } else {
                         if (data.match("deleted")) {
 
-                            $("#premium" + id).html('Already sold / Deleted').show();
+                            $("#lead" + id).html('Already sold / Deleted').show();
 
 
                         } else {
