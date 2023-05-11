@@ -38,7 +38,7 @@
 				</div>
 				<div class="card-body">
 					<div class="table-responsive">
-						<table id="sample_data" class="table table-bordered table-striped">
+						<table id="lead_data" class="table table-bordered table-striped">
 							<thead>
 								<tr>
 									
@@ -65,7 +65,7 @@
 
 $(document).ready(function(){
 	
-	var dataTable = $('#sample_data').DataTable({
+	var dataTable = $('#lead_data').DataTable({
 		"processing" : true,
 		"serverSide" : true,
 		"order" : [],
