@@ -18,17 +18,17 @@ $usrid = mysqli_real_escape_string($dbcon, $_SESSION['sname']);
 
 		<style>
 
-.table td {
+.lead_data td {
     background: var(--color-card);
       color: var(--font-color);
 
 }
-.dataTables_wrapper .dataTables_paginate .paginate_button {
+.datalead_datas_wrapper .datalead_datas_paginate .paginate_button {
 
     color: var(--font-color);
 
 }
-#table_paginate .paginate_button {
+#lead_data_paginate .paginate_button {
 color: var(--font-color);
 
 }
@@ -40,16 +40,16 @@ color: var(--font-color);
 
 }
 
-#table_filter{
+#lead_data_filter{
   color: var(--font-color);
 }
-#table_length{
+#lead_data_length{
   color: var(--font-color);
 }
-#table_paginate{
+#lead_data_paginate{
   color: var(--font-color);
 }
-#table_info{
+#lead_data_info{
   color: var(--font-color);
 }
 
@@ -89,9 +89,9 @@ color: var(--font-color);
         </div>
     </div>
     <div class="row m-2 pt-3 " style="max-width:100%; color: var(--font-color); background-color: var(--color-card);">
-        <div class="col-sm-12 table-responsive">
+        <div class="col-sm-12 lead_data-responsive">
  <div id="mainDiv" class="scrollBody">
-            <table id="table" class="display responsive table-hover" style="width:100%; color: var(--font-color); background-color: var(--color-card);">
+            <lead_data id="lead_data" class="display responsive lead_data-hover" style="width:100%; color: var(--font-color); background-color: var(--color-card);">
                 <thead>
                     <tr>
                         <th data-priority="1"></th>
@@ -106,7 +106,7 @@ color: var(--font-color);
                         <th class="all">Buy</th>
                     </tr>
                 </thead>
-            </table>
+            </lead_data>
         </div>
     </div>
     <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" data-backdrop="true">
@@ -175,8 +175,8 @@ color: var(--font-color);
             var webID;
             load_data();
  
-            function load_data(myarray) {
-                $('#table').DataTable({
+            function load_data(array_search) {
+                $('#lead_data').Datalead_data({
                     "processing": true,
                     "serverSide": true,
                     "responsive": true,
@@ -195,7 +195,7 @@ color: var(--font-color);
                         url: "divPage32.html",
                         type: "POST",
                         data: {
-                            data_filter: myarray,
+                            data_filter: array_search,
                             type: document.getElementById('type').value,
                             draw: 'draw',
                             row: 'start',
@@ -243,21 +243,21 @@ color: var(--font-color);
             }
  
             $(document).on('change', '.form-control', function() {
-                $('#table').DataTable().destroy();
+                $('#lead_data').Datalead_data().destroy();
                 var country = $('#country').val();
                 var description = $('#infos').val();
                 var seller1 = $('#seller').val();
                 $idseller = seller1.split("Seller");
                 var seller = $idseller[1];
-                var myarray = {};
+                var array_search = {};
  
-                myarray[0] = country;
-                myarray[1] = description;
-                myarray[2] = seller;
+                array_search[0] = country;
+                array_search[1] = description;
+                array_search[2] = seller;
  
                 if (country != '' || description != '' || seller != '') {
  
-                    load_data(myarray);
+                    load_data(array_search);
                 } else {
                     load_data();
                 }
