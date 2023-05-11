@@ -81,7 +81,7 @@ $usrid = mysqli_real_escape_string($dbcon, $_SESSION['sname']);
     color: var(--font-color);
 
 }
-#lead_data_paginate .paginate_button {
+#mainDiv_paginate .paginate_button {
 color: var(--font-color);
 
 }
@@ -93,16 +93,16 @@ color: var(--font-color);
 
 }
 
-#lead_data_filter{
+#mainDiv_filter{
   color: var(--font-color);
 }
-#lead_data_length{
+#mainDiv_length{
   color: var(--font-color);
 }
-#lead_data_paginate{
+#mainDiv_paginate{
   color: var(--font-color);
 }
-#lead_data_info{
+#mainDiv_info{
   color: var(--font-color);
 }
 
@@ -147,10 +147,10 @@ color: var(--font-color);
 		</div>
 		<div class="row m-2 pt-3 " style="max-width:100%; color: var(--font-color); background-color: var(--color-card);">
 			<div class="col-sm-12 table-responsive">
-				<div id="lead_data_wrapper" class="dataTables_wrapper no-footer">
-					<div class="dataTables_length" id="lead_data_length">
+				<div id="mainDiv_wrapper" class="dataTables_wrapper no-footer">
+					<div class="dataTables_length" id="mainDiv_length">
 						<label>Show
-							<select name="lead_data_length" aria-controls="lead_data" class="">
+							<select name="mainDiv_length" aria-controls="mainDiv" class="">
 								<option value="10">10</option>
 								<option value="25">25</option>
 								<option value="50">50</option>
@@ -160,62 +160,62 @@ color: var(--font-color);
 							</select>
 							entries</label>
 					</div>
-					<div id="lead_data_filter" class="dataTables_filter">
-						<label>Search:<input type="search" class="" placeholder="" aria-controls="lead_data">
+					<div id="mainDiv_filter" class="dataTables_filter">
+						<label>Search:<input type="search" class="" placeholder="" aria-controls="mainDiv">
 						</label>
 					</div>
-					<div id="lead_data_processing" class="dataTables_processing" style="display: none;">Processing...</div>
+					<div id="mainDiv_processing" class="dataTables_processing" style="display: none;">Processing...</div>
 					<div class="dataTables_scroll">
 						<div class="dataTables_scrollHead" style="overflow: hidden; position: relative; border: 0px; width: 100%;">
 							<div class="dataTables_scrollHeadInner" style="box-sizing: content-box; width: 979px; padding-right: 0px;">
 								<table class="display responsive table-hover dataTable no-footer" style="width: 979px; color: var(--font-color); background-color: var(--color-card); margin-left: 0px;" role="grid">
 									<thead>
 										<tr role="row">
-											<th class="all sorting" tabindex="0" aria-controls="lead_data" rowspan="1" colspan="1" style="width: 15.984375px;" aria-label="ID: activate to sort column ascending">ID</th>
-											<th data-priority="3" class="sorting" tabindex="0" aria-controls="lead_data" rowspan="1" colspan="1" style="width: 55.921875px;" aria-label="Country: activate to sort column ascending">Country</th>
-											<th data-priority="6" class="sorting" tabindex="0" aria-controls="lead_data" rowspan="1" colspan="1" style="width: 171.515625px;" aria-label="Description: activate to sort column ascending">Description</th>
-											<th data-priority="7" class="sorting" tabindex="0" aria-controls="lead_data" rowspan="1" colspan="1" style="width: 37.984375px;" aria-label="Email N: activate to sort column ascending">Email N</th>
-											<th data-priority="8" class="sorting" tabindex="0" aria-controls="lead_data" rowspan="1" colspan="1" style="width: 104px;" aria-label="Seller: activate to sort column ascending">Seller</th>
-											<th data-priority="2" class="sorting" tabindex="0" aria-controls="lead_data" rowspan="1" colspan="1" style="width: 79px;" aria-label="Proof: activate to sort column ascending">Proof</th>
-											<th data-priority="9" class="sorting" tabindex="0" aria-controls="lead_data" rowspan="1" colspan="1" style="width: 34.984375px;" aria-label="Price: activate to sort column ascending">Price</th>
-											<th data-priority="10" class="sorting" tabindex="0" aria-controls="lead_data" rowspan="1" colspan="1" style="width: 89.6875px;" aria-label="Added on : activate to sort column ascending">Added on
+											<th class="all sorting" tabindex="0" aria-controls="mainDiv" rowspan="1" colspan="1" style="width: 15.984375px;" aria-label="ID: activate to sort column ascending">ID</th>
+											<th data-priority="3" class="sorting" tabindex="0" aria-controls="mainDiv" rowspan="1" colspan="1" style="width: 55.921875px;" aria-label="Country: activate to sort column ascending">Country</th>
+											<th data-priority="6" class="sorting" tabindex="0" aria-controls="mainDiv" rowspan="1" colspan="1" style="width: 171.515625px;" aria-label="Description: activate to sort column ascending">Description</th>
+											<th data-priority="7" class="sorting" tabindex="0" aria-controls="mainDiv" rowspan="1" colspan="1" style="width: 37.984375px;" aria-label="Email N: activate to sort column ascending">Email N</th>
+											<th data-priority="8" class="sorting" tabindex="0" aria-controls="mainDiv" rowspan="1" colspan="1" style="width: 104px;" aria-label="Seller: activate to sort column ascending">Seller</th>
+											<th data-priority="2" class="sorting" tabindex="0" aria-controls="mainDiv" rowspan="1" colspan="1" style="width: 79px;" aria-label="Proof: activate to sort column ascending">Proof</th>
+											<th data-priority="9" class="sorting" tabindex="0" aria-controls="mainDiv" rowspan="1" colspan="1" style="width: 34.984375px;" aria-label="Price: activate to sort column ascending">Price</th>
+											<th data-priority="10" class="sorting" tabindex="0" aria-controls="mainDiv" rowspan="1" colspan="1" style="width: 89.6875px;" aria-label="Added on : activate to sort column ascending">Added on
 											</th>
-											<th class="all sorting" tabindex="0" aria-controls="lead_data" rowspan="1" colspan="1" style="width: 66px;" aria-label="Buy: activate to sort column ascending">Buy</th>
+											<th class="all sorting" tabindex="0" aria-controls="mainDiv" rowspan="1" colspan="1" style="width: 66px;" aria-label="Buy: activate to sort column ascending">Buy</th>
 										</tr>
 									</thead>
 								</table>
 							</div>
 						</div>
 						<div class="dataTables_scrollBody" style="position: relative; overflow: auto; width: 100%;">
-							<table id="lead_data" class="display responsive table-hover dataTable no-footer dtr-inline" style="width: 100%; color: var(--font-color); background-color: var(--color-card);" role="grid" aria-describedby="lead_data_info">
+							<table id="mainDiv" class="display responsive table-hover dataTable no-footer dtr-inline" style="width: 100%; color: var(--font-color); background-color: var(--color-card);" role="grid" aria-describedby="mainDiv_info">
 								<thead>
 									<tr role="row" style="height: 0px;">
-										<th class="all sorting" aria-controls="lead_data" rowspan="1" colspan="1" style="width: 15.984375px; padding-top: 0px; padding-bottom: 0px; border-top-width: 0px; border-bottom-width: 0px; height: 0px;" aria-label="ID: activate to sort column ascending">
+										<th class="all sorting" aria-controls="mainDiv" rowspan="1" colspan="1" style="width: 15.984375px; padding-top: 0px; padding-bottom: 0px; border-top-width: 0px; border-bottom-width: 0px; height: 0px;" aria-label="ID: activate to sort column ascending">
 											<div class="dataTables_sizing" style="height:0;overflow:hidden;">ID</div>
 										</th>
-										<th data-priority="3" class="sorting" aria-controls="lead_data" rowspan="1" colspan="1" style="width: 55.921875px; padding-top: 0px; padding-bottom: 0px; border-top-width: 0px; border-bottom-width: 0px; height: 0px;" aria-label="Country: activate to sort column ascending">
+										<th data-priority="3" class="sorting" aria-controls="mainDiv" rowspan="1" colspan="1" style="width: 55.921875px; padding-top: 0px; padding-bottom: 0px; border-top-width: 0px; border-bottom-width: 0px; height: 0px;" aria-label="Country: activate to sort column ascending">
 											<div class="dataTables_sizing" style="height:0;overflow:hidden;">Country</div>
 										</th>
-										<th data-priority="6" class="sorting" aria-controls="lead_data" rowspan="1" colspan="1" style="width: 171.515625px; padding-top: 0px; padding-bottom: 0px; border-top-width: 0px; border-bottom-width: 0px; height: 0px;" aria-label="Description: activate to sort column ascending">
+										<th data-priority="6" class="sorting" aria-controls="mainDiv" rowspan="1" colspan="1" style="width: 171.515625px; padding-top: 0px; padding-bottom: 0px; border-top-width: 0px; border-bottom-width: 0px; height: 0px;" aria-label="Description: activate to sort column ascending">
 											<div class="dataTables_sizing" style="height:0;overflow:hidden;">Description</div>
 										</th>
-										<th data-priority="7" class="sorting" aria-controls="lead_data" rowspan="1" colspan="1" style="width: 37.984375px; padding-top: 0px; padding-bottom: 0px; border-top-width: 0px; border-bottom-width: 0px; height: 0px;" aria-label="Email N: activate to sort column ascending">
+										<th data-priority="7" class="sorting" aria-controls="mainDiv" rowspan="1" colspan="1" style="width: 37.984375px; padding-top: 0px; padding-bottom: 0px; border-top-width: 0px; border-bottom-width: 0px; height: 0px;" aria-label="Email N: activate to sort column ascending">
 											<div class="dataTables_sizing" style="height:0;overflow:hidden;">Email N</div>
 										</th>
-										<th data-priority="8" class="sorting" aria-controls="lead_data" rowspan="1" colspan="1" style="width: 104px; padding-top: 0px; padding-bottom: 0px; border-top-width: 0px; border-bottom-width: 0px; height: 0px;" aria-label="Seller: activate to sort column ascending">
+										<th data-priority="8" class="sorting" aria-controls="mainDiv" rowspan="1" colspan="1" style="width: 104px; padding-top: 0px; padding-bottom: 0px; border-top-width: 0px; border-bottom-width: 0px; height: 0px;" aria-label="Seller: activate to sort column ascending">
 											<div class="dataTables_sizing" style="height:0;overflow:hidden;">Seller</div>
 										</th>
-										<th data-priority="2" class="sorting" aria-controls="lead_data" rowspan="1" colspan="1" style="width: 79px; padding-top: 0px; padding-bottom: 0px; border-top-width: 0px; border-bottom-width: 0px; height: 0px;" aria-label="Proof: activate to sort column ascending">
+										<th data-priority="2" class="sorting" aria-controls="mainDiv" rowspan="1" colspan="1" style="width: 79px; padding-top: 0px; padding-bottom: 0px; border-top-width: 0px; border-bottom-width: 0px; height: 0px;" aria-label="Proof: activate to sort column ascending">
 											<div class="dataTables_sizing" style="height:0;overflow:hidden;">Proof</div>
 										</th>
-										<th data-priority="9" class="sorting" aria-controls="lead_data" rowspan="1" colspan="1" style="width: 34.984375px; padding-top: 0px; padding-bottom: 0px; border-top-width: 0px; border-bottom-width: 0px; height: 0px;" aria-label="Price: activate to sort column ascending">
+										<th data-priority="9" class="sorting" aria-controls="mainDiv" rowspan="1" colspan="1" style="width: 34.984375px; padding-top: 0px; padding-bottom: 0px; border-top-width: 0px; border-bottom-width: 0px; height: 0px;" aria-label="Price: activate to sort column ascending">
 											<div class="dataTables_sizing" style="height:0;overflow:hidden;">Price</div>
 										</th>
-										<th data-priority="10" class="sorting" aria-controls="lead_data" rowspan="1" colspan="1" style="width: 89.6875px; padding-top: 0px; padding-bottom: 0px; border-top-width: 0px; border-bottom-width: 0px; height: 0px;" aria-label="Added on : activate to sort column ascending">
+										<th data-priority="10" class="sorting" aria-controls="mainDiv" rowspan="1" colspan="1" style="width: 89.6875px; padding-top: 0px; padding-bottom: 0px; border-top-width: 0px; border-bottom-width: 0px; height: 0px;" aria-label="Added on : activate to sort column ascending">
 											<div class="dataTables_sizing" style="height:0;overflow:hidden;">Added on
 											</div>
 										</th>
-										<th class="all sorting" aria-controls="lead_data" rowspan="1" colspan="1" style="width: 66px; padding-top: 0px; padding-bottom: 0px; border-top-width: 0px; border-bottom-width: 0px; height: 0px;" aria-label="Buy: activate to sort column ascending">
+										<th class="all sorting" aria-controls="mainDiv" rowspan="1" colspan="1" style="width: 66px; padding-top: 0px; padding-bottom: 0px; border-top-width: 0px; border-bottom-width: 0px; height: 0px;" aria-label="Buy: activate to sort column ascending">
 											<div class="dataTables_sizing" style="height:0;overflow:hidden;">Buy</div>
 										</th>
 									</tr>
@@ -250,13 +250,13 @@ color: var(--font-color);
 							</table>
 						</div>
 					</div>
-					<div class="dataTables_info" id="lead_data_info" role="status" aria-live="polite">Showing 1 to 1 of 1 entries</div>
-					<div class="dataTables_paginate paging_simple_numbers" id="lead_data_paginate">
-						<a class="paginate_button previous disabled" aria-controls="lead_data" data-dt-idx="0" tabindex="0" id="lead_data_previous">Previous</a>
+					<div class="dataTables_info" id="mainDiv_info" role="status" aria-live="polite">Showing 1 to 1 of 1 entries</div>
+					<div class="dataTables_paginate paging_simple_numbers" id="mainDiv_paginate">
+						<a class="paginate_button previous disabled" aria-controls="mainDiv" data-dt-idx="0" tabindex="0" id="mainDiv_previous">Previous</a>
 						<span>
-							<a class="paginate_button current" aria-controls="lead_data" data-dt-idx="1" tabindex="0">1</a>
+							<a class="paginate_button current" aria-controls="mainDiv" data-dt-idx="1" tabindex="0">1</a>
 						</span>
-						<a class="paginate_button next disabled" aria-controls="lead_data" data-dt-idx="2" tabindex="0" id="lead_data_next">Next</a>
+						<a class="paginate_button next disabled" aria-controls="mainDiv" data-dt-idx="2" tabindex="0" id="mainDiv_next">Next</a>
 					</div>
 				</div>
 			</div>
@@ -319,7 +319,7 @@ color: var(--font-color);
             load_data();
 
             function load_data(myarray) {
-                $('#lead_data').DataTable({
+                $('#mainDiv').DataTable({
                     "processing": true,
                     "serverSide": true,
                     "responsive": true,
@@ -366,7 +366,7 @@ color: var(--font-color);
             }
 
             $(document).on('change', '.form-control', function(){
-                $('#lead_data').DataTable().destroy();
+                $('#mainDiv').DataTable().destroy();
                  var country = $('#country').val();
                 var description = $('#infos').val();
                  var seller1 = $('#seller').val();
