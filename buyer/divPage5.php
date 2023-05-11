@@ -3,7 +3,7 @@
 
 //fetch.php
 
-$connect = new PDO("mysql:host=localhost;dbname=xbaseleets_table", "xbaseleets_xbaseleets", "reseller");
+$connect = new PDO("mysql:host=localhost;dbname=xbaseleets_table", "xbaseleets_xbaseleets", "xbaseleets_xbaseleets");
 
 $column = array("customer_id", "customer_first_name", "customer_last_name", "customer_email", "customer_gender");
 
