@@ -1,4 +1,4 @@
-<?php
+Hu<?php
 ob_start();
 session_start();
 date_default_timezone_set('UTC');
@@ -24,7 +24,7 @@ $usrid = mysqli_real_escape_string($dbcon, $_SESSION['sname']);
 		<link rel="shortcut icon" href="../../favicon.ico">
 		<title>Ticket</title>
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/css/bootstrap.min.css">
-		<script src="layout/js/jquery-3.4.1.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js" ></script>
 		<script src="layout/js/clipboard.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
 		<script src="layout/js/bootstrap.min.js"></script>
