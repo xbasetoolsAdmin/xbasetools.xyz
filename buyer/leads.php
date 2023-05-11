@@ -13,7 +13,7 @@
  
     }
  
-    #lead_data_paginate .paginate_button {
+    #lead_item_paginate .paginate_button {
         color: var(--font-color);
  
     }
@@ -25,19 +25,19 @@
  
     }
  
-    #lead_data_filter {
+    #lead_item_filter {
         color: var(--font-color);
     }
  
-    #lead_data_length {
+    #lead_item_length {
         color: var(--font-color);
     }
  
-    #lead_data_paginate {
+    #lead_item_paginate {
         color: var(--font-color);
     }
  
-    #lead_data_info {
+    #lead_item_info {
         color: var(--font-color);
     }
 </style>
@@ -237,7 +237,7 @@
             }
  
             $(document).on('change', '.form-control', function() {
-                $('#lead_data').DataTable().destroy();
+                $('#lead_item').DataTable().destroy();
                 var country = $('#country').val();
                 var description = $('#infos').val();
                 var seller1 = $('#seller').val();
