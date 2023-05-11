@@ -1,4 +1,4 @@
-<?php
+by by<?php
 ob_start();
 session_start();
 date_default_timezone_set('UTC');
@@ -11,13 +11,19 @@ if (!isset($_SESSION['sname']) and !isset($_SESSION['spass'])) {
 $usrid = mysqli_real_escape_string($dbcon, $_SESSION['sname']);
 ?>
 <!DOCTYPE html>
+
 <html class="theme-light">
 <head>
+<html lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DarkNetShop</title>
+    
 	       
 	       <title>Ticket</title>	   
-<link rel="stylesheet" href="layout/css/util.css">
-<link rel="stylesheet" href="layout/css/all.min.css">
-<link rel="stylesheet" href="layout/css/bootstrap.min.css">
+
+
+<link rel="stylesheet" href="files/css/bootstrap.min.css">
 <link rel="stylesheet" href="layout/css/main%EF%B9%96v=12.9.css">
 <link rel="stylesheet" type="text/css" href="layout/css/flags.css">
 <link rel="stylesheet" href="../cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css">
