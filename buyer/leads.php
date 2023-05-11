@@ -54,7 +54,6 @@ color: var(--font-color);
 }
 
 		</style>
-	</head>
 	
 	<?php include"shell.php"?>
 	
