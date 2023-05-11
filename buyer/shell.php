@@ -62,7 +62,7 @@ function pageDiv(n,t,u,x){
 
     	}
       document.title = obj.Title;
-    $("#mainDiv").html('<div id="mydiv"><img src="/buyer/divPage6.html" class="ajax-loader"></div>').show();
+    $("#mainDiv").html('<div id="mydiv"><img src="divPage6.html" class="load_data"></div>').show();
     $.ajax({
     type:       'GET',
     url:        'divPage6.html',
