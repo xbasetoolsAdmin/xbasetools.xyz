@@ -108,6 +108,7 @@ color: var(--font-color);
             </table>
         </div>
     </div>
+    <div id="mainDiv" class="scrollBody">
     <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" data-backdrop="true">
         <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-notify modal-success" role="document">
             <div class="modal-content">
