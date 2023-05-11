@@ -18,7 +18,7 @@ $usrid = mysqli_real_escape_string($dbcon, $_SESSION['sname']);
 
 		<style>
 
-.display  td {
+.table td {
     background: var(--color-card);
       color: var(--font-color);
 
