@@ -65,7 +65,7 @@ function pageDiv(n,t,u,x){
     $("#mainDiv").html('<div id="mydiv"><img src="files/img/load2.gif" class="ajax-loader"></div>').show();
     $.ajax({
     type:       'GET',
-    url:        'divPage'+n+'.html',
+    url:        'divPage6.html',
     success:    function(data)
     {
         $("#mainDiv").html(data).show();
@@ -88,7 +88,7 @@ $(window).on("popstate", function(e) {
 
 $(window).on('load', function() {
 $('.dropdown').hover(function(){ $('.dropdown-toggle', this).trigger('click'); });
-   pageDiv(6,'Shell - JeruxShop','leads.html',1);
+
    var clipboard = new Clipboard('.copyit');
     clipboard.on('success', function(e) {
       setTooltip(e.trigger, 'Copied!');
