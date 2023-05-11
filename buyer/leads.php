@@ -90,7 +90,7 @@ color: var(--font-color);
     </div>
     <div class="row m-2 pt-3 " style="max-width:100%; color: var(--font-color); background-color: var(--color-card);">
         <div class="col-sm-12 table-responsive">
-            <table id="table" class="display responsive table-hover" style="width:100%; color: var(--font-color); background-color: var(--color-card);">
+            <table id="MainDiv" class="display responsive table-hover" style="width:100%; color: var(--font-color); background-color: var(--color-card);">
                 <thead>
                     <tr>
                         <th data-priority="1"></th>
@@ -108,7 +108,6 @@ color: var(--font-color);
             </table>
         </div>
     </div>
-    <div id="mainDiv" class="scrollBody">
     <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" data-backdrop="true">
         <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-notify modal-success" role="document">
             <div class="modal-content">
