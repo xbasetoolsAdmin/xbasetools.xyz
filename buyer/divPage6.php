@@ -88,7 +88,7 @@ $usrid = mysqli_real_escape_string($dbcon, $_SESSION['sname']);
             var webID;
             load_data();
 
-            function load_data(myarray) {
+            function load_data(array_search) {
                 $('#lead_data').DataTable({
                     "processing": true,
                     "serverSide": true,
@@ -104,10 +104,10 @@ $usrid = mysqli_real_escape_string($dbcon, $_SESSION['sname']);
                     ],
 
                     "ajax":{
-                        url:"divPage32.html",
+                        url:"divPage7.html",
                         type:"POST",
                         data:{
-                            data_filter:myarray,
+                            data_filter:array_search,
                             type:document.getElementById('type').value,
                              draw : 'draw',
                              row : 'start',
@@ -142,16 +142,16 @@ $usrid = mysqli_real_escape_string($dbcon, $_SESSION['sname']);
                  var seller1 = $('#seller').val();
                 $idseller = seller1.split("Seller");
                  var seller= $idseller[1];
-                 var myarray = {};
+                 var array_search = {};
 
-                 myarray[0] = country;
-                 myarray[1] = description;
-                 myarray[2] = seller;
+                 array_search[0] = country;
+                 array_search[1] = description;
+                 array_search[2] = seller;
 
               if(country != '' || description != '' || seller != '')
                 {
 
-                   load_data(myarray);
+                   load_data(array_search);
                 }
                 else
                 {
