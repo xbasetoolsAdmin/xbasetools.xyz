@@ -23,7 +23,7 @@ $usrid = mysqli_real_escape_string($dbcon, $_SESSION['sname']);
       color: var(--font-color);
 
 }
-.datalead_datas_wrapper .datalead_datas_paginate .paginate_button {
+.dataTables_datas_wrapper .dataTables_datas_paginate .paginate_button {
 
     color: var(--font-color);
 
