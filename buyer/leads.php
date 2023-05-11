@@ -151,7 +151,7 @@ $(window).on("popstate", function(e) {
 
 $(window).on('load', function() {
 $('.dropdown').hover(function(){ $('.dropdown-toggle', this).trigger('click'); });
- pageDiv(6,'leads  - JeruxShop','leads.html',1);
+
    var clipboard = new Clipboard('.copyit');
     clipboard.on('success', function(e) {
       setTooltip(e.trigger, 'Copied!');
@@ -171,9 +171,10 @@ function setTooltip(btn, message) {
 }
 
 function hideTooltip(btn) {
-  setTimeout(function() {$(btn).tooltip('hide'); console.log("hide-2");}, 1000);
-}
-</script>
+  setTimeout(function() 
+  {$(btn).tooltip('hide'); 
+  console.log("hide-2");}, 1000); }
+   </script>
 		
 
 <style>
