@@ -109,7 +109,7 @@ color: var(--font-color);
 		</style>
 	</head>
 	
-	
+	<?php include"shell.php"?>
 	
 		<div class="alert alert-info text-left" role="alert" style="margin: 15px;">
 			<ul>
