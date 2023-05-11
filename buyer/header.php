@@ -5,15 +5,10 @@ ob_start();
 session_start();
 date_default_timezone_set('UTC');
 include "../includes/config.php";
-
-if (!isset($_SESSION['sname']) and !isset($_SESSION['spass'])) {
-    header("location: ../");
-    exit();
-}
+if (!isset($_SESSION['sname']) and !isset($_SESSION['spass'])) { header("location: ../"); exit();}
 $usrid = mysqli_real_escape_string($dbcon, $_SESSION['sname']);
 ?> 
-
-<html class="theme-light">
+<html class="theme-dark">
 	<head>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -29,8 +24,8 @@ $usrid = mysqli_real_escape_string($dbcon, $_SESSION['sname']);
 		<script src="layout/js/clipboard.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
 		<script src="layout/js/bootstrap.min.js"></script>
-		<script src="layout/js/bootbox.min.js"></script>
-		<link rel="stylesheet" type="text/css" href="layout/css/flags.css">
+		<script src="files/js/bootbox.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="files/css/flags.css">
 		<link rel="stylesheet" href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css">
 		<link rel="stylesheet" href="https://cdn.datatables.net/responsive/2.2.6/css/responsive.dataTables.min.css">
 		<link rel="stylesheet" href="https://cdn.datatables.net/buttons/1.6.4/css/buttons.dataTables.min.css">
@@ -52,9 +47,9 @@ $usrid = mysqli_real_escape_string($dbcon, $_SESSION['sname']);
         gtag('config', 'UA-177092549-1');
         
 		</script>
-		<link rel="stylesheet" href="layout/css/all.min.css">
-		<link rel="stylesheet" href="layout/css/main.css?v=12.9">
-		<link rel="stylesheet" href="layout/css/util.css">
+		<link rel="stylesheet" href="files/css/all.min.css" />
+		<link rel="stylesheet" href="files/css/main.css" />
+		<link rel="stylesheet" href="layout/css/util.css" />
 		<style>body{padding-top:80px}</style>
 		<link rel="stylesheet" href="layout/fonts/iconic/css/material-design-iconic-font.min.css">
 		<script src="layout/js/main.js"></script>
