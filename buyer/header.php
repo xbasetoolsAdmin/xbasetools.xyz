@@ -2,7 +2,7 @@
 
 
 
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="en">
 <head>
 	<meta charset="utf-8">
@@ -12,7 +12,7 @@
 	<link href="https://drklt5.es/assets/img/favicon.ico" rel="icon">
         <link href="assets/css/bootstrap.min.css" rel="stylesheet">
 	  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
-	//cdn.datatables.net/1.13.4/css/jquery.dataTables.min.css
+	<link href="//cdn.datatables.net/1.13.4/css/jquery.dataTables.min.css">
 	<title>DarkNetShop</title>
 	<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
 	<script src="https:https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
