@@ -79,7 +79,7 @@ $(document).ready(function(){
 
 	$('#column_name').change(function(){
 
-		var all_column = ["0", "1", "2", "3", "4"];
+		var all_column = ["0", "1", "2", "3", "4", "5", "6", "7"];
 
 		var remove_column = $('#column_name').val();
 
