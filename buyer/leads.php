@@ -73,31 +73,34 @@
             <label for="Country" style="margin-bottom: 10px; margin-top: 5px">Country :</label>
             <select name="country" id="country" class="form-control" style="color: var(--font-color); background-color: var(--color-card);">
                 <option value="">All Countries</option>
+                
                 <option value="WorldWide">WorldWide</option>
             </select>
         </div>
+        
         <div class="col-xs-6 col-sm-4 col-lg-2" style="display:inline-block">
             <label for="seller" style="margin-bottom: 10px; margin-top: 5px">Seller :</label>
             <select name="seller" id="seller" class="form-control" style="color: var(--font-color); background-color: var(--color-card);">
                 <option value="">All</option>
-                <option value="Seller482">Seller482</option>
+                <option value="Seller">Seller</option>
             </select>
         </div>
     </div>
+    
     <div class="row m-2 pt-3 " style="max-width:100%; color: var(--font-color); background-color: var(--color-card);">
         <div class="col-sm-12 table-responsive">
-            <table id="lead_data" class="display responsive table-hover" style="width:100%; color: var(--font-color); background-color: var(--color-card);">
+            <table id="lead_item" class="display responsive table-hover" style="width:100%; color: var(--font-color); background-color: var(--color-card);">
                 <thead>
                     <tr>
                         <th data-priority="1"></th>
-                        <th class="all">ID</th>
-                        <th data-priority="3">Country</th>
+                        <th class="all">ID.             </th>
+                        <th data-priority="3">  Country  </th>
                         <th data-priority="6">Description</th>
-                        <th data-priority="7">Email N</th>
-                        <th data-priority="8">Seller</th>
-                        <th data-priority="2">Proof</th>
-                        <th data-priority="9">Price</th>
-                        <th data-priority="10">Added on </th>
+                        <th data-priority="7">  Email N  </th>
+                        <th data-priority="8">  Seller   </th>
+                        <th data-priority="2"    Proof   </th>
+                        <th data-priority="9">    Price   </th>
+                        <th data-priority="10">  Added on </th>
                         <th class="all">Buy</th>
                     </tr>
                 </thead>
@@ -124,17 +127,13 @@
  
     <div class="modal fade" id="modalConfirmBuy" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-sm modal-notify modal-info" role="document">
- 
             <div class="modal-content text-center">
- 
                 <div class="modal-header d-flex justify-content-center">
                     <p class="heading">Are you sure?</p>
                 </div>
- 
                 <div class="modal-body">
                     <i class='fas fa-shopping-cart fa-4x animated rotateIn'></i>
                 </div>
- 
                 <div class="modal-footer flex-center">
                     <a onClick='confirmbye()' class="btn btn-outline-info waves-effect" data-dismiss="modal">Yes</a>
                     <a type="button" class="btn btn-info" data-dismiss="modal">No</a>
@@ -170,8 +169,8 @@
             var webID;
             load_data();
  
-            function load_data(myarray) {
-                $('#lead_data').DataTable({
+            function load_data(array_search) {
+                $('#lead_item').DataTable({
                     "processing": true,
                     "serverSide": true,
                     "responsive": true,
@@ -187,10 +186,10 @@
                     }],
  
                     "ajax": {
-                        url: "divPage32.html",
+                        url: "divPage7.html",
                         type: "POST",
                         data: {
-                            data_filter: myarray,
+                            data_filter: array_search,
                             type: document.getElementById('type').value,
                             draw: 'draw',
                             row: 'start',
@@ -244,15 +243,15 @@
                 var seller1 = $('#seller').val();
                 $idseller = seller1.split("Seller");
                 var seller = $idseller[1];
-                var myarray = {};
+                var array_search = {};
  
-                myarray[0] = country;
-                myarray[1] = description;
-                myarray[2] = seller;
+                array_search[0] = country;
+                array_search[1] = description;
+                array_search[2] = seller;
  
                 if (country != '' || description != '' || seller != '') {
  
-                    load_data(myarray);
+                    load_data(array_search);
                 } else {
                     load_data();
                 }
