@@ -21,12 +21,15 @@ $usrid = mysqli_real_escape_string($dbcon, $_SESSION['sname']);
 		<meta name="revisit-after" content="2 days">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script>
-		<script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-B0E636W1BE&amp;l=dataLayer&amp;cx=c"></script>
-		<script src="/cdn-cgi/apps/head/AGN3NmUziwZfMV-TNTe1kdyeR2Y.js"></script>
+		<script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-B0E636W1BE&amp;l=dataLayer&amp;cx=c"></script></script>
+		
 		<link rel="shortcut icon" href="../../favicon.ico">
+			
 		<title>Ticket</title>
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/css/bootstrap.min.css">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js" ></script>
+		
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.5.3/css/bootstrap.min.css" integrity="sha512-oc9+XSs1H243/FRN9Rw62Fn8EtxjEYWHXRvjS43YtueEewbS6ObfXcJNyohjHqVKFPoXXUxwc+q1K7Dee6vv9g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js" >
+	</script>
 		<script src="layout/js/clipboard.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
 		<script src="layout/js/bootstrap.min.js"></script>
