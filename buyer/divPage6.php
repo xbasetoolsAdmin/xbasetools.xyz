@@ -1,4 +1,17 @@
-    <div class="row m-2 pt-3 " style="max-width:100%; color: var(--font-color); background-color: var(--color-card);">
+<?php
+ob_start();
+session_start();
+date_default_timezone_set('UTC');
+include "../includes/config.php";
+
+if (!isset($_SESSION['sname']) and !isset($_SESSION['spass'])) {
+    header("location: ../");
+    exit();
+}
+$usrid = mysqli_real_escape_string($dbcon, $_SESSION['sname']);
+?> 
+    
+            <div class="row m-2 pt-3 " style="max-width:100%; color: var(--font-color); background-color: var(--color-card);">
          <div class="col-sm-12 table-responsive">
              <div id="table_wrapper" class="dataTables_wrapper no-footer">
                  <div class="dataTables_length" id="table_length">
