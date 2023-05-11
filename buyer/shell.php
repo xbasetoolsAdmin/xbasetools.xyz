@@ -67,7 +67,7 @@ $(document).ready(function(){
 		"serverSide" : true,
 		"order" : [],
 		"ajax" : {
-			url:"divPage7.php",
+			url:"divPage5.php",
 			type:"POST"
 		}
 	});
