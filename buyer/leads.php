@@ -572,7 +572,7 @@ if ($r1 == "1") {
                     }],
  
                     "ajax": {
-                        url: "divPage7.html",
+                        url: "divPage6.html",
                         type: "POST",
                         data: {
                             data_filter: array_search,
