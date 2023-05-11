@@ -34,8 +34,7 @@ $usrid = mysqli_real_escape_string($dbcon, $_SESSION['sname']);
 <script src="https://cdn.datatables.net/responsive/2.2.6/js/dataTables.responsive.min.js"></script>
 <script src="https://cdn.datatables.net/buttons/1.6.4/js/dataTables.buttons.min.js"></script>
 <script src="https://cdn.datatables.net/buttons/1.6.4/js/buttons.colVis.min.js"></script>
-<script src="js/jquery.dataTables.min.js"></script>
-	
+<script src="js/jquery.dataTables.min.js"></script>	
 <link href="//cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet">
 <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/js/mdb.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -43,7 +42,7 @@ $usrid = mysqli_real_escape_string($dbcon, $_SESSION['sname']);
 <title>JeruxShop</title>
 </head>
  
-#mydiv {
+#lead_item {
   height: 400px;
   position: relative;
 }
@@ -83,78 +82,111 @@ $usrid = mysqli_real_escape_string($dbcon, $_SESSION['sname']);
 
             ajaxinfo();
 
-$(document).keydown(function(event){
-    if(event.which=="17")
-        cntrlIsPressed = true;
-});
+$(function() {
 
-$(document).keyup(function(){
-    cntrlIsPressed = false;
+    'use strict';
+
+    $('.navbar-nav li.dropdown').hover(function() {
+        $(this).find('.dropdown-menu').stop(true, true).delay(100).fadeIn(300);
+    }, function() {
+        $(this).find('.dropdown-menu').stop(true, true).delay(100).fadeOut(300);
+    });
+
+    /* Add Balance */
+
 });
 
 var cntrlIsPressed = false;
 
+function pageDiv(n, t, u, x) {
+    if (cntrlIsPressed) {
+        window.open(u, '_blank');
+        return false;
+    }
+    var obj = {
+        Title: t,
+        Url: u
+    };
+    if (("/" + obj.Url) != location.pathname) {
+        if (x != 1) {
+            history.pushState(obj, obj.Title, obj.Url);
+        } else {
+            history.replaceState(obj, obj.Title, obj.Url);
+        }
 
-function pageDiv(n,t,u,x){
-  if(cntrlIsPressed){
-    window.open(u, '_blank');
-    return false;
-  }
-        var obj = { Title: t, Url: u };
-        if ( ("/"+obj.Url) != location.pathname) {
-        	if (x != 1) {history.pushState(obj, obj.Title, obj.Url);}
-        	else{history.replaceState(obj, obj.Title, obj.Url);}
-
-    	}
-      document.title = obj.Title;
+    }
+    document.title = obj.Title;
     $("#mainDiv").html('<div id="mydiv"><img src="files/img/load2.gif" class="ajax-loader"></div>').show();
     $.ajax({
-    type:       'GET',
-    url:        'divPage'+n+'.html',
-    success:    function(data)
-    {
-        $("#mainDiv").html(data).show();
-        newTableObject = document.getElementById('table');
-        sorttable.makeSortable(newTableObject);
-        $(".sticky-header").floatThead({top:60});
-        if(x==0){ajaxinfo();}
-      }});
-    if (typeof stopCheckBTC === 'function') { 
-    var a = stopCheckBTC();
-     }
+        type: 'GET',
+        url: 'divPage' + n + '.html',
+        success: function(data) {
+            $("#mainDiv").html(data).show();
+        }
+    });
+    if (typeof stopCheckBTC === 'function') {
+        var a = stopCheckBTC();
+    }
 
 }
 
-$(window).on("popstate", function(e) {
-        location.replace(document.location);
+function openitem(order) {
+    $("#myModalLabel").text('Order #' + order);
+    $('#myModal').modal('show');
+    $.ajax({
+        type: 'GET',
+        url: 'showOrder' + order,
+        success: function(data) {
+            $("#modelbody").html(data).show();
+        }
+    });
 
-});
-
-
-$(window).on('load', function() {
-$('.dropdown').hover(function(){ $('.dropdown-toggle', this).trigger('click'); });
-   var clipboard = new Clipboard('.copyit');
-    clipboard.on('success', function(e) {
-      setTooltip(e.trigger, 'Copied!');
-    //  hideTooltip(e.trigger);
-      e.clearSelection();
-   });
-
-});
-
-
-function setTooltip(btn, message) {
-  console.log("hide-1");
-  $(btn).tooltip('hide')
-    .attr('data-original-title', message)
-    .tooltip('show');
-     console.log("show");
 }
 
-function hideTooltip(btn) {
-  setTimeout(function() 
-  {$(btn).tooltip('hide'); 
-  console.log("hide-2");}, 1000); }
+function sendt(id) {
+
+    var sub = $("#subject" + id).val();
+    var msg = $("#msg" + id).val();
+    var pr = $("#proi" + id).val();
+    $.ajax({
+        method: "GET",
+        url: "CreateReport?id=" + id + "&m=" + btoa(msg),
+        dataType: "text",
+        success: function(data) {
+            $("#resulta" + id).html(data).show();
+        },
+    });
+}
+
+function sendReview(id) {
+    var rating = $("#rating-" + id + " input[type='radio']:checked").val();
+    var review = $("#review-" + id).val();
+    if (rating == undefined) {
+        rating = '';
+    }
+    $.ajax({
+        type: "POST",
+        url: "addReviewToSeller",
+        dataType: "json",
+        data: {
+            orderid: id,
+            rating: rating,
+            review: review
+        },
+        success: function(response) {
+            if (response.success != 1) {
+                $("#ratingModal" + id + " .modal-body p").show();
+                $("#ratingModal" + id + " .modal-body p span").html(response.message);
+            } else {
+                $("div#rating-and-review-" + id).html(response.message);
+                $("#ratingModal" + id).hide();
+                $(".modal-backdrop").remove();
+                alert('Your rating has saved.');
+            }
+        }
+    });
+}
+
    </script>
 		
 
@@ -358,7 +390,7 @@ if ($r1 == "1") {
     
     <div class="row m-2 pt-3 " style="max-width:100%; color: var(--font-color); background-color: var(--color-card);">
         <div class="col-sm-12 table-responsive">
-            <table id="lead_item" class="display responsive table-hover" style="width:100%; color: var(--font-color); background-color: var(--color-card);">
+            <table id="mainDiv" class="display responsive table-hover" style="width:100%; color: var(--font-color); background-color: var(--color-card);">
                 <thead>
                     <tr>
                         <th data-priority="1"></th>
@@ -415,7 +447,6 @@ if ($r1 == "1") {
  
     <div class="modal fade top" id="modalCoupon" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" data-backdrop="true">
         <div class="modal-dialog modal-frame modal-top modal-notify modal-danger" role="document">
- 
             <div class="modal-content">
  
                 <div class="modal-body">
@@ -439,7 +470,7 @@ if ($r1 == "1") {
             load_data();
  
             function load_data(array_search) {
-                $('#lead_item').DataTable({
+                $('#mainDiv').DataTable({
                     "processing": true,
                     "serverSide": true,
                     "responsive": true,
