@@ -61,7 +61,7 @@ table.floatThead-table {
   height: 400px;
   position: relative;
 }
-.ajax-loader {
+.load {
   position: absolute;
   left: 0;
   top: 0;
@@ -75,16 +75,9 @@ table.floatThead-table {
     
 
 </style>
-<script type="text/javascript">
-    $.ajax({
-       url:divPage7.html,
-       type:'GET',
-       success: function(data){
-           $('#mainDiv').html($(data).find('#table').html());
-       }
-    });
+<script>
+$("mydiv").load(".divPage7.html #mainDiv");
 </script>
-
 		<style>
             .navbar {
                 background-color: #001f3f;
