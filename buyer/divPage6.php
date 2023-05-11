@@ -310,6 +310,5 @@
  
          }
      </script>
-     <div class="hiddendiv common"></div>
- </body>
+    </div>
  
