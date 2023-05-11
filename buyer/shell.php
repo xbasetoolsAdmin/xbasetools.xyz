@@ -28,10 +28,10 @@
 						<div class="col-lg-3">
 							<select name="column_name" id="column_name" class="form-control selectpicker" multiple>
 								<option value="0">ID</option>
-						      	<option value="1">Country</option>
-						      	<option value="Price</option>
-						      	<option value="3">Info</option>
-						      	<option value="4">Sitename</option>
+						  <option value="1">Country</option>
+						  	<option value="2">Price</option>
+						   <option value="3">Info</option>
+						   	<option value="4">Sitename</option>
 							</select>
 						</div>
 					</div>
@@ -43,16 +43,13 @@
 								<tr>
 									
                     <th> ID</th>
-								
                     <th>Country</th>								
                     <th>infos</th>
-				     
                     <th>Price</th>
-									<th>reseller</th>
-									<th>sitename</th>
-									
-<th>Date</th>
-	</tr>
+																					<th>reseller</th>
+																					<th>sitename</th>
+																					<th>Date</th>
+																						</tr>
 						</thead>
 						</table>
 					</div>
