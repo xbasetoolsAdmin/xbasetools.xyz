@@ -3,20 +3,20 @@
 
 //fetch.php
 
-$connect = new PDO("mysql:host=localhost;dbname=xbaseleets_table", "xbaseleets_xbaseleets", "xbaseleets_xbaseleets");
+$connect = new PDO("mysql:host=localhost;dbname=xbaseleets_xbaseleets", "xbaseleets_xbaseleets", "xbaseleets_xbaseleets");
 
-$column = array("customer_id", "customer_first_name", "customer_last_name", "customer_email", "customer_gender");
+$column = array("id", "country", "price", "infos", "sitename");
 
-$query = "SELECT * FROM customer_table ";
+$query = "SELECT * FROM accounts ";
 
 if(isset($_POST["search"]["value"]))
 {
 	$query .= '
-	WHERE customer_id LIKE "%'.$_POST["search"]["value"].'%" 
-	OR customer_first_name LIKE "%'.$_POST["search"]["value"].'%" 
-	OR customer_last_name LIKE "%'.$_POST["search"]["value"].'%" 
-	OR customer_email LIKE "%'.$_POST["search"]["value"].'%" 
-	OR customer_gender LIKE "%'.$_POST["search"]["value"].'%" 
+	WHERE id LIKE "%'.$_POST["search"]["value"].'%" 
+	OR country LIKE "%'.$_POST["search"]["value"].'%" 
+	OR price LIKE "%'.$_POST["search"]["value"].'%" 
+	OR infos LIKE "%'.$_POST["search"]["value"].'%" 
+	OR sitename LIKE "%'.$_POST["search"]["value"].'%" 
 	';
 }
 
@@ -26,7 +26,7 @@ if(isset($_POST["order"]))
 }
 else
 {
-	$query .= 'ORDER BY customer_id DESC ';
+	$query .= 'ORDER BY id DESC ';
 }
 
 $query1 = '';
@@ -49,17 +49,19 @@ $data = array();
 foreach($result as $row)
 {
 	$sub_array = array();
-	$sub_array[] = $row['customer_id'];
-	$sub_array[] = $row['customer_first_name'];
-	$sub_array[] = $row['customer_last_name'];
-	$sub_array[] = $row['customer_email'];
-	$sub_array[] = $row['customer_gender'];
+	$sub_array[] = $row['id'];
+	$sub_array[] = $row['country'];
+	$sub_array[] = $row['infos'];
+	$sub_array[] = $row['price'];
+	$sub_array[] = $row['reseller'];
+	$sub_array[] = $row['sitename‘];
+	$sub_array[] = $row[‘date’];
 	$data[] = $sub_array;
 }
 
 function count_all_data($connect)
 {
-	$query = "SELECT * FROM customer_table";
+	$query = “SELECT * FROM accounts”;
 
 	$statement = $connect->prepare($query);
 
@@ -69,12 +71,14 @@ function count_all_data($connect)
 }
 
 $output = array(
-	"draw"		=>	intval($_POST["draw"]),
-	"recordsTotal"	=>	count_all_data($connect),
-	"recordsFiltered"	=>	$number_filter_row,
-	"data"	=>	$data
+	“draw”		=>	intval($_POST[“draw”]),
+	“recordsTotal”	=>	count_all_data($connect),
+	“recordsFiltered”	=>	$number_filter_row,
+	“data”	=>	$data
 );
 
 echo json_encode($output);
 
 ?>
+
+
