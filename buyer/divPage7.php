@@ -14,10 +14,12 @@ if(!isset($_SESSION['sname']) and !isset($_SESSION['spass'])){
 
         <div class="col-xs-6 col-sm-4 col-lg-2" style="display:inline-block">
             <label for="seller" style="margin-bottom: 10px; margin-top: 5px">Seller :</label>
+            
             <select name="seller" id="seller" class="form-control" style="color: var(--font-color); background-color: var(--color-card);">
                 <option value="">
                   All</option>
                 <option value="Seller349">Seller349</option>
+              
                 <option value="Seller413">Seller413</option>
                 <option value="Seller370">Seller370</option>
                 <option value="Seller382">Seller382</option>
