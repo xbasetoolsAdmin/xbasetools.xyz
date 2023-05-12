@@ -33,13 +33,7 @@ $usrid = mysqli_real_escape_string($dbcon, $_SESSION['sname']);
 </head>
 <style>
 
-.label-as-badge {
-    border-radius: 0.5em;
-}
 
-body {
-    padding-top:50px;
-}
 table.floatThead-table {
     border-top: none;
     border-bottom: none;
