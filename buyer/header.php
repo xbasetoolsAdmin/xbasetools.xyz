@@ -1,35 +1,75 @@
-<html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
-<!-- Font Awesome -->
-    <link  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"  rel="stylesheet" />
-<!-- Google Fonts -->
-     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet"/>
-                      <!-- MDB -->
-    <link  href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.3.0/mdb.min.css"  rel="stylesheet" />
-   <link  href="https:// //cdn.datatables.net/1.13.4/css/jquery.dataTables.min.css"  rel="stylesheet" />
-    <title>Hello, world!</title>
+<!DOCTYPE html>
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     
-    
-   
-    <title>Hello, world!</title>
-  <title>Hello, world!</title>
-  <title>Hello, world!</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Main - home </title>
+ <link rel="stylesheet" href="layout/css/bootstrap.min.css">
+ <link rel="stylesheet" type="text/css" href="layout/css/main.css">
+<link rel="stylesheet" type="text/css" href="../buyer/assets/flags.css">
+ <link rel="stylesheet" type="text/css" href="layout/css/tickets.css">
+  
+<script type="text/javascript" src="layout/js/jquery-3.5.1.min.js"></script>
+<script type="text/javascript" src="layout/js/jquery.dataTables.js"></script>
+<script type="text/javascript" src="layout/js/bootbox.min.js"></script>
+<script type="text/javascript" src="./assets/sorttable.js"></script>
+  
+<font face="Arial"><link href="layout/css/style.css" rel="stylesheet">	
+<style>
+
+.alert.alert-shadowed {
+    -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.2);
+    -moz-box-shadow: 0 1px 2px rgba(0,0,0,.2);
+    box-shadow: 0 1px 2px rgba(0,0,0,.2);
+}
+
+
+.alert {
+    margin-bottom: 20px;
+    margin-top: 0;
+    color: #fff;
+    border-width: 0;
+    border-left-width: 5px;
+    padding: 10px;
+    border-radius: 0;
+}
+
+.alert.alert-danger {
+    border-color: #df5138;
+    background: #001f3f;
+}
+
+.teddy-text {
+  background: #f2f1ef;
+  padding: 1.2em 1em;
+  border-radius: 5px 5px 0px 0px;
+}   
+
+.teddy-follow {
+  background: #17C0FB;
+  padding: 0.7em 0em 0.7em 0em;
+}
+.teddy-followred {
+  background: #D41010;
+  padding: 0.7em 0em 0.7em 0em;
+}
+</style>
   
   
- 
-  </head>
-  
-  
-  
-  
-  
-  
-  
-  
-  
- 
+<style>
+.content {
+	display:none;
+}
+
+</style>
+    <style>
+.disp {
+  .sortable
+}
+.sort th:not(.sorttable_sorted):not(.sorttable_sorted_reverse):not(.sorttable_nosort):after { 
+    content: " \25BE" 
+}
+</style>
+</head>
