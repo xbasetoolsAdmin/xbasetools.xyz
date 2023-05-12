@@ -1,7 +1,7 @@
-ErrorDocument 404 /JERUX/buyer/index
+ErrorDocument 404 /JERUX/buyer/index.html
 RewriteEngine on
-RewriteRule ^index$  index.php
-RewriteRule ^ajaxinfo$  ajax.php
+RewriteRule ^index.html$  index.php
+RewriteRule ^ajaxinfo.html$  ajax.php
 RewriteRule ^mailer$  mailer.php
 RewriteRule ^offers$  offers.php
 
