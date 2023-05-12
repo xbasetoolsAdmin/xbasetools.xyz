@@ -1,6 +1,23 @@
 
-    </style>
-</head>
+<html>
+	<head>
+		<title>How to Dynamically Display Hide DataTables Column with PHP Ajax</title>
+		<!-- JS, Popper.js, and jQuery -->
+		<script  src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+		<!-- CSS only -->
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+		
+		<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+		<script src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js"></script>
+		<script src="https://cdn.datatables.net/1.10.22/js/dataTables.bootstrap4.min.js"></script>  
+		<link rel="stylesheet" href="https://cdn.datatables.net/1.10.22/css/dataTables.bootstrap4.min.css" />
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/css/bootstrap-select.min.css">
+  		<script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/js/bootstrap-select.min.js"></script>
+	</head>
+	<body>
+
 <style>
     .display td {
         background: var(--color-card);
@@ -395,72 +412,31 @@
             background-position: center center;
             background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADwAAAA8CAYAAAA6/NlyAAAAAXNSR0IArs4c6QAAA3hJREFUaAXlm8+K00Acx7MiCIJH/yw+gA9g25O49SL4AO3Bp1jw5NvktC+wF88qevK4BU97EmzxUBCEolK/n5gp3W6TTJPfpNPNF37MNsl85/vN/DaTmU6PknC4K+pniqeKJ3k8UnkvDxXJzzy+q/yaxxeVHxW/FNHjgRSeKt4rFoplzaAuHHDBGR2eS9G54reirsmienDCTRt7xwsp+KAoEmt9nLaGitZxrBbPFNaGfPloGw2t4JVamSt8xYW6Dg1oCYo3Yv+rCGViV160oMkcd8SYKnYV1Nb1aEOjCe6L5ZOiLfF120EjWhuBu3YIZt1NQmujnk5F4MgOpURzLfAwOBSTmzp3fpDxuI/pabxpqOoz2r2HLAb0GMbZKlNV5/Hg9XJypguryA7lPF5KMdTZQzHjqxNPhWhzIuAruOl1eNqKEx1tSh5rfbxdw7mOxCq4qS68ZTjKS1YVvilu559vWvFHhh4rZrdyZ69Vmpgdj8fJbDZLJpNJ0uv1cnr/gjrUhQMuI+ANjyuwftQ0bbL6Erp0mM/ny8Fg4M3LtdRxgMtKl3jwmIHVxYXChFy94/Rmpa/pTbNUhstKV+4Rr8lLQ9KlUvJKLyG8yvQ2s9SBy1Jb7jV5a0yapfF6apaZLjLLcWtd4sNrmJUMHyM+1xibTjH82Zh01TNlhsrOhdKTe00uAzZQmN6+KW+sDa/JD2PSVQ873m29yf+1Q9VDzfEYlHi1G5LKBBWZbtEsHbFwb1oYDwr1ZiF/2bnCSg1OBE/pfr9/bWx26UxJL3ONPISOLKUvQza0LZUxSKyjpdTGa/vDEr25rddbMM0Q3O6Lx3rqFvU+x6UrRKQY7tyrZecmD9FODy8uLizTmilwNj0kraNcAJhOp5aGVwsAGD5VmJBrWWbJSgWT9zrzWepQF47RaGSiKfeGx6Szi3gzmX/HHbihwBser4B9UJYpFBNX4R6vTn3VQnez0SymnrHQMsRYGTr1dSk34ljRqS/EMd2pLQ8YBp3a1PLfcqCpo8gtHkZFHKkTX6fs3MY0blKnth66rKCnU0VRGu37ONrQaA4eZDFtWAu2fXj9zjFkxTBOo8F7t926gTp/83Kyzzcy2kZD6xiqxTYnHLRFm3vHiRSwNSjkz3hoIzo8lCKWUlg/YtGs7tObunDAZfpDLbfEI15zsEIY3U/x/gHHc/G1zltnAgAAAABJRU5ErkJggg==);
         }
+    </style>		<div class="container">
+			<br />
+			<h1 align="center" class="text-primary"><b>How to Dynamically Display Hide DataTables Column with PHP Ajax</b></h1>
+			<br />
+			<div class="card">
+				<div class="card-header">
+					<div class="row">
+						<div class="col-lg-9">Sample Data</div>
+						<div class="col-lg-3">
+							<select name="column_name" id="column_name" class="form-control selectpicker" multiple>
+								<option value="0">ID</option>
+						  <option value="1">Country</option>
+						  	<option value="2">Price</option>
+						   <option value="3">Info</option>
+						   	<option value="4">Sitename</option>
+							</select>
+						</div>
+					</div>
+				</div>
+				<div class="card-body">
+					<div class="table-responsive">
+						<table id="lead_data" class="table table-bordered table-striped">
+							<thead>
     </style>
-    <div class="d-flex flex-row-reverse mt-0">
-        <div class="p-2">
-            <label id="switch" class="switch">
-                <input type="checkbox" onchange="toggleTheme()" id="slider">
-                <span class="slider round">
-                </span>
-            </label>
-        </div>
-    </div>
-    <div class="alert alert-info text-left" role="alert" style="margin: 15px;">
-        <ul>
-            <li>For Any problem for account after buy just open report and seller will fix it or replace.</li>
-            <li>There is <b> 6 </b> Accounts Available.</li>
-        </ul>
-    </div>
-    <input type=hidden id="cat" name="cat" value="2" />
-    <div class="row m-3 pt-1" style="color: var(--font-color);">
-        <div class="col-xs-6 col-sm-4 col-lg-2" style="display:inline-block">
-            <label for="infos" style="margin-bottom: 10px; margin-top: 5px">Website Name :</label>
-            <select name="sitename" id="sitename" class="form-control" style="color: var(--font-color); background-color: var(--color-card);">
-                <option value="">All</option>
-                <option value="https://my.bluehost.com/web-ho">https://my.bluehost.com/web-ho</option>
-                <option value="https://portal.azure.com">https://portal.azure.com</option>
-                <option value="https://signin.aws.amazon.com/">https://signin.aws.amazon.com/</option>
-                <option value="https://uk.hosting24.com/cpane">https://uk.hosting24.com/cpane</option>
-            </select>
-        </div>
-        <div class="col-xs-6 col-sm-4 col-lg-2" style="display:inline-block">
-            <label for="infos" style="margin-bottom: 10px; margin-top: 5px">Details:</label>
-            <input type="search" class="form-control" id="infos" style="color: var(--font-color); background-color: var(--color-card);">
-        </div>
-        <div class="col-xs-6 col-sm-4 col-lg-2" style="display:inline-block">
-            <label for="Country" style="margin-bottom: 10px; margin-top: 5px">Country :</label>
-            <select name="country" id="country" class="form-control" style="color: var(--font-color); background-color: var(--color-card);">
-                <option value="">All Countries</option>
-                <option value="United Kingdom">United Kingdom</option>
-                <option value="United States">United States</option>
-            </select>
-        </div>
-        <div class="col-xs-6 col-sm-4 col-lg-2" style="display:inline-block">
-            <label for="seller" style="margin-bottom: 10px; margin-top: 5px">Seller :</label>
-            <select name="seller" id="seller" class="form-control" style="color: var(--font-color); background-color: var(--color-card);">
-                <option value="">All</option>
-                <option value="Seller349">Seller349</option>
-                <option value="Seller327">Seller327</option>
-                <option value="Seller342">Seller342</option>
-            </select>
-        </div>
-    </div>
-    <div class="row m-2 pt-3 " style="max-width:100%; color: var(--font-color); background-color: var(--color-card);">
-        <div class="col-sm-12 table-responsive">
-            <table id="account_data" class="display responsive table-hover" style="width:100%; color: var(--font-color); background-color: var(--color-card);">
-                <thead>
-                    <tr>
-                        <th data-priority="1"></th>
-                        <th class="all">ID</th>
-                        <th data-priority="3">Website Name</th>
-                        <th data-priority="4">Country</th>
-                        <th data-priority="7">Details</th>
-                        <th data-priority="8">Price</th>
-                        <th data-priority="9">Seller</th>
-                        <th data-priority="10">Source</th>
-                        <th class="all">Proof</th>
-                        <th data-priority="11">Date Created</th>
-                        <th class="all">Buy</th>
+</head>
                     </tr>
                 </thead>
             </table>
