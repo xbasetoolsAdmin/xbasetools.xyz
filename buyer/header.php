@@ -11,10 +11,10 @@
 <link rel="stylesheet" type="text/css" href="../buyer/assets/flags.css">
  <link rel="stylesheet" type="text/css" href="layout/css/tickets.css">
   
-<script type="text/javascript" src="layout/js/jquery-3.5.1.min.js"></script>
-<script type="text/javascript" src="layout/js/jquery.dataTables.js"></script>
-<script type="text/javascript" src="layout/js/bootbox.min.js"></script>
-<script type="text/javascript" src="./assets/sorttable.js"></script>
+<script type="text/javascript" src="layout/dist/js/jquery-3.5.1.min.js"></script>
+<script type="text/javascript" src="layout/dist/js/jquery.dataTables.js"></script>
+<script type="text/javascript" src="layout/dist/js/bootbox.min.js"></script>
+<script type="text/javascript" src="./assets/plugin.js"></script>
   
 <font face="Arial"><link href="layout/css/style.css" rel="stylesheet">	
 <style>
