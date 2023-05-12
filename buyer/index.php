@@ -84,7 +84,7 @@ table.floatThead-table {
 }
 @media (min-width: 768px) {
   .dropdown:hover .dropdown-menu {
-    display: block;
+    display:inline-block;
   }
 }
 
