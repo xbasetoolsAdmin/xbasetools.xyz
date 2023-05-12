@@ -41,6 +41,47 @@ $usrid = mysqli_real_escape_string($dbcon, $_SESSION['sname']);
             }, 3000);
 
             ajaxinfo();
+</script>
+
+
+
+
+    
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <!-- /.navbar-collapse -->
+  </div>
+  <!-- /.container-fluid -->
+</nav>
+<div id="mainDiv"></div>
+
+<script type="text/javascript">
+             function ajaxinfo() {
+                $.ajax({
+                    type: 'GET',
+                    url: 'ajaxinfo.html',
+                    timeout: 10000,
+
+                    success: function(data) {
+                        if (data != '01') {
+                            var data = JSON.parse(data);
+                            for (var prop in data) {
+                                $("#" + prop).html(data[prop]).show();
+                            }
+                        } else {
+                            window.location = "logout.html";
+                        }
+                    }
+                });
+
+            }
+            setInterval(function() {
+                ajaxinfo()
+            }, 3000);
+
+            ajaxinfo();
 
 $(document).keydown(function(event){
     if(event.which=="17")
@@ -69,7 +110,7 @@ function pageDiv(n,t,u,x){
     $("#mainDiv").html('<div id="mydiv"><img src="files/img/load2.gif" class="ajax-loader"></div>').show();
     $.ajax({
     type:       'GET',
-    url:        'divPage',
+    url:        'divPage'+n+'.html',
     success:    function(data)
     {
         $("#mainDiv").html(data).show();
@@ -88,7 +129,7 @@ function pageDiv(n,t,u,x){
                 "pageLength": 500
             });
         }
- </
+        $(".sticky-header").floatThead({top:60});
         if(x==0){ajaxinfo();}
       }});
     if (typeof stopCheckBTC === 'function') { 
@@ -105,7 +146,7 @@ $(window).on("popstate", function(e) {
 
 $(window).on('load', function() {
 $('.dropdown').hover(function(){ $('.dropdown-toggle', this).trigger('click'); });
-   pageDiv(0,'Main - JeruxShop','index.html',1);
+   pageDiv(7,'P ','index.html',1);
    var clipboard = new Clipboard('.copyit');
     clipboard.on('success', function(e) {
       setTooltip(e.trigger, 'Copied!');
@@ -129,50 +170,8 @@ function hideTooltip(btn) {
 }
 </script>
 
-                        <?php
-$uid = mysqli_real_escape_string($dbcon, $_SESSION['sname']);
-$q = mysqli_query($dbcon, "SELECT resseller FROM users WHERE username='$uid'") or die(mysqli_error());
-$r         = mysqli_fetch_assoc($q);
-$reselerif = $r['resseller'];
-if ($reselerif == "1") {
-    $uid = mysqli_real_escape_string($dbcon, $_SESSION['sname']);
-    $q = mysqli_query($dbcon, "SELECT soldb FROM resseller WHERE username='$uid'") or die(mysqli_error());
-    $r = mysqli_fetch_assoc($q);
-
-    echo '<li><a href="seller/index.html"><span class="badge" title="Seller Panel"><span class="glyphicon glyphicon-cloud"></span><span id="seller"></span></span></a></li>';
-} else {
-} ?>      
-<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Tickets <span id="alltickets">
-<?php
-$sze112  = mysqli_query($dbcon, "SELECT * FROM ticket WHERE uid='$uid' and seen='1'");
-$r844941 = mysqli_num_rows($sze112);
-if ($r844941 == "1") {
-    echo '<span class="label label-danger">1</span>';
-}
-?>
-</span></a>
-          <ul class="dropdown-menu" role="menu">
-            <li><a href="tickets.html" onclick="pageDiv(11,'Tickets - FeluxShop','tickets.html',0); return false;">Tickets <span class="label label-info"><span id="tickets"></span></span><?php
-$s1 = mysqli_query($dbcon, "SELECT * FROM ticket WHERE uid='$uid' and seen='1'");
-$r1 = mysqli_num_rows($s1);
-if ($r1 == "1") {
-    echo '<span class="label label-success"> 1 New</span>';
-}
-?></span></a></li>
-            <li><a href="reports.html" onclick="pageDiv(12,'Reports - FeluxShop','reports.html',0); return false;">Reports <span class="label label-info"><span id="reports"></span></span> <?php
-$s1 = mysqli_query($dbcon, "SELECT * FROM reports WHERE uid='$uid' and seen='1'");
-$r1 = mysqli_num_rows($s1);
-if ($r1 == "1") {
-    echo '<span class="label label-success"> 1 New</span>';
-}
-?></span> </a></li>
-
-
-</nav>
-<div id="mainDiv">
-
-
-</div>
 </body>
 </html>
+
+
 
