@@ -10,7 +10,7 @@
     <script src="/cdn-cgi/apps/head/AGN3NmUziwZfMV-TNTe1kdyeR2Y.js"></script>
     <link rel="shortcut icon" href="../../favicon.ico" />
     <title>Profile</title>
-    <link rel="stylesheet" href="layout/css/bootstrap.min.css">
+    <link rel="stylesheet" href="files/css/bootstrap.min.css">
     <script src="layout/js/jquery-3.4.1.min.js"></script>
     <script src="layout/js/clipboard.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
