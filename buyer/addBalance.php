@@ -47,7 +47,7 @@ color: var(--font-color);
     <div class="alert alert-info text-left" role="alert" style="margin: 15px;">
         <ul>
             <li>For Any problem for account after buy just open report and seller will fix it or replace.</li>
-            <li>There is <b> 6 </b> Accounts Available.</li>
+            <li>There is <b> 19 </b> Accounts Available.</li>
         </ul>
     </div>
     
