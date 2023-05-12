@@ -34,10 +34,7 @@ $usrid = mysqli_real_escape_string($dbcon, $_SESSION['sname']);
 <style>
 
 
-#mydiv {
-  height: 400px;
-  position: relative;
-}
+
 .ajax-loader {
   position: absolute;
   left: 0;
