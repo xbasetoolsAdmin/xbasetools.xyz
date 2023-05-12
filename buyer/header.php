@@ -13,7 +13,7 @@
     <title>Report</title>
     
     
-    <link rel="stylesheet" href="layout/css/all.Xbasetools.css">
+    <link rel="stylesheet" href="layout/css/bs.xbasetools.css">
     <link rel="stylesheet" href="layout/css/all.Xbasetools.css">
     <link rel="stylesheet" href="layout/css/all.Xbasetools.css">
     <link rel="stylesheet" href="layout/css/all.Xbasetools.css">
