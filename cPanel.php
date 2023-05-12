@@ -33,12 +33,6 @@ $usrid = mysqli_real_escape_string($dbcon, $_SESSION['sname']);
 </head>
 <style>
 
-
-table.floatThead-table {
-    border-top: none;
-    border-bottom: none;
-    background-color: #fff;
-}
 @media (min-width: 768px) {
   .dropdown:hover .dropdown-menu {
     display: block;
