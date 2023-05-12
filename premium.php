@@ -408,29 +408,19 @@
     <div class="alert alert-info text-left" role="alert" style="margin: 15px;">
         <ul>
             <li>For Any problem for account after buy just open report and seller will fix it or replace.</li>
-            <li>There is <b> 99 </b> Accounts Available.</li>
+            <li>There is <b> 6 </b> Accounts Available.</li>
         </ul>
     </div>
-    <input type=hidden id="cat" name="cat" value="1" />
+    <input type=hidden id="cat" name="cat" value="2" />
     <div class="row m-3 pt-1" style="color: var(--font-color);">
         <div class="col-xs-6 col-sm-4 col-lg-2" style="display:inline-block">
             <label for="infos" style="margin-bottom: 10px; margin-top: 5px">Website Name :</label>
             <select name="sitename" id="sitename" class="form-control" style="color: var(--font-color); background-color: var(--color-card);">
                 <option value="">All</option>
-                <option value="http://gmx.com/">http://gmx.com/</option>
-                <option value="https://app.constantcontact.co">https://app.constantcontact.co</option>
-                <option value="https://deds.nl/webmail/src/lo">https://deds.nl/webmail/src/lo</option>
-                <option value="https://login.hostmonster.com/">https://login.hostmonster.com/</option>
-                <option value="https://mail.hostinger.com">https://mail.hostinger.com</option>
-                <option value="https://mail.hostinger.com/">https://mail.hostinger.com/</option>
-                <option value="https://mail.ionos.com/">https://mail.ionos.com/</option>
-                <option value="https://mail.simnet.is">https://mail.simnet.is</option>
-                <option value="https://postur.simnet.is">https://postur.simnet.is</option>
-                <option value="https://webmail.mwt.net">https://webmail.mwt.net</option>
-                <option value="https://webmail1.hostinger.com">https://webmail1.hostinger.com</option>
-                <option value="https://www.zoho.com">https://www.zoho.com</option>
-                <option value="mail.infinitummail.com">mail.infinitummail.com</option>
-                <option value="nordaccount.com">nordaccount.com</option>
+                <option value="https://my.bluehost.com/web-ho">https://my.bluehost.com/web-ho</option>
+                <option value="https://portal.azure.com">https://portal.azure.com</option>
+                <option value="https://signin.aws.amazon.com/">https://signin.aws.amazon.com/</option>
+                <option value="https://uk.hosting24.com/cpane">https://uk.hosting24.com/cpane</option>
             </select>
         </div>
         <div class="col-xs-6 col-sm-4 col-lg-2" style="display:inline-block">
@@ -441,12 +431,8 @@
             <label for="Country" style="margin-bottom: 10px; margin-top: 5px">Country :</label>
             <select name="country" id="country" class="form-control" style="color: var(--font-color); background-color: var(--color-card);">
                 <option value="">All Countries</option>
-                <option value="France">France</option>
-                <option value="Mexico">Mexico</option>
-                <option value="Netherlands">Netherlands</option>
-                <option value="Saudi Arabia">Saudi Arabia</option>
+                <option value="United Kingdom">United Kingdom</option>
                 <option value="United States">United States</option>
-                <option value="WorldWide">WorldWide</option>
             </select>
         </div>
         <div class="col-xs-6 col-sm-4 col-lg-2" style="display:inline-block">
@@ -454,12 +440,8 @@
             <select name="seller" id="seller" class="form-control" style="color: var(--font-color); background-color: var(--color-card);">
                 <option value="">All</option>
                 <option value="Seller349">Seller349</option>
-                <option value="Seller413">Seller413</option>
-                <option value="Seller370">Seller370</option>
-                <option value="Seller382">Seller382</option>
-                <option value="Seller366">Seller366</option>
-                <option value="Seller306">Seller306</option>
-                <option value="Seller393">Seller393</option>
+                <option value="Seller327">Seller327</option>
+                <option value="Seller342">Seller342</option>
             </select>
         </div>
     </div>
@@ -532,7 +514,6 @@
  
                 <div class="modal-body">
                     <div class="row d-flex justify-content-center align-items-center">
- 
                         <img src="layout/images/balance.png">
                         <span class="pt-3 mx-4" style="font-size: 14 px"><b>No enough balance !</b> Please refill your balance</span>
                         <a type="button" href="addBalance" onclick="window.open(this.href);return false;" class="btn btn-danger">Add Balance
