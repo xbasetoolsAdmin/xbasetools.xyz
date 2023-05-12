@@ -5,7 +5,7 @@ date_default_timezone_set('UTC');
 include "../includes/config.php";
 
 if (!isset($_SESSION['sname']) and !isset($_SESSION['spass'])) {
-    header("location: ../");
+    header("location: login.html");
     exit();
 }
 $usrid = mysqli_real_escape_string($dbcon, $_SESSION['sname']);
@@ -13,9 +13,6 @@ $usrid = mysqli_real_escape_string($dbcon, $_SESSION['sname']);
 <!doctype html>
 <html>
 <head>
-<link rel="stylesheet" type="text/css" href="files/bootstrap/3/css/bootstrap.css?1" />
-<link rel="stylesheet" type="text/css" href="files/css/flags.css" />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.2.0/css/font-awesome.min.css">
 <script type="text/javascript" src="files/js/jquery.js?1"></script>
 <script type="text/javascript" src="files/bootstrap/3/js/bootstrap.js?1"></script>
 <script type="text/javascript" src="files/js/sorttable.js"></script>
@@ -23,14 +20,8 @@ $usrid = mysqli_real_escape_string($dbcon, $_SESSION['sname']);
 <script type="text/javascript" src="files/js/bootbox.min.js"></script>
 <script type="text/javascript" src="files/js/clipboard.min.js"></script>
 
-<link rel="shortcut icon" href="files/img/favicon.ico" />
-<meta http-equiv="X-UA-Compatible" content="IE=10; IE=9; IE=8; IE=7; IE=EDGE" /> 
- <meta name="referrer" content="no-referrer" />
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta charset="utf-8">
-<title>JeruxShop</title>
- 
+
 <script type="text/javascript">
              function ajaxinfo() {
                 $.ajax({
@@ -72,7 +63,7 @@ var cntrlIsPressed = false;
 function pageDiv(n,t,u,x){
   if(cntrlIsPressed){
     window.open(u, '_blank');
-    return false;</head> 
+    return false;
   }
         var obj = { Title: t, Url: u };
         if ( ("/"+obj.Url) != location.pathname) {
@@ -84,7 +75,7 @@ function pageDiv(n,t,u,x){
     $("#mainDiv").html('<div id="mydiv"><img src="files/img/load2.gif" class="ajax-loader"></div>').show();
     $.ajax({
     type:       'GET',
-    url:        'divPage,
+    url:        'divPage'+n+'.html',
     success:    function(data)
     {
         $("#mainDiv").html(data).show();
@@ -107,7 +98,7 @@ $(window).on("popstate", function(e) {
 
 $(window).on('load', function() {
 $('.dropdown').hover(function(){ $('.dropdown-toggle', this).trigger('click'); });
-   pageDiv(0,'Main - JeruxShop','index.html',1);
+   pageDiv(0,'Main - FeluxShop','index.html',1);
    var clipboard = new Clipboard('.copyit');
     clipboard.on('success', function(e) {
       setTooltip(e.trigger, 'Copied!');
@@ -130,7 +121,47 @@ function hideTooltip(btn) {
   setTimeout(function() {$(btn).tooltip('hide'); console.log("hide-2");}, 1000);
 }
 </script>
- <?php includes"mMin "?>
+
+                        <?php
+$uid = mysqli_real_escape_string($dbcon, $_SESSION['sname']);
+$q = mysqli_query($dbcon, "SELECT resseller FROM users WHERE username='$uid'") or die(mysqli_error());
+$r         = mysqli_fetch_assoc($q);
+$reselerif = $r['resseller'];
+if ($reselerif == "1") {
+    $uid = mysqli_real_escape_string($dbcon, $_SESSION['sname']);
+    $q = mysqli_query($dbcon, "SELECT soldb FROM resseller WHERE username='$uid'") or die(mysqli_error());
+    $r = mysqli_fetch_assoc($q);
+
+    echo '<li><a href="seller/index.html"><span class="badge" title="Seller Panel"><span class="glyphicon glyphicon-cloud"></span><span id="seller"></span></span></a></li>';
+} else {
+} ?>      
+<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Tickets <span id="alltickets">
+<?php
+$sze112  = mysqli_query($dbcon, "SELECT * FROM ticket WHERE uid='$uid' and seen='1'");
+$r844941 = mysqli_num_rows($sze112);
+if ($r844941 == "1") {
+    echo '<span class="label label-danger">1</span>';
+}
+?>
+</span></a>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="tickets.html" onclick="pageDiv(11,'Tickets - FeluxShop','tickets.html',0); return false;">Tickets <span class="label label-info"><span id="tickets"></span></span><?php
+$s1 = mysqli_query($dbcon, "SELECT * FROM ticket WHERE uid='$uid' and seen='1'");
+$r1 = mysqli_num_rows($s1);
+if ($r1 == "1") {
+    echo '<span class="label label-success"> 1 New</span>';
+}
+?></span></a></li>
+            <li><a href="reports.html" onclick="pageDiv(12,'Reports - FeluxShop','reports.html',0); return false;">Reports <span class="label label-info"><span id="reports"></span></span> <?php
+$s1 = mysqli_query($dbcon, "SELECT * FROM reports WHERE uid='$uid' and seen='1'");
+$r1 = mysqli_num_rows($s1);
+if ($r1 == "1") {
+    echo '<span class="label label-success"> 1 New</span>';
+}
+?></span> </a></li>
+
+
+</nav>
 <div id="mainDiv">
 
 
