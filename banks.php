@@ -1,6 +1,12 @@
-
-<html>
-	<head>
+><!DOCTYPE html>
+<html class="theme-dark">
+ 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="revisit-after" content="2 days">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="shortcut icon" href="favicon.ico.png"
 		<title>How to Dynamically Display Hide DataTables Column with PHP Ajax</title>
 		<!-- JS, Popper.js, and jQuery -->
 		<script  src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
