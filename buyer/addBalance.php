@@ -1,25 +1,11 @@
-<!DOCTYPE html><html class="theme-light"><head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="alfacoins-site-verification" content="5ef8c2279aa605ef8c2279aa965ef8c2279aacb_ALFAcoins">
-<meta name="revisit-after" content="2 days">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<script type="text/javascript" async="" src="../www.google-analytics.com/analytics.js"></script><script type="text/javascript" async="" src="../www.googletagmanager.com/gtag/js%EF%B9%96id=G-B0E636W1BE&amp;l=dataLayer&amp;cx=c.js"></script><script src="cdn-cgi/apps/head/AGN3NmUziwZfMV-TNTe1kdyeR2Y.js"></script>
-<style type="text/css">/* Chart.js */
-@-webkit-keyframes chartjs-render-animation{from{opacity:0.99}to{opacity:1}}@keyframes chartjs-render-animation{from{opacity:0.99}to{opacity:1}}.chartjs-render-monitor{-webkit-animation:chartjs-render-animation 0.001s;animation:chartjs-render-animation 0.001s;}</style>
 
 
 
-            // Notice how this gets configured before we load Font Awesome
-            window.FontAwesomeConfig = { autoReplaceSvg: false }
-        </script>
-<style>@import url(../fonts.googleapis.com/css%EF%B9%96family=Roboto%EF%B9%95400.css);
-            .navbar-nav .dropdown-menu
-            {
-            margin:0 !important
-            }
-        </style>
-<style>.display  td {
+
+
+<style>
+
+.display  td {
     background: var(--color-card);
       color: var(--font-color);
 
