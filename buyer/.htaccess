@@ -2,35 +2,19 @@ ErrorDocument 404 /JERUX/buyer/index.html
 RewriteEngine on
 RewriteRule ^index.html$  index.php
 RewriteRule ^ajaxinfo.html$  ajax.php
+
+RewriteRule ^settingEdit$  settingEdit.php
+RewriteRule ^CreateTicket$  createticket.php
+RewriteRule ^CreateReport$  createreport.php
+RewriteRule ^addBalance$      funds.php
+RewriteRule ^addBalanceAction$  addBalanceAction.php
+RewriteRule ^rdp$  rdp.php
 RewriteRule ^mailer$  mailer.php
 RewriteRule ^offers$  offers.php
-
 RewriteRule ^shell$  shell.php
 RewriteRule ^leads$  leads.php
 RewriteRule ^premium$  premium.php
 RewriteRule ^addBalance$  addBalance.php
-RewriteRule ^divPage1$  divPage1.php
-RewriteRule ^divPage2$  divPage2.php
-RewriteRule ^divPage3$  divPage3.php
-RewriteRule ^divPage4$  divPage4.php
-RewriteRule ^divPage5$  divPage5.php
-RewriteRule ^divPage6$  divPage6.php
-RewriteRule ^divPage7$  divPage7.php
-RewriteRule ^divPage8$  divPage8.php
-RewriteRule ^divPage9$  divPage9.php
-RewriteRule ^divPage10$  divPage10.php
-RewriteRule ^divPage11$  divPage11.php
-RewriteRule ^divPage12$  divPage12.php
-RewriteRule ^divPage13$  divPage13.php
-RewriteRule ^divPage14$  divPage14.php
-RewriteRule ^divPage15$  divPage15.php
-RewriteRule ^divPage0$  divPage0.php
-RewriteRule ^settingEdit$  settingEdit.php
-RewriteRule ^CreateTicket$  createticket.php
-RewriteRule ^CreateReport$  createreport.php
-RewriteRule ^addBalance$  funds.php
-RewriteRule ^addBalanceAction$  addBalanceAction.php
-RewriteRule ^rdp$  rdp.php
 RewriteRule ^tutorial$  tutorial.php
 RewriteRule ^MakePayment$  pay.php
 RewriteRule ^BitcoinPayment$  btc3.php
@@ -51,8 +35,28 @@ RewriteRule ^cPanel$  cPanel.php
 RewriteRule ^checkEmailChange$  checkEmailChange.php
 RewriteRule ^reports$  reports.php
 RewriteRule ^Rules$  shoprules.php
-RewriteRule ^account$  profile.php
+RewriteRule ^seller-profies$  profile.php
 RewriteRule ^AddCards$  addc.php
+RewriteRule ^divPage1$  divPage1.php
+RewriteRule ^divPage2$  divPage2.php
+RewriteRule ^divPage3$  divPage3.php
+RewriteRule ^divPage4$  divPage4.php
+RewriteRule ^divPage5$  divPage5.php
+RewriteRule ^divPage6$  divPage6.php
+RewriteRule ^divPage7$  divPage7.php
+RewriteRule ^divPage8$  divPage8.php
+RewriteRule ^divPage9$  divPage9.php
+RewriteRule ^divPage10$  divPage10.php
+RewriteRule ^divPage11$  divPage11.php
+RewriteRule ^divPage12$  divPage12.php
+RewriteRule ^divPage13$  divPage13.php
+RewriteRule ^divPage14$  divPage14.php
+RewriteRule ^divPage15$  divPage15.php
+RewriteRule ^divPage0$  divPage0.php
+
+
+
+
 RewriteRule ^vt-(.*)$ vt.php?id=$1
 RewriteRule ^vr-(.*)$ vr.php?id=$1
 RewriteRule ^divPageticket(.*)$ divPageticket.php?id=$1
