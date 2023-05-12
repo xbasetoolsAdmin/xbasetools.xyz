@@ -3,9 +3,8 @@ ob_start();
 session_start();
 date_default_timezone_set('UTC');
 include "../includes/config.php";
-
 if (!isset($_SESSION['sname']) and !isset($_SESSION['spass'])) {
-    header("location: login.html");
+    header("location: login");
     exit();
 }
 $usrid = mysqli_real_escape_string($dbcon, $_SESSION['sname']);
@@ -25,9 +24,6 @@ $usrid = mysqli_real_escape_string($dbcon, $_SESSION['sname']);
 <script type="text/javascript" src="files/js/table-head.js?3334"></script>
 <script type="text/javascript" src="files/js/bootbox.min.js"></script>
 <script type="text/javascript" src="files/js/clipboard.min.js"></script>
-
-
-
 <script type="text/javascript">
              function ajaxinfo() {
                 $.ajax({
@@ -86,8 +82,21 @@ function pageDiv(n,t,u,x){
     {
         $("#mainDiv").html(data).show();
         newTableObject = document.getElementById('table');
-        sorttable.makeSortable(newTableObject);
-        $(".sticky-header").floatThead({top:60});
+		$(document).ready(function() {
+			$('#order_data').DataTable( {
+				"lengthMenu": [[10, 25, 100, 500, -1], [10, 25, 100, 500, "All"]],
+				'iDisplayLength': 1000,
+				"aaSorting": []
+		              }],
+                     "ajax": {
+                    url: "divPage7.html",
+                    type: "POST",
+                },
+ 
+                "pageLength": 500
+            });
+        }
+ </
         if(x==0){ajaxinfo();}
       }});
     if (typeof stopCheckBTC === 'function') { 
