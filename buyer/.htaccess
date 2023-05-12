@@ -26,8 +26,8 @@ RewriteRule ^divPage14$  divPage14.php
 RewriteRule ^divPage15$  divPage15.php
 RewriteRule ^divPage0$  divPage0.php
 RewriteRule ^settingEdit$  settingEdit.php
-RewriteRule ^CreateTicket$  tticket.php
-RewriteRule ^CreateReport$  treport.php
+RewriteRule ^CreateTicket$  createticket.php
+RewriteRule ^CreateReport$  createreport.php
 RewriteRule ^addBalance$  funds.php
 RewriteRule ^addBalanceAction$  addBalanceAction.php
 RewriteRule ^rdp$  rdp.php
