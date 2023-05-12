@@ -1,7 +1,7 @@
 
 
 
-
+<?php include "head_MetaTage.php ";?>
 
 <style>
 
@@ -11,8 +11,7 @@
 
 }
 .dataTables_wrapper .dataTables_paginate .paginate_button {
-
-    color: var(--font-color);
+           color: var(--font-color);
 
 }
 #data_paginate .paginate_button {
@@ -41,7 +40,7 @@ color: var(--font-color);
 }
 </style></head>
 
-<?php include" ";?>
+<?php include"MainHeaderContent";?>
  
     <div class="alert alert-info text-left" role="alert" style="margin: 15px;">
         <ul>
