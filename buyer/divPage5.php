@@ -1,84 +1,72 @@
+?php
+ob_start();
+session_start();
+error_reporting();
+date_default_timezone_set('UTC');
 
+if(!isset($_SESSION['sname']) and !isset($_SESSION['spass'])){
+   header("location: ../");
+   exit();
+}
+  include "../includes/config.php";
+?>
 <?php
 
-//fetch.php
+  $date = date("Y-m-d H:i:s");
+  $uid = mysqli_real_escape_string($dbcon, $_GET['id']);
+  $tbl = mysqli_real_escape_string($dbcon, $_GET['t']);
 
-$connect = new PDO("mysql:host=localhost;dbname=xbaseleets_xbaseleets", "xbaseleets_xbaseleets", "xbaseleets_xbaseleets");
+  $qqs = @mysqli_query($dbcon, "SELECT * FROM $tbl WHERE id='$uid'") or die();
 
-$column = array("id", "country", "price", "infos", "sitename");
+  $rows = mysqli_fetch_assoc($qqs);
 
-$q = "SELECT * FROM accounts ";
+  $price = mysqli_real_escape_string($dbcon, $rows['price']);
+  $type  = mysqli_real_escape_string($dbcon, $rows['acctype']);
+  $fb  = mysqli_real_escape_string($dbcon, $rows['country']);
+  $infos  = mysqli_real_escape_string($dbcon, $rows['infos']);
+  $url  = mysqli_real_escape_string($dbcon, $rows['url']);
+  $login  = mysqli_real_escape_string($dbcon, $rows['login']);
+  $pa  = mysqli_real_escape_string($dbcon, $rows['pass']);
+  $sid  = mysqli_real_escape_string($dbcon, $rows['id']);
+  $resseller  = mysqli_real_escape_string($dbcon, $rows['resseller']);
 
-if(isset($_POST["search"]["value"]))
-{
-	$q .= '
-	WHERE id LIKE "%'.$_POST["search"]["value"].'%" 
-	OR country LIKE "%'.$_POST["search"]["value"].'%" 
-	OR price LIKE "%'.$_POST["search"]["value"].'%" 
-	OR infos LIKE "%'.$_POST["search"]["value"].'%" 
-	OR sitename LIKE "%'.$_POST["search"]["value"].'%" 
-	';
-}
+  $usrid = mysqli_real_escape_string($dbcon, $_SESSION['sname']);
+  $qqs2 = @mysqli_query($dbcon, "SELECT * FROM users WHERE username='$usrid'") or die();
+  $rows2 = mysqli_fetch_assoc($qqs2);
 
-if(isset($_POST["order"]))
-{
-	$q .= 'ORDER BY '.$column[$_POST['order']['0']['column']].' '.$_POST['order']['0']['dir'].' ';
-}
-else
-{
-	$q .= 'ORDER BY id DESC ';
-}
+  $balance =  $rows2['balance'];
+  $ipur =   $rows2['ipurchassed'];
 
-$q1 = '';
+  if($balance >= $price){
+	  
+    $newb = $balance - $price;
+    $newb2 = mysqli_real_escape_string($dbcon, $newb);
+    $re = mysqli_query($dbcon, "SELECT sold FROM $tbl WHERE id='$uid'");
+    $ree = mysqli_fetch_assoc($re);
+   
+	  if($ree['sold'] == '0'){
+          
+		  $npur = $ipur + 1 ;
+			mysqli_query($dbcon, "UPDATE $tbl SET sold='1', sto='$usrid', dateofsold='$date', resseller='$resseller' WHERE id='$uid'");
+			mysqli_query($dbcon, "UPDATE users SET balance='$newb2' WHERE username='$usrid'");
+			mysqli_query($dbcon, "UPDATE users SET ipurchassed='$npur' WHERE username='$usrid'");
+			mysqli_query($dbcon, "INSERT INTO purchases
+            (s_id,buyer,date,type,country,infos,url,login,pass,price,resseller,reported,reportid)
+            VALUES
+            ('$sid','$usrid','$date','$type','$fb','$infos','$url','$login','$pa','$price','$resseller','','')
+            ");
+            $last_id = mysqli_insert_id($dbcon);
+         $b = $price;
+         mysqli_query($dbcon, "UPDATE resseller SET allsales=(allsales + $b),soldb=(soldb + $b) WHERE username='$resseller'");
 
-if($_POST["length"] != -1)
-{
-	$q1 = 'LIMIT ' . $_POST['start'] . ', ' . $_POST['length'];
-}
-
-$statement = $connect->prepare($q);
-
-$statement->execute();
-
-$number_filter_row = $statement->rowCount();
-
-$result = $connect->q($q . $q1);
-
-$data = array();
-
-foreach($result as $row)
-{
-	$sub_array = array();
-	$sub_array[] = $row['id'];
-	$sub_array[] = $row['country'];
-	$sub_array[] = $row['infos'];
-	$sub_array[] = $row['price'];
-	$sub_array[] = $row['reseller'];
-	$sub_array[] = $row['sitename‘];
-	$sub_array[] = $row[‘date’];
-	$data[] = $sub_array;
-}
-
-function count_all_data($connect)
-{
-	$q = “SELECT * FROM accounts”;
-
-	$statement = $connect->prepare($q);
-
-	$statement->execute();
-
-	return $statement->rowCount();
-}
-
-$output = array(
-	“draw”		=>	intval($_POST[“draw”]),
-	“recordsTotal”	=>	count_all_data($connect),
-	“recordsFiltered”	=>	$number_filter_row,
-	“data”	=>	$data
-);
-
-echo json_encode($output);
+	    echo '<button onclick="openitem('.$last_id.')" class="btn btn-primary btn-xs"> Order #'.$last_id.'</button>';
+		
+         }else{
+      echo 'Already sold / Deleted.' ;
+           }
+       }else{
+      echo 'Please top-up your balance to buy this item.' ;
+       }
 
 ?>
-
-
+\
