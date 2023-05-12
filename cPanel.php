@@ -33,11 +33,6 @@ $usrid = mysqli_real_escape_string($dbcon, $_SESSION['sname']);
 </head>
 <style>
 
-@media (min-width: 768px) {
-  .dropdown:hover .dropdown-menu {
-    display: block;
-  }
-}
 
 #mydiv {
   height: 400px;
