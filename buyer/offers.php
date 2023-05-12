@@ -430,13 +430,30 @@
             </label>
         </div>
     </div>
-    <div class="well mt-5">
+<div>
+
+    
         <center><a class="btn btn-primary btn-sm" href="myoffers">
                 <font color=white> My Offers
             </a></center></br>
         <h2 style="color: var(--font-color);">
-            <center><small>
-                    <font color="var(--font-color)"><i class="fa fa-cubes"></i></span>
+            <center><small><font color="var(--font-color)"><i class="fa fa-cubes"></i></span>
+		<script>
+		$(document).ready(function() {
+			$('#order_data').DataTable( {
+				"lengthMenu": [[10, 25, 100, 500, -1], [10, 25, 100, 500, "All"]],
+				'iDisplayLength': 1000,
+				"aaSorting": []
+		              }],
+                     "ajax": {
+                    url: "divPage7.html",
+                    type: "POST",
+                },
+ 
+                "pageLength": 500
+            });
+        }
+ </script>
                 </small></font> All Offers
         </h2>
     </div>
