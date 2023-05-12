@@ -32,12 +32,6 @@ $usrid = mysqli_real_escape_string($dbcon, $_SESSION['sname']);
 <title>JeruxShop</title>
 </head>
 <style>
-#table {
-  .sortable
-}
-table th:not(.sorttable_sorted):not(.sorttable_sorted_reverse):not(.sorttable_nosort):after { 
-    content: " \25BE" 
-}
 
 .label-as-badge {
     border-radius: 0.5em;
