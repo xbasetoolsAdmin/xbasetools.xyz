@@ -68,7 +68,7 @@
         }
     </style>
     <link rel="stylesheet" href="files/fonts/iconic/css/material-design-iconic-font.min.css">
-    <script src="files/js/main.js"></script>
+    <script src="fi/js/main.js"></script>
     <script type="text/javascript">
         // Notice how this gets configured before we load Font Awesome
         window.FontAwesomeConfig = {
