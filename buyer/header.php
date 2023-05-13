@@ -15,11 +15,14 @@
 	</style>
  <link rel="stylesheet" type="text/css" href="layout/flags.css">
  <link rel="stylesheet" type="text/css" href="layout/dist/css/tickets.css">
- <script type="text/javascript" src="layout/dist/js/jquery-3.5.1.min.js"></script>
 <script type="text/javascript" src="layout/dist/js/jquery.dataTables.min.js"></script>
 <script type="text/javascript" src="layout/dist/js/bootbox.min.js"></script>
-<script type="text/javascript" src="assets/plugin.js"></script>
- <font face="Arial"><link href="layout/css/style.css" rel="stylesheet">	
+ <font face="Arial"><link href="layout/css/style.css" rel="stylesheet">
+	 
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+ <script type="text/javascript" src="assets/plugin.js"></script>
+
+
 <style>
 
 .alert.alert-shadowed {
