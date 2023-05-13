@@ -7,6 +7,7 @@
                 <title>Main - home </title>
    <link rel="stylesheet"href="layout/css/bootstrap.min.css">
    <link rel="stylesheet" type="text/css" href="layout/dist/css/main.css">
+   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js">
   </script>
 	<style>
