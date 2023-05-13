@@ -20,7 +20,7 @@
  <font face="Arial"><link href="layout/css/style.css" rel="stylesheet">
 	 
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
- <script type="text/javascript" src="vendors/include-html.min.js"></script>
+ <script type="text/javascript" src="vendors/divPage0-html.min.js"></script>
 
 <style>
 .content {
