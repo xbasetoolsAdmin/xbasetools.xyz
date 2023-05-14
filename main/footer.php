@@ -353,3 +353,5 @@ var KTDatatablesServerSide = function () {
 KTUtil.onDOMContentLoaded(function () {
     KTDatatablesServerSide.init();
 });
+
+</script>
