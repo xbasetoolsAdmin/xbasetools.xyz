@@ -1,7 +1,7 @@
 
 <!doctype html>
 <html>
-<link rel="stylesheet" type="text/css" href="buyer/assets/bootstrap.css" />
+<link rel="stylesheet" type="text/css" href="https://buyer/layout/css/bootstrap.min.css" />
 <script type="text/javascript" src="buyer/assets/jquery.js"></script>
 <script type="text/javascript" src="buyer/assets/bootstrap.js"></script>
 
