@@ -40,7 +40,6 @@ gtag('config', 'UA-177092549-1');
 </script>
 <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 <script src="js/jquery.dataTables.min.js"></script>
-<script src="layout/js/main.js"></script>
 <script type="text/javascript">
 // Notice how this gets configured before we load Font Awesome
 window.FontAwesomeConfig = { autoReplaceSvg: false }
