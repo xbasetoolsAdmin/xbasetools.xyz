@@ -19,22 +19,16 @@ $usrid = mysqli_real_escape_string($dbcon, $_SESSION['sname']);
 <!DOCTYPE html>
 <html>
  
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="alfacoins-site-verification" content="5ef8c2279aa605ef8c2279aa965ef8c2279aacb_ALFAcoins">
-    <meta name="revisit-after" content="2 days">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <head>
     <script src="/cdn-cgi/apps/head/AGN3NmUziwZfMV-TNTe1kdyeR2Y.js"></script>
-    <link rel="shortcut icon" href="../../favicon.ico" />
     <title>OdinShop</title>
-    <link rel="stylesheet" href="layout/css/bootstrap.min.css">
-    <script src="layout/js/jquery-3.4.1.min.js"></script>
-    <script src="layout/js/clipboard.min.js"></script>
+    <link rel="stylesheet" href="main/layout/css/bootstrap.min.css">
+    <script src="main/layout/js/jquery-3.4.1.min.js"></script>
+    <script src="main/layout/js/clipboard.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-    <script src="layout/js/bootstrap.min.js"></script>
-    <script src="layout/js/bootbox.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="layout/css/flags.css" />
+    <script src="main/layout/js/bootstrap.min.js"></script>
+    <script src="main/layout/js/bootbox.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="main/layout/css/flags.css" />
  
     <link rel="stylesheet" href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css">
     <link rel="stylesheet" href="https://cdn.datatables.net/responsive/2.2.6/css/responsive.dataTables.min.css">
@@ -46,7 +40,13 @@ $usrid = mysqli_real_escape_string($dbcon, $_SESSION['sname']);
     <script src="js/jquery.dataTables.min.js"></script>
     <link href="//cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet">
     <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/js/mdb.min.js"></script>
- 
+ <link rel="shortcut icon" href="files/img/favicon.ico" />
+<meta http-equiv="X-UA-Compatible" content="IE=10; IE=9; IE=8; IE=7; IE=EDGE" /> 
+ <meta name="referrer" content="no-referrer" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8">
+    
+<title>JeruxShop</title>
     <script async src="//www.googletagmanager.com/gtag/js?id=UA-177092549-1"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
@@ -60,16 +60,16 @@ $usrid = mysqli_real_escape_string($dbcon, $_SESSION['sname']);
         }); // Set the user ID using signed-in user_id.
         gtag('config', 'UA-177092549-1');
     </script>
-    <link rel="stylesheet" href="layout/css/all.min.css" />
-    <link rel="stylesheet" href="layout/css/main.css?v=12.9" />
-    <link rel="stylesheet" href="layout/css/util.css" />
+    <link rel="stylesheet" href="main/layout/css/all.min.css" />
+    <link rel="stylesheet" href="main/layout/css/main.css?v=12.9" />
+    <link rel="stylesheet" href="main/layout/css/util.css" />
     <style>
         body {
             padding-top: 80px
         }
     </style>
-    <link rel="stylesheet" href="layout/fonts/iconic/css/material-design-iconic-font.min.css">
-    <script src="layout/js/main.js"></script>
+    <link rel="stylesheet" href="main/layout/fonts/iconic/css/material-design-iconic-font.min.css">
+    <script src="main/layout/js/main.js"></script>
     <script type="text/javascript">
         // Notice how this gets configured before we load Font Awesome
         window.FontAwesomeConfig = {
@@ -247,26 +247,8 @@ $usrid = mysqli_real_escape_string($dbcon, $_SESSION['sname']);
         }
     })();
 </script>
-<link rel="stylesheet" type="text/css" href="files/bootstrap/3/css/bootstrap.css?1" />
-<link rel="stylesheet" type="text/css" href="files/css/flags.css" />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.2.0/css/font-awesome.min.css">
-<script type="text/javascript" src="files/js/jquery.js?1"></script>
-<script type="text/javascript" src="files/bootstrap/3/js/bootstrap.js?1"></script>
-<script type="text/javascript" src="files/js/sorttable.js"></script>
-<script type="text/javascript" src="files/js/table-head.js?3334"></script>
-<script type="text/javascript" src="files/js/bootbox.min.js"></script>
-<script type="text/javascript" src="files/js/clipboard.min.js"></script>
-
-<link rel="shortcut icon" href="files/img/favicon.ico" />
-<meta http-equiv="X-UA-Compatible" content="IE=10; IE=9; IE=8; IE=7; IE=EDGE" /> 
- <meta name="referrer" content="no-referrer" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta charset="utf-8">
-    
-<title>JeruxShop</title>
 </head>
 
-</style>
 <script type="text/javascript">
              function ajaxinfo() {
                 $.ajax({
