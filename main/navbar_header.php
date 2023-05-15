@@ -387,4 +387,7 @@
 		}
 		
 	</style>
+	
+	<script src="layout/js/main.js"></script>
+ 
 <div class="container">
