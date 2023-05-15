@@ -1,5 +1,5 @@
 
-ErrorDocument 404 /index
+ErrorDocument 404 /index.html
 RewriteEngine on
 Options -Indexes
 RewriteRule ^main$  index.php
