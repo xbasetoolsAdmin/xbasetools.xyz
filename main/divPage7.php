@@ -24,16 +24,20 @@
                </div>
                <div id="account_data_processing" class="dataTables_processing" style="display: none;">Processing...</div>
                <div class="dataTables_scroll">
+                  
                   <div class="dataTables_scrollHead" style="overflow: hidden; position: relative; border: 0px; width: 100%;">
+                     
                      <div class="dataTables_scrollHeadInner" style="box-sizing: content-box; width: 345px; padding-right: 0px;">
-                              <Dsplay: none;"&gt;Expiry=2025>
+                             
+                           <Dsplay: none;"&gt;Expiry=2025">
+                        
                         <table class="display responsive table-hover dataTable no-footer" style="width: 345px; color: var(--font-color); background-color: var(--color-card); margin-left: 0px;" role="grid">
                            <thead>
                               <tr role="row">
                                  <th class="all sorting" tabindex="0" aria-controls="account_data" rowspan="1" colspan="1" style="width: 35.140625px;" aria-label="ID: activate to sort column ascending">ID</th>
 
                                  <th class="all sorting" tabindex="0" aria-controls="account_data" rowspan="1" colspan="1" style="width: 117.453125px;" aria-label="Proof: activate to sort column ascending">Proof</th>
-                                 <th data-priority="11" class="sorting" tabindex="0" aria-controls="account_data" rowspan="1" colspan="1" style="width: 0px; display: none;" aria-label="Date Created: activate to sort column ascending">Date Created</th>
+
                                  <th class="all sorting" tabindex="0" aria-controls="account_data" rowspan="1" colspan="1" style="width: 84.421875px;" aria-label="Buy: activate to sort column ascending">Buy</th>
                                  <td style="display: none;">5.00</td>
                                  <td style="display: none;">
