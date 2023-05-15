@@ -37,23 +37,7 @@ l
 
 <!---------xbasetools text/js library--------->
 
- 
-    <!--<script async src="//www.googletagmanager.com/gtag/js?id=UA-177092549-1"></script> <script> --->
-       // window.dataLayer = window.dataLayer ||[];
- 
-       // function gtag() {            dataLayer.push(arguments);        }        gtag('js', new Date());        gtag('set', {            '$usrid': 'USER_ID'        }); // Set the user ID using signed-in user_id.        gtag('config', 'UA-177092549-1');    </script>--->
 
-    <style>
-        body {
-            padding-top: 80px
-        }
-    </style>
-  
-  
-  
-  
-  
-  
     <script type="text/javascript">
         // Notice how this gets configured before we load Font Awesome
         window.FontAwesomeConfig = {
