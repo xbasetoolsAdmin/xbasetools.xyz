@@ -38,15 +38,26 @@
 
                                  <th class="all sorting" tabindex="0" aria-controls="account_data" rowspan="1" colspan="1" style="width: 117.453125px;" aria-label="Proof: activate to sort column ascending">Proof</th>
 
+                                 <th class="all sorting" tabindex="0" aria-controls="account_data" rowspan="1" colspan="1" style="width: 35.140625px;" aria-label="ID: activate to sort column ascending">ID</th>
+
+                                 <th class="all sorting" tabindex="0" aria-controls="account_data" rowspan="1" colspan="1" style="width: 117.453125px;" aria-label="Proof: activate to sort column ascending">Proof</th>
+
+                                 <th class="all sorting" tabindex="0" aria-controls="account_data" rowspan="1" colspan="1" style="width: 84.421875px;" aria-label="Buy: activate to sort column ascending">Buy</th>
+                                 
                                  <th class="all sorting" tabindex="0" aria-controls="account_data" rowspan="1" colspan="1" style="width: 84.421875px;" aria-label="Buy: activate to sort column ascending">Buy</th>
                                  <td style="display: none;">5.00</td>
                                  <td style="display: none;">
                                     <a href="login.html" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer" target="_blank">
                                     <i class="fas fa-user mr-1"></i>Seller349</a>
                                  </td>
+                                 
                                  <td style="display: none;">
+                                    
                                     <span style="color:#f00">
-                                    <i class="fas fa-circle"></i>cracked</span>
+                                       
+                                    <i class="fas fa-circle">
+                                       
+                                    </i>cracked</span>
                                  </td>
                                  <td>
                                     <span>
@@ -54,13 +65,16 @@
                                     </span>
                                  </td>
                                  <td style="display: none;">01/02/2023 02:24:47 pm</td>
-                                 <td>
+                                
+                                  <td>
                                     <span id="premium3379" title="buy" type="premium">
                                     <a onclick="javascript:buythistool(3379)" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer">
                                     <i class="fas fa-shopping-cart mr-1"></i>Buy</a>
                                     </span>
                                  </td>
+                                 
                               </tr>
+                              
                               <tr role="row" class="even">
                                  <td class="dtr-control">3039</td>
                                  <td style="display: none;">https: //mail.simnet.is</td>
