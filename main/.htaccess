@@ -2,7 +2,7 @@
 ErrorDocument 404 /index
 RewriteEngine on
 Options -Indexes
-RewriteRule ^index$  index.php
+RewriteRule ^main$  index.php
 RewriteRule ^signup$  signup.php
 RewriteRule ^forget$  forget.php
 RewriteRule ^reset$  resetpass.php
@@ -13,7 +13,7 @@ RewriteRule ^loginpage3$  loginpage3.php
 RewriteRule ^loginform$  loginform.php
 RewriteRule ^signupform$  signupform.php
 RewriteRule ^passform$  passform.php
-RewriteRule ^index$  index.php
+RewriteRule ^index.php$  index.php
 RewriteRule ^ajaxinfo$  ajax.php
 RewriteRule ^mailer$  mailer.php
 RewriteRule ^shell$  shell.php
