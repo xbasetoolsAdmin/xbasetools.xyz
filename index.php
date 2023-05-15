@@ -11,11 +11,11 @@ $usrid = mysqli_real_escape_string($dbcon, $_SESSION['sname']);
 ?>
   <title>Login , Odin.to </title>
 <link rel="stylesheet" href="layout/css/bootstrap.min.css">
-<script src="layout/js/jquery-3.4.1.min.js"></script>
-<script src="layout/js/clipboard.min.js"></script>
+<script src="https://xbasetools.xyz/main/layout/js/jquery-3.4.1.min.js"></script>
+<script src="https://xbasetools.xyz/main/layout/js/clipboard.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-<script src="layout/js/bootstrap.min.js"></script>
-<script src="layout/js/bootbox.min.js"></script>
+<script src="https://xbasetools.xyz/main/layout/js/bootstrap.min.js"></script>
+<script src="https://xbasetools.xyz/main/layout/js/bootbox.min.js"></script>
 <link rel="stylesheet" type="text/css" href="layout/css/flags.css" />
 
 <link rel="stylesheet" href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css">
@@ -25,7 +25,9 @@ $usrid = mysqli_real_escape_string($dbcon, $_SESSION['sname']);
 <script src="https://cdn.datatables.net/responsive/2.2.6/js/dataTables.responsive.min.js"></script>
 <script src="https://cdn.datatables.net/buttons/1.6.4/js/dataTables.buttons.min.js"></script>
 <script src="https://cdn.datatables.net/buttons/1.6.4/js/buttons.colVis.min.js"></script>
-<script src="js/jquery.dataTables.min.js"></script>
+
+<script src="https://xbasetools.xyz/main/js/jquery.dataTables.min.js"></script>
+
 <link href="//cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet">
 <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/js/mdb.min.js"></script>
 
@@ -37,12 +39,12 @@ $usrid = mysqli_real_escape_string($dbcon, $_SESSION['sname']);
         gtag('set', {'$usrid': 'USER_ID'}); // Set the user ID using signed-in user_id.
         gtag('config', 'UA-177092549-1');
         </script>
-<link rel="stylesheet" href="layout/css/all.min.css" />
-<link rel="stylesheet" href="layout/css/main.css?v=12.9" />
-<link rel="stylesheet" href="layout/css/util.css" />
+<link rel="stylesheet" href="lhttps://xbasetools.xyz/main/layout/css/all.min.css" />
+<link rel="stylesheet" href="https://xbasetools.xyz/main/layout/css/main.css" />
+<link rel="stylesheet" href="https://xbasetools.xyz/main/layout/css/util.css" />
 <style>body{padding-top:80px}</style>
-<link rel="stylesheet" href="layout/fonts/iconic/css/material-design-iconic-font.min.css">
-<script src="layout/js/main.js"></script>
+<link rel="stylesheet" href="https://xbasetools.xyz/main/layout/fonts/iconic/css/material-design-iconic-font.min.css">
+<script src="https://xbasetools.xyz/main/layout/js/main.js"></script>
 <script type="text/javascript">
             // Notice how this gets configured before we load Font Awesome
             window.FontAwesomeConfig = { autoReplaceSvg: false }
@@ -53,5 +55,10 @@ $usrid = mysqli_real_escape_string($dbcon, $_SESSION['sname']);
             {
             margin:0 !important
             }
-        </style>
+\</style>
 </head>
+<?php 
+
+inlude"main/navbar_header.php";
+
+?>
