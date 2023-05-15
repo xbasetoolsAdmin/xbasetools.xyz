@@ -1,0 +1,752 @@
+<!DOCTYPE html><html class="theme-light"><head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="alfacoins-site-verification" content="5ef8c2279aa605ef8c2279aa965ef8c2279aacb_ALFAcoins">
+<meta name="revisit-after" content="2 days">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<script type="text/javascript" async="" src="../www.google-analytics.com/analytics.js"></script><script type="text/javascript" async="" src="../www.googletagmanager.com/gtag/js%EF%B9%96id=G-B0E636W1BE&amp;l=dataLayer&amp;cx=c.js"></script><script src="cdn-cgi/apps/head/AGN3NmUziwZfMV-TNTe1kdyeR2Y.js"></script><link rel="stylesheet" href="data:text/css;charset=utf-8;base64,Y2xvdWRmbGFyZS1hcHBbYXBwPSJjb3JuZXItcmliYm9uIl0gewogIHBvaW50ZXItZXZlbnRzOiBub25lOwogIHBvc2l0aW9uOiBmaXhlZDsKfQoKY2xvdWRmbGFyZS1hcHBbYXBwPSJjb3JuZXItcmliYm9uIl0gLnJpYmJvbi1jb250ZW50IHsKICBib3JkZXI6IDA7CiAgYm94LXNoYWRvdzogMCAwIDNweCByZ2JhKDAsIDAsIDAsIC4zKTsKICBib3gtc2l6aW5nOiBib3JkZXItYm94OwogIGN1cnNvcjogZGVmYXVsdDsKICBoZWlnaHQ6IDNlbTsKICBsZXR0ZXItc3BhY2luZzogLjAzZW07CiAgbGluZS1oZWlnaHQ6IDEuMTsKICBvdmVyZmxvdzogaGlkZGVuOwogIHBhZGRpbmc6IDFlbSAwOwogIHBvc2l0aW9uOiBhYnNvbHV0ZTsKICB0ZXh0LWFsaWduOiBjZW50ZXI7CiAgdGV4dC1kZWNvcmF0aW9uOiBub25lOwogIHRleHQtb3ZlcmZsb3c6IGVsbGlwc2lzOwogIHRyYW5zZm9ybS1vcmlnaW46IDAgMDsKICB3aGl0ZS1zcGFjZTogbm93cmFwOwogIHdpZHRoOiAxNDEuNDIxMzU2JTsgLyogc3FydCgyKSAqLwp9CgpjbG91ZGZsYXJlLWFwcFthcHA9ImNvcm5lci1yaWJib24iXSAucmliYm9uLWNvbnRlbnRbaHJlZl0gewogIGN1cnNvcjogcG9pbnRlcjsKICBwb2ludGVyLWV2ZW50czogYWxsOwp9CgpjbG91ZGZsYXJlLWFwcFthcHA9ImNvcm5lci1yaWJib24iXSAucmliYm9uLWNvbnRlbnRbaHJlZl0sCmNsb3VkZmxhcmUtYXBwW2FwcD0iY29ybmVyLXJpYmJvbiJdIC5yaWJib24tY29udGVudFtocmVmXTpsaW5rLApjbG91ZGZsYXJlLWFwcFthcHA9ImNvcm5lci1yaWJib24iXSAucmliYm9uLWNvbnRlbnRbaHJlZl06aG92ZXIsCmNsb3VkZmxhcmUtYXBwW2FwcD0iY29ybmVyLXJpYmJvbiJdIC5yaWJib24tY29udGVudFtocmVmXTphY3RpdmUgewogIGNvbG9yOiBpbmhlcml0OwogIG91dGxpbmU6IG5vbmU7Cn0KCmNsb3VkZmxhcmUtYXBwW2FwcD0iY29ybmVyLXJpYmJvbiJdIC5yaWJib24tY29udGVudFtocmVmXTpob3ZlciB7CiAgb3BhY2l0eTogLjg7Cn0KCmNsb3VkZmxhcmUtYXBwW2FwcD0iY29ybmVyLXJpYmJvbiJdW2RhdGEtc2l6ZT0ic21hbGwiXSAgewogIGZvbnQtc2l6ZTogMC44NWVtOwp9CgpjbG91ZGZsYXJlLWFwcFthcHA9ImNvcm5lci1yaWJib24iXVtkYXRhLXNpemU9Im5vcm1hbCJdIHsKICBmb250LXNpemU6IDEuMDBlbTsKfQoKY2xvdWRmbGFyZS1hcHBbYXBwPSJjb3JuZXItcmliYm9uIl1bZGF0YS1zaXplPSJsYXJnZSJdIHsKICBmb250LXNpemU6IDEuMjVlbTsKfQoKY2xvdWRmbGFyZS1hcHBbYXBwPSJjb3JuZXItcmliYm9uIl1bZGF0YS1zaXplPSJodWdlIl0gewogIGZvbnQtc2l6ZTogMS41MGVtOwp9CgoKY2xvdWRmbGFyZS1hcHBbYXBwPSJjb3JuZXItcmliYm9uIl1bZGF0YS1wb3NpdGlvbj0idG9wLWxlZnQiXSB7CiAgdG9wOiAwOwogIGxlZnQ6IDA7Cn0KCmNsb3VkZmxhcmUtYXBwW2FwcD0iY29ybmVyLXJpYmJvbiJdW2RhdGEtcG9zaXRpb249InRvcC1yaWdodCJdIHsKICB0b3A6IDA7CiAgcmlnaHQ6IDA7Cn0KCmNsb3VkZmxhcmUtYXBwW2FwcD0iY29ybmVyLXJpYmJvbiJdW2RhdGEtcG9zaXRpb249ImJvdHRvbS1sZWZ0Il0gewogIGJvdHRvbTogMDsKICBsZWZ0OiAwOwp9CgpjbG91ZGZsYXJlLWFwcFthcHA9ImNvcm5lci1yaWJib24iXVtkYXRhLXBvc2l0aW9uPSJib3R0b20tcmlnaHQiXSB7CiAgYm90dG9tOiAwOwogIHJpZ2h0OiAwOwp9CgpjbG91ZGZsYXJlLWFwcFthcHA9ImNvcm5lci1yaWJib24iXVtkYXRhLXBvc2l0aW9uPSJ0b3AtbGVmdCJdIC5yaWJib24tY29udGVudCB7CiAgdHJhbnNmb3JtOiByb3RhdGUoLTQ1ZGVnKTsKICB0b3A6IDEwMCU7CiAgbGVmdDogLTIuMTIxMzJlbTsKICBtYXJnaW4tdG9wOiAtMi4xMjEzMmVtOwp9CgpjbG91ZGZsYXJlLWFwcFthcHA9ImNvcm5lci1yaWJib24iXVtkYXRhLXBvc2l0aW9uPSJ0b3AtcmlnaHQiXSAucmliYm9uLWNvbnRlbnQgewogIHRyYW5zZm9ybTogcm90YXRlKDQ1ZGVnKTsKICBsZWZ0OiAyLjEyMTMyZW07CiAgdG9wOiAtMi4xMjEzMmVtOwp9CgpjbG91ZGZsYXJlLWFwcFthcHA9ImNvcm5lci1yaWJib24iXVtkYXRhLXBvc2l0aW9uPSJib3R0b20tbGVmdCJdIC5yaWJib24tY29udGVudCB7CiAgdHJhbnNmb3JtOiByb3RhdGUoNDVkZWcpOwp9CgpjbG91ZGZsYXJlLWFwcFthcHA9ImNvcm5lci1yaWJib24iXVtkYXRhLXBvc2l0aW9uPSJib3R0b20tcmlnaHQiXSAucmliYm9uLWNvbnRlbnQgewogIHRyYW5zZm9ybTogcm90YXRlKC00NWRlZyk7CiAgdG9wOiAxMDAlOwp9Cg=="><link rel="shortcut icon" href="favicon.ico.png">
+<title>MAILER</title>
+<link rel="stylesheet" href="layout/css/bootstrap.min.css">
+<script src="layout/js/jquery-3.4.1.min.js"></script>
+<script src="layout/js/clipboard.min.js"></script>
+<script src="../cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+<script src="layout/js/bootstrap.min.js"></script>
+<script src="layout/js/bootbox.min.js"></script>
+<link rel="stylesheet" type="text/css" href="layout/css/flags.css">
+
+<link rel="stylesheet" href="../cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css">
+<link rel="stylesheet" href="../cdn.datatables.net/responsive/2.2.6/css/responsive.dataTables.min.css">
+<link rel="stylesheet" href="../cdn.datatables.net/buttons/1.6.4/css/buttons.dataTables.min.css">
+<script src="../cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+<script src="../cdn.datatables.net/responsive/2.2.6/js/dataTables.responsive.min.js"></script>
+<script src="../cdn.datatables.net/buttons/1.6.4/js/dataTables.buttons.min.js"></script>
+<script src="../cdn.datatables.net/buttons/1.6.4/js/buttons.colVis.min.js"></script>
+<script src="js/jquery.dataTables.min.js"></script>
+<link href="../cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet">
+<script type="text/javascript" src="../cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/js/mdb.min.js"></script><style type="text/css">/* Chart.js */
+@-webkit-keyframes chartjs-render-animation{from{opacity:0.99}to{opacity:1}}@keyframes chartjs-render-animation{from{opacity:0.99}to{opacity:1}}.chartjs-render-monitor{-webkit-animation:chartjs-render-animation 0.001s;animation:chartjs-render-animation 0.001s;}</style>
+
+<script async="" src="../www.googletagmanager.com/gtag/js%EF%B9%96id=UA-177092549-1.js"></script>
+<script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('set', {'$usrid': 'USER_ID'}); // Set the user ID using signed-in user_id.
+        gtag('config', 'UA-177092549-1');
+        </script>
+<link rel="stylesheet" href="layout/css/all.min.css">
+<link rel="stylesheet" href="layout/css/main%EF%B9%96v=12.9.css">
+<link rel="stylesheet" href="layout/css/util.css">
+<style>body{padding-top:80px}</style>
+<link rel="stylesheet" href="layout/fonts/iconic/css/material-design-iconic-font.min.css">
+<script src="layout/js/main.js"></script>
+<script type="text/javascript">
+            // Notice how this gets configured before we load Font Awesome
+            window.FontAwesomeConfig = { autoReplaceSvg: false }
+        </script>
+<style>@import url(../fonts.googleapis.com/css%EF%B9%96family=Roboto%EF%B9%95400.css);
+            .navbar-nav .dropdown-menu
+            {
+            margin:0 !important
+            }
+        </style>
+<style>.display  td {
+    background: var(--color-card);
+      color: var(--font-color);
+
+}
+.dataTables_wrapper .dataTables_paginate .paginate_button {
+
+    color: var(--font-color);
+
+}
+#mailer_data_paginate .paginate_button {
+color: var(--font-color);
+
+}
+
+.alert-info {
+    color: var(--color-info);
+    background-color: var(--color-backinfo);
+    border-color: var(--color-borderinfo);
+
+}
+
+#mailer_data_filter{
+  color: var(--font-color);
+}
+#mailer_data_length{
+  color: var(--font-color);
+}
+#mailer_data_paginate{
+  color: var(--font-color);
+}
+#mailer_data_info{
+  color: var(--font-color);
+}
+</style></head>
+
+<body class="them">
+<style>.navbar-nav .dropdown-menu
+    {
+      margin:0 !important
+    }
+    .theme-light {
+  --color-primary: #0060df;
+  --color-secondary: #ffffff;
+   --color-secondary2: #ecf0f1;
+  --color-accent: #fd6f53;
+  --font-color: #000000;
+  --color-nav: #ffffff;
+  --color-dropdown: #ffffff;
+  --color-card: #ffffff;
+   --color-card2: #d1ecf1;
+  --color-info: #0c5460;
+  --color-backinfo: #d1ecf1;
+  --color-borderinfo: #bee5eb;
+
+}
+.theme-dark {
+  --color-primary: #17ed90;
+  --color-secondary: #353B50;
+  --color-secondary2: #353B50;
+  --color-accent: #12cdea;
+  --font-color: #ffffff;
+  --color-nav: #363947;
+  --color-dropdown: rgba(171, 205, 239, 0.3);
+  --color-card: #262A37;
+   --color-card2: #262A37;
+   --color-info: #4DD0E1;
+  --color-backinfo: #262A37;
+  --color-borderinfo: #262A37;
+}
+.them {
+
+  background: var(--color-secondary);
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.them h1 {
+  color: var(--font-color);
+  font-family: sans-serif;
+}
+.card-body {
+     color: var(--font-color);
+    }
+.them button {
+  color: var(--font-color);
+  background-color: #ffffff;
+  padding: 10px 20px;
+  border: 0;
+  border-radius: 5px;
+}
+.navbar.navbar-light .navbar-toggler {
+    color: var(--font-color);
+}
+
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 40px;
+  width: 40px;
+  left: 0px;
+  bottom: 4px;
+  top: 0;
+  bottom: 0;
+  margin: auto 0;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  box-shadow: 0 0px 15px #2020203d;
+  background: white url('../i.ibb.co/FxzBYR9/night.png');
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+input:checked + .slider {
+  background-color: #2196f3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196f3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(24px);
+  -ms-transform: translateX(24px);
+  transform: translateX(24px);
+  background: white url('../i.ibb.co/7JfqXxB/sunny.png');
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+  </style>
+<script>
+
+        function setTheme(themeName) {
+            localStorage.setItem('theme', themeName);
+            document.documentElement.className = themeName;
+        }
+
+        // function to toggle between light and dark theme
+        function toggleTheme() {
+            if (localStorage.getItem('theme') === 'theme-dark') {
+                setTheme('theme-light');
+            } else {
+                setTheme('theme-dark');
+            }
+        }
+
+        // Immediately invoked function to set the theme on initial load
+        (function () {
+            if (localStorage.getItem('theme') === 'theme-dark') {
+                setTheme('theme-dark');
+                document.getElementById('slider').checked = false;
+            } else {
+                setTheme('theme-light');
+              document.getElementById('slider').checked = true;
+            }
+        })();
+
+  </script>
+<nav class="navbar navbar-expand-xl navbar  navbar-light " style="
+                                                          position:fixed;
+                                                          background-color: var(--color-nav);
+                                                          z-index:1;
+                                                          top:0;
+                                                          left:0;
+                                                          right:0;
+                                                          line-height: 1.5;
+                                                          font-family: 'Lato', sans-serif;
+                                                          font-size: 15px;
+                                                          padding-top: 0.5rem;
+                                                          padding-right: 1rem;
+                                                          padding-bottom: 0.5rem;
+                                                          padding-left: 1rem;
+                                                        ">
+<a class="navbar-brand" href="main.html" style="color: var(--font-color);"><img width="40px" src="layout/images/logo.png"> Odin</a>
+<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+<i class="navbar-toggler-icon"></i>
+</button>
+<div class="collapse navbar-collapse order-1" id="navbarSupportedContent">
+<ul class="navbar-nav mr-auto">
+
+<li class="nav-item dropdown mr-auto">
+<a class="nav-link dropdown-toggle waves-effect waves-light" style="color: var(--font-color);" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-warehouse fa-sm orange-text"></i>
+Hosts
+</a>
+<div class="dropdown-menu dropdown-menu-left" style="color: var(--font-color); background-color: var(--color-nav);" aria-labelledby="navbarDropdown">
+<a class="dropdown-item waves-effect waves-light" href="rdp.html" style="color: var(--font-color);"><span class="px-2"><i class="fas fa-desktop fa-fw"></i> RDPs <span class="badge badge-primary">76</span></span></a>
+<a class="dropdown-item waves-effect waves-light" href="cPanel.html" style="color: var(--font-color);"><span class="px-2"><i class="fas fa-tools fa-fw"></i> cPanels <span class="badge badge-primary">15489</span></span></a>
+<a class="dropdown-item waves-effect waves-light" href="shell.html" style="color: var(--font-color);"><span class="px-2"><i class="fas fa-file-code fa-fw"></i> Shells <span class="badge badge-primary">919</span></span></a>
+<a class="dropdown-item waves-effect waves-light" href="ssh.html" style="color: var(--font-color);"><span class="px-2"><i class="fab fa-linux"></i> SSH/WHM <span class="badge badge-primary">135</span></span></a>
+</div>
+</li>
+
+<li class="nav-item dropdown mr-auto">
+<a class="nav-link dropdown-toggle waves-effect waves-light" style="color: var(--font-color);" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-leaf fa-fw fa-sm text-success" style="margin-right: 4px;"></i>Premium</a>
+<div class="dropdown-menu dropdown-menu-left" style="color: var(--font-color); background-color: var(--color-nav);" aria-labelledby="navbarDropdown">
+<a class="dropdown-item waves-effect waves-light" href="premium_shell.html" style="color: var(--font-color);"><span class="px-2"><i class="fas fa-leaf fa-fw"></i> Premium Shells <span class="badge badge-primary">881</span></span></a>
+<a class="dropdown-item waves-effect waves-light" href="premium_cPanel.html" style="color: var(--font-color);"><span class="px-2"><i class="fas fa-leaf fa-fw"></i> Premium cPanels <span class="badge badge-primary">6014</span></span></a>
+<a class="dropdown-item waves-effect waves-light" href="premium_downloads.html" style="color: var(--font-color);"><span class="px-2"><i class="fas fa-leaf fa-fw"></i> Premium Downloads <span class="badge badge-primary">8</span></span></a>
+</div>
+</li>
+
+<li class="nav-item dropdown mr-auto">
+<a class="nav-link dropdown-toggle waves-effect waves-light" style="color: var(--font-color);" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fab fa-google-play fa-sm text-success"></i>
+Send
+</a>
+<div class="dropdown-menu dropdown-menu-left" style="color: var(--font-color); background-color: var(--color-nav);" aria-labelledby="navbarDropdown">
+<a class="dropdown-item waves-effect waves-light" href="mailer.html" style="color: var(--font-color);"><span class="px-2"><i class="fas fa-leaf fa-fw"></i> Mailers <span class="badge badge-primary">488</span></span></a>
+<a class="dropdown-item waves-effect waves-light" href="smtp.html" style="color: var(--font-color);"><span class="px-2"><i class="fas fa-envelope fa-fw"></i> SMTPs <span class="badge badge-primary">2291</span></span></a>
+</div>
+</li>
+
+
+<li class="nav-item dropdown mr-auto">
+<a class="nav-link dropdown-toggle waves-effect waves-light" style="color: var(--font-color);" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-mail-bulk fa-sm pink-color"></i> Leads
+</a>
+<div class="dropdown-menu dropdown-menu-left" style="color: var(--font-color); background-color: var(--color-nav);" aria-labelledby="navbarDropdown">
+<a class="dropdown-item waves-effect waves-light" href="leads-5.html" style="color: var(--font-color);"><span class="px-2"><i class="fas fa-award"></i> 100% Validated Leads <span class="badge badge-primary">0</span></span></a>
+<a class="dropdown-item waves-effect waves-light" href="leads-1.html" style="color: var(--font-color);"><span class="px-2"><i class="fa fa-fire orange-color"></i> Email Only <span class="badge badge-primary">163</span></span></a>
+<a class="dropdown-item waves-effect waves-light" href="leads-2.html" style="color: var(--font-color);"><span class="px-2"><i class="fas fa-passport"></i> Combo Email:Password <span class="badge badge-primary">24</span></span></a>
+<a class="dropdown-item waves-effect waves-light" href="leads-3.html" style="color: var(--font-color);"><span class="px-2"><i class="fab fa-battle-net"></i> Combo Username:Password <span class="badge badge-primary">1</span></span></a>
+<a class="dropdown-item waves-effect waves-light" href="leads-4.html" style="color: var(--font-color);"><span class="px-2"><i class="fas fa-at"></i> Email Access <span class="badge badge-primary">22</span></span></a>
+<a class="dropdown-item waves-effect waves-light" href="leads-6.html" style="color: var(--font-color);"><span class="px-2"><i class="fas fa-mobile-alt"></i> Phone Number Only <span class="badge badge-primary">31</span></span></a>
+<a class="dropdown-item waves-effect waves-light" href="leads-7.html" style="color: var(--font-color);"><span class="px-2"><i class="fas fa-phone-square"></i> Combo Phone:Password <span class="badge badge-primary">3</span></span></a>
+<a class="dropdown-item waves-effect waves-light" href="leads-8.html" style="color: var(--font-color);"><span class="px-2"><i class="fas fa-inbox"></i> Full Data <span class="badge badge-primary">0</span></span></a>
+<a class="dropdown-item waves-effect waves-light" href="leads-9.html" style="color: var(--font-color);"><span class="px-2"><i class="fab fa-facebook"></i> Social Media Data <span class="badge badge-primary">0</span></span></a>
+</div>
+</li>
+
+
+<li class="nav-item dropdown mr-auto">
+<a class="nav-link dropdown-toggle waves-effect waves-light" style="color: var(--font-color);" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-user-tie fa-sm"></i> Business
+</a>
+<div class="dropdown-menu dropdown-menu-left" style="color: var(--font-color); background-color: var(--color-nav);" aria-labelledby="navbarDropdown">
+<a class="dropdown-item waves-effect waves-light" href="business-1.html" style="color: var(--font-color);"><span class="px-2"><i class="fas fa-business-time"></i> cPanel Webmail <span class="badge badge-primary">6215</span></span></a>
+<a class="dropdown-item waves-effect waves-light" href="business-2.html" style="color: var(--font-color);"><span class="px-2"><i class="fas fa-mail-bulk"></i> Godaddy Webmail <span class="badge badge-primary">2246</span></span></a>
+<a class="dropdown-item waves-effect waves-light" href="business-3.html" style="color: var(--font-color);"><span class="px-2"><i class="fas fa-globe"></i> Office365 Webmail <span class="badge badge-primary">10010</span></span></a>
+<a class="dropdown-item waves-effect waves-light" href="business-4.html" style="color: var(--font-color);"><span class="px-2"><i class="fas fa-envelope-open-text"></i> Rackspace Webmail <span class="badge badge-primary">1822</span></span></a>
+</div>
+</li>
+
+
+<li class="nav-item dropdown mr-auto">
+<a class="nav-link dropdown-toggle waves-effect waves-light" style="color: var(--font-color);" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-user-friends fa-sm"></i> Accounts
+</a>
+<div class="dropdown-menu dropdown-menu-left" style="color: var(--font-color); background-color: var(--color-nav);" aria-labelledby="navbarDropdown">
+<a class="dropdown-item waves-effect waves-light" href="accounts-1.html" style="color: var(--font-color);"><span class="px-2"><i class="fas fa-comments-dollar"></i> Marketing <span class="badge badge-primary">99</span></span></a>
+<a class="dropdown-item waves-effect waves-light" href="accounts-2.html" style="color: var(--font-color);"><span class="px-2"><i class="fas fa-server"></i> Hosting / Domain <span class="badge badge-primary">6</span></span></a>
+<a class="dropdown-item waves-effect waves-light" href="accounts-3.html" style="color: var(--font-color);"><span class="px-2"><i class="fas fa-gamepad"></i> Games <span class="badge badge-primary">18</span></span></a>
+<a class="dropdown-item waves-effect waves-light" href="accounts-4.html" style="color: var(--font-color);"><span class="px-2"><i class="fas fa-cubes"></i> VPN/Socks Proxy&gt;Email Access <span class="badge badge-primary">1190</span></span></a>
+<a class="dropdown-item waves-effect waves-light" href="accounts-5.html" style="color: var(--font-color);"><span class="px-2"><i class="fas fa-shopping-cart"></i> Shopping{Amazon, Ebay, ...} <span class="badge badge-primary">94</span></span></a>
+<a class="dropdown-item waves-effect waves-light" href="accounts-6.html" style="color: var(--font-color);"><span class="px-2"><i class="fas fa-ethernet"></i> Programs {Antivirus, Adobe, ...} <span class="badge badge-primary">0</span></span></a>
+<a class="dropdown-item waves-effect waves-light" href="accounts-7.html" style="color: var(--font-color);"><span class="px-2"><i class="fas fa-stream"></i> Stream {Netflix,HBO, ... } <span class="badge badge-primary">124</span></span></a>
+<a class="dropdown-item waves-effect waves-light" href="accounts-8.html" style="color: var(--font-color);"><span class="px-2"><i class="fas fa-user-plus"></i> Dating <span class="badge badge-primary">87</span></span></a>
+<a class="dropdown-item waves-effect waves-light" href="accounts-9.html" style="color: var(--font-color);"><span class="px-2"><i class="fas fa-graduation-cap"></i> Learning{ Udacity, Udemy, Lynda, ... } <span class="badge badge-primary">14</span></span></a>
+<a class="dropdown-item waves-effect waves-light" href="accounts-10.html" style="color: var(--font-color);"><span class="px-2"><i class="fas fa-window-restore"></i> Torrent / File Host <span class="badge badge-primary">3</span></span></a>
+<a class="dropdown-item waves-effect waves-light" href="accounts-11.html" style="color: var(--font-color);"><span class="px-2"><i class="fas fa-phone-volume"></i> Voip / Sip <span class="badge badge-primary">0</span></span></a>
+<a class="dropdown-item waves-effect waves-light" href="accounts-12.html" style="color: var(--font-color);"><span class="px-2"><i class="fas fa-network-wired"></i> Other <span class="badge badge-primary">3</span></span></a>
+</div>
+</li>
+
+
+<li class="nav-item dropdown">
+<a class="nav-link dropdown-toggle waves-effect waves-light" role="button" style="color: var(--font-color);" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fab fa-drupal text-primary fa-sm"></i> Requests
+</a>
+<div class="dropdown-menu dropdown-menu-left" style="color: var(--font-color); background-color: var(--color-nav);" aria-labelledby="navbarDropdown">
+<a class="dropdown-item waves-effect waves-light" href="requests.html" style="color: var(--font-color);"><span class="px-2"><i class="fas fa-user-plus"></i> Buyers Requests <span class="badge badge-primary"> 83</span></span></a>
+</div>
+</li>
+
+<li class="nav-item dropdown">
+<a class="nav-link waves-effect waves-light" href="offers.html" style="color: var(--font-color);"><i class="fas fa-user-secret text-primary fa-sm"></i> Bulk Offers</a>
+</li>
+</ul>
+
+<ul class="navbar-nav profile">
+
+<li class="nav-item dropdown">
+<a class="nav-link dropdown-toggle waves-effect waves-light" style="color: var(--font-color);" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-bell text-danger"></i> <span class="badge badge-success">0</span></a>
+<div class="dropdown-menu" aria-labelledby="navbarDropdown" style="color: var(--font-color); background-color: var(--color-nav);">
+<a class="dropdown-item waves-effect waves-light" href="#" style="color: var(--font-color);">There is no new notifications</a> </div>
+</li>
+
+<li class="nav-item">
+<a class="nav-link waves-effect waves-light" href="addBalance.html" style="color: var(--font-color);" role="button" aria-haspopup="true" aria-expanded="false"><span class="badge badge-danger">
+0
+<span class="px-2"><i class="fa fa-plus"></i></span></span>
+</a>
+</li>
+
+<li class="nav-item dropdown">
+<a class="nav-link dropdown-toggle waves-effect waves-light" style="color: var(--font-color);" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Ticket <span class="badge badge-success">0</span></a>
+
+<div class="dropdown-menu" aria-labelledby="navbarDropdown" style="color: var(--font-color); background-color: var(--color-nav);">
+<a class="dropdown-item waves-effect waves-light" href="orders.html" style="color: var(--font-color);"><span class="px-2">Report Items</span></a>
+<a class="dropdown-item waves-effect waves-light" href="tickets.html" style="color: var(--font-color);"><span class="px-2">My Tickets <span class="badge badge-success">0</span></span></a>
+<a class="dropdown-item waves-effect waves-light" href="reports.html" style="color: var(--font-color);"><span class="px-2">My Reports <span class="badge badge-success">0</span></span></a>
+<a class="dropdown-item waves-effect waves-light" href="OpenTicket.html" style="color: var(--font-color);"><span class="px-2">New Ticket</span></a>
+</div>
+</li>
+
+
+<li class="nav-item dropdown">
+<a class="nav-link dropdown-toggle waves-effect waves-light" style="color: var(--font-color);" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> XBASELEET <i class="fa fa-user-secret" style="color: var(--font-color);"></i></a>
+
+<div class="dropdown-menu" aria-labelledby="navbarDropdown" style="color: var(--font-color); background-color: var(--color-nav);">
+<a class="dropdown-item waves-effect waves-light" href="setting.html" style="color: var(--font-color);"><span class="px-2">Setting <i class="fa fa-cog"></i></span></a>
+<a class="dropdown-item waves-effect waves-light" href="seller-profile.html" style="color: var(--font-color);"><span class="px-2">Profile <i class="fa fa-user"></i></span></a>
+<a class="dropdown-item waves-effect waves-light" href="orders.html" style="color: var(--font-color);"><span class="px-2">My Orders <i class="fa fa-shopping-cart"></i></span></a>
+<a class="dropdown-item waves-effect waves-light" href="addBalance.html" style="color: var(--font-color);"><span class="px-2">Add Balance <i class="fa fa-money-bill-alt"></i></span></a>
+<a class="dropdown-item waves-effect waves-light" href="login.html" style="color: var(--font-color);"><span class="px-2">Logout <i class="fa fa-door-open"></i></span></a>
+</div>
+</li>
+
+</ul>
+
+</div>
+</nav>
+<style>.modal-dialog.modal-frame.modal-top.modal-notify.modal-danger .modal-body,.modal-dialog.modal-frame.modal-top.modal-offernov.modal-danger .modal-body{
+	    padding-top: 35px;
+}
+.modal-dialog.modal-frame.modal-top.modal-notify.modal-danger,.modal-dialog.modal-frame.modal-top.modal-offernov.modal-danger {
+    max-width: 500px !important;
+    margin: 1.75rem auto !important;
+    position: relative;
+    width: auto !important;
+    pointer-events: none;
+}
+a.closearb {
+    position: absolute;
+    top: 2.5px;
+    right: 2.5px;
+    display: block;
+    width: 30px;
+    height: 30px;
+    text-indent: -9999px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADwAAAA8CAYAAAA6/NlyAAAAAXNSR0IArs4c6QAAA3hJREFUaAXlm8+K00Acx7MiCIJH/yw+gA9g25O49SL4AO3Bp1jw5NvktC+wF88qevK4BU97EmzxUBCEolK/n5gp3W6TTJPfpNPNF37MNsl85/vN/DaTmU6PknC4K+pniqeKJ3k8UnkvDxXJzzy+q/yaxxeVHxW/FNHjgRSeKt4rFoplzaAuHHDBGR2eS9G54reirsmienDCTRt7xwsp+KAoEmt9nLaGitZxrBbPFNaGfPloGw2t4JVamSt8xYW6Dg1oCYo3Yv+rCGViV160oMkcd8SYKnYV1Nb1aEOjCe6L5ZOiLfF120EjWhuBu3YIZt1NQmujnk5F4MgOpURzLfAwOBSTmzp3fpDxuI/pabxpqOoz2r2HLAb0GMbZKlNV5/Hg9XJypguryA7lPF5KMdTZQzHjqxNPhWhzIuAruOl1eNqKEx1tSh5rfbxdw7mOxCq4qS68ZTjKS1YVvilu559vWvFHhh4rZrdyZ69Vmpgdj8fJbDZLJpNJ0uv1cnr/gjrUhQMuI+ANjyuwftQ0bbL6Erp0mM/ny8Fg4M3LtdRxgMtKl3jwmIHVxYXChFy94/Rmpa/pTbNUhstKV+4Rr8lLQ9KlUvJKLyG8yvQ2s9SBy1Jb7jV5a0yapfF6apaZLjLLcWtd4sNrmJUMHyM+1xibTjH82Zh01TNlhsrOhdKTe00uAzZQmN6+KW+sDa/JD2PSVQ873m29yf+1Q9VDzfEYlHi1G5LKBBWZbtEsHbFwb1oYDwr1ZiF/2bnCSg1OBE/pfr9/bWx26UxJL3ONPISOLKUvQza0LZUxSKyjpdTGa/vDEr25rddbMM0Q3O6Lx3rqFvU+x6UrRKQY7tyrZecmD9FODy8uLizTmilwNj0kraNcAJhOp5aGVwsAGD5VmJBrWWbJSgWT9zrzWepQF47RaGSiKfeGx6Szi3gzmX/HHbihwBser4B9UJYpFBNX4R6vTn3VQnez0SymnrHQMsRYGTr1dSk34ljRqS/EMd2pLQ8YBp3a1PLfcqCpo8gtHkZFHKkTX6fs3MY0blKnth66rKCnU0VRGu37ONrQaA4eZDFtWAu2fXj9zjFkxTBOo8F7t926gTp/83Kyzzcy2kZD6xiqxTYnHLRFm3vHiRSwNSjkz3hoIzo8lCKWUlg/YtGs7tObunDAZfpDLbfEI15zsEIY3U/x/gHHc/G1zltnAgAAAABJRU5ErkJggg==);
+}
+</style> <div class="d-flex flex-row-reverse mt-0">
+<div class="p-2">
+<label id="switch" class="switch">
+<input type="checkbox" onchange="toggleTheme()" id="slider">
+<span class="slider round">
+</span>
+</label>
+</div>
+</div>
+<div class="alert alert-info text-left" role="alert" style="margin: 15px;">
+<ul>
+<li>To Check The Mailer ( Deliver or not ) , Click on Send ( For Free ) Then Check Your Testing E-mail.</li>
+<li>There is <b> 488 </b> Mailers Available.</li>
+</ul>
+</div>
+<ul class="nav nav-tabs m-2 container">
+<li class="active m-2"><a href="#mytickets" class="btn btn-primary btn-sm waves-effect waves-light" data-toggle="tab" aria-expanded="true" style="font-size: 12 px;">PHP Mailer</a></li>
+<li class="m-2"><a href="#open" class="btn btn-primary btn-sm waves-effect waves-light" data-toggle="tab" aria-expanded="false" style="font-size: 12 px;"> <span class="glyphicon glyphicon-pencil"></span> Change Email</a></li>
+</ul>
+<div id="myTabContent" class="tab-content container-fluid">
+<div class="tab-pane fade in" id="open" style="color: var(--font-color);">
+<h3 class="text-center alert alert-success">Checker Email</h3>
+<div class="row">
+<div class="form-group col-md-5 " style="color: var(--font-color); background-color: var(--color-card);">
+<form method="post" class="col-lg-12">
+<label for="c_email" class="active">Checker Email </label>
+<input type="email" name="c_email" id="c_email" class="form-control mt-2 mb-2 input-sm" value="XBASELEET@XBASELEET.COM" required=""><button type="submit" name="edit" class="btn btn-primary waves-effect waves-light">Change</button>
+</form>
+<br><br>
+<div id="resulta"> </div>
+</div>
+<br><br>
+</div>
+</div>
+<div class="tab-pane active in" id="mytickets">
+<div class="row m-3 pt-1" style="color: var(--font-color);">
+<div class="col-xs-6 col-sm-4 col-lg-2" style="display:inline-block">
+<label for="country" style="margin-bottom: 10px; margin-top: 5px">Country :</label>
+<select name="country" id="country" class="form-control" style="color: var(--font-color); background-color: var(--color-card);">
+<option value="">All Countries</option>
+<option value=""></option><option value="Australia">Australia</option><option value="Austria">Austria</option><option value="Belgium">Belgium</option><option value="Brazil">Brazil</option><option value="Canada">Canada</option><option value="China">China</option><option value="Colombia">Colombia</option><option value="Finland">Finland</option><option value="France">France</option><option value="Germany">Germany</option><option value="Hong Kong SAR China">Hong Kong SAR China</option><option value="India">India</option><option value="Indonesia">Indonesia</option><option value="Iran">Iran</option><option value="Ireland">Ireland</option><option value="Japan">Japan</option><option value="Lebanon">Lebanon</option><option value="Lithuania">Lithuania</option><option value="Mongolia">Mongolia</option><option value="Netherlands">Netherlands</option><option value="New Zealand">New Zealand</option><option value="Poland">Poland</option><option value="Romania">Romania</option><option value="Russia">Russia</option><option value="Singapore">Singapore</option><option value="South Africa">South Africa</option><option value="Spain">Spain</option><option value="Switzerland">Switzerland</option><option value="Taiwan">Taiwan</option><option value="Thailand">Thailand</option><option value="Ukraine">Ukraine</option><option value="United Kingdom">United Kingdom</option><option value="United States">United States</option><option value="Vietnam">Vietnam</option><option value="Zimbabwe">Zimbabwe</option> </select>
+</div>
+<div class="col-xs-6 col-sm-4 col-lg-2" style="display:inline-block">
+<label for="hosting" style="margin-bottom: 10px; margin-top: 5px">Hosting :</label>
+<select name="detect_hosting" id="detect_hosting" class="form-control" style="color: var(--font-color); background-color: var(--color-card);">
+<option value="">All</option>
+<option value=""></option><option value="A2 Hosting, Inc.">A2 Hosting, Inc.</option><option value="A2B IP B.V.">A2B IP B.V.</option><option value="AD EDUCATION">AD EDUCATION</option><option value="Afrihost (Pty) Ltd">Afrihost (Pty) Ltd</option><option value="Akamai Technologies, Inc.">Akamai Technologies, Inc.</option><option value="Alibaba Cloud">Alibaba Cloud</option><option value="Alibaba.com LLC">Alibaba.com LLC</option><option value="Alibaba.com Singapore E-Commerce Private Limited">Alibaba.com Singapore E-Commerce Private Limited</option><option value="ALICLOUD-US">ALICLOUD-US</option><option value="Amazon Technologies Inc. (AMAZON)">Amazon Technologies Inc. (AMAZON)</option><option value="Amazon Technologies Inc. (EC2)">Amazon Technologies Inc. (EC2)</option><option value="Aruba S.p.A.">Aruba S.p.A.</option><option value="Atlantic.Net - Dallas, LLC.">Atlantic.Net - Dallas, LLC.</option><option value="Cloudflare, Inc.">Cloudflare, Inc.</option><option value="Computer Research Center of Islamic Sciences">Computer Research Center of Islamic Sciences</option><option value="Contabo GmbH">Contabo GmbH</option><option value="Cyberweb Networks Ltda">Cyberweb Networks Ltda</option><option value="Cyber_Folks S.A.">Cyber_Folks S.A.</option><option value="Dattatec.com">Dattatec.com</option><option value="DCNET TELECOM">DCNET TELECOM</option><option value="DigitalOcean, LLC">DigitalOcean, LLC</option><option value="dogado GmbH">dogado GmbH</option><option value="Euskaltel S.A.">Euskaltel S.A.</option><option value="Fasthosts Internet Limited">Fasthosts Internet Limited</option><option value="Fastly, Inc.">Fastly, Inc.</option><option value="GDY-US-EAST">GDY-US-EAST</option><option value="GIGAS HOSTING USA, LLC">GIGAS HOSTING USA, LLC</option><option value="GMO Internet,Inc">GMO Internet,Inc</option><option value="GoDaddy.com, LLC">GoDaddy.com, LLC</option><option value="Google LLC">Google LLC</option><option value="Hetzner Online GmbH">Hetzner Online GmbH</option><option value="HKBN Enterprise Solutions HK Limited">HKBN Enterprise Solutions HK Limited</option><option value="home.pl S.A.">home.pl S.A.</option><option value="Host Europe GmbH">Host Europe GmbH</option><option value="Host One Servicos de Internet Ltda">Host One Servicos de Internet Ltda</option><option value="Hosting Ltd">Hosting Ltd</option><option value="Hostnet B.V.">Hostnet B.V.</option><option value="hosttech GmbH">hosttech GmbH</option><option value="Hostway Corporation">Hostway Corporation</option><option value="Hostwinds LLC.">Hostwinds LLC.</option><option value="Huawei Cloud/Telecom">Huawei Cloud/Telecom</option><option value="iiNet Limited">iiNet Limited</option><option value="Internet Solution &amp; Service Provider Co., Ltd.">Internet Solution &amp; Service Provider Co., Ltd.</option><option value="internic Datenkommunikations GmbH">internic Datenkommunikations GmbH</option><option value="IONOS Inc.">IONOS Inc.</option><option value="IONOS SE">IONOS SE</option><option value="iWeb Technologies Inc.">iWeb Technologies Inc.</option><option value="Jing'an/Telecom/Unicom">Jing'an/Telecom/Unicom</option><option value="JSC RTComm.RU">JSC RTComm.RU</option><option value="JSC RU-CENTER">JSC RU-CENTER</option><option value="Jumpline Inc">Jumpline Inc</option><option value="Labtech Systems Ltd">Labtech Systems Ltd</option><option value="LeaseWeb Netherlands B.V.">LeaseWeb Netherlands B.V.</option><option value="Ligh technology viet joint stock company">Ligh technology viet joint stock company</option><option value="LinzNet Internet Service Provider GmbH">LinzNet Internet Service Provider GmbH</option><option value="LLC MASTERHOST">LLC MASTERHOST</option><option value="LLC Smart Ape">LLC Smart Ape</option><option value="Media Temple, Inc.">Media Temple, Inc.</option><option value="Michael Sebastian Schinzel trading as IP-Projects GmbH &amp; Co. KG">Michael Sebastian Schinzel trading as IP-Projects GmbH &amp; Co. KG</option><option value="MICROSOFT-CORP-MSN-AS-BLOCK">MICROSOFT-CORP-MSN-AS-BLOCK</option><option value="MULTACOM CORPORATION">MULTACOM CORPORATION</option><option value="Namecheap, Inc.">Namecheap, Inc.</option><option value="National Data Center">National Data Center</option><option value="Nazwa.pl Sp.z.o.o.">Nazwa.pl Sp.z.o.o.</option><option value="Neerja Softwares Pvt Ltd">Neerja Softwares Pvt Ltd</option><option value="Newfold Digital, Inc.">Newfold Digital, Inc.</option><option value="nFrame">nFrame</option><option value="O2SWITCH SARL">O2SWITCH SARL</option><option value="OGIC Informatica S.L.">OGIC Informatica S.L.</option><option value="Open Computer Network">Open Computer Network</option><option value="Oracle Corporation">Oracle Corporation</option><option value="ORCS Web, Inc.">ORCS Web, Inc.</option><option value="OVH (NWK)">OVH (NWK)</option><option value="OVH BV">OVH BV</option><option value="OVH Hosting Limited">OVH Hosting Limited</option><option value="OVH Hosting, Inc.">OVH Hosting, Inc.</option><option value="OVH Ltd">OVH Ltd</option><option value="OVH SAS">OVH SAS</option><option value="Oxylion S. A.">Oxylion S. A.</option><option value="Pars Parva System LLC">Pars Parva System LLC</option><option value="PEG TECH INC">PEG TECH INC</option><option value="Private Customer">Private Customer</option><option value="PrivateSystems Networks GA">PrivateSystems Networks GA</option><option value="PT INDONESIA COMNETS PLUS">PT INDONESIA COMNETS PLUS</option><option value="QTIME BUSINESSES PRIVATE LIMITED">QTIME BUSINESSES PRIVATE LIMITED</option><option value="Rackforest Zrt.">Rackforest Zrt.</option><option value="Rackspace.com Hong Kong Limited">Rackspace.com Hong Kong Limited</option><option value="RCS &amp; RDS SA">RCS &amp; RDS SA</option><option value="Rica Web Services">Rica Web Services</option><option value="Saba Hour Yeganeh Co. ( Private Joint Stock)">Saba Hour Yeganeh Co. ( Private Joint Stock)</option><option value="SCICUBE LIMITED">SCICUBE LIMITED</option><option value="Seclan Oy">Seclan Oy</option><option value="SECURED SERVERS LLC">SECURED SERVERS LLC</option><option value="Server Central Network">Server Central Network</option><option value="Shaw Telecom G.P.">Shaw Telecom G.P.</option><option value="Signet B.V.">Signet B.V.</option><option value="SingleHop LLC">SingleHop LLC</option><option value="Smart Servers">Smart Servers</option><option value="SOUTH VALLEY INTERNET">SOUTH VALLEY INTERNET</option><option value="SpaceWeb Ltd">SpaceWeb Ltd</option><option value="Sucuri">Sucuri</option><option value="SUPERDATA-VN">SUPERDATA-VN</option><option value="SYNERGY WHOLESALE PTY LTD">SYNERGY WHOLESALE PTY LTD</option><option value="Taiwan Academic Network (TANet) Information Center">Taiwan Academic Network (TANet) Information Center</option><option value="Telia Inmics-Nebula Oy">Telia Inmics-Nebula Oy</option><option value="Telmex Colombia S.A.">Telmex Colombia S.A.</option><option value="Telone PVT Ltd">Telone PVT Ltd</option><option value="Tencent Cloud">Tencent Cloud</option><option value="TerraNet sal">TerraNet sal</option><option value="The Constant Company, LLC">The Constant Company, LLC</option><option value="TierPoint, LLC">TierPoint, LLC</option><option value="TimeWeb Ltd.">TimeWeb Ltd.</option><option value="Totaaldomein BV">Totaaldomein BV</option><option value="UAB Interneto vizija">UAB Interneto vizija</option><option value="UCLOUD INFORMATION TECHNOLOGY (HK) LIMITED">UCLOUD INFORMATION TECHNOLOGY (HK) LIMITED</option><option value="Umbrellar Limited">Umbrellar Limited</option><option value="Unified Layer">Unified Layer</option><option value="User Association of Ukrainian Research and Academic Network URAN">User Association of Ukrainian Research and Academic Network URAN</option><option value="Versio B.V.">Versio B.V.</option><option value="VIETNAM POSTS AND TELECOMMUNICATIONS GROUP">VIETNAM POSTS AND TELECOMMUNICATIONS GROUP</option><option value="VNET-org-93.184.66.201">VNET-org-93.184.66.201</option><option value="Web-hosting.com">Web-hosting.com</option><option value="WEBSITEWELCOME.COM">WEBSITEWELCOME.COM</option><option value="WPEngine, Inc.">WPEngine, Inc.</option><option value="yunjue">yunjue</option><option value="zColo">zColo</option> </select>
+</div>
+<div class="col-xs-6 col-sm-4 col-lg-2" style="display:inline-block">
+<label for="type" style="margin-bottom: 10px; margin-top: 5px">Source :</label>
+<select name="source" id="source" class="form-control" style="color: var(--font-color); background-color: var(--color-card);">
+<option value="">All</option>
+<option value="cracked">cracked</option><option value="created">created</option> </select>
+</div>
+<div class="col-xs-6 col-sm-4 col-lg-2" style="display:inline-block">
+<label for="seller" style="margin-bottom: 10px; margin-top: 5px">Seller :</label>
+<select name="seller" id="seller" class="form-control" style="color: var(--font-color); background-color: var(--color-card);">
+<option value="">All</option>
+<option value="Seller369">Seller369</option><option value="Seller382">Seller382</option><option value="Seller366">Seller366</option><option value="Seller389">Seller389</option><option value="Seller397">Seller397</option><option value="Seller329">Seller329</option><option value="Seller458">Seller458</option><option value="Seller284">Seller284</option><option value="Seller473">Seller473</option><option value="Seller460">Seller460</option><option value="Seller422">Seller422</option><option value="Seller316">Seller316</option><option value="Seller390">Seller390</option><option value="Seller480">Seller480</option><option value="Seller373">Seller373</option><option value="Seller471">Seller471</option><option value="Seller301">Seller301</option><option value="Seller289">Seller289</option><option value="Seller451">Seller451</option><option value="Seller420">Seller420</option><option value="Seller465">Seller465</option> </select>
+</div>
+</div>
+<div class="row m-2 pt-3" style="max-width:100%; color: var(--font-color); background-color: var(--color-card);">
+<div class="col-sm-12 table-responsive">
+<div id="mailer_data_wrapper" class="dataTables_wrapper no-footer"><div class="dataTables_length" id="mailer_data_length"><label>Show <select name="mailer_data_length" aria-controls="mailer_data" class=""><option value="10">10</option><option value="25">25</option><option value="50">50</option><option value="100">100</option><option value="500">500</option><option value="10000">All</option></select> entries</label></div><div id="mailer_data_filter" class="dataTables_filter"><label>Search:<input type="search" class="" placeholder="" aria-controls="mailer_data"></label></div><div id="mailer_data_processing" class="dataTables_processing" style="display: none;">Processing...</div><div class="dataTables_scroll"><div class="dataTables_scrollHead" style="overflow: hidden; position: relative; border: 0px; width: 100%;"><div class="dataTables_scrollHeadInner" style="box-sizing: content-box; width: 100%;"><table class="display responsive table-striped table-hover dataTable no-footer" style="width: 100%; color: var(--font-color); background-color: var(--color-card); margin-left: 0px;" role="grid"><thead>
+<tr role="row"><th class="all sorting" tabindex="0" aria-controls="mailer_data" rowspan="1" colspan="1" style="width: 14px;">ID</th><th data-priority="3" class="sorting" tabindex="0" aria-controls="mailer_data" rowspan="1" colspan="1" style="width: 54px; display: none;">Country</th><th data-priority="6" class="sorting" tabindex="0" aria-controls="mailer_data" rowspan="1" colspan="1" style="width: 28px; display: none;">SSL</th><th data-priority="10" class="sorting" tabindex="0" aria-controls="mailer_data" rowspan="1" colspan="1" style="width: 53px; display: none;">Hosting</th><th data-priority="8" class="sorting" tabindex="0" aria-controls="mailer_data" rowspan="1" colspan="1" style="width: 48px; display: none;">Source</th><th data-priority="9" class="sorting" tabindex="0" aria-controls="mailer_data" rowspan="1" colspan="1" style="width: 39px; display: none;">Seller</th><th class="all sorting" tabindex="0" aria-controls="mailer_data" rowspan="1" colspan="1" style="width: 217px;">Send Test <span class="label label-default" id="checkertitle">to XBASELEET@XBASELEET.COM</span></th><th data-priority="7" class="sorting" tabindex="0" aria-controls="mailer_data" rowspan="1" colspan="1" style="width: 35px; display: none;">Price</th><th data-priority="11" class="sorting" tabindex="0" aria-controls="mailer_data" rowspan="1" colspan="1" style="width: 44px; display: none;">Added on </th><th class="all sorting" tabindex="0" aria-controls="mailer_data" rowspan="1" colspan="1" style="width: 27px;">Buy</th></tr>
+</thead></table></div></div><div class="dataTables_scrollBody" style="position: relative; overflow: auto; width: 100%;"><table id="mailer_data" class="display responsive table-striped table-hover dataTable no-footer dtr-inline collapsed" style="width: 100%; color: var(--font-color); background-color: var(--color-card);" role="grid" aria-describedby="mailer_data_info">
+
+<tbody>
+</tbody>
+</table></div></div><div class="dataTables_info" id="mailer_data_info" role="status" aria-live="polite"></div><div class="dataTables_paginate paging_simple_numbers" id="mailer_data_paginate"></div></div>
+</div>
+</div>
+</div>
+</div>
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" data-backdrop="true">
+<div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-notify modal-success" role="document">
+<div class="modal-content">
+<div class="modal-header">
+<p class="heading" id="myModalHeader"></p>
+<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+<span aria-hidden="true" class="white-text">×</span>
+</button>
+</div>
+<div class="modal-body" id="modelbody">
+</div>
+<div class="modal-footer justify-content-center">
+<a type="button" class="btn btn-outline-success waves-effect" data-dismiss="modal">Close</a>
+</div>
+</div>
+</div>
+</div>
+
+<div class="modal fade" id="modalConfirmBuy" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal-dialog modal-dialog-centered modal-sm modal-notify modal-info" role="document">
+
+<div class="modal-content text-center">
+
+<div class="modal-header d-flex justify-content-center">
+<p class="heading">Are you sure?</p>
+</div>
+
+<div class="modal-body">
+<i class="fas fa-shopping-cart fa-4x animated rotateIn"></i>
+</div>
+
+<div class="modal-footer flex-center">
+<a onclick="confirmbye()" class="btn btn-outline-info waves-effect" data-dismiss="modal">Yes</a>
+<a type="button" class="btn btn-info waves-effect waves-light" data-dismiss="modal">No</a>
+</div>
+</div>
+
+</div>
+</div>
+
+
+<div class="modal fade top" id="modalCoupon" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" data-backdrop="true">
+<div class="modal-dialog modal-frame modal-top modal-notify modal-danger" role="document">
+
+<div class="modal-content">
+
+<div class="modal-body">
+<div class="row d-flex justify-content-center align-items-center">
+<img src="layout/images/balance.png">
+<span class="pt-3 mx-4" style="font-size: 14 px"><b>No enough balance !</b> Please refill your balance</span>
+<a type="button" href="addBalance.html" onclick="window.open(this.href);return false;" class="btn btn-danger waves-effect waves-light">Add Balance
+<i class="fas fa-book ml-1 white-text"></i>
+</a>
+<a type="button" class="btn btn-outline-danger waves-effect" data-dismiss="modal">No, thanks</a>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<script>
+
+
+        $(document).ready(function(){
+            var webID;
+            load_data();
+
+            function load_data(myarray) {
+                $('#mailer_data').DataTable({
+                    "processing": true,
+                    "serverSide": true,
+                    "responsive": true,
+                     "stateSave": true,
+                    "scrollX": true,
+
+                    "order": [],
+                    "columnDefs": [
+                        {
+                            "targets": [ 0 ],
+                            "visible": false
+                        }
+                    ],
+                     "lengthMenu": [[10, 25, 50, 100, 500, 10000], [10, 25, 50, 100, 500, "All"]],
+
+                    "ajax":{
+                        url:"divPage4.html",
+                        type:"POST",
+                          data: {data_filter:myarray,
+                            draw : 'draw',
+                            row : 'start',
+                             rowperpage : 'length',
+                             columnIndex : 'order',
+                             columnName : 'columns',
+                             columnSortOrder : 'order',
+                             searchValue : 'search'}
+                    },
+                    "columns": [
+                                { "data": 0 },
+                                { "data": 1 },
+                                { "data": 2 },
+                                { "data": 3 },
+                                { "data": 4 },
+                                { "data": 5 },
+                                { "data": 6 },
+                                { "data": 7 },
+                                { "data": 8 },
+                                { "data": 9 },
+                                { "data": 10 }],
+
+                    "pageLength": 500
+                });
+            }
+
+            $(document).on('change', '.form-control', function(){
+
+                $('#mailer_data').DataTable().destroy();
+                 var country = $('#country').val();
+                var detectHosting = $('#detect_hosting').val();
+                var source = $('#source').val();
+                 var seller1 = $('#seller').val();
+                $idseller = seller1.split("Seller");
+                 var seller= $idseller[1];
+
+
+                 var myarray = {};
+                 myarray[0] = country;
+                 myarray[1] = detectHosting;
+                 myarray[2] = source;
+                 myarray[3] = seller;
+                 console.log(myarray);
+
+              if(country != '' || detectHosting != '' || source != '' || seller != '')
+                {
+
+                   load_data(myarray);
+                }
+                else
+                {
+                    load_data();
+                }
+            });
+
+
+        });
+
+         function buythistool(id){
+         $('#modalConfirmBuy').modal('show');
+         webID= id;
+                        }
+
+        function confirmbye(id){
+              id= webID;
+
+             $.ajax({
+                        method:"GET",
+                        url:"buytool.php?id="+id+"&t=mailers",
+                        dataType:"text",
+                        success:function(data){
+                             if(data.match("buy")){
+                                let lastid = data.split("buy,")[1];
+                                $("#mailer"+id).html(`<button onclick=openitem(${lastid}) class="btn btn-success btn-sm" style="font-size: 11px; cursor:pointer">Order ${'#'+lastid}</button>`).show();
+
+                            }
+                            else{
+                                if(data.match("deleted")){
+
+                                $("#mailer"+id).html('Already sold / Deleted').show();
+
+                                  }else{
+                                  $('#modalCoupon').modal('show');
+                                }
+
+
+                            }
+                        },
+                    });
+        }
+
+        g:xcheck=0;
+        function check(id){
+            if(xcheck > 10){
+
+                bootbox.alert("<b>Wait</b> - Other checking operation is executed!");
+
+            } else {
+                xcheck++;
+                var type = $("#shop"+id).attr('type')
+                 $("#shop"+id).html('<b><span class="indigo-text" align="center"> <i class="fas fa-spinner indigo-text fa-pulse fa-3x mx-4"></i></span></b> ').show();
+                $.ajax({
+                    type:     'GET',
+                    url:    'CheckMailer'+id,
+                    success:  function(data)
+                    {
+                             if(data.match("sent")){
+                                let testemail = data.split("sent,")[1];
+                                $("#shop"+id).html(`<span class="btn btn-success btn-sm">Sent to ${testemail+' '+'#'+id}</span>`).show();
+
+                            }
+                            else{
+                                if(data.match("incorrect")){
+
+                                $("#shop"+id).html(`<span class='btn btn-danger btn-sm' style='font-size: 12px'>Incorrect email!</span>`).show();
+
+                                  }else{
+                                     if(data.match("bad")){
+                                     var ide= 'bad-mailer'+id;
+
+                                $("#shop"+id).html('<span id=' + ide + ' class="btn btn-danger btn-sm" style="font-size: 12px">Bad!</span>').show();
+
+                                var tr = $("#shop"+id).parents('tr');
+                                   setTimeout(function(){
+                                 $('#mailer_data').DataTable().row(tr).child.hide();
+                                 }, 2000);
+                                   $("#"+ide).parent().parent().parent().delay(3000).hide('slow');
+
+                                  }
+
+
+                                }
+                            }
+                        xcheck--;
+                    }
+                });
+            }
+        }
+         function openitem(order){
+
+        $.ajax({
+        type:       'GET',
+        url:        'showOrder'+order,
+        success:    function(data)
+        {
+        $("#myModalHeader").text('Order #'+order);
+        $("#modelbody").append(data);
+        $('#myModal').modal();
+
+
+        }});
+
+        }
+
+
+
+
+    </script>
+
+<div class="hiddendiv common"></div></body></html>
