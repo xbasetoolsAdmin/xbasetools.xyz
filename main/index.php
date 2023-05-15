@@ -37,8 +37,8 @@ $usrid = mysqli_real_escape_string($dbcon, $_SESSION['sname']);
 <script type="text/javascript">
              function ajaxinfo() {
                 $.ajax({
-                    type: 'GET',
-                    url: 'ajaxinfo.html',
+                    type: 'POST',
+                    url: 'ajaxinfo',
                     timeout: 10000,
 
                     success: function(data) {
@@ -77,7 +77,11 @@ function pageDiv(n,t,u,x){
     window.open(u, '_blank');
     return false;
   }
-        var obj = { Title: t, Url: u };
+        var obj = 
+        {
+             Title: t,
+             Url: u 
+        };
         if ( ("/"+obj.Url) != location.pathname) {
         	if (x != 1) {history.pushState(obj, obj.Title, obj.Url);}
         	else{history.replaceState(obj, obj.Title, obj.Url);}
