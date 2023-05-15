@@ -1,5 +1,5 @@
 <html>
-   <head></head>
+   <head
    <body>
       <div class="row m-2 pt-3 " style="max-width:100%; color: var(--font-color); background-color: var(--color-card);">
          <div class="col-sm-12 table-responsive">
@@ -45,7 +45,7 @@
                                  <th class="all sorting" tabindex="0" aria-controls="account_data" rowspan="1" colspan="1" style="width: 84.421875px;" aria-label="Buy: activate to sort column ascending">Buy</th>
                                  
                                  <th class="all sorting" tabindex="0" aria-controls="account_data" rowspan="1" colspan="1" style="width: 84.421875px;" aria-label="Buy: activate to sort column ascending">Buy</th>
-                                 <td style="display: none;">5.00</td>
+                           
                                  <td style="display: none;">
                                     <a href="login.html" class="btn btn-primary btn-sm" style="font-size: 11px; cursor:pointer" target="_blank">
                                     <i class="fas fa-user mr-1"></i>Seller349</a>
@@ -78,7 +78,12 @@
                               <tr role="row" class="even">
                                  <td class="dtr-control">3039</td>
                                  <td style="display: none;">https: //mail.simnet.is</td>
-                              </tr>
+                                  <td style="display: none;">5.00</td>
+                                  <td class="dtr-control">3039</td>
+                                 <td style="display: none;">https: //mail.simnet.is</td>
+                                  <td style="display: none;">5.00</td>
+                          
+                                     </tr>
                               <tr vailign=""></tr>
                            </thead>
                         </table>
