@@ -10,7 +10,7 @@ if (!isset($_SESSION['sname']) and !isset($_SESSION['spass'])) {
 $usrid = mysqli_real_escape_string($dbcon, $_SESSION['sname']);
 ?>
   <title>Login , Odin.to </title>
-<link rel="stylesheet" href="layout/css/bootstrap.min.css">
+<link rel="stylesheet" href="main/layout/css/bootstrap.min.css">
 <script src="https://xbasetools.xyz/main/layout/js/jquery-3.4.1.min.js"></script>
 <script src="https://xbasetools.xyz/main/layout/js/clipboard.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
