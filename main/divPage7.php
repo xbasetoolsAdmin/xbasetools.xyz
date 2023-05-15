@@ -45,7 +45,7 @@
                                  <th class="all sorting" tabindex="0" aria-controls="account_data" rowspan="1" colspan="1" style="width: 84.421875px;" aria-label="Buy: activate to sort column ascending">Buy</th>
                                  
                                  <th class="all sorting" tabindex="0" aria-controls="account_data" rowspan="1" colspan="1" style="width: 84.421875px;" aria-label="Buy: activate to sort column ascending">Buy</th>
-                                                      <tr role="row">
+                                                    
                                  <th class="all sorting" tabindex="0" aria-controls="account_data" rowspan="1" colspan="1" style="width: 35.140625px;" aria-label="ID: activate to sort column ascending">ID</th>
 
                                  <th class="all sorting" tabindex="0" aria-controls="account_data" rowspan="1" colspan="1" style="width: 117.453125px;" aria-label="Proof: activate to sort column ascending">Proof</th>
@@ -58,6 +58,10 @@
                                  
                                  <th class="all sorting" tabindex="0" aria-controls="account_data" rowspan="1" colspan="1" style="width: 84.421875px;" aria-label="Buy: activate to sort column ascending">Buy</th>
                            
+                           
+                           
+                                                 
+                                  <tr role="row">
                            </thead>
                         </table>
                      </div>
