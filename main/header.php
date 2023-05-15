@@ -11,17 +11,6 @@
 <title>xBaseTools</title>
 <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.2.3/css/bootstrap.min.css" /> <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.2.3/js/bootstrap.bundle.min.js">
 </script>--->
-
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="alfacoins-site-verification" content="5ef8c2279aa605ef8c2279aa965ef8c2279aacb_ALFAcoins">
-<meta name="revisit-after" content="2 days">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<script src="/cdn-cgi/apps/head/AGN3NmUziwZfMV-TNTe1kdyeR2Y.js"></script><link rel="shortcut icon" href="../../favicon.ico" />
-<title>RDP</title>
 <link rel="stylesheet" href="layout/css/bootstrap.min.css">
 <script src="layout/js/jquery-3.4.1.min.js"></script>
 <script src="layout/js/clipboard.min.js"></script>
