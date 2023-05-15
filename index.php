@@ -55,10 +55,7 @@ $usrid = mysqli_real_escape_string($dbcon, $_SESSION['sname']);
             {
             margin:0 !important
             }
-\</style>
+</style>
 </head>
-<?php 
-
-inlude"main/navbar_header.php";
-
+<?php inlude "main/navbar_header.php";
 ?>
