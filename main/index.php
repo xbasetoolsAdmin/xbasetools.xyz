@@ -5,6 +5,8 @@ include "header.php";
 ?>
 
 
+<script>script.js</script>
+
 <?php 
 include "navbar_header.php";
 ?>
@@ -333,7 +335,6 @@ include "navbar_header.php";
           
           
           
-
 
 <?php 
   
