@@ -193,7 +193,7 @@ function hideTooltip(btn) {
             }
         </style>
 <body style="padding-top: 70px; padding-bottom: 70px;">
-
+<?php include"main/navbar_header.php";?>
 <nav class="navbar navbar-default navbar-fixed-top ">
   <div class="container-fluid">
     <div class="navbar-header">
