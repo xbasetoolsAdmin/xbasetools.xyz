@@ -23,7 +23,7 @@ $usrid = mysqli_real_escape_string($dbcon, $_SESSION['sname']);
     <script src="/cdn-cgi/apps/head/AGN3NmUziwZfMV-TNTe1kdyeR2Y.js"></script>
     <title>OdinShop</title>
     <link rel="stylesheet" href="main/layout/css/bootstrap.min.css">
-    <script src="main/layout/js/jquery-3.4.1.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="main/layout/js/clipboard.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
     <script src="main/layout/js/bootstrap.min.js"></script>
