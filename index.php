@@ -351,7 +351,7 @@ function hideTooltip(btn) {
 
 <?php include"main/navbar_header.php";?>
 
-<div id="mainDiv">
+
 
 	
 	
