@@ -221,6 +221,7 @@ $usrid = mysqli_real_escape_string($dbcon, $_SESSION['sname']);
         border-radius: 50%;
     }
 </style>
+	
 <script>
     function setTheme(themeName) {
         localStorage.setItem('theme', themeName);
@@ -246,9 +247,7 @@ $usrid = mysqli_real_escape_string($dbcon, $_SESSION['sname']);
             document.getElementById('slider').checked = true;
         }
     })();
-</script>
-</head>
-
+	</script>
 <script type="text/javascript">
              function ajaxinfo() {
                 $.ajax({
@@ -380,7 +379,8 @@ function hideTooltip(btn) {
         font-family: 'Raleway', sans-serif;
     }
 </style>
- 
+	</head>
+	
 <body class="them loading">
     <link rel="stylesheet" href="/layout/css/flexslider5.css" type="text/css">
     <script src="/layout/js/jquery.flexslider-min.js"></script>
@@ -454,7 +454,8 @@ function hideTooltip(btn) {
             color: #505050;
         }
     </style>
- 
+	<?php include"main/navbar_header.php";?>
+
     <div class="modal fade top" id="mod" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" data-backdrop="true">
         <div class="modal-dialog modal-frame modal-top modal-notify modal-danger" role="document">
  
@@ -629,21 +630,7 @@ function hideTooltip(btn) {
                 </div>
             </div>
             
- <?php
-ob_start();
-session_start();
-error_reporting();
-date_default_timezone_set('UTC');
-include "includes/config.php";
-
-if (!isset($_SESSION['sname']) and !isset($_SESSION['spass'])) {
-    header("location: ../");
-    exit();
-}
-$usrid = mysqli_real_escape_string($dbcon, $_SESSION['sname']);
-
-?>
-
+  
 
  <div class="main-home mt-5 mb-5">
                 <div class="row">
@@ -1052,7 +1039,6 @@ $usrid = mysqli_real_escape_string($dbcon, $_SESSION['sname']);
                     </div>
                 </div>
             </div>
-<?php include"main/navbar_header.php";?>
 
 
 
