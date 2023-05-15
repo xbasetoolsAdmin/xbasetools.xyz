@@ -1,18 +1,12 @@
-<?php 
-
-include "header.php";
-
-?>
+<?php   								     include    						         "header.php"; ?>
 
 
-<script>script.js</script>
+ <script src="layout/js/jquery.min.js"></script>
 
-<?php 
-include "navbar_header.php";
-?>
- 
+<?php                     						      include                 						  "navbar_header.php"; ?>
 
-	<style>
+
+<style>
 		.scroll-area-lg {
 			height: 400px;
 			overflow-x: hidden;
