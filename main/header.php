@@ -19,8 +19,7 @@
 <!---------------jquery JS library------------>
 
 
-    <script src="https://code.jquery-3.5.1.min.js">
-</script>
+    <script src="https://code.jquery-3.5.1.min.js"></script>
 
 
 <!---------cdn dataTable css library--------->
