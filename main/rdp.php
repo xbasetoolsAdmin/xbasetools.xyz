@@ -1,9 +1,7 @@
-<?php 
-
-include "header.php";
+<?php   								     include    						         "header.php"; ?>
 
 
-?>
+ <script src="layout/js/jquery.min.js"></script>
 <style>
 
 .display  td {
@@ -92,25 +90,72 @@ table.floatThead-table {
     
 
 </style>
+<?php 
+                  include                 						  "navbar_header.php"; 
 
+?>
+
+<style>
+.modal-dialog.modal-frame.modal-top.modal-notify.modal-danger .modal-body,.modal-dialog.modal-frame.modal-top.modal-offernov.modal-danger .modal-body{
+	    padding-top: 35px;
+}
+.modal-dialog.modal-frame.modal-top.modal-notify.modal-danger,.modal-dialog.modal-frame.modal-top.modal-offernov.modal-danger {
+    max-width: 500px !important;
+    margin: 1.75rem auto !important;
+    position: relative;
+    width: auto !important;
+    pointer-events: none;
+}
+a.closearb {
+    position: absolute;
+    top: 2.5px;
+    right: 2.5px;
+    display: block;
+    width: 30px;
+    height: 30px;
+    text-indent: -9999px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADwAAAA8CAYAAAA6/NlyAAAAAXNSR0IArs4c6QAAA3hJREFUaAXlm8+K00Acx7MiCIJH/yw+gA9g25O49SL4AO3Bp1jw5NvktC+wF88qevK4BU97EmzxUBCEolK/n5gp3W6TTJPfpNPNF37MNsl85/vN/DaTmU6PknC4K+pniqeKJ3k8UnkvDxXJzzy+q/yaxxeVHxW/FNHjgRSeKt4rFoplzaAuHHDBGR2eS9G54reirsmienDCTRt7xwsp+KAoEmt9nLaGitZxrBbPFNaGfPloGw2t4JVamSt8xYW6Dg1oCYo3Yv+rCGViV160oMkcd8SYKnYV1Nb1aEOjCe6L5ZOiLfF120EjWhuBu3YIZt1NQmujnk5F4MgOpURzLfAwOBSTmzp3fpDxuI/pabxpqOoz2r2HLAb0GMbZKlNV5/Hg9XJypguryA7lPF5KMdTZQzHjqxNPhWhzIuAruOl1eNqKEx1tSh5rfbxdw7mOxCq4qS68ZTjKS1YVvilu559vWvFHhh4rZrdyZ69Vmpgdj8fJbDZLJpNJ0uv1cnr/gjrUhQMuI+ANjyuwftQ0bbL6Erp0mM/ny8Fg4M3LtdRxgMtKl3jwmIHVxYXChFy94/Rmpa/pTbNUhstKV+4Rr8lLQ9KlUvJKLyG8yvQ2s9SBy1Jb7jV5a0yapfF6apaZLjLLcWtd4sNrmJUMHyM+1xibTjH82Zh01TNlhsrOhdKTe00uAzZQmN6+KW+sDa/JD2PSVQ873m29yf+1Q9VDzfEYlHi1G5LKBBWZbtEsHbFwb1oYDwr1ZiF/2bnCSg1OBE/pfr9/bWx26UxJL3ONPISOLKUvQza0LZUxSKyjpdTGa/vDEr25rddbMM0Q3O6Lx3rqFvU+x6UrRKQY7tyrZecmD9FODy8uLizTmilwNj0kraNcAJhOp5aGVwsAGD5VmJBrWWbJSgWT9zrzWepQF47RaGSiKfeGx6Szi3gzmX/HHbihwBser4B9UJYpFBNX4R6vTn3VQnez0SymnrHQMsRYGTr1dSk34ljRqS/EMd2pLQ8YBp3a1PLfcqCpo8gtHkZFHKkTX6fs3MY0blKnth66rKCnU0VRGu37ONrQaA4eZDFtWAu2fXj9zjFkxTBOo8F7t926gTp/83Kyzzcy2kZD6xiqxTYnHLRFm3vHiRSwNSjkz3hoIzo8lCKWUlg/YtGs7tObunDAZfpDLbfEI15zsEIY3U/x/gHHc/G1zltnAgAAAABJRU5ErkJggg==);
+}
+</style> 
+
+<div class="d-flex flex-row-reverse mt-0">
+<div class="p-2"><label id="switch" class="switch">
+<input type="checkbox" onchange="toggleTheme()" id="slider">
+<span class="slider round"></span>
+</label>
+    
+    </div>
+</div>
+<div class="alert alert-info text-left" role="alert" style="margin: 15px;">
+<ul>
+<li> Click on check button before buy any RDP to know if it's work or not.</li>
+<li>There is <b> 74 </b> RDPs Available.</li>
+</ul>
+</div>
 <div class="row m-3 pt-1" style="color: var(--font-color);">
 <div class="col-xs-6 col-sm-4 col-lg-2" style="display:inline-block">
 <label for="country" style="margin-bottom: 10px; margin-top: 5px">Country :</label>
 <select name="country" id="country" class="form-control" style="color: var(--font-color); background-color: var(--color-card);">
 <option value="">All Countries</option>
-<option value="Australia">Australia</option><option value="Brazil">Brazil</option><option value="Canada">Canada</option><option value="France">France</option><option value="Germany">Germany</option><option value="Hong Kong">Hong Kong</option><option value="India">India</option><option value="Ireland">Ireland</option><option value="Netherlands">Netherlands</option><option value="Norway">Norway</option><option value="Singapore">Singapore</option><option value="South Africa">South Africa</option><option value="South Korea">South Korea</option><option value="Sweden">Sweden</option><option value="United Kingdom">United Kingdom</option><option value="United States">United States</option> </select>
+
+    <option value="Australia">Australia</option><option value="Germany">Germany</option><option value="Hong Kong">Hong Kong</option><option value="India">India</option><option value="Ireland">Ireland</option><option value="Netherlands">Netherlands</option><option value="Norway">Norway</option><option value="Singapore">Singapore</option><option value="South Africa">South Africa</option><option value="South Korea">South Korea</option><option value="Sweden">Sweden</option><option value="United Kingdom">United Kingdom</option><option value="United States">United States</option> </select>
 </div>
 <div class="col-xs-6 col-sm-4 col-lg-2" style="display:inline-block">
 <label for="hosting" style="margin-bottom: 10px; margin-top: 5px">Hosting :</label>
 <select name="detect_hosting" id="detect_hosting" class="form-control" style="color: var(--font-color); background-color: var(--color-card);">
 <option value="">All</option>
-<option value="Amazon Technologies Inc. (AMAZON)">Amazon Technologies Inc. (AMAZON)</option><option value="Amazon Technologies Inc. (EC2)">Amazon Technologies Inc. (EC2)</option><option value="Hetzner Online GmbH">Hetzner Online GmbH</option><option value="Microsoft">Microsoft</option><option value="Microsoft do Brasil Imp. e Com. Software e Video G">Microsoft do Brasil Imp. e Com. Software e Video G</option><option value="MICROSOFT-CORP-MSN-AS-BLOCK">MICROSOFT-CORP-MSN-AS-BLOCK</option> </select>
+
+    <option value="Amazon Technologies Inc. (AMAZON)">Amazon Technologies Inc. (AMAZON)</option><option value="Amazon Technologies Inc. (EC2)">Amazon Technologies Inc. (EC2)</option><option value="Hetzner Online GmbH">Hetzner Online GmbH</option><option value="Microsoft">Microsoft</option><option value="Microsoft do Brasil Imp. e Com. Software e Video G">Microsoft do Brasil Imp. e Com. Software e Video G</option><option value="MICROSOFT-CORP-MSN-AS-BLOCK">MICROSOFT-CORP-MSN-AS-BLOCK</option> </select>
 </div>
 <div class="col-xs-6 col-sm-4 col-lg-2" style="display:inline-block">
 <label for="windows" style="margin-bottom: 10px; margin-top: 5px">windows :</label>
 <select name="windows" id="windows" class="form-control" style="color: var(--font-color); background-color: var(--color-card);">
 <option value="">All</option>
-<option value="10">10</option><option value="2012">2012</option><option value="2016">2016</option><option value="2019">2019</option> </select>
+<option value="10">10</option
+    </select>
 </div>
 <div class="col-xs-6 col-sm-4 col-lg-1" style="display:inline-block">
 <label for="ram" style="margin-bottom: 10px; margin-top: 5px">Ram :</label>
@@ -154,7 +199,7 @@ table.floatThead-table {
 <th class="all">Buy</th>
 </tr>
 </thead>
-    <tbody class="scrollbody" id="aria-hidden="true" >
+      <tbody class="scrollbody" id="aria-hidden="true"text-center">
 </table>
 </div>
 </div>
@@ -162,7 +207,8 @@ table.floatThead-table {
 <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-notify modal-success" role="document">
 <div class="modal-content">
 <div class="modal-header">
-<p class="heading" id="myModalHeader"></p>
+<p class="heading" id="myModalHeader">
+                                     </p>
 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
 <span aria-hidden="true" class="white-text">&times;</span>
 </button>
