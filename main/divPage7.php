@@ -12,7 +12,7 @@
                 <option value="500">500</option>
                 <option value="10000">All</option>
                 </select> entries</label>
-        </div>
+
         <div id="account_data_filter" class="dataTables_filter">
                 <label>Search:<input type="search" class="" placeholder="" aria-controls="account_data">
                 </label>
