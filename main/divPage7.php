@@ -20,8 +20,7 @@
                </div>
                <div id="account_data_filter" class="dataTables_filter">
                   <label>Search:<input type="search" class="" placeholder="" aria-controls="account_data">
-                  </label>
-               </div>
+                
                <div id="account_data_processing" class="dataTables_processing" style="display: none;">Processing...</div>
                <div class="dataTables_scroll">
                   
